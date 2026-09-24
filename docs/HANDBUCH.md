@@ -252,20 +252,57 @@ Die Sprache ist zu eigen. Man sollte es abschalten oder niedrig gewichten.
 
 ### Die Analyse (`analysis/`)
 
-Die Tabelle zeigt die wichtigsten Skripte — nicht alle.
-Der Ordner `analysis/` enthält über 20 Dateien.
-Viele sind Einzeluntersuchungen zu einer bestimmten Seite.
+Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
+
+**Verifikation und Beweise:**
 
 | Datei | Aufgabe |
 |---|---|
 | `verify_article_claim.py` | Prüft die Behauptung zu Seite 217 |
 | `verify_217.py` | Vollständige Prüfung aller Konventionen für Seite 217 |
+| `verify_solutions.py` | Prüft alle gelösten Seiten gegen den Klartext |
 | `rank_conflicts.py` | Belegt die Konfliktzahl als exaktes Kriterium |
-| `anomaly_scan.py` | Sucht fehlende Zeichen, testet Hypothesen |
+
+**Reparatur und Suche:**
+
+| Datei | Aufgabe |
+|---|---|
 | `repair_171.py` | Repariert Seite 171 per Editierdistanz |
 | `reconstruct_171.py` | Rekonstruiert Seite 171 |
-| `childs_scan.py` | Sucht ungelöste Seiten im Childs-Buch |
+| `search_all.py` | Testet alle Seiten gegen alle 14 Schlüssel |
+| `search_fix.py` | Sucht pro Seite und Schlüssel nach Korrekturen |
+| `search_fix2.py` | Korrekturen mit 1–2 Einfügungen/Löschungen |
+| `fix_search.py` | Sucht Einfüge-/Löschoperationen für lesbaren Text |
+| `run_corpus.py` | Testet den ganzen Korpus gegen alle Schlüssel |
+| `solve_152.py` | Gezielter Angriff auf Seite 152 |
+| `solve_73.py` | Lösungsversuch Seite 73: alle Schlüssel durchprobieren |
+
+**Anomalien:**
+
+| Datei | Aufgabe |
+|---|---|
+| `anomaly_scan.py` | Sucht fehlende Zeichen, testet Hypothesen |
+| `analyze_170.py` | Tiefenanalyse der Seite 170 (RICHI-240) |
+
+**Seite 217:**
+
+| Datei | Aufgabe |
+|---|---|
+| `exhaustive_217.py` | Erschöpfende Suche nach der Transpositionskonvention |
+| `new_approach_217.py` | Korrigierter Ansatz: `TRUPPENVERSCHIEBUNG` als Transpositionswort |
+| `refine_217.py` | Verfeinert die Transpositionskonvention |
+
+**Quellen-Arbeit (PDF und Scans):**
+
+| Datei | Aufgabe |
+|---|---|
 | `extract_friedman.py` | Holt Text aus dem Friedman-PDF |
+| `childs_scan.py` | Sucht ungelöste Seiten im Childs-Buch |
+| `pdf_page_order.py` | Ordnet gedruckte Seitenzahlen den PDF-Seiten zu |
+| `pdf_page_text.py` | Extrahiert Text einzelner PDF-Seiten |
+| `pdf_tail.py` | Zeigt PDF-Text nach einem Suchbegriff |
+| `find_page38.py` | Findet gedruckte Seite 38 in der OCR |
+| `map_jpgs.py` | Ordnet die JPG-Dateien den PDF-Seiten zu |
 
 ---
 
