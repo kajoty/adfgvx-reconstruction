@@ -203,8 +203,13 @@ Es gilt:
 - `conflicts > 0` bedeutet: Mindestens ein Zeichen ist falsch.
 
 Das Projekt hat das geprüft.
-Ergebnis: **11 von 11 gelösten Seiten zeigen nach der Korrektur null Konflikte.**
+Ergebnis: **Alle 11 geprüften Seiten zeigen nach der Korrektur null Konflikte.**
 Vorher lagen sie bei 34 bis 107 Konflikten.
+
+Warum 11 und nicht 12? Das Projekt kennt 12 Lösungen.
+Aber eine davon (Seite `??`, Schlüssel `Nov22-24`) hat keine Korpus-Seite in `data/corpus.py`.
+Sie stammt aus einem Forum und ist nicht Teil der 22 Seiten.
+Der Konflikt-Test läuft nur über Korpus-Seiten — deshalb 11.
 
 Die Konfliktzahl ist also ein Beweis, kein Gefühl.
 Aber sie hat einen Haken: Man braucht den Klartext, um sie zu messen.
@@ -247,6 +252,10 @@ Die Sprache ist zu eigen. Man sollte es abschalten oder niedrig gewichten.
 
 ### Die Analyse (`analysis/`)
 
+Die Tabelle zeigt die wichtigsten Skripte — nicht alle.
+Der Ordner `analysis/` enthält über 20 Dateien.
+Viele sind Einzeluntersuchungen zu einer bestimmten Seite.
+
 | Datei | Aufgabe |
 |---|---|
 | `verify_article_claim.py` | Prüft die Behauptung zu Seite 217 |
@@ -265,8 +274,8 @@ Die Sprache ist zu eigen. Man sollte es abschalten oder niedrig gewichten.
 ### Der Bestand
 
 - 22 Seiten im Korpus (`data/corpus.py`)
-- 12 davon gelöst (`data/solutions.py`)
-- 10 noch offen
+- 12 Lösungen (`data/solutions.py`) — 11 davon zu Korpus-Seiten, 1 extra (Seite `??`)
+- 10 Korpus-Seiten noch offen
 - 14 bekannte Schlüsselwörter (`core/adfgvx.py`)
 - 3 Seiten mit Anomalien
 
@@ -305,10 +314,15 @@ Beide Seiten nutzen den Schlüssel `Oct28-31`.
 Die Permutation ist `[6,15,12,16,5,7,14,4,13,8,11,1,17,2,10,3,18,9]`.
 Die Tabellen stehen in `data/childs_additional.py`.
 
-### RICHI-240 — teilweise
+### RICHI-240 — verifiziert, nicht selbst gelöst
 
 Von 240 Zeichen fehlen 20.
 Die Ziffern 7, 9 und 6 stammen aus einem französischen Telegramm.
+
+**Wichtig:** RICHI-240 wurde **nicht von diesem Projekt** gelöst.
+Der Artikel von Astra (prinzai.com) hat es getan.
+Dieses Projekt hat die Behauptung **geprüft** — und bestätigt.
+Das ist ein Unterschied. Gelöst heißt: selbst gerechnet. Verifiziert heißt: nachgerechnet.
 
 ---
 
@@ -337,7 +351,7 @@ Alle Skripte sind Python 3.
 Man startet sie aus dem Projektverzeichnis.
 
 ```bash
-cd /home/user/Projekte/adfgvx
+cd adfgvx
 
 # Chiffre testen
 python3 -c "import bootstrap; from core.adfgvx import *; print(KEYS.keys())"
@@ -358,6 +372,20 @@ python3 tests/test_171.py
 
 `bootstrap.py` setzt den Projektpfad auf `sys.path`.
 Man muss es nur einmal importieren.
+
+Es gibt keine externen Abhängigkeiten. Nur die Standardbibliothek.
+
+### Das Projekt auf GitHub
+
+Das Projekt liegt als Open Source bereit:
+
+**https://github.com/kajoty/adfgvx-reconstruction**
+
+- **README.md** — der kompakte Einstieg. Oben: Worum geht es, Stand, Loslegen. Unten: das Arbeitsprotokoll mit allen Befunden.
+- **LICENSE** — MIT. Der Code darf frei genutzt werden.
+- Die historischen Quellen in `docs/` unterliegen eigenen Rechten. Sie werden zu Forschungszwecken zitiert.
+
+Wer einen Fehler findet oder eine Seite löst: Ein Issue auf GitHub genügt.
 
 ---
 
