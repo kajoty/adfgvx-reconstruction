@@ -337,12 +337,26 @@ EINENGLISCHERKREUZEREINLIEGXSEWASTOPOLXS4STENX
 EINGESCHWADERDERXALLIIERTENFOLGT26STENX
 ```
 
-**Achtung, zwei Dinge nicht verwechseln.**
-`TRUPPENVERSCHIEBUNG` ist das **Transpositionswort** (19 Buchstaben), nicht das Quadrat.
-Das Quadrat ist eine eigene 6×6-Tabelle und wird separat gebraucht.
-Die Auffüllregel aus Abschnitt 2 (`make_square()`) gilt nur für das Quadrat.
-Auf `TRUPPENVERSCHIEBUNG` ist sie nicht anwendbar — 19 Buchstaben ergeben kein 36-Zeichen-Quadrat.
-Genau diese Verwechslung war ein früherer Denkfehler des Projekts.
+**Achtung — das Schlüsselwort liefert beides.**
+Der Artikel nutzt `TRUPPENVERSCHIEBUNG` für **beide Stufen**:
+
+1. **Als Quadrat-Grundlage.** Der Artikel druckt ein 6×6-Quadrat mit
+   ADFGVX-Achsen ab, das aus dem Schlüsselwort abgeleitet ist (Zeile 1:
+   `T R U P E …` — die Keyword-Reihenfolge).
+2. **Als Transpositionswort.** Alphabetisch sortiert ergeben die 19
+   Buchstaben die Spaltenreihenfolge (das `T` hat Rang 16, das `R` Rang 13).
+
+**Die Füllregel ist aber nicht die naive.** Füllt man nach der schematischen
+Regel aus Abschnitt 2 (`make_square()`: Keyword ohne Doppel + Restalphabet),
+bekommt man Unsinn — nur 29 von 85 Zeichen stimmen. Das historische Quadrat
+mischt die Ziffern **einflechtend** zwischen die Keyword-Buchstaben
+(Zeile 1: `T R U P E 4`, Zeile 2: `N V S C 2 H` — im Artikel-Bild sind alle
+Ziffern handschriftlich nachgetragen). Die 23 aus dem Klartext belegten
+Quadratzellen decken sich zu 82 von 85 Zeichen mit dieser Version. 0 Konflikte.
+
+Genau diese feine Unterscheidung — *Keyword liefert das Quadrat, aber nicht
+durch die schematische Füllregel* — war der Denkfehler des Projekts: erst
+wurde die Konvention ignoriert, dann die Füllregel übertrieben.
 
 Drei Tests laufen durch:
 
@@ -352,6 +366,12 @@ Drei Tests laufen durch:
 
 **Wichtig:** Eine frühere „Widerlegung" im Projekt war ein Denkfehler.
 Der Fehler lag in der Rangfolge der Permutation. Siehe Abschnitt 2.
+
+**Zusatz 24.09.2026 — Quelle präzisiert.** Der Artikel nutzt
+`TRUPPENVERSCHIEBUNG` für Quadrat **und** Transposition. Das Quadrat ist
+kein schematisches `make_square()`-Produkt, sondern ein historisches
+Keyword-Quadrat mit eingestreuten Ziffern (im Artikel-Bild handschriftlich
+nachgetragen). Siehe oben.
 
 ### RICHI-274 und RICHI-338 — gelöst
 

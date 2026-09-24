@@ -77,8 +77,10 @@ Schwellenwert, kein Graubereich. Es ist ein Beweis, kein Gefühl.
 | bekannte Schlüssel | 14 |
 | Seiten mit Anomalie | 3 |
 
-**Seite 217 (RICHI-170)** ist gelöst und bewiesen. Das Transpositionswort
-lautet `TRUPPENVERSCHIEBUNG`. Drei unabhängige Tests bestätigen das Ergebnis:
+**Seite 217 (RICHI-170)** ist gelöst und bewiesen. Das Schlüsselwort
+`TRUPPENVERSCHIEBUNG` liefert **beide** Stufen: das 6×6-Quadrat (als
+Keyword-Quadrat mit eingestreuten Ziffern) und die Transpositions-Permutation
+(alphabetische Rangfolge). Drei unabhängige Tests bestätigen das Ergebnis:
 Transposition, Substitution, Roundtrip.
 
 ## Loslegen
@@ -320,7 +322,7 @@ veroeffentlicht. Der Engpass war nie die Kryptographie, sondern die
 
 | | RICHI-170 (Seite 217) | RICHI-240 |
 |---|---|---|
-| Schluessel | `TRUPPENVERSCHIEBUNG` (Childs S. 214-215) | Nov10-12 (Lasry-Liste) |
+| Schluessel | `TRUPPENVERSCHIEBUNG` (Childs S. 214-215) — liefert Quadrat UND Permutation | Nov10-12 (Lasry-Liste) |
 | Problem | Transkriptions-/Empfangsfehler | 20 von 240 Zeichen fehlen |
 | Astras Beitrag | korrekte Konvention anwenden | Position der Luecke finden |
 | Verifikation | Roundtrip + 0 Konflikte | histor. Telegramm → 7/9/6 |
