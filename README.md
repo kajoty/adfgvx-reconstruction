@@ -543,6 +543,22 @@ fremd überlieferte Daten geprüft.
 Seiten beschaffen (Kommentarthread, Original-Seitenbilder). Das ist der
 eigentliche Engpass — nicht die Kryptanalyse.
 
+**Stand dieser Suche (2026-09-24).** Beide im Repo vorhandenen Quellen sind
+systematisch ausgeschöpft:
+
+- `data/texte.txt` (56 Kommentare) enthält vollständige Transkriptionen nur
+  für **100** (Armin #13), **105** (Norbert #15) und **146** (Norbert #19).
+  Für 164a/164b gibt es nur Fragmente mit Notationszeichen (`A:`, `f:`,
+  `[f]:`), für alle übrigen Seiten nur Prosa-Beschreibungen der Korrekturen.
+- `data/corpus.py` liefert nur bei **Seite 100** einen nahezu intakten
+  Rohgeheimtext (99,2 % Zeichentreffer zum Soll-CT). Alle anderen Roh-CTs
+  liegen bei 0–32 % — sie sind keine verwertbare Transkription.
+
+Damit ist ohne **neue externe Quelle** (Original-Seitenbilder der
+Cipherbrain-Seite, weitere Kommentare, Archivmaterial) kein weiterer
+unabhängiger Beleg zu gewinnen. Die 9 synthetischen Seiten bleiben bis dahin
+ehrlich als solche gekennzeichnet.
+
 ## Die ungelösten Seiten
 
 | Seite | CT | Bigramme | Zellen | Lücken |
