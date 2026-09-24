@@ -71,11 +71,12 @@ Schwellenwert, kein Graubereich.
 
 > **Wichtig — was die Konfliktzahl beweist und was nicht.** Die Konfliktzahl
 > ist nur dann ein *Beweis*, wenn sie gegen ein **unabhängig überliefertes**
-> Chiffrat geprüft wird. Das trifft auf die Seiten **105** und **146** zu
-> (echte Transkription aus dem Kommentarthread). Für die übrigen gelösten
-> Seiten wurde der Geheimtext aus dem Klartext **rekonstruiert**
-> (`transpose(bigrams(pt), perm)`) — dort ist der Roundtrip per Konstruktion
-> garantiert und die Konfliktzahl 0 trivial. Siehe „Evidenzlage" unten.
+> Chiffrat geprüft wird. Das trifft auf die Seiten **100**, **105** und **146**
+> zu (echte Transkription aus `corpus.py` bzw. dem Kommentarthread). Für die
+> übrigen gelösten Seiten wurde der Geheimtext aus dem Klartext
+> **rekonstruiert** (`transpose(bigrams(pt), perm)`) — dort ist der Roundtrip
+> per Konstruktion garantiert und die Konfliktzahl 0 trivial. Siehe
+> „Evidenzlage" unten.
 
 ## Stand
 
@@ -83,7 +84,7 @@ Schwellenwert, kein Graubereich.
 |---|---|
 | Seiten im Korpus | 22 |
 | davon gelöst | 12 |
-| davon unabhängig belegt | 2 (105, 146) |
+| davon unabhängig belegt | 3 (100, 105, 146) |
 | noch offen | 10 |
 | bekannte Schlüssel | 14 |
 | Seiten mit Anomalie | 3 |
@@ -100,10 +101,11 @@ Die Headline-Ergebnisse:
 - **RICHI-240** — verifiziert, aber nicht von diesem Projekt gelöst.
 
 > **Zur Ehrlichkeit der Zahlen.** Von den 12 gelösten Korpus-Seiten sind nur
-> **2** (105, 146) gegen ein unabhängig überliefertes Chiffrat geprüft. Bei den
-> übrigen 10 wurde der Geheimtext aus dem Klartext rekonstruiert — der Beweis
-> ist dort zirkulär. Die externen Beweise (217, RICHI-264/274/338, RICHI-222)
-> sind davon nicht betroffen. Details: „Evidenzlage der gelösten Seiten".
+> **3** (100, 105, 146) gegen ein unabhängig überliefertes Chiffrat geprüft.
+> Bei den übrigen 9 wurde der Geheimtext aus dem Klartext rekonstruiert — der
+> Beweis ist dort zirkulär. Die externen Beweise (217, RICHI-264/274/338,
+> RICHI-222) sind davon nicht betroffen. Details: „Evidenzlage der gelösten
+> Seiten".
 
 ## Loslegen
 
@@ -189,7 +191,7 @@ CT = Geheimtext in ADFGVX-Zeichen. Klartext in Zeichen ohne Worttrenner
 | Spruch | CT-Zeichen | Klartext | Schlüssel | Status |
 |---|---|---|---|---|
 | Korpus 73 | 176 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 100 | 124 | 62 | `Nov1-3` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
+| Korpus 100 | 124 | 62 | `Nov1-3` | gelöst, bewiesen (Transkription, 0 Konflikte) |
 | Korpus 105 | 290 | 143 | `Nov1-3` | gelöst, bewiesen (Transkription, 0 Konflikte) |
 | Korpus 109 | 258 | 125 | `Nov1-3` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
 | Korpus 132 | 153 | 77 | `Nov4-6` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
@@ -218,10 +220,6 @@ CT = Geheimtext in ADFGVX-Zeichen. Klartext in Zeichen ohne Worttrenner
 | RICHI-240 | 220 | 240 | `Nov10-12` | verifiziert, nicht selbst gelöst (20 Zeichen fehlen) |
 
 <!-- /GENERATED -->
-
-
-
-
 
 ---
 
@@ -479,10 +477,10 @@ Gegen die verifizierten Klartexte der gelösten Seiten:
 
 > **Achtung — Evidenzlage.** Diese Tabelle belegt, dass die Konfliktzahl als
 > *Kriterium* funktioniert. Sie belegt **nicht** für jede Seite, dass der
-> Klartext unabhängig gesichert ist: Nur bei **105** und **146** stammt der
-> Geheimtext aus einer echten Transkription. Bei den übrigen 9 Seiten ist er
-> synthetisch aus dem Klartext erzeugt — der Roundtrip ist dort tautologisch.
-> Details im Abschnitt „Evidenzlage der gelösten Seiten".
+> Klartext unabhängig gesichert ist: Nur bei **100**, **105** und **146**
+> stammt der Geheimtext aus einer echten Transkription. Bei den übrigen 8
+> Seiten ist er synthetisch aus dem Klartext erzeugt — der Roundtrip ist dort
+> tautologisch. Details im Abschnitt „Evidenzlage der gelösten Seiten".
 
 **Aber: Es gibt kein brauchbares blindes Ersatzkriterium.** Zwei Kandidaten
 wurden geprüft und verworfen:
@@ -502,17 +500,23 @@ wichtig, weil sie bestimmt, wie viel ein Roundtrip wert ist.
 
 | Evidenz | Seiten | Was der Roundtrip beweist |
 |---|---|---|
-| **Unabhängige Transkription** | 105, 146 | Echter Beweis: Klartext, Quadrat und Permutation passen zu einem **fremd überlieferten** Chiffrat. |
-| **Synthetisch rekonstruiert** | 100, 109, 132, 153a, 164a, 164b, 171, 176a, 187, `??` | **Kein** Beweis. Der Geheimtext wurde per `transpose(bigrams(pt), perm)` aus dem Klartext erzeugt — der Roundtrip ist per Konstruktion garantiert. |
+| **Unabhängige Transkription** | 100, 105, 146 | Echter Beweis: Klartext, Quadrat und Permutation passen zu einem **fremd überlieferten** Chiffrat. |
+| **Synthetisch rekonstruiert** | 109, 132, 153a, 164a, 164b, 171, 176a, 187, `??` | **Kein** Beweis. Der Geheimtext wurde per `transpose(bigrams(pt), perm)` aus dem Klartext erzeugt — der Roundtrip ist per Konstruktion garantiert. |
 
 **Warum das so ist.** Die Original-Chiffrate in `corpus.py` sind durch
-Empfangsfehler beschädigt. Für 105 und 146 liegt im Kommentarthread eine
-vollständige, korrigierte Transkription vor. Für die übrigen Seiten gibt es
-keine — die Korrekturen sind dort nur in Prosa beschrieben oder fehlen ganz
-(siehe `UNVERIFIED` in `data/corpus_corrected.py`). Statt die Lücke
-offenzulassen, wurde der Geheimtext aus dem verifizierten Klartext
-**zurückgerechnet**. Das ist mathematisch korrekt, aber als *Verifikation*
-zirkulär.
+Empfangsfehler beschädigt. Für **105** und **146** liegt im Kommentarthread
+(`texte.txt`) eine vollständige, korrigierte Transkription vor. Für **100**
+liefert `corpus.py` selbst eine praktisch intakte Transkription: Der
+Korpus-CT hat exakt die richtige Länge (124 Zeichen) und weicht nur an
+**einer** Position ab (Position 20: `V` statt `A`). Diese Korrektur ist
+**eindeutig** — von allen fünf möglichen Ein-Zeichen-Substitutionen führt nur
+`V→A` zum Soll-Klartext, und sie ist zugleich die sprachlich beste
+(`KEINESTOERUNG` statt `KEINESTOERING`). Für die übrigen Seiten gibt es keine
+verwertbare Transkription — die Korrekturen sind dort nur in Prosa
+beschrieben oder fehlen ganz (siehe `UNVERIFIED` in
+`data/corpus_corrected.py`). Statt die Lücke offenzulassen, wurde der
+Geheimtext aus dem verifizierten Klartext **zurückgerechnet**. Das ist
+mathematisch korrekt, aber als *Verifikation* zirkulär.
 
 **Verstärkt wird das durch unvollständige Quadrate.** `make_square()` füllt
 `-`-Lücken im Substitutionsquadrat mit dem Restalphabet — eine willkürliche
@@ -535,7 +539,7 @@ nicht an dieser Schwäche: **Seite 217 (RICHI-170)**, **RICHI-264**,
 **RICHI-274/338** und die **Struktur von RICHI-222** wurden gegen echte,
 fremd überlieferte Daten geprüft.
 
-**Nächster Schritt:** unabhängige Transkriptionen für die 10 synthetischen
+**Nächster Schritt:** unabhängige Transkriptionen für die 9 synthetischen
 Seiten beschaffen (Kommentarthread, Original-Seitenbilder). Das ist der
 eigentliche Engpass — nicht die Kryptanalyse.
 
@@ -604,7 +608,8 @@ flowchart TD
 | Seite 217 lösen (0 Lücken, Schlüssel bekannt) | **erledigt** |
 | RICHI-264 und RICHI-222 aus dem Childs-Buch | **erledigt** |
 | Evidenzlage der gelösten Seiten ehrlich ausweisen | **erledigt** |
-| Unabhängige Transkriptionen für die 10 synthetischen Seiten | **offen (Engpass)** |
+| Seite 100 als echte Transkription nachweisen (1 Zeichen) | **erledigt** |
+| Unabhängige Transkriptionen für die 9 synthetischen Seiten | **offen (Engpass)** |
 | Quadrat-Lücken auflösen (`Nov13-15a/b`, `Nov10-12`, `Nov7-9`) | offen |
 | Seite 170 (0 Lücken) mit Stufe 3 angreifen | offen |
 | Lücken-Suche mit Zufalls-Baseline systematisieren | offen |

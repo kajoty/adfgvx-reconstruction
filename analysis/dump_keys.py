@@ -59,6 +59,8 @@ def build_message_table() -> str:
             # (CORRECTED) sind gegen echtes Chiffrat geprueft. Alle anderen
             # wurden synthetisch aus dem Klartext rekonstruiert -> der Roundtrip
             # ist per Konstruktion garantiert und beweist nichts.
+            # CORRECTED umfasst: 100 (corpus.py, 1 eindeutige Korrektur),
+            # 105 und 146 (texte.txt, Norbert #15/#19).
             if page in CORRECTED:
                 status = "gelöst, bewiesen (Transkription, 0 Konflikte)"
             else:
@@ -126,7 +128,10 @@ def insert_into_readme() -> None:
     if BLOCK_BEGIN in text:
         start = text.index(BLOCK_BEGIN)
         end = text.index(BLOCK_END) + len(BLOCK_END)
-        text = text[:start] + block + text[end:]
+        # Idempotent: Leerraum direkt nach dem Block entfernen, damit
+        # wiederholte Laeufe keine Leerzeilen anhaeufen.
+        rest = text[end:].lstrip("\n")
+        text = text[:start] + block + "\n" + rest
     else:
         marker = "# Arbeitsprotokoll"
         idx = text.index(marker)

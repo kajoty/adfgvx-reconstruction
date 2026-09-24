@@ -324,13 +324,14 @@ Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
 Eine vollständige Liste aller Sprüche mit Schlüsseln, Quadraten und
 Permutationen steht in der README (`analysis/dump_keys.py` erzeugt sie).
 
-> **Evidenzlage.** Von den 12 gelösten Korpus-Seiten sind nur **2** (105, 146)
-> gegen ein unabhängig überliefertes Chiffrat geprüft. Bei den übrigen 10 wurde
-> der Geheimtext aus dem Klartext rekonstruiert (`transpose(bigrams(pt), perm)`)
-> — der Roundtrip ist dort per Konstruktion garantiert und beweist nichts.
-> Verstärkt wird das durch unvollständige Quadrate (`Nov13-15a/b`, `Nov10-12`,
-> `Nov7-9`), deren `-`-Lücken `make_square()` willkürlich füllt. Die externen
-> Beweise (217, RICHI-264/274/338, RICHI-222) sind davon nicht betroffen.
+> **Evidenzlage.** Von den 12 gelösten Korpus-Seiten sind nur **3** (100, 105,
+> 146) gegen ein unabhängig überliefertes Chiffrat geprüft. Bei den übrigen 9
+> wurde der Geheimtext aus dem Klartext rekonstruiert
+> (`transpose(bigrams(pt), perm)`) — der Roundtrip ist dort per Konstruktion
+> garantiert und beweist nichts. Verstärkt wird das durch unvollständige
+> Quadrate (`Nov13-15a/b`, `Nov10-12`, `Nov7-9`), deren `-`-Lücken
+> `make_square()` willkürlich füllt. Die externen Beweise (217,
+> RICHI-264/274/338, RICHI-222) sind davon nicht betroffen.
 > Details: README, Abschnitt „Evidenzlage der gelösten Seiten".
 
 ### Seite 217 (RICHI-170) — gelöst und bewiesen

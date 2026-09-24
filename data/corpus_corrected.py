@@ -19,10 +19,14 @@ Beweis (Seite 146, Norbert #19):
 
 Verifikationsstand (gegen `solutions.SOLVED`)
 --------------------------------------------
+  100  OK   score -20.88  39 hits   exakter Klartext-Match
+            Quelle: `corpus.py` (echte Transkription), 1 eindeutige Korrektur
   105  OK   score -27.15  47 hits   exakter Klartext-Match
+            Quelle: texte.txt (Norbert #15)
   146  OK   score -21.33  88 hits   exakter Klartext-Match
+            Quelle: texte.txt (Norbert #19)
 
-  Die uebrigen 10 Seiten sind NICHT enthalten, weil ihre korrigierten
+  Die uebrigen 9 Seiten sind NICHT enthalten, weil ihre korrigierten
   Geheimtexte nicht verifiziert werden konnten (siehe unten).
 
 Wichtige Erkenntnisse aus der Analyse
@@ -64,6 +68,17 @@ from data.solutions import SOLVED
 # --------------------------------------------------------------------------
 
 CORRECTED: dict[str, str] = {
+    # Seite 100 — ECHTE Transkription aus `corpus.py` (nicht aus texte.txt!).
+    # Der Korpus-CT hat exakt die richtige Laenge (124 Zeichen) und weicht nur
+    # an EINER Position ab: Position 20 ist 'V', muss aber 'A' sein.
+    # Diese Korrektur ist EINDEUTIG: Von allen 5 moeglichen Ein-Zeichen-
+    # Substitutionen fuehrt nur V->A zum Soll-Klartext (und ist zugleich die
+    # sprachlich beste: KEINESTOERUNG statt KEINESTOERING/...).
+    # Beweis: decrypt(korpus_ct_mit_A_an_pos20, Nov1-3) == SOLVED['100'][1]
+    "100": (
+        "VDDADAADFGVVVAVGDAFVAAFGVDDVXFDFGGAAGXAAGGVADXGAXVXAXGAXAGAXDDG"
+        "DGVFFAXGDFGFDVGFAADVVGVXGDVGGDDADAVAGFXDFVADVDGDGFGDDFGDAVGAA"
+    ),
     # Norbert #15 (texte.txt Zeile 147)
     # "Group 10: Cancel X / Group 20: Cancel DG"
     # Original 290 Zeichen -> korrigiert 287 Zeichen (143 Bigramme)
@@ -98,7 +113,6 @@ UNVERIFIED: dict[str, tuple[str, str]] = {
         "Norbert #20 (texte.txt Zeile 225)",
         "314 Zeichen korrekt, aber Klartext weicht ab Position 1 ab",
     ),
-    "100": ("Armin #13", "Korrektur nur beschrieben, kein CT im Kommentar"),
     "187": ("Norbert #24", "Korrektur nur beschrieben, kein CT im Kommentar"),
     "176a": ("Norbert #26", "Korrektur nur beschrieben, kein CT im Kommentar"),
     "132": ("Norbert #37", "Korrektur nur beschrieben, kein CT im Kommentar"),
@@ -198,13 +212,14 @@ def main() -> None:
               f"{sc:8.2f} {hits:5}  {'OK' if ok else 'FEHLER'}")
 
     print("-" * 78)
-    print(f"Verifiziert (Transkription aus texte.txt): {len(CORRECTED)}/{len(SOLVED)}")
+    print(f"Verifiziert (echte Transkription)        : {len(CORRECTED)}/{len(SOLVED)}")
     print(f"Synthetisch rekonstruiert               : {len(RECONSTRUCTED)}/{len(SOLVED)}")
     print(f"Gesamt verfuegbar                       : "
           f"{len(CORRECTED) + len(RECONSTRUCTED)}/{len(SOLVED)}")
     print()
-    print("Hinweis: 'synthet.' = ct = transpose(bigrams(klartext), perm).")
-    print("         Roundtrip ist per Konstruktion garantiert.")
+    print("Hinweis: 'Transkr.' = echte Transkription (corpus.py bzw. texte.txt),")
+    print("         'synthet.' = ct = transpose(bigrams(klartext), perm).")
+    print("         Roundtrip ist bei 'synthet.' per Konstruktion garantiert.")
     print()
     print("Seiten mit fehlerhaftem/fehlendem Kommentar-CT (dokumentiert):")
     for page, (src, problem) in UNVERIFIED.items():
