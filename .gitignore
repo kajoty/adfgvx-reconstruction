@@ -49,3 +49,6 @@ Thumbs.db
 *.old
 *.orig
 *.tmp
+
+# Laufzeit-Logs der Hintergrund-Solver (run_detached.sh)
+logs/

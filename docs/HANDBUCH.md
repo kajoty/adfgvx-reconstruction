@@ -520,6 +520,46 @@ Man muss es nur einmal importieren.
 
 Es gibt keine externen Abhängigkeiten. Nur die Standardbibliothek.
 
+### Lange Läufe im Hintergrund
+
+Manche Löser rechnen Stunden.
+Wenn man sie in einem normalen Terminal startet, sterben sie, sobald die
+SSH-Verbindung abbricht — etwa wenn der Arbeitsplatz-PC in Standby geht.
+Der Prozess bekommt dann ein `SIGHUP` und wird beendet.
+
+Dafür gibt es `run_detached.sh`.
+Es startet ein Skript in einer **tmux**-Session.
+Die läuft unabhängig von SSH und VS Code weiter.
+
+```bash
+# Solver im Hintergrund starten
+./run_detached.sh analysis/solve_152.py --name s152
+
+# Live mitlesen
+./run_detached.sh --log s152
+
+# In die Session springen (Strg+B, dann D zum Lösen)
+./run_detached.sh --attach s152
+
+# Laufende Sessions anzeigen
+./run_detached.sh --list
+
+# Beenden
+./run_detached.sh --stop s152
+```
+
+Die Ausgabe landet zusätzlich in `logs/<name>.log`.
+Man kann VS Code schließen und den PC in Standby schicken — der Lauf geht weiter.
+
+**Warum das funktioniert.** Der Prozess hängt dann nicht mehr am
+SSH-Terminal, sondern am tmux-Server. Dessen Elternprozess ist `init` (PID 1).
+Ein Verbindungsabbruch erreicht ihn nicht mehr.
+
+**Wichtig:** Das schützt nur gegen den Abbruch der *Verbindung*.
+Wenn der **Analyse-Rechner selbst** in Standby geht, schläft die CPU — dann
+rechnet nichts mehr. Für einen headless Server schaltet man den Standby ab
+(`sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target`).
+
 ### Das Projekt auf GitHub
 
 Das Projekt liegt als Open Source bereit:
