@@ -5,6 +5,24 @@ Ersten Weltkriegs (Ostfront, 1918).
 
 **Erst die Daten reparieren, dann entschlüsseln.**
 
+Das Projekt hat **12 von 22** historischen Funksprüchen entschlüsselt.
+Die Methode: bekannte Schlüssel aus der Literatur nehmen, beschädigte
+Geheimtexte rekonstruieren, das Ergebnis exakt beweisen.
+
+---
+
+## Wegweiser
+
+Diese Datei hat drei Ebenen. Lies nur so tief, wie du brauchst.
+
+| Du willst... | Lies... |
+|---|---|
+| in 2 Minuten wissen, was das ist | diese README bis hier |
+| verstehen, wie ADFGVX funktioniert | [Handbuch](docs/HANDBUCH.md), Abschnitt 2 |
+| die Beweise nachvollziehen | [Handbuch](docs/HANDBUCH.md), Abschnitt 5 |
+| jeden Befund im Detail prüfen | das Arbeitsprotokoll unten |
+| den Code benutzen | Abschnitt „Loslegen" unten |
+
 ---
 
 ## Worum geht es?
@@ -89,12 +107,19 @@ importieren.
 
 ## Dokumentation
 
-Das **[Handbuch](docs/HANDBUCH.md)** erklärt das Projekt von Grund auf — für
-Außenstehende, in kurzen Sätzen, mit Bildern aus den Quellen. Wer neu hier ist,
-liest zuerst das Handbuch.
+Diese Dokumentation folgt dem Prinzip der gestuften Tiefe: Jede Ebene setzt die
+vorherige voraus, keine zwingt zur nächsten.
 
-Der Rest dieser Datei ist das **Arbeitsprotokoll**: Befunde, Sackgassen,
-Verifikationen. Er ist für Mitlesende gedacht, die tiefer einsteigen wollen.
+- **Ebene 1 — diese README (oben).** Was ist das, was hat es gebracht, wie
+  starte ich? Zwei Minuten.
+- **Ebene 2 — das [Handbuch](docs/HANDBUCH.md).** Verstehen. Wie ADFGVX
+  funktioniert, warum die Daten das Problem sind, was das Projekt gelernt hat.
+  Für Außenstehende, in kurzen Sätzen, mit Bildern aus den Quellen.
+- **Ebene 3 — das Arbeitsprotokoll (unten in dieser Datei).** Nachvollziehen.
+  Alle Befunde, Sackgassen und Verifikationen im Detail. Für Mitlesende, die
+  jede Zahl prüfen wollen.
+
+Wer neu hier ist, liest Ebene 1 und dann Ebene 2. Ebene 3 ist Nachschlagewerk.
 
 ---
 
