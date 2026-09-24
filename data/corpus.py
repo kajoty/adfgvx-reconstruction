@@ -5,6 +5,16 @@ Korpus der ungeloesten ADFGVX-Kryptogramme (Childs' Buch, 1918).
 Quelle: Klaus Schmeh, Cipherbrain, 23.02.2017.
 Transkription: vom Nutzer bereitgestellt (2026-09-21).
 
+Originalquelle (2026-09-24 verifiziert):
+    https://scienceblogs.de/klausis-krypto-kolumne/unsolved-adfxvx-messages-from-world-war-i/
+    Der Artikel enthaelt die Geheimtexte als PNG UND als Klartext-Transkription
+    im HTML. Beides liegt unter `docs/cipherbrain_pages/` (article.html,
+    article_body.txt, cryptogram-01..19.png). Der Parser
+    `analysis/parse_cipherbrain.py` extrahiert die Artikel-Transkription und
+    vergleicht sie mit diesem Korpus: 14 von 22 Seiten stimmen zeichengenau
+    (100.0 %) ueberein. Dieser Korpus ist also eine TREUE Abschrift der
+    Originalquelle -- keine beschaedigte Transkription.
+
 '-' = unleserliches Zeichen, 'v'/'V' in Kleinschreibung = unsicher gelesen.
 """
 

@@ -559,6 +559,57 @@ Cipherbrain-Seite, weitere Kommentare, Archivmaterial) kein weiterer
 unabhängiger Beleg zu gewinnen. Die 9 synthetischen Seiten bleiben bis dahin
 ehrlich als solche gekennzeichnet.
 
+### Die Originalquelle ist gefunden (2026-09-24)
+
+Die oben genannte „neue externe Quelle" **existiert und ist abrufbar**. Der
+Artikel selbst enthält die Geheimtexte nicht nur als Bild, sondern als
+**Klartext-Transkription im HTML**:
+
+> Klaus Schmeh, *Unsolved ADFXVX messages from World War I*, Cipherbrain,
+> 23.02.2017 (Seite bereitgestellt von George Lasry) —
+> `scienceblogs.de/klausis-krypto-kolumne/unsolved-adfxvx-messages-from-world-war-i/`
+
+Das Rohmaterial liegt jetzt im Repo unter `docs/cipherbrain_pages/`:
+
+| Datei | Inhalt |
+|---|---|
+| `article.html` | Original-HTML der Seite (116 KB) |
+| `article_body.txt` | extrahierter Artikeltext mit Bildmarkern (13 KB) |
+| `cryptogram-01..19.png` | die 19 Original-Geheimtext-Bilder (614 px breit) |
+
+Die Transkription ist als `data/article_transcription.py` (`ARTICLE_CT`,
+22 Blöcke) verfügbar; `analysis/parse_cipherbrain.py` extrahiert sie aus dem
+HTML, `analysis/verify_corpus_provenance.py` vergleicht sie mit dem Korpus.
+
+**Ergebnis: `corpus.py` ist eine treue Abschrift der Originalquelle.**
+**14 von 22 Seiten stimmen zeichengenau (100,0 %)** überein — 73, 105, 109,
+132, 146, 152, 170, 187, 198, 217, 153a, 176a, 176b, 187b. Die übrigen acht
+Abweichungen sind rein kosmetisch:
+
+- **zusätzliche `-`** (unleserliche Zeichen), die der Korpus konservativer
+  setzt (158, 171, 189, 215, 153b, 164a, 164b), bzw.
+- **bereits angewandte Kommentar-Korrekturen** (Seite 100: die `DG`-Einfügung
+  aus Armin #13) und **entfernte Klammernotation** (158: `(VVFGD)`, `{VVDAD}`).
+
+**Seite 100 — die Originalquelle bestätigt die `DG`-Einfügung.** Der
+Artikel-Block für Seite 100 hat 122 Zeichen, der Korpus 124. Der Unterschied
+ist **exakt** die `DG`-Einfügung aus Armin #13 an Position 110:
+`Korpus == Artikel + 'DG'`. Allein entschlüsselt der Artikel-Block zu
+Kauderwelsch (Score −33,25, 0 Treffer); mit der `DG`-Einfügung wird er
+lesbar (Score −21,22, 38 Treffer). Erst die zusätzliche Korrektur `V→A` an
+CT-Position 20 ergibt exakt den verifizierten Klartext (Score −20,88,
+39 Treffer). Artikel und Korpus lesen an Position 20 **beide** ein `V` — die
+`V→A`-Korrektur ist also eine *separate* Korrektur, die auf beide Quellen
+gleichermaßen anzuwenden ist. Die Originalquelle **bestätigt damit die
+`DG`-Einfügung** und widerspricht der Transkription an keiner Stelle.
+
+**Konsequenz.** Die Herkunft des Korpus ist jetzt lückenlos belegt: Er ist
+keine beschädigte Transkription, sondern die (leicht bereinigte) Abschrift
+der Originalquelle. Für die 9 synthetischen Seiten fehlt weiterhin ein
+*unabhängiger* Beleg — die Originalquelle liefert nur **dieselbe**
+Transkription, die der Korpus bereits enthält. Der Engpass verschiebt sich
+damit von „Quelle unbekannt" zu „Quelle bekannt, aber nur einfach belegt".
+
 ## Die ungelösten Seiten
 
 | Seite | CT | Bigramme | Zellen | Lücken |
