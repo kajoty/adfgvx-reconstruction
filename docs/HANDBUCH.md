@@ -591,6 +591,42 @@ Ein Prüfbericht über die Scans liegt in `docs/childs_scan_report.txt`.
 
 Ein Entwurf für einen Kommentar auf Cipherbrain liegt in `docs/cipherbrain_kommentar_entwurf.md`.
 
+### Der Cipherbrain-Artikel (Originalquelle)
+
+Der Artikel, aus dem die 22 Funksprüche stammen, ist selbst eine Quelle —
+und zwar eine bessere, als lange angenommen.
+
+Klaus Schmeh: *Unsolved ADFXVX messages from World War I*, Cipherbrain,
+23.02.2017 (Sammlung von George Lasry):
+`scienceblogs.de/klausis-krypto-kolumne/unsolved-adfxvx-messages-from-world-war-i/`
+
+Der Artikel enthält die Geheimtexte **nicht nur als Bild**, sondern als
+**Klartext-Transkription im HTML**. Das Rohmaterial liegt unter
+`docs/cipherbrain_pages/`:
+
+| Datei | Inhalt |
+|---|---|
+| `article.html` | Original-HTML der Seite |
+| `article_body.txt` | extrahierter Artikeltext mit Bildmarkern |
+| `cryptogram-01..19.png` | die 19 Original-Geheimtext-Bilder |
+
+Die Transkription ist als `data/article_transcription.py` (`ARTICLE_CT`)
+verfügbar. `analysis/parse_cipherbrain.py` extrahiert sie aus dem HTML,
+`analysis/verify_corpus_provenance.py` vergleicht sie mit dem Korpus.
+
+**Befund: `corpus.py` ist eine treue Abschrift der Originalquelle.**
+14 von 22 Seiten stimmen zeichengenau (100,0 %) überein. Die übrigen acht
+Abweichungen sind rein kosmetisch — zusätzliche `-` (unleserliche Zeichen)
+oder bereits angewandte Kommentar-Korrekturen (Seite 100: die `DG`-Einfügung
+aus Armin #13). Der Korpus ist also **keine beschädigte Transkription**,
+sondern die (leicht bereinigte) Abschrift der Quelle. Der Test
+`tests/test_provenance.py` prüft das.
+
+**Was das nicht löst.** Die Originalquelle liefert nur *dieselbe*
+Transkription, die der Korpus bereits enthält. Für die 9 synthetischen
+Seiten fehlt weiterhin ein *unabhängiger* Beleg. Der Engpass verschiebt sich
+damit von „Quelle unbekannt" zu „Quelle bekannt, aber nur einfach belegt".
+
 ---
 
 ## 11. Die Regeln dieses Handbuchs
