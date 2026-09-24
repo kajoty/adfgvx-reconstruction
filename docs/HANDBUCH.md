@@ -288,7 +288,8 @@ Der Ordner enthält 36 Skripte. Hier ist die vollständige Liste.
 | `search_fix2.py` | Korrekturen mit 1–2 Einfügungen/Löschungen |
 | `fix_search.py` | Sucht Einfüge-/Löschoperationen für lesbaren Text |
 | `run_corpus.py` | Testet den ganzen Korpus gegen alle Schlüssel |
-| `solve_152.py` | Gezielter Angriff auf Seite 152 |
+| `solve_152.py` | Gezielter Angriff auf Seite 152 (SA, langsam) |
+| `solve_152_fast.py` | Seite 152 mit dem analytischen Solver (schnell) |
 | `solve_73.py` | Lösungsversuch Seite 73: alle Schlüssel durchprobieren |
 
 **Anomalien:**
@@ -533,7 +534,7 @@ Die läuft unabhängig von SSH und VS Code weiter.
 
 ```bash
 # Solver im Hintergrund starten
-./run_detached.sh analysis/solve_152.py --name s152
+./run_detached.sh analysis/solve_152_fast.py --name s152
 
 # Live mitlesen
 ./run_detached.sh --log s152
