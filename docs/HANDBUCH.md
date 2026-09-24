@@ -261,6 +261,9 @@ Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
 | `verify_article_claim.py` | Prüft die Behauptung zu Seite 217 |
 | `verify_217.py` | Vollständige Prüfung aller Konventionen für Seite 217 |
 | `verify_solutions.py` | Prüft alle gelösten Seiten gegen den Klartext |
+| `verify_richi_264.py` | Beweis für RICHI-264 (2 Reparaturen, Roundtrip) |
+| `richi_222_reconstruct.py` | RICHI-222: Struktur-Beweis + Beam-Search-Kandidat |
+| `dump_keys.py` | Erzeugt die Schlüssel- und Spruchtabellen für die README |
 | `rank_conflicts.py` | Belegt die Konfliktzahl als exaktes Kriterium |
 
 **Reparatur und Suche:**
@@ -315,6 +318,11 @@ Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
 - 10 Korpus-Seiten noch offen
 - 14 bekannte Schlüsselwörter (`core/adfgvx.py`)
 - 3 Seiten mit Anomalien
+- Dazu aus dem Childs-Buch: RICHI-264 (bewiesen), RICHI-222 (Struktur bewiesen),
+  RICHI-274 und RICHI-338 (verifiziert)
+
+Eine vollständige Liste aller Sprüche mit Schlüsseln, Quadraten und
+Permutationen steht in der README (`analysis/dump_keys.py` erzeugt sie).
 
 ### Seite 217 (RICHI-170) — gelöst und bewiesen
 
@@ -350,6 +358,51 @@ Der Fehler lag in der Rangfolge der Permutation. Siehe Abschnitt 2.
 Beide Seiten nutzen den Schlüssel `Oct28-31`.
 Die Permutation ist `[6,15,12,16,5,7,14,4,13,8,11,1,17,2,10,3,18,9]`.
 Die Tabellen stehen in `data/childs_additional.py`.
+
+### RICHI-264 — aus dem Childs-Buch, gelöst und bewiesen
+
+Der erste Funkspruch aus dem Childs-Buch, der nicht im 22-Seiten-Korpus steht.
+Der Schlüssel `Nov1-3` war schon bewiesen. Der Geheimtext enthielt zwei Fehler:
+
+1. Bigramm 63: `AD` statt `AG` — eine D/G-Verwechslung (Morse: `D = -..`, `G = --.`).
+2. Nach Bigramm 64 fehlte das Bigramm `XG` — eine Löschung.
+
+Nach beiden Reparaturen gilt der volle Beweis: Dekodierung und Re-Encryption
+stimmen exakt. Der Klartext (133 Zeichen):
+
+```
+DEMNACHGEHENNUMEHRSAEMTLICHESCHIFFEVONKOSPOLINACHODESSABEZWX
+NIKOLAJEWXVERTEILTWIEFRX52751XUNDXBVGXRUMXXL7CHXROEMX2XGROSSXBXFRX52787XX
+```
+
+Lesefassung: *Demnach gehen nunmehr sämtliche Schiffe von Kospoli nach Odessa
+bzw. Nikolajew. Verteilt wie Fr. 52751 und B.V.G. rum. L7 Ch. Röm. 2. Groß B.
+Fr. 52787.* — Ein Marine-Funkspruch vom 1. November 1918.
+
+Reproduzierbar: `python3 analysis/verify_richi_264.py`
+
+### RICHI-222 — Struktur bewiesen, Lücken offen
+
+Der 13. Teil einer 13-teiligen Nachricht (Konstantinopel nach Berlin, 3.11.1918).
+Der Schlüssel `Nov1-3` bestätigt sich zum dritten Mal — die Spaltenköpfe der
+Tabelle sind exakt die bewiesene Permutation.
+
+Der Geheimtext ist schwer beschädigt: 79 Empfangslücken, dazu fehlt das Ende.
+Von 114 Bigrammen sind nur 37 vollständig. Der Beweis gilt für die Struktur:
+Re-Encryption deckt alle 144 überlieferten CT-Zeichen exakt.
+
+Der Klartext selbst ist an den Lücken **nicht eindeutig bestimmt**. Der beste
+Kandidat (Beam-Search mit dem Sprachmodell, 64 Worttreffer):
+
+```
+TECHENDERXGESARMEEDENMERSCHDURMEINGARNAUFESERSCHLESIENANZIT
+UNTENSEINDERSTENNDWISSERDETERESEXKTERRMTLTAA1GRISISCASS
+```
+
+Childs hat die Lücken per Elimination gefüllt (Buch S. 43). Das Handbuch
+trennt beides: Struktur = bewiesen. Füllung = Kandidat.
+
+Reproduzierbar: `python3 analysis/richi_222_reconstruct.py`
 
 ### RICHI-240 — verifiziert, nicht selbst gelöst
 
@@ -534,6 +587,6 @@ Und darum geht es hier: Ein Außenstehender soll verstehen, was passiert.
 2. Das Projekt entziffert alte deutsche Funksprüche.
 3. Das größte Problem sind Lesefehler, nicht die Krypto.
 4. Die Konfliktzahl ist ein exakter Beweis für ein richtiges Ergebnis.
-5. 12 von 22 Seiten sind gelöst.
+5. 11 von 22 Korpus-Seiten sind gelöst, dazu 4 aus dem Childs-Buch.
 6. Seite 217 ist mit `TRUPPENVERSCHIEBUNG` bewiesen.
 7. Erst die Daten reparieren, dann entschlüsseln.

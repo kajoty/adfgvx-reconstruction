@@ -123,6 +123,77 @@ Wer neu hier ist, liest Ebene 1 und dann Ebene 2. Ebene 3 ist Nachschlagewerk.
 
 ---
 
+<!-- GENERATED: dump_keys.py -->
+## Schlüssel- und Spruchverzeichnis
+
+Diese Tabellen werden aus dem Code generiert (`analysis/dump_keys.py`).
+Sie spiegeln den Stand von `core/adfgvx.py`, `data/corpus.py` und
+`data/solutions.py`.
+
+### Die 14 Schlüssel
+
+`n` ist die Spaltenzahl des Transpositionsrasters (= Zahl der Bigramme
+je Zeile). Die Permutation ist eine **Rangfolge**, keine Lesereihenfolge
+(siehe oben). Das Quadrat ist der 36-Zeichen-String in Zeile-für-Zeile-
+Lesung des 6×6-Felds.
+
+| Schlüssel | n | Permutation (Rangfolge) | Quadrat (36 Zeichen) |
+|---|---|---|---|
+| `Sep19-21` | 22 | `12-2-7-20-10-19-1-13-9-18-3-17-21-8-14-4-6-16-11-22-5-15` | `D5613Q9KBNO0HY8EISJUTZFCW7VPML2ARG4X` |
+| `Oct4-6` | 22 | `4-13-3-14-1-16-9-15-5-19-10-18-6-17-7-20-11-21-8-12-22-2` | `YN87PJ3WRUCIEO1SKLZX0DFBH6MT9A2QV54G` |
+| `Oct28-31` | 18 | `6-15-12-16-5-7-14-4-13-8-11-1-17-2-10-3-18-9` | `HI20SXRUWQY8EK7O619CBJAP453FDZTGLMVN` |
+| `Nov1-3` | 19 | `3-16-4-15-7-12-18-6-17-8-19-1-13-10-2-14-11-9-5` | `UILOF9RCZVSX02G7QTD8WNB5JMHEKPY41A36` |
+| `Nov4-6` | 17 | `7-10-8-14-3-11-16-1-6-13-4-9-15-5-12-17-2` | `17WHFLJ5D2UPEXKVZ9O0Q3Y6R8ABGITCMS4N` |
+| `Nov7-9` | 20 | `6-12-7-15-1-11-16-5-8-14-3-18-9-13-2-17-20-10-19-4` | `PRMYUW3LZGES8C71QOV29ITB40-KXH-AJNDF` |
+| `Nov10-12` | 16 | `9-12-7-11-3-8-16-6-14-2-10-15-5-13-1-4` | `4ARUT1OIFSKN3-BZPVLD-JMXCWHQ2E-G0-Y-` |
+| `Nov13-15a` | 20 | `13-8-6-16-7-18-1-14-9-20-10-15-17-2-3-11-5-19-4-12` | `JZLH-R--S-T-MKDWU-V-B-P--FAO-GIX-CNE` |
+| `Nov13-15b` | 16 | `4-11-5-14-9-7-16-1-12-15-6-10-3-13-8-2` | `H--BMUF15PX0DJLR---S6VONKZ-AWITEGC-` |
+| `Nov16-18` | 19 | `7-12-1-14-8-16-13-9-19-3-15-4-10-18-6-2-11-17-5` | `WG-EITNHUB2R--FDZJS---PY-VQL-1OAXMKC` |
+| `Nov19-21` | 20 | `13-20-3-16-7-14-4-12-8-11-5-15-2-18-17-10-19-6-1-9` | `LC58QH7VI2YB9EURO60GX3MTFAKP1D4NJZSW` |
+| `Nov22-24` | 22 | `6-12-16-7-14-22-11-18-1-15-8-10-20-2-13-21-3-17-19-5-9-4` | `QNZ72XS4C0IJY3RBEKL9FD6GMTHUVWA5O8P1` |
+| `Nov25-28` | 23 | `21-9-6-14-10-20-1-16-18-7-15-4-11-22-5-17-23-2-12-8-19-3-13` | `HQ05DKZAOYM6BEIWTJ7PSCFLV94132NGURX8` |
+| `Nov28-Dec1` | 16 | `9-3-14-10-2-8-15-4-16-11-5-13-6-12-1-7` | `782GPY5OQHF91UDNI364TLVXEAR0JZBKMCSW` |
+
+### Die Funksprüche
+
+CT = Geheimtext in ADFGVX-Zeichen. Klartext in Zeichen ohne Worttrenner
+(X = Worttrenner im Original).
+
+| Spruch | CT-Zeichen | Klartext | Schlüssel | Status |
+|---|---|---|---|---|
+| Korpus 73 | 176 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 100 | 124 | 62 | `Nov1-3` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 105 | 290 | 143 | `Nov1-3` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 109 | 258 | 125 | `Nov1-3` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 132 | 153 | 77 | `Nov4-6` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 146 | 244 | 122 | `Nov4-6` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 152 | 104 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 153a | 132 | 176 | `Nov13-15a` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 153b | 93 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 158 | 240 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 164a | 158 | 63 | `Nov7-9` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 164b | 136 | 90 | `Nov7-9` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 170 | 106 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 171 | 310 | 157 | `Nov7-9` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 176a | 214 | 112 | `Nov10-12` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 176b | 220 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 187 | 212 | 107 | `Nov13-15b` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 187b | 142 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 189 | 84 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 198 | 165 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 215 | 237 | — | unbekannt | ungelöst (beschädigt) |
+| Korpus 217 | 170 | — | unbekannt | ungelöst (beschädigt) |
+| RICHI-264 | 264 | 133 | `Nov1-3` | gelöst, bewiesen (2 Reparaturen, Roundtrip) |
+| RICHI-222 | 144 | 114 (Kandidat) | `Nov1-3` | Struktur bewiesen; Lücken nicht eindeutig |
+| RICHI-274 | 258 | 135 | `Oct28-31` | gelöst, verifiziert |
+| RICHI-338 | 286 | 162 | `Oct28-31` | gelöst, verifiziert (OCR-Fehler in der Tabelle) |
+| RICHI-217 (Seite 217) | 170 | 88 | `TRUPPENVERSCHIEBUNG` | gelöst, bewiesen (Roundtrip) |
+| RICHI-240 | 220 | 240 | `Nov10-12` | verifiziert, nicht selbst gelöst (20 Zeichen fehlen) |
+
+<!-- /GENERATED -->
+
+---
+
 # Arbeitsprotokoll
 
 ## Das Verfahren
