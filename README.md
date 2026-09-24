@@ -559,6 +559,11 @@ Cipherbrain-Seite, weitere Kommentare, Archivmaterial) kein weiterer
 unabhängiger Beleg zu gewinnen. Die 9 synthetischen Seiten bleiben bis dahin
 ehrlich als solche gekennzeichnet.
 
+> **Nachtrag (siehe unten).** Die „neue externe Quelle" wurde inzwischen
+> gefunden — der Cipherbrain-Artikel selbst. Sie liefert aber **dieselbe**
+> Transkription wie der Korpus. Der Engpass verschiebt sich damit von
+> „Quelle unbekannt" zu „Quelle bekannt, aber nur einfach belegt".
+
 ### Die Originalquelle ist gefunden (2026-09-24)
 
 Die oben genannte „neue externe Quelle" **existiert und ist abrufbar**. Der

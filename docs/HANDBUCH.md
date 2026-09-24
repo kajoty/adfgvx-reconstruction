@@ -203,13 +203,21 @@ Es gilt:
 - `conflicts > 0` bedeutet: Mindestens ein Zeichen ist falsch.
 
 Das Projekt hat das geprüft.
-Ergebnis: **Alle 11 geprüften Seiten zeigen nach der Korrektur null Konflikte.**
+Ergebnis: **Alle 11 geprüften Korpus-Seiten zeigen nach der Korrektur null Konflikte.**
 Vorher lagen sie bei 34 bis 107 Konflikten.
 
 Warum 11 und nicht 12? Das Projekt kennt 12 Lösungen.
 Aber eine davon (Seite `??`, Schlüssel `Nov22-24`) hat keine Korpus-Seite in `data/corpus.py`.
 Sie stammt aus einem Forum und ist nicht Teil der 22 Seiten.
 Der Konflikt-Test läuft nur über Korpus-Seiten — deshalb 11.
+
+> **Wichtig — was die Konfliktzahl beweist und was nicht.**
+> Die Konfliktzahl ist nur dann ein *Beweis*, wenn sie gegen ein
+> **unabhängig überliefertes** Chiffrat geprüft wird. Das trifft auf die
+> Seiten **100**, **105** und **146** zu. Für die übrigen gelösten Seiten
+> wurde der Geheimtext aus dem Klartext **rekonstruiert**
+> (`transpose(bigrams(pt), perm)`) — dort ist der Roundtrip per Konstruktion
+> garantiert und die Konfliktzahl 0 trivial. Siehe Abschnitt 7.
 
 Die Konfliktzahl ist also ein Beweis, kein Gefühl.
 Aber sie hat einen Haken: Man braucht den Klartext, um sie zu messen.
@@ -252,7 +260,7 @@ Die Sprache ist zu eigen. Man sollte es abschalten oder niedrig gewichten.
 
 ### Die Analyse (`analysis/`)
 
-Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
+Der Ordner enthält 36 Skripte. Hier ist die vollständige Liste.
 
 **Verifikation und Beweise:**
 
@@ -262,7 +270,10 @@ Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
 | `verify_217.py` | Vollständige Prüfung aller Konventionen für Seite 217 |
 | `verify_solutions.py` | Prüft alle gelösten Seiten gegen den Klartext |
 | `verify_richi_264.py` | Beweis für RICHI-264 (2 Reparaturen, Roundtrip) |
+| `richi_222.py` | RICHI-222: Prüfung der Struktur |
 | `richi_222_reconstruct.py` | RICHI-222: Struktur-Beweis + Beam-Search-Kandidat |
+| `verify_corpus_provenance.py` | Vergleicht den Korpus mit der Originalquelle |
+| `parse_cipherbrain.py` | Extrahiert die Artikel-Transkription aus dem HTML |
 | `dump_keys.py` | Erzeugt die Schlüssel- und Spruchtabellen für die README |
 | `rank_conflicts.py` | Belegt die Konfliktzahl als exaktes Kriterium |
 
@@ -306,6 +317,10 @@ Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
 | `pdf_tail.py` | Zeigt PDF-Text nach einem Suchbegriff |
 | `find_page38.py` | Findet gedruckte Seite 38 in der OCR |
 | `map_jpgs.py` | Ordnet die JPG-Dateien den PDF-Seiten zu |
+| `crop_p51.py` | Schneidet die Scan-Seite 51 zu |
+| `render_p50.py` | Rendert PDF-Seite 50 als Bild |
+| `render_p51.py` | Rendert PDF-Seite 51 als Bild |
+| `render_s214.py` | Rendert die Scan-Seite 214 als Bild |
 
 ---
 
@@ -315,7 +330,7 @@ Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
 
 - 22 Seiten im Korpus (`data/corpus.py`)
 - 12 Lösungen (`data/solutions.py`) — 11 davon zu Korpus-Seiten, 1 extra (Seite `??`)
-- 10 Korpus-Seiten noch offen
+- 11 Korpus-Seiten noch offen (die README zählt 10, weil sie die `??`-Seite mitzählt)
 - 14 bekannte Schlüsselwörter (`core/adfgvx.py`)
 - 3 Seiten mit Anomalien
 - Dazu aus dem Childs-Buch: RICHI-264 (bewiesen), RICHI-222 (Struktur bewiesen),
@@ -324,8 +339,14 @@ Der Ordner enthält 25 Skripte. Hier ist die vollständige Liste.
 Eine vollständige Liste aller Sprüche mit Schlüsseln, Quadraten und
 Permutationen steht in der README (`analysis/dump_keys.py` erzeugt sie).
 
-> **Evidenzlage.** Von den 12 gelösten Korpus-Seiten sind nur **3** (100, 105,
-> 146) gegen ein unabhängig überliefertes Chiffrat geprüft. Bei den übrigen 9
+> **Provenienz.** Der Korpus ist eine **treue Abschrift der Originalquelle**.
+> 14 von 22 Seiten stimmen zeichengenau mit dem Cipherbrain-Artikel überein,
+> die übrigen acht Abweichungen sind rein kosmetisch. Der Korpus ist also
+> **nicht beschädigt** — er ist die (leicht bereinigte) Abschrift der Quelle.
+> Details in Abschnitt 10.
+
+> **Evidenzlage.** Von den 11 gelösten Korpus-Seiten sind nur **3** (100, 105,
+> 146) gegen ein unabhängig überliefertes Chiffrat geprüft. Bei den übrigen 8
 > wurde der Geheimtext aus dem Klartext rekonstruiert
 > (`transpose(bigrams(pt), perm)`) — der Roundtrip ist dort per Konstruktion
 > garantiert und beweist nichts. Verstärkt wird das durch unvollständige
@@ -459,6 +480,8 @@ Dieses Projekt hat viele davon dokumentiert.
 | Blinde Suche nach Quadrat und Permutation | Löst das falsche Problem — die Schlüssel sind meist bekannt |
 | Anomalie-Reparatur | War ein Artefakt. Gelöste Seiten zeigen größere Abweichungen |
 | Seite 170 als „einziger Astra-Kandidat" | Falsch. Nur 106 statt 240 Zeichen |
+| „Der Korpus ist beschädigt" | Falsch. Er ist eine treue Abschrift der Quelle (14/22 zeichengenau) |
+| „Eine neue Quelle würde die offenen Seiten lösen" | Falsch. Die Originalquelle liefert dieselbe Transkription |
 
 Die wichtigste Lehre steht schon in Abschnitt 4:
 **Erst die Daten, dann die Krypto.**
@@ -488,6 +511,8 @@ python3 analysis/rank_conflicts.py
 # Tests laufen lassen
 python3 tests/testcases.py
 python3 tests/test_171.py
+python3 tests/test_fitness.py
+python3 tests/test_provenance.py
 ```
 
 `bootstrap.py` setzt den Projektpfad auf `sys.path`.
@@ -652,7 +677,8 @@ Und darum geht es hier: Ein Außenstehender soll verstehen, was passiert.
 1. ADFGVX ist eine Chiffre in zwei Stufen: Quadrat, dann Transposition.
 2. Das Projekt entziffert alte deutsche Funksprüche.
 3. Das größte Problem sind Lesefehler, nicht die Krypto.
-4. Die Konfliktzahl ist ein exakter Beweis für ein richtiges Ergebnis.
-5. 11 von 22 Korpus-Seiten sind gelöst, dazu 4 aus dem Childs-Buch.
+4. Die Konfliktzahl ist ein exakter Beweis — aber nur gegen ein unabhängig überliefertes Chiffrat.
+5. 11 von 22 Korpus-Seiten sind gelöst, dazu 4 aus dem Childs-Buch. Nur 3 der 11 sind unabhängig belegt.
 6. Seite 217 ist mit `TRUPPENVERSCHIEBUNG` bewiesen.
-7. Erst die Daten reparieren, dann entschlüsseln.
+7. Der Korpus ist eine treue Abschrift der Originalquelle (14 von 22 Seiten zeichengenau).
+8. Erst die Daten reparieren, dann entschlüsseln.
