@@ -17,6 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import bootstrap  # noqa: F401
 from core.adfgvx import KEYS
 from data.corpus import CORPUS
+from data.corpus_corrected import CORRECTED
 from data.solutions import SOLVED
 from data.childs_additional import (
     RICHI_264_CT_OCR, RICHI_264_PLAINTEXT, RICHI_264_KEY,
@@ -54,7 +55,14 @@ def build_message_table() -> str:
         ct = ct_len(page)
         if page in SOLVED:
             key, pt, _src = SOLVED[page]
-            status = "gelöst, bewiesen (0 Konflikte)"
+            # Ehrliche Evidenzangabe: Nur Seiten mit unabhaengiger Transkription
+            # (CORRECTED) sind gegen echtes Chiffrat geprueft. Alle anderen
+            # wurden synthetisch aus dem Klartext rekonstruiert -> der Roundtrip
+            # ist per Konstruktion garantiert und beweist nichts.
+            if page in CORRECTED:
+                status = "gelöst, bewiesen (Transkription, 0 Konflikte)"
+            else:
+                status = "gelöst (Klartext aus Kommentar, CT rekonstruiert)"
             lines.append(f"| Korpus {page} | {ct} | {len(pt)} | `{key}` | {status} |")
         else:
             lines.append(f"| Korpus {page} | {ct} | — | unbekannt | ungelöst (beschädigt) |")

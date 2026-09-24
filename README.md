@@ -67,7 +67,15 @@ Zeichen, stimmt etwas nicht. Die Konfliktzahl zählt diese Widersprüche.
 
 **Alle 11 geprüften Korpus-Seiten zeigen nach der Korrektur null Konflikte.**
 Vorher lagen sie bei 34 bis 107 Konflikten. Das Kriterium trennt scharf — kein
-Schwellenwert, kein Graubereich. Es ist ein Beweis, kein Gefühl.
+Schwellenwert, kein Graubereich.
+
+> **Wichtig — was die Konfliktzahl beweist und was nicht.** Die Konfliktzahl
+> ist nur dann ein *Beweis*, wenn sie gegen ein **unabhängig überliefertes**
+> Chiffrat geprüft wird. Das trifft auf die Seiten **105** und **146** zu
+> (echte Transkription aus dem Kommentarthread). Für die übrigen gelösten
+> Seiten wurde der Geheimtext aus dem Klartext **rekonstruiert**
+> (`transpose(bigrams(pt), perm)`) — dort ist der Roundtrip per Konstruktion
+> garantiert und die Konfliktzahl 0 trivial. Siehe „Evidenzlage" unten.
 
 ## Stand
 
@@ -75,6 +83,7 @@ Schwellenwert, kein Graubereich. Es ist ein Beweis, kein Gefühl.
 |---|---|
 | Seiten im Korpus | 22 |
 | davon gelöst | 12 |
+| davon unabhängig belegt | 2 (105, 146) |
 | noch offen | 10 |
 | bekannte Schlüssel | 14 |
 | Seiten mit Anomalie | 3 |
@@ -89,6 +98,12 @@ Die Headline-Ergebnisse:
 - **RICHI-222** — Struktur bewiesen; die Lückenfüllung ist nicht eindeutig.
 - **RICHI-274 / RICHI-338** — verifiziert am Schlüssel `Oct28-31`.
 - **RICHI-240** — verifiziert, aber nicht von diesem Projekt gelöst.
+
+> **Zur Ehrlichkeit der Zahlen.** Von den 12 gelösten Korpus-Seiten sind nur
+> **2** (105, 146) gegen ein unabhängig überliefertes Chiffrat geprüft. Bei den
+> übrigen 10 wurde der Geheimtext aus dem Klartext rekonstruiert — der Beweis
+> ist dort zirkulär. Die externen Beweise (217, RICHI-264/274/338, RICHI-222)
+> sind davon nicht betroffen. Details: „Evidenzlage der gelösten Seiten".
 
 ## Loslegen
 
@@ -174,22 +189,22 @@ CT = Geheimtext in ADFGVX-Zeichen. Klartext in Zeichen ohne Worttrenner
 | Spruch | CT-Zeichen | Klartext | Schlüssel | Status |
 |---|---|---|---|---|
 | Korpus 73 | 176 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 100 | 124 | 62 | `Nov1-3` | gelöst, bewiesen (0 Konflikte) |
-| Korpus 105 | 290 | 143 | `Nov1-3` | gelöst, bewiesen (0 Konflikte) |
-| Korpus 109 | 258 | 125 | `Nov1-3` | gelöst, bewiesen (0 Konflikte) |
-| Korpus 132 | 153 | 77 | `Nov4-6` | gelöst, bewiesen (0 Konflikte) |
-| Korpus 146 | 244 | 122 | `Nov4-6` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 100 | 124 | 62 | `Nov1-3` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
+| Korpus 105 | 290 | 143 | `Nov1-3` | gelöst, bewiesen (Transkription, 0 Konflikte) |
+| Korpus 109 | 258 | 125 | `Nov1-3` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
+| Korpus 132 | 153 | 77 | `Nov4-6` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
+| Korpus 146 | 244 | 122 | `Nov4-6` | gelöst, bewiesen (Transkription, 0 Konflikte) |
 | Korpus 152 | 104 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 153a | 132 | 176 | `Nov13-15a` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 153a | 132 | 176 | `Nov13-15a` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
 | Korpus 153b | 93 | — | unbekannt | ungelöst (beschädigt) |
 | Korpus 158 | 240 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 164a | 158 | 63 | `Nov7-9` | gelöst, bewiesen (0 Konflikte) |
-| Korpus 164b | 136 | 90 | `Nov7-9` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 164a | 158 | 63 | `Nov7-9` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
+| Korpus 164b | 136 | 90 | `Nov7-9` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
 | Korpus 170 | 106 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 171 | 310 | 157 | `Nov7-9` | gelöst, bewiesen (0 Konflikte) |
-| Korpus 176a | 214 | 112 | `Nov10-12` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 171 | 310 | 157 | `Nov7-9` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
+| Korpus 176a | 214 | 112 | `Nov10-12` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
 | Korpus 176b | 220 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 187 | 212 | 107 | `Nov13-15b` | gelöst, bewiesen (0 Konflikte) |
+| Korpus 187 | 212 | 107 | `Nov13-15b` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
 | Korpus 187b | 142 | — | unbekannt | ungelöst (beschädigt) |
 | Korpus 189 | 84 | — | unbekannt | ungelöst (beschädigt) |
 | Korpus 198 | 165 | — | unbekannt | ungelöst (beschädigt) |
@@ -203,6 +218,10 @@ CT = Geheimtext in ADFGVX-Zeichen. Klartext in Zeichen ohne Worttrenner
 | RICHI-240 | 220 | 240 | `Nov10-12` | verifiziert, nicht selbst gelöst (20 Zeichen fehlen) |
 
 <!-- /GENERATED -->
+
+
+
+
 
 ---
 
@@ -458,6 +477,13 @@ Gegen die verifizierten Klartexte der gelösten Seiten:
 
 **11/11 gelöste Seiten: exakt 0 Konflikte nach der Korrektur, 34–107 vorher.**
 
+> **Achtung — Evidenzlage.** Diese Tabelle belegt, dass die Konfliktzahl als
+> *Kriterium* funktioniert. Sie belegt **nicht** für jede Seite, dass der
+> Klartext unabhängig gesichert ist: Nur bei **105** und **146** stammt der
+> Geheimtext aus einer echten Transkription. Bei den übrigen 9 Seiten ist er
+> synthetisch aus dem Klartext erzeugt — der Roundtrip ist dort tautologisch.
+> Details im Abschnitt „Evidenzlage der gelösten Seiten".
+
 **Aber: Es gibt kein brauchbares blindes Ersatzkriterium.** Zwei Kandidaten
 wurden geprüft und verworfen:
 
@@ -468,6 +494,50 @@ wurden geprüft und verworfen:
 
 **Konsequenz:** Für ungelöste Seiten muss der Klartext kandidatenweise geraten
 und die Konfliktzahl minimiert werden — genau das tut `conflict_solver.py`.
+
+## Evidenzlage der gelösten Seiten
+
+Nicht jede „gelöste" Seite ist gleich gut belegt. Die Unterscheidung ist
+wichtig, weil sie bestimmt, wie viel ein Roundtrip wert ist.
+
+| Evidenz | Seiten | Was der Roundtrip beweist |
+|---|---|---|
+| **Unabhängige Transkription** | 105, 146 | Echter Beweis: Klartext, Quadrat und Permutation passen zu einem **fremd überlieferten** Chiffrat. |
+| **Synthetisch rekonstruiert** | 100, 109, 132, 153a, 164a, 164b, 171, 176a, 187, `??` | **Kein** Beweis. Der Geheimtext wurde per `transpose(bigrams(pt), perm)` aus dem Klartext erzeugt — der Roundtrip ist per Konstruktion garantiert. |
+
+**Warum das so ist.** Die Original-Chiffrate in `corpus.py` sind durch
+Empfangsfehler beschädigt. Für 105 und 146 liegt im Kommentarthread eine
+vollständige, korrigierte Transkription vor. Für die übrigen Seiten gibt es
+keine — die Korrekturen sind dort nur in Prosa beschrieben oder fehlen ganz
+(siehe `UNVERIFIED` in `data/corpus_corrected.py`). Statt die Lücke
+offenzulassen, wurde der Geheimtext aus dem verifizierten Klartext
+**zurückgerechnet**. Das ist mathematisch korrekt, aber als *Verifikation*
+zirkulär.
+
+**Verstärkt wird das durch unvollständige Quadrate.** `make_square()` füllt
+`-`-Lücken im Substitutionsquadrat mit dem Restalphabet — eine willkürliche
+Annahme. Betroffene, tatsächlich genutzte Schlüssel:
+
+| Schlüssel | Lücken | genutzt von |
+|---|---|---|
+| `Nov13-15a` | 12 | 153a |
+| `Nov13-15b` | 7 | 187 |
+| `Nov10-12` | 5 | 176a |
+| `Nov7-9` | 2 | 171, 164a, 164b |
+| `Nov16-18` | 8 | (keine Seite) |
+
+Bei **153a** werden 8 der 12 gefüllten Zellen vom Klartext tatsächlich benutzt.
+Da der Geheimtext zugleich synthetisch ist, ist die Verifikation dort
+**doppelt zirkulär**.
+
+**Was davon unberührt bleibt.** Die externen Beweise sind echt und hängen
+nicht an dieser Schwäche: **Seite 217 (RICHI-170)**, **RICHI-264**,
+**RICHI-274/338** und die **Struktur von RICHI-222** wurden gegen echte,
+fremd überlieferte Daten geprüft.
+
+**Nächster Schritt:** unabhängige Transkriptionen für die 10 synthetischen
+Seiten beschaffen (Kommentarthread, Original-Seitenbilder). Das ist der
+eigentliche Engpass — nicht die Kryptanalyse.
 
 ## Die ungelösten Seiten
 
@@ -533,6 +603,9 @@ flowchart TD
 | Konfliktzahl als Ranking-Metrik (`rank_conflicts.py`) | **erledigt** |
 | Seite 217 lösen (0 Lücken, Schlüssel bekannt) | **erledigt** |
 | RICHI-264 und RICHI-222 aus dem Childs-Buch | **erledigt** |
+| Evidenzlage der gelösten Seiten ehrlich ausweisen | **erledigt** |
+| Unabhängige Transkriptionen für die 10 synthetischen Seiten | **offen (Engpass)** |
+| Quadrat-Lücken auflösen (`Nov13-15a/b`, `Nov10-12`, `Nov7-9`) | offen |
 | Seite 170 (0 Lücken) mit Stufe 3 angreifen | offen |
 | Lücken-Suche mit Zufalls-Baseline systematisieren | offen |
 | Externe Quellen für Ziffern/Eigennamen erschließen | offen |
