@@ -1,0 +1,21832 @@
+
+
+
+gH^| 
+
+
+RECORDS CHARGE-OUT 
+
+
+
+
+FILE OR 
+SERIAL 
+NUMBER 
+AND 
+
+SUBJECT 
+
+
+BBaflHDClimgKy From File oX Special Consultant (Friedman) 
+Jennan Military Ciphers from February to November 1918 
+tegister No. 117 
+
+l.ri*l So - 1016 
+
+
+TO 
+
+
+NAME AND EXTENSION OF PERSON REQUESTING PILE ORGANIZATION, BUILDING, AND SOOi t NUMBER 
+
+Mr. William Friedman LI 6-8520 
+
+
+
+
+Mrs. Christian, AG-24, NSA, Ft. Geo. G. Meade, Ml. 
+
+
+
+
+\sTRUCTION8 
+
+
+WHEN TRANSFERRING FILE TO ANOTHER PERSON, COMPLETE SELF-ADDRESSED TRANSFER COUPON BELOW, DETACH, STITCH TO BLANK 
+LETTER-SIZE PAPER AND PLACE IN OUT-GOING MAIL SERVICE. 
+
+
+
+G 
+
+
+
+eclassified and approved for release bv NSA on 05-06-2U14 pursuant to E.O. 13521 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.v -i‘. t ■•;•■ . is> bi-uvoi. 
+
+•• • ise'i«t» »3*w • 
+
+1 -v ch'W** ' •;.»»<» o> • 
+cvnu: * -, w.J 
+
+
+
+-Confidential 
+
+
+
+Register No. 117 
+
+
+
+WAR DEPARTMENT 
+
+OFFICE or THE CHIEF SIGNAL OFFICEB 
+WASHINGTON 
+
+
+
+GERMAN MILITARY CIPHERS 
+FROM FEBRUARY TO 
+NOVEMBER 1918 
+
+
+
+1016 
+
+iLioib . t. 
+
+
+
+1 VlvV v \ ; 
+
+
+< C ■ 
+
+
+
+
+
+
+1 \ I 
+
+
+VX- ’ V \ i > ' • V N Yv V 
+
+
+
+
+
+
+
+
+
+
+l^SSEM’HD : A68206 . 
+
+- j- see o'Ktir^- 
+
+Pre<>p e u.s.^^ny 
+
+
+
+
+
+
+ScHoCU. 
+
+
+
+
+
+WAR DEPARTMENT 
+
+OFFICE OF THE CHIEF SIGNAL OFFICER 
+WASHINGTON 
+
+
+
+GERMAN MILITARY CIPHERS 
+FROM FEBRUARY TO NOVEMBER, 1918 
+
+
+
+technical paper 
+
+(Mto 
+
+i" t ' ' j ' 
+
+SIGNAL INTELLIGENCE SECTION 
+WAR PLANS AND TRAINING DIVISION 
+
+
+
+A*) 
+
+
+
+fi uer No- ***■ 
+
+
+
+
+HoV 1 -»9SV 
+
+At>THORATV Urr. <£r 
+
+' to f -xerf *s£-- 
+
+O /a ^ | ^ UNTIfD STARS „ 
+
+v. ^uTLok Gdv*Ria«NrT^»OT '* 
+
+
+
+WASHINGTON 1 1(U 
+
+
+
+jsj: 
+
+
+
+j REF ID:A68206 
+
+1 
+
+1 A 
+
+‘ 
+
+V) 
+
+
+
+FOREWORD 
+
+•The following report on the military ciphers used by the Germans from February to 
+November 1918, was written about December 1918 by First Lt. J. R. Childs, Infantry, and 
+except for minor changes is in the form in which he prepared it. There have been added note 
+7, by First Lt. H. C. Skinner, M.I.D., entitled “Note on Reconstruction of an Incomplete 
+ADFGVX Message”, and note 12, entitled “A. Mechanical Method for Determining the Key 
+for the Transposition in the ADFGVX Cipher, Given Two Messages Having Similar End- 
+ings”, prepared in January 1919 by the undersigned, then First Lieut., Military Intelligence 
+Division, U.S.A. 
+
+William F. Friedman, 
+Cryptanalyst, Chief of Signal Intelligence Section. 
+
+Office of the Chief Signal Officer, 
+
+War Department, 
+
+Washington, June IBS, 1934- 
+
+(m) 
+
+
+
+REF ID : A68206 
+
+
+
+CONTENTS 
+
+*•* » 
+
+I. Substitution ciphers * 
+
+II. Transposition ciphers * ® 
+
+III. The ADFGVX Cipher (Western Front) 13 
+
+IV. The ADFGVX Cipher (Eastern Front) - 14 
+
+V. Miscellaneous notes •- 
+
+
+
+(v) 
+
+
+
+GERMAN MILITARY CIPHERS FROM FEBRUARY TO NOVEMBER, 1918 
+
+This survey of German Military Ciphers is intended to be very brief. A knowledge of the 
+principles contained in Hitt’s Manual for the Solution of Military Ciphers is prestupposed. 
+
+One of the most outstanding features in the use of cipher by the Germans, whether on the 
+Western or Eastern Front, was their predilection for transposition methods. Of all their systems 
+which have come under our observation, there were only two of purely substitution methods. 
+
+J. SUBSTITUTION CIPHERS 
+
+One of these, strange to say, was a single mixed alphabet substitution used by Gen. Kress 
+von Kressenstein in communication with Helferich. Several very important messages were 
+sent in this very simple cipher. • This cipher was preceded by the preamble “777. M This was 
+an identification to the recipient of the system which had been employed. The life of the “777 ” 
+Cipher was not of long duration. The system was too simple; the wonder is that it was ever 
+used at all. A message sent in the “RICH!” Cipher a few days after the “777” had been 
+solved, directed an immediate discontinuation of its use. 
+
+“The cipher prepared by General von Kress was Solved here at once. Its further use and 
+operation is forbidden. (Signed) Chief Signal Officer, Berlin.” 
+
+The second cipher based upon substitution principles and perhaps the only one which was 
+ever made extensive use of,- was the so-called “Wilhelm” or “Fuer God” Cipher. This cipher 
+i was used over a longer period of time than any other cipher which the Germans were ever known 
+
+to have employed. 
+
+The cipher was knowh as the “Fuer God” for the reason that all messages in this cipher 
+contained the address “Fuer God”, “GOD” being the call sign of the wireless station to which 
+the messages were directed. The messages were sent by POZ, a station at Nauen, just outside 
+of Berlin. They were numbered serially from the first of the year to December the 31st, and 
+were sent at more or less irregular intervals, an average of about three a week. 
+
+These ciphers were identified as substitution ciphers from the resemblance which the frequency 
+tables of the cipher letters bore to the common type of substitution frequencies. Further evi- 
+dence was contained in the repetitions which occurred in the body of the messages. These 
+repetitions were factored as an ordinary substitution cipher; and they established the fact that 
+the number of alphabets in messages numbered from 1 to 30 varied between 11 and 18, and that 
+from 31 to 60, inclusive, the number of alphabets employed reverted to the same cycle as from 
+1 tb 30. In other words, there were but 30 keys and messages from 31 to 60, and from 61 to 90 
+were enciphered by the same keys as those numbered from 1 to 30. 
+
+It was also ascertained that the number of alphabets was limited ; and that not only was the 
+same alphabet oftentimes repeated in the 13 alphabets, for example, in the 13 of message number 
+1, but that the same alphabet also reappeared in the 13 alphabets of number 2, in the 12 of 3, 
+and in the 18 of number 4, and so forth. 
+
+The number of alphabets finally reduced themselves to 22. They formed a modified 
+Vigen&re Table. 
+
+
+
+( 1 ) 
+
+
+
+Table— 1— THE ALPHABETS FOR THE “WILHELM” CIPHER 
+
+
+
+
+
+A 
+
+
+B 
+
+
+C 
+
+
+D 
+
+
+E 
+
+
+F 
+
+
+G 
+
+
+H 
+
+
+I 
+
+
+J 
+
+
+K 
+
+
+L 
+
+
+M 
+
+
+N 
+
+
+0 
+
+
+P 
+
+
+Q 
+
+
+R 
+
+
+s 
+
+
+T 
+
+
+U 
+
+
+V 
+
+
+W 
+
+
+X 
+
+
+Y 
+
+
+Z 
+
+
+A 
+
+
+S 
+
+
+Q 
+
+
+R 
+
+
+Y 
+
+
+V 
+
+
+X 
+
+
+U 
+
+
+Z 
+
+
+T 
+
+
+w 
+
+
+B 
+
+
+D 
+
+
+c 
+
+
+A 
+
+
+E 
+
+
+J 
+
+
+H 
+
+
+K 
+
+
+I 
+
+
+F 
+
+
+G 
+
+
+P 
+
+
+M 
+
+
+0 
+
+
+N 
+
+
+L 
+
+
+B 
+
+
+L 
+
+
+0 
+
+
+P 
+
+
+N 
+
+
+M 
+
+
+Q 
+
+
+S 
+
+
+R 
+
+
+T 
+
+
+u 
+
+
+V 
+
+
+Z 
+
+
+X 
+
+
+Y 
+
+
+W 
+
+
+C 
+
+
+A 
+
+
+B 
+
+
+H 
+
+
+E 
+
+
+D 
+
+
+G 
+
+
+J 
+
+
+F 
+
+
+K 
+
+
+I 
+
+
+C 
+
+
+P 
+
+
+0 
+
+
+N 
+
+
+M 
+
+
+R 
+
+
+T 
+
+
+S 
+
+
+Q 
+
+
+ff 
+
+
+Y 
+
+
+u 
+
+
+X 
+
+
+z 
+
+
+V 
+
+
+C 
+
+
+A 
+
+
+B 
+
+
+E 
+
+
+D 
+
+
+F 
+
+
+J 
+
+
+G 
+
+
+K 
+
+
+H 
+
+
+I 
+
+
+L 
+
+
+D 
+
+
+1 
+
+
+F 
+
+
+H 
+
+
+J 
+
+
+G 
+
+
+N 
+
+
+K 
+
+
+L 
+
+
+M 
+
+
+P 
+
+
+0 
+
+
+T 
+
+
+s 
+
+
+R 
+
+
+Q 
+
+
+V 
+
+
+Y 
+
+
+U 
+
+
+X 
+
+
+Z 
+
+
+W 
+
+
+D 
+
+
+B 
+
+
+C 
+
+
+A 
+
+
+E 
+
+
+E 
+
+
+X 
+
+
+U 
+
+
+V 
+
+
+Z 
+
+
+Y 
+
+
+W 
+
+
+A 
+
+
+C 
+
+
+B 
+
+
+E 
+
+
+D 
+
+
+G 
+
+
+I 
+
+
+H 
+
+
+J 
+
+
+F 
+
+
+K 
+
+
+M 
+
+
+0 
+
+
+N 
+
+
+L 
+
+
+T 
+
+
+R 
+
+
+S 
+
+
+Q 
+
+
+P 
+
+
+F 
+
+
+u 
+
+
+X 
+
+
+Z 
+
+
+W 
+
+
+Y 
+
+
+V 
+
+
+A 
+
+
+E 
+
+
+B 
+
+
+C 
+
+
+F 
+
+
+D 
+
+
+I 
+
+
+H 
+
+
+G 
+
+
+J 
+
+
+N 
+
+
+K 
+
+
+M 
+
+
+L 
+
+
+S 
+
+
+P 
+
+
+0 
+
+
+R 
+
+
+T 
+
+
+Q 
+
+
+G 
+
+
+A 
+
+
+c 
+
+
+D 
+
+
+B 
+
+
+H 
+
+
+J 
+
+
+F 
+
+
+I 
+
+
+G 
+
+
+E 
+
+
+M 
+
+
+N 
+
+
+L 
+
+
+K 
+
+
+0 
+
+
+T 
+
+
+R 
+
+
+S 
+
+
+T 
+
+
+Q 
+
+
+Y 
+
+
+Z 
+
+
+V 
+
+
+U 
+
+
+X 
+
+
+W 
+
+
+H 
+
+
+B 
+
+
+A 
+
+
+D 
+
+
+C 
+
+
+F 
+
+
+G 
+
+
+E 
+
+
+I 
+
+
+H 
+
+
+J 
+
+
+N 
+
+
+0 
+
+
+K 
+
+
+M 
+
+
+L 
+
+
+S 
+
+
+R 
+
+
+P 
+
+
+T 
+
+
+Q 
+
+
+W 
+
+
+X 
+
+
+V 
+
+
+Y 
+
+
+u 
+
+
+Z 
+
+
+I 
+
+
+T 
+
+
+R 
+
+
+S 
+
+
+Q 
+
+
+Y 
+
+
+» X 
+
+
+Z 
+
+
+V 
+
+
+U 
+
+
+E 
+
+
+BA 
+
+
+C 
+
+
+D 
+
+
+K 
+
+
+F 
+
+
+J 
+
+
+I 
+
+
+G 
+
+
+H 
+
+
+M 
+
+
+L 
+
+
+P 
+
+
+N 
+
+
+0 
+
+
+J 
+
+
+L 
+
+
+M 
+
+
+0 
+
+
+N 
+
+
+T 
+
+
+Q 
+
+
+R 
+
+
+P 
+
+
+S 
+
+
+z 
+
+
+X 
+
+
+U 
+
+
+Y 
+
+
+V 
+
+
+W 
+
+
+B 
+
+
+A 
+
+
+G 
+
+
+D 
+
+
+E 
+
+
+G 
+
+
+J 
+
+
+H 
+
+
+F 
+
+
+K 
+
+
+I 
+
+
+K 
+
+
+N 
+
+
+0 
+
+
+K 
+
+
+N 
+
+
+L 
+
+
+Q 
+
+
+S 
+
+
+R 
+
+
+P 
+
+
+w 
+
+
+z 
+
+
+T 
+
+
+Y 
+
+
+u 
+
+
+X 
+
+
+Y 
+
+
+D 
+
+
+B 
+
+
+A 
+
+
+C 
+
+
+E 
+
+
+F 
+
+
+J 
+
+
+G 
+
+
+I 
+
+
+H 
+
+
+L 
+
+
+I 
+
+
+E 
+
+
+H 
+
+
+F 
+
+
+G 
+
+
+L 
+
+
+0 
+
+
+M 
+
+
+J 
+
+
+K 
+
+
+N 
+
+
+Q 
+
+
+P 
+
+
+T 
+
+
+R 
+
+
+S 
+
+
+X 
+
+
+V 
+
+
+Y 
+
+
+U 
+
+
+Z 
+
+
+V 
+
+
+B 
+
+
+A 
+
+
+D 
+
+
+C 
+
+
+M 
+
+
+H 
+
+
+F 
+
+
+I 
+
+
+G 
+
+
+N 
+
+
+M 
+
+
+J 
+
+
+K 
+
+
+0 
+
+
+L 
+
+
+Q 
+
+
+P 
+
+
+S 
+
+
+R 
+
+
+V 
+
+
+T 
+
+
+Z 
+
+
+U 
+
+
+W 
+
+
+X 
+
+
+Y 
+
+
+B 
+
+
+E 
+
+
+D 
+
+
+C 
+
+
+A 
+
+
+N 
+
+
+C 
+
+
+D 
+
+
+A 
+
+
+B 
+
+
+G 
+
+
+H 
+
+
+E 
+
+
+J 
+
+
+F 
+
+
+I 
+
+
+K 
+
+
+M 
+
+
+? 
+
+
+0 
+
+
+L 
+
+
+N 
+
+
+T 
+
+
+R 
+
+
+Q 
+
+
+S 
+
+
+X 
+
+
+U 
+
+
+Z 
+
+
+W 
+
+
+V 
+
+
+Y 
+
+
+0 
+
+
+E 
+
+
+C 
+
+
+D 
+
+
+B 
+
+
+A 
+
+
+F 
+
+
+J 
+
+
+I 
+
+
+G 
+
+
+H L 
+
+
+K 
+
+
+0 
+
+
+N 
+
+
+M 
+
+
+S 
+
+
+P 
+
+
+Q 
+
+
+T 
+
+
+R 
+
+
+Z 
+
+
+U 
+
+
+X 
+
+
+V 
+
+
+W 
+
+
+Y 
+
+
+P 
+
+
+R 
+
+
+Q 
+
+
+P 
+
+
+S 
+
+
+Z 
+
+
+W 
+
+
+T 
+
+
+V 
+
+
+U 
+
+
+X 
+
+
+Y 
+
+
+D 
+
+
+B 
+
+
+C 
+
+
+A 
+
+
+G 
+
+
+I 
+
+
+E 
+
+
+J 
+
+
+H 
+
+
+K 
+
+
+F 
+
+
+0 
+
+
+N 
+
+
+L 
+
+
+M 
+
+
+Q 
+
+
+V 
+
+
+Y 
+
+
+X 
+
+
+U 
+
+
+Z 
+
+
+W 
+
+
+C 
+
+
+A 
+
+
+B 
+
+
+E 
+
+
+D 
+
+
+I 
+
+
+H 
+
+
+G 
+
+
+F 
+
+
+L 
+
+
+K 
+
+
+N 
+
+
+M 
+
+
+J 
+
+
+Q 
+
+
+0 
+
+
+T 
+
+
+P 
+
+
+S 
+
+
+R 
+
+
+R 
+
+
+B 
+
+
+A 
+
+
+c 
+
+
+H 
+
+
+D 
+
+
+J 
+
+
+F 
+
+
+E 
+
+
+G 
+
+
+I 
+
+
+L 
+
+
+0 
+
+
+N 
+
+
+P 
+
+
+K 
+
+
+M 
+
+
+S 
+
+
+Q 
+
+
+R 
+
+
+U 
+
+
+z 
+
+
+T 
+
+
+Y 
+
+
+V 
+
+
+W 
+
+
+X 
+
+
+S 
+
+
+Q 
+
+
+Y 
+
+
+z 
+
+
+V 
+
+
+X 
+
+
+A 
+
+
+B 
+
+
+C 
+
+
+E 
+
+
+F 
+
+
+D 
+
+
+M 
+
+
+J 
+
+
+I 
+
+
+G 
+
+
+K 
+
+
+A 
+
+
+P 
+
+
+L 
+
+
+N 
+
+
+s 
+
+
+R 
+
+
+0 
+
+
+Y 
+
+
+U 
+
+
+T 
+
+
+T 
+
+
+E 
+
+
+D 
+
+
+I 
+
+
+G 
+
+
+H 
+
+
+F 
+
+
+L 
+
+
+M 
+
+
+K 
+
+
+P 
+
+
+0 
+
+
+N 
+
+
+R 
+
+
+Q 
+
+
+J 
+
+
+S 
+
+
+U 
+
+
+X 
+
+
+T 
+
+
+Z 
+
+
+w 
+
+
+V 
+
+
+Y 
+
+
+C 
+
+
+A 
+
+
+B 
+
+
+U 
+
+
+R 
+
+
+T 
+
+
+s 
+
+
+W 
+
+
+V 
+
+
+Y 
+
+
+Z 
+
+
+U 
+
+
+X 
+
+
+F 
+
+
+A 
+
+
+C 
+
+
+B 
+
+
+E 
+
+
+D 
+
+
+J 
+
+
+K 
+
+
+i 
+
+
+G 
+
+
+H 
+
+
+0 
+
+
+N 
+
+
+M 
+
+
+P 
+
+
+Q 
+
+
+L 
+
+
+V 
+
+
+M 
+
+
+0 
+
+
+L 
+
+
+N 
+
+
+P 
+
+
+S 
+
+
+R 
+
+
+Q 
+
+
+X 
+
+
+T 
+
+
+Y 
+
+
+W 
+
+
+Z 
+
+
+U 
+
+
+V 
+
+
+A 
+
+
+D 
+
+
+c 
+
+
+B 
+
+
+H 
+
+
+F 
+
+
+I 
+
+
+K 
+
+
+E 
+
+
+J 
+
+
+G 
+
+
+Numbers 
+
+
+were 
+
+
+expressed by the following letters bracketed between 
+
+
+“Q 
+
+
+’s’ 1 
+
+
+
+
+
+1234567890 
+
+HPJWDYVRAF 
+
+
+
+The alphabet beginning “SQRYV” was known as the “A” alphabet, that beginning “LOPNM” 
+as the “B” alphabet, etc. 
+
+Messages numbered 1, 31, 61, etc., were decipherable by the 13 alphabets in the order 
+JVCEPQHCMPQGP”. 
+
+Messages numbered 2, 32, 62, etc., were decipherable by the 13 alphabets in the order 
+“TBUULENFKEQGC”. 
+
+The horizontal sequence above the table is the plain-text sequence. The vertical alphabet 
+on the extreme left gives the arbitrary symbol by which the different alphabets were known 
+n the 30 keys. Attached is a list of these 30 keys: 
+
+
+
+REF ID : A6820 6 
+
+
+
+3 
+
+1 J V C E P Q H C M P PGP 
+
+2 TBUULENFKEQGJ 
+
+3 VCBHEGC JKGEP 
+
+4 IOCEBPGKKGPJVEGUGC 
+
+5 HGJKEI I M.PQJBCK 
+
+6 SOFCKMPKGCHCGNFMPQ 
+
+7 LOQGPLGNFJGU 
+
+8 LBUUGPJEGSOFCGP 
+
+9 PBNFGKLOJIEUNF 
+
+10 GJJNFIGNAKIEC 
+
+11 ABCADEGFGC 
+
+12 DMNAGCDOPQG 
+
+13 JNFLEGQGCTOKGC 
+
+14 LEGUOPQGROMGCKGJ 
+
+15 LEGTEGUAB JKGKGJ 
+
+16 SCGIRGPHMNF 
+
+17 HGPGREAKEPGC 
+
+18 JGUKGCLOJJGC 
+
+19 HGELGIAQMSGPJEG 
+
+20 VOVEGCFOPRUMPQ 
+
+21 VSGCRGTGCIEGKGC 
+
+22 QBUROCHGEKGC 
+
+23 FOPRUMPQJ QGFEUSG 
+
+24 FOPRJNFMFIONFGC 
+
+25 EPJKCMIGPKGPIONFGC 
+
+26...: AOIGUKCGEHGC 
+
+27 COREGCQMIIE 
+
+28 HGJBCQGREGVSGGRG 
+
+29 RMPAGUAOIIGC 
+
+30 GGNFKJGGUGFCKGC 
+
+It will be noticed that the same letter, as P, for instance, in key no. 1, is repeated four 
+different times. Again, the E and Q and G which occur in 1 occur also in 2. These facts 
+pointed to the use in these 30 keys of intelligible German words. The arbitrary letters, which 
+the keys in their present form contained, represented a simple substitution. This appeared 
+from the frequency, for example, of G and the inseparable combinations NF and NA, N never 
+appearing unless followed by F or A. It was therefore extremely probable that these letters, 
+arbitrarily chosen to represent the 22 different alphabets, in reality represented keywords in 
+German text. 
+
+N was assumed to be the value of C, and F, H; and G, the most frequent letter which was 
+never absent from any of the series, E. This simple substitution was continued until familiar 
+German syllables began to appear and finally the complete keywords themselves. 
+
+
+
+68652 — 35— — 2 
+
+
+
+ktw \ 
+
+
+
+
+4 
+
+
+
+1— 
+
+
+. s 
+
+
+P 
+
+
+R 
+
+
+I 
+
+
+N 
+
+
+G 
+
+
+B 
+
+
+R 
+
+
+U 
+
+
+N 
+
+
+N 
+
+
+E 
+
+
+N 
+
+
+
+
+
+
+
+
+
+
+
+
+2 
+
+
+. V 
+
+
+0 
+
+
+L 
+
+
+L 
+
+
+W 
+
+
+I 
+
+
+C 
+
+
+H 
+
+
+T 
+
+
+I 
+
+
+G 
+
+
+E 
+
+
+S 
+
+
+
+
+
+
+
+
+
+
+
+
+3 — 
+
+
+. p 
+
+
+R 
+
+
+0 
+
+
+B 
+
+
+I 
+
+
+E 
+
+
+R 
+
+
+S 
+
+
+T 
+
+
+E 
+
+
+I 
+
+
+N 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4 
+
+
+- M 
+
+
+A 
+
+
+R 
+
+
+I 
+
+
+0 
+
+
+N 
+
+
+E 
+
+
+T 
+
+
+T 
+
+
+E 
+
+
+N 
+
+
+S 
+
+
+P 
+
+
+I 
+
+
+E 
+
+
+L 
+
+
+E 
+
+
+R 
+
+
+5— 
+
+
+_ B 
+
+
+E 
+
+
+S 
+
+
+T 
+
+
+I 
+
+
+M 
+
+
+M U 
+
+
+N 
+
+
+G 
+
+
+S 
+
+
+0 
+
+
+R 
+
+
+T 
+
+
+
+
+
+
+
+
+
+
+6— 
+
+
+. F 
+
+
+A 
+
+
+H 
+
+
+R 
+
+
+T 
+
+
+U 
+
+
+N 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+B 
+
+
+R 
+
+
+E 
+
+
+C 
+
+
+H 
+
+
+U 
+
+
+N 
+
+
+G 
+
+
+7— 
+
+
+. W 
+
+
+A 
+
+
+G 
+
+
+E 
+
+
+N 
+
+
+w 
+
+
+E 
+
+
+C 
+
+
+H 
+
+
+S 
+
+
+E 
+
+
+L 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8— . 
+
+
+. W 
+
+
+0 
+
+
+L 
+
+
+L 
+
+
+E 
+
+
+N 
+
+
+S 
+
+
+I 
+
+
+E 
+
+
+F 
+
+
+A 
+
+
+H 
+
+
+R 
+
+
+E 
+
+
+N 
+
+
+
+
+
+
+
+
+9— 
+
+
+. N 
+
+
+0 
+
+
+C 
+
+
+H 
+
+
+E 
+
+
+T 1 
+
+
+W 
+
+
+A 
+
+
+S 
+
+
+U 
+
+
+I 
+
+
+L 
+
+
+C 
+
+
+H 
+
+
+
+
+
+
+
+
+
+
+10... 
+
+
+- E 
+
+
+S 
+
+
+s 
+
+
+C 
+
+
+H 
+
+
+M 
+
+
+E 
+
+
+C 
+
+
+K 
+
+
+T 
+
+
+M 
+
+
+I 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+
+
+11... 
+
+
+.. K 
+
+
+0 
+
+
+R 
+
+
+K 
+
+
+Z 
+
+
+I 
+
+
+E 
+
+
+H 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12— 
+
+
+.. Z 
+
+
+U 
+
+
+C 
+
+
+K 
+
+
+E 
+
+
+R 
+
+
+Z 
+
+
+A 
+
+
+N 
+
+
+G 
+
+
+E 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13— 
+
+
+. s 
+
+
+C 
+
+
+H 
+
+
+W 
+
+
+I 
+
+
+E 
+
+
+G 
+
+
+E 
+
+
+R 
+
+
+V 
+
+
+A 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+14— 
+
+
+. w 
+
+
+I 
+
+
+E 
+
+
+L 
+
+
+A 
+
+
+N 
+
+
+G 
+
+
+E 
+
+
+D 
+
+
+A 
+
+
+U 
+
+
+E 
+
+
+R 
+
+
+T 
+
+
+E 
+
+
+S 
+
+
+
+
+
+
+15— 
+
+
+- w 
+
+
+I 
+
+
+E 
+
+
+V 
+
+
+I 
+
+
+E 
+
+
+L 
+
+
+K 
+
+
+0 
+
+
+S 
+
+
+T 
+
+
+E 
+
+
+T 
+
+
+E 
+
+
+S 
+
+
+
+
+
+
+
+
+16— 
+
+
+- F 
+
+
+R 
+
+
+E 
+
+
+M 
+
+
+D 
+
+
+E 
+
+
+N 
+
+
+B 
+
+
+U 
+
+
+c 
+
+
+H 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17- 
+
+
+. B 
+
+
+E 
+
+
+N 
+
+
+E 
+
+
+D 
+
+
+I 
+
+
+K 
+
+
+T 
+
+
+I 
+
+
+N 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18- 
+
+
+. S 
+
+
+E 
+
+
+L 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+W 
+
+
+A 
+
+
+S 
+
+
+S 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19- 
+
+
+. B 
+
+
+E 
+
+
+I 
+
+
+W 
+
+
+E 
+
+
+M 
+
+
+K 
+
+
+A 
+
+
+U 
+
+
+F 
+
+
+E 
+
+
+N 
+
+
+S 
+
+
+I 
+
+
+E 
+
+
+
+
+
+
+
+
+20- 
+
+
+.. P 
+
+
+A 
+
+
+P 
+
+
+I 
+
+
+E 
+
+
+R 
+
+
+H 
+
+
+A 
+
+
+N 
+
+
+D 
+
+
+L 
+
+
+U 
+
+
+N 
+
+
+G 
+
+
+
+
+
+
+
+
+
+
+21-- 
+
+
+.. P 
+
+
+F 
+
+
+E 
+
+
+R 
+
+
+D 
+
+
+E 
+
+
+V 
+
+
+E 
+
+
+R 
+
+
+M 
+
+
+I 
+
+
+E 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+1 
+
+1 
+
+<N 
+
+
+„ G 
+
+
+0 
+
+
+L 
+
+
+D 
+
+
+A 
+
+
+R 
+
+
+B 
+
+
+E 
+
+
+I 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+23- 
+
+
+- H 
+
+
+A 
+
+
+N 
+
+
+D 
+
+
+L 
+
+
+U 
+
+
+N 
+
+
+G 
+
+
+S 
+
+
+G 
+
+
+E 
+
+
+H 
+
+
+I 
+
+
+L 
+
+
+F 
+
+
+E 
+
+
+
+
+
+
+24- 
+
+
+„ H 
+
+
+A 
+
+
+N 
+
+
+D 
+
+
+S 
+
+
+C 
+
+
+H 
+
+
+U 
+
+
+H M 
+
+
+A 
+
+
+C 
+
+
+H 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+25- 
+
+
+„ I 
+
+
+N 
+
+
+S 
+
+
+T 
+
+
+R 
+
+
+u 
+
+
+M 
+
+
+E 
+
+
+N 
+
+
+T 
+
+
+E 
+
+
+N 
+
+
+M 
+
+
+A 
+
+
+C 
+
+
+H 
+
+
+E 
+
+
+R 
+
+
+26— 
+
+
+K 
+
+
+A 
+
+
+M 
+
+
+E 
+
+
+L 
+
+
+T 
+
+
+R 
+
+
+E 
+
+
+I 
+
+
+B 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27— 
+
+
+-- R 
+
+
+A 
+
+
+D 
+
+
+I 
+
+
+E 
+
+
+R 
+
+
+G 
+
+
+U 
+
+
+M 
+
+
+M 
+
+
+I 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+28- 
+
+
+— B 
+
+
+E 
+
+
+S 
+
+
+0 
+
+
+R 
+
+
+G 
+
+
+E 
+
+
+D 
+
+
+I 
+
+
+E 
+
+
+P 
+
+
+F 
+
+
+E 
+
+
+R 
+
+
+D 
+
+
+E 
+
+
+
+
+
+
+29— 
+
+
+.. D 
+
+
+U 
+
+
+N 
+
+
+K 
+
+
+E 
+
+
+L 
+
+
+K 
+
+
+A 
+
+
+M 
+
+
+M 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CO 
+
+0 
+
+1 
+1 
+
+
+„ R 
+
+
+E 
+
+
+C 
+
+
+H 
+
+
+T 
+
+
+S 
+
+
+G 
+
+
+E 
+
+
+L 
+
+
+E 
+
+
+H 
+
+
+R 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+
+
+
+
+
+
+
+REF ID:A68206 
+
+
+
+5 
+
+II. TRANSPOSITION CIPHERS 
+
+Reference has been made to the predilection for transposition methods on the part of 
+the Germans. Even substitution methods, when resorted to, usually contained in them some form 
+of transposition, such as in the “RlOHI”, the most important military cipher used by the 
+Germans. 
+
+One of the most common forms of transposition cipher used by the Germans was the double 
+transposition. Occasionally, the simple columnar transposition was used, but this was extremely 
+rare as such a system of encipherment in a language such as the German, which contains the 
+common invariable combination CH, offers very little security. 
+
+The solution of a simple columnar transposition involves merely putting together the columns 
+containing the C’s with the columns containing the H’s with which they belong. If, as often 
+happens, in a transposition cipher, two C’s occur in the same column, there must also be two 
+H’s which occur the same number of letters apart as the two C’s in a similar single column. 
+
+As an example of a simple transposition, there was intercepted by the high-powered station 
+at General Headquarters in May, a cipher which read as follows : 
+
+
+
+ALTMARK 
+
+
+41 
+
+
+GRUPPEN 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BEL 
+
+
+N 
+
+
+S 
+
+
+M 
+
+
+E 
+
+
+U 
+
+
+A G 
+
+
+H 
+
+
+R L N 
+
+
+V 
+
+
+R 
+
+
+S N D 
+
+
+C 
+
+
+D 
+
+
+C N 0 A 
+
+
+A 
+
+
+C 
+
+
+E 
+
+
+F 
+
+
+N 
+
+
+F N F 
+
+
+P 
+
+
+E 
+
+
+0 
+
+
+S 
+
+
+G 
+
+
+A A 
+
+
+B 
+
+
+N B D 
+
+
+E 
+
+
+D 
+
+
+M ff L 
+
+
+R 
+
+
+R 
+
+
+T H N A 
+
+
+T 
+
+
+0 
+
+
+S 
+
+
+0 
+
+
+N 
+
+
+S N U 
+
+
+I 
+
+
+K 
+
+
+L 
+
+
+N 
+
+
+I 
+
+
+G P 
+
+
+U 
+
+
+S U S 
+
+
+S 
+
+
+HFE I 
+
+
+N 
+
+
+R 
+
+
+A A D N 
+
+
+H 
+
+
+N 
+
+
+R 
+
+
+N 
+
+
+E 
+
+
+F A E 
+
+
+U 
+
+
+N 
+
+
+E 
+
+
+H 
+
+
+B 
+
+
+A S 
+
+
+R 
+
+
+T A R R 
+
+
+N 
+
+
+U E R 
+
+
+I 
+
+
+If 
+
+
+GORE 
+
+
+1 . . 
+
+K 
+
+
+C 
+
+
+0 
+
+
+B 
+
+
+T 
+
+
+AIT 
+
+
+0 
+
+
+F 
+
+
+I 
+
+
+L 
+
+
+T 
+
+
+A N 
+
+
+N U A E 
+
+
+M 
+
+
+E 
+
+
+I 0 D 
+
+
+E 
+
+
+D 
+
+
+E H Z K 
+
+
+G 
+
+
+N 
+
+
+T 
+
+
+C 
+
+
+H 
+
+
+NAD 
+
+
+u 
+
+
+G 
+
+
+U 
+
+
+R 
+
+
+S 
+
+
+R T 
+
+
+E 
+
+
+D L Z 
+
+
+R 
+
+
+I 
+
+
+C A U 
+
+
+N 
+
+
+Z 
+
+
+DURF 
+
+
+A L 
+
+
+C 
+
+
+N 
+
+
+L 
+
+
+N E U 
+
+
+L 
+
+
+U 
+
+
+B 
+
+
+E 
+
+
+S 
+
+
+B H 
+
+
+T 
+
+
+ENA 
+
+
+H 
+
+
+D 
+
+
+NOS 
+
+
+T 
+
+
+A 
+
+
+N M S Z. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+A frequency of the cipher letters in which the most frequent German letters, E, A, N, I, etc., 
+appeared in approximately the same proportion as in German text and the absence of Q, J, and 
+Y indicated that the principle upon which the message had been enciphered was that of 
+transposition. 1C 
+
+In the fourth cipher group of 5 letters there is a C which is followed at an interval of 
+2 letters by a C in the fifth group. A third C follows the second C at an interval of 5 letters. 
+
+In the thirteenth group from the end there is an H followed by a K at a similar interval of 
+2 letters, as was observed between the first 2 C’s, and, furt'her, there is another H which follows 
+the K at an interval of 5 letters. * -> 1 
+
+There can be but one conclusion, and that is that these 3 C’s belong in a column which will 
+directly precede the column which contains the 2 H’s and the K. 
+
+, c h 
+
+.. ' , i D E r ' 
+
+C K ••• ‘ 1 - • 
+
+N G 
+0 N 
+A T 
+A C 
+C H 
+
+
+
+
+
+
+
+6 
+
+
+
+As yet the length of the columns is still unknown, though there can be no doubt that the 
+length must be at least such as to include the 8 lines which are contained in the series of 
+the 3 C’s. 
+
+If a count is made of the letters which occur between the first C in the fourth group and the 
+H in the fourteenth group from the end (2 letters which it is believed are paired together) the 
+number will be found to be 123. This number is divisible only by 3 and 41. There are 205 
+letters in the entire message. If the message is divided into columns of 41 letters in length, 
+precisely 5 columns will result. 
+
+Again, one might have chosen to place a third column against the original two which had 
+been selected 
+
+C H 
+D Z 
+C K 
+NG 
+ON 
+A T 
+A C 
+C H 
+
+
+
+by putting a column containing an H or K against the AC which appeared as a result of the matching 
+of the three C’s. There are a numbed of H’s from which to choose but the proper H would have 
+readily proved itself from Hie kind of syllables which would have resulted when the letters 
+immediately preceding it appeared in conjunction with those which were already possessed. 
+
+Compare two such combinations, one in which the correct H has been placed against the 
+AC which it follows and the other an H selected at random. 
+
+
+
+( 1 ) 
+
+CHL 
+D Z U 
+C K B 
+N G E 
+0 N S 
+A T B 
+A C H 
+C H T 
+
+
+
+( 2 ) 
+
+CHS 
+D Z M 
+C K E 
+N G U 
+0 N A 
+A T G 
+A C H 
+C H R 
+
+
+
+In the first, the German word ZU has appeared. The second contains in its second line 
+a combination “DZM” which, unless an error, 'Is impossible in German. A count of the letters 
+between the C and H in “ACH” in the first gives also 41 which is a factor of the number 123 
+which was found to separate the other CH’s. 
+
+
+
+REF ID : A68206 
+
+
+
+7 
+
+There is no other conclusion but that the columns are five in number and are 41 letters 
+
+
+
+in length. The columns 
+12 8 
+
+
+are 
+
+4 
+
+
+accordingly cut as follows: 
+8 
+
+
+i 
+
+
+?. 
+
+
+3 
+
+
+4 
+
+
+8 
+
+
+B 
+
+
+N 
+
+
+A 
+
+
+0 
+
+
+R 
+
+
+C 
+
+
+U 
+
+
+R 
+
+
+K 
+
+
+B 
+
+
+E 
+
+
+B 
+
+
+D 
+
+
+F 
+
+
+I 
+
+
+N 
+
+
+I 
+
+
+R 
+
+
+G 
+
+
+E 
+
+
+L 
+
+
+D 
+
+
+N 
+
+
+I 
+
+
+C 
+
+
+0 
+
+
+K 
+
+
+N 
+
+
+N 
+
+
+S 
+
+
+N 
+
+
+E 
+
+
+H 
+
+
+L 
+
+
+A 
+
+
+A 
+
+
+L 
+
+
+D 
+
+
+T 
+
+
+B 
+
+
+S 
+
+
+D 
+
+
+N 
+
+
+T 
+
+
+U 
+
+
+A 
+
+
+N 
+
+
+JE 
+
+
+C 
+
+
+H 
+
+
+M 
+
+
+M 
+
+
+R 
+
+
+A 
+
+
+N 
+
+
+C 
+
+
+I 
+
+
+R 
+
+
+H 
+
+
+T 
+
+
+E 
+
+
+W 
+
+
+N 
+
+
+N 
+
+
+Z 
+
+
+E 
+
+
+G 
+
+
+I 
+
+
+N 
+
+
+E 
+
+
+U 
+
+
+L 
+
+
+E 
+
+
+N 
+
+
+D 
+
+
+F 
+
+
+P 
+
+
+M 
+
+
+A 
+
+
+N 
+
+
+A 
+
+
+R 
+
+
+F 
+
+
+U 
+
+
+M 
+
+
+N 
+
+
+U 
+
+
+G 
+
+
+D 
+
+
+A 
+
+
+G 
+
+
+R 
+
+
+A 
+
+
+A 
+
+
+R 
+
+
+F 
+
+
+S 
+
+
+U 
+
+
+U 
+
+
+H 
+
+
+H 
+
+
+T 
+
+
+E 
+
+
+E 
+
+
+F 
+
+
+N 
+
+
+V 
+
+
+R 
+
+
+G 
+
+
+D 
+
+
+R 
+
+
+H 
+
+
+U 
+
+
+M 
+
+
+A 
+
+
+F 
+
+
+s 
+
+
+E 
+
+
+U 
+
+
+N 
+
+
+L 
+
+
+N 
+
+
+N 
+
+
+E 
+
+
+L 
+
+
+P 
+
+
+s 
+
+
+K 
+
+
+R 
+
+
+U 
+
+
+N 
+
+
+A 
+
+
+E 
+
+
+I 
+
+
+C 
+
+
+E 
+
+
+H 
+
+
+C 
+
+
+S 
+
+
+S 
+
+
+V 
+
+
+T 
+
+
+H 
+
+
+0 
+
+
+N 
+
+
+0 
+
+
+F 
+
+
+0 
+
+
+R 
+
+
+T 
+
+
+R 
+
+
+0 
+
+
+B 
+
+
+D 
+
+
+L 
+
+
+3 
+
+
+E 
+
+
+B 
+
+
+T 
+
+
+A 
+
+
+S 
+
+
+S 
+
+
+A 
+
+
+E 
+
+
+N 
+
+
+G 
+
+
+I 
+
+
+T 
+
+
+E 
+
+
+W 
+
+
+N 
+
+
+0 
+
+
+S 
+
+
+D 
+
+
+E 
+
+
+A 
+
+
+N 
+
+
+A 
+
+
+D 
+
+
+M 
+
+
+D 
+
+
+N 
+
+
+R 
+
+
+E 
+
+
+U 
+
+
+A 
+
+
+R 
+
+
+I 
+
+
+L 
+
+
+S 
+
+
+C 
+
+
+S 
+
+
+T 
+
+
+H 
+
+
+L 
+
+
+B 
+
+
+A 
+
+
+T 
+
+
+Z 
+
+
+z 
+
+
+D 
+
+
+N 
+
+
+A 
+
+
+Z 
+
+
+U 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DU: 
+
+
+
+
+
+
+By fitting tiie remaining C’s with H’s which appear in the same horizontal lines the’ com- 
+pletely reconstructed key becomes: ' " ‘ ! 
+
+s 2 1 4 s 
+
+A N B 0 R 
+
+D B E F I 
+
+N D L I C 
+
+HEKLA 
+N B S T U 
+
+R M « A N 
+
+N W E K Z 
+
+E L U N D 
+
+F R A U M 
+
+A R G A R 
+
+E T H E F 
+
+U H R M A 
+
+N N L E L 
+
+E A N I C 
+
+H T V 0 N 
+
+B 0 R D L 
+
+A S S E N 
+
+SONDE 
+R N D E U 
+
+T S C H L 
+
+A N D Z U 
+
+The message is now in the original form in which it appeared before encipherment. The 
+
+translation reads: “Do not let Reservist Wenzel and Mrs. Margaret Fuhrman Lelea, who 
+are on board, disembark, but bring them back to Germany. Notify Consulate. Confirm 
+at once to the Admiralty Staff the receipt and carrying out of this wireless message.” 
+
+In the case of a double transposition, which is the double application of the same columnar 
+key, it is impossible to attempt to reconstruct the key by the method of fitting together the C’s 
+with the H’s. The cipher letters in a double transposition are inextricably mixed together in a 
+way that has led a mathematician to say that the only principle which remains in the order of 
+the letters after their double encipherment is the fact that there is no principle. 
+
+There is but one method of solution. This is accomplished when two or more messages 
+are to be had of the same length and enciphered by the same key. This is only possible in the 
+case of two messages of identical length where the number of letters does not exceed 50 in each 
+message. If the number is more, the solution is only possible with three messages of identical 
+length. The method of solution is that of writing out the messages of identical length under 
+each other. The vertical columns which are thus formed are cut up and the messages are then 
+anagrammed. 
+
+The principle of anagraming two messages is made possible by reason of the fact that, in 
+any transposition or rearrangement of letters in messages of equal length enciphered by the same 
+key, the letters which occupy the same relative positions in each of the clear text messages of 
+
+
+
+f 
+
+
+
+8 2 14 6 
+
+R 0 C K SB 
+R 1 N G E 
+N K 0 N S 
+U L A T B 
+E N A C H 
+R I C H T 
+I G E N E 
+M P F A N 
+G D N D A 
+U S F U H 
+R U N G D 
+E S F U N 
+K S P R U 
+CHESS 
+
+0 F 0 R T 
+6 E S T A 
+T I G E N 
+A N A D M 
+
+1 R A L S 
+T A B Z Z 
+
+
+
+REF ID : A68206 
+
+
+
+9 
+
+similar length will pass through identically the same permutations when put through the process 
+of encipherment. 
+
+The double transpositions which were used by the Germans in 1918 — notably, the Alachi, 
+Gechi, Omochi, Itochi, all modifications in one unimportant way or another of a double applica- 
+tion of a single transposition key — were never used in sufficient quantity to make the method of 
+solution by means of anagraming two messages of equal length possible. 
+
+It however happened on more than one occasion in messages sent by some of the smaller 
+stations in the Black Sea area which made use of the Alachi and Itochi, etc., in communication 
+with Berlin and Constantinople, that, instead of making a double application of the key in the 
+encipherment of messages, only a single application of the key was employed. This had the effect 
+of leaving the message in the form of a simple columnar transposition. 
+
+Thus, on July 24, two messages were intercepted by our stations — one of them Bent by LP 
+(Berlin) to COS (Tiflis) by way of NKJ (Nicolaiev) and the other sent to OSM (Constantinople) 
+by COS (Tiflis). 
+
+
+
+NKJ v LP 
+FUER COS 
+
+
+ALACHI- 
+
+
+-266 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E H N T I 
+
+
+X 
+
+
+N 
+
+
+F 
+
+
+M 
+
+
+U 
+
+
+M 
+
+
+A 
+
+
+I 
+
+
+R 
+
+
+A 
+
+
+I 
+
+
+C 
+
+
+E 
+
+
+I 
+
+
+T 
+
+
+A 
+
+
+W 
+
+
+A 
+
+
+N 
+
+
+M 
+
+
+E 
+
+
+E 
+
+
+DEG 
+
+
+X D N G R 
+
+
+C 
+
+
+R 
+
+
+3 
+
+
+T 
+
+
+U 
+
+
+E 
+
+
+S 
+
+
+A 
+
+
+U 
+
+
+C 
+
+
+E 
+
+
+P 
+
+
+C 
+
+
+U 
+
+
+T 
+
+
+E 
+
+
+B 
+
+
+0 
+
+
+T 
+
+
+E 
+
+
+T 
+
+
+I 
+
+
+I Q L 
+
+
+N N S E T 
+
+
+N 
+
+
+0 
+
+
+E 
+
+
+H 
+
+
+E 
+
+
+E 
+
+
+S 
+
+
+N 
+
+
+E 
+
+
+L 
+
+
+R 
+
+
+E 
+
+
+G 
+
+
+E 
+
+
+Z 
+
+
+V 
+
+
+U 
+
+
+I 
+
+
+E 
+
+
+E 
+
+
+I 
+
+
+N 
+
+
+N N D 
+
+
+E N 0 M N 
+
+
+E 
+
+
+R 
+
+
+H 
+
+
+S 
+
+
+S 
+
+
+H 
+
+
+X 
+
+
+R 
+
+
+T 
+
+
+0 
+
+
+M 
+
+
+R 
+
+
+I 
+
+
+N 
+
+
+K 
+
+
+U 
+
+
+E 
+
+
+A 
+
+
+G 
+
+
+T 
+
+
+R 
+
+
+E 
+
+
+T G H 
+
+
+X N S F T 
+
+
+F 
+
+
+T 
+
+
+E 
+
+
+B 
+
+
+Z 
+
+
+U 
+
+
+s 
+
+
+R 
+
+
+E 
+
+
+T 
+
+
+X 
+
+
+L 
+
+
+N 
+
+
+P 
+
+
+0 
+
+
+E 
+
+
+E 
+
+
+I 
+
+
+H 
+
+
+F 
+
+
+L 
+
+
+S 
+
+
+0 C 0 
+
+
+N Z E N R 
+
+
+X 
+
+
+N 
+
+
+B 
+
+
+R 
+
+
+G 
+
+
+P 
+
+
+R 
+
+
+I 
+
+
+N 
+
+
+R 
+
+
+E 
+
+
+H 
+
+
+L 
+
+
+E 
+
+
+0 
+
+
+E 
+
+
+S 
+
+
+F 
+
+
+R 
+
+
+T 
+
+
+U 
+
+
+I 
+
+
+R U I 
+
+
+AUARE 
+
+
+N 
+
+
+I 
+
+
+E 
+
+
+H 
+
+
+N 
+
+
+E 
+
+
+M 
+
+
+V 
+
+
+B 
+
+
+E 
+
+
+A 
+
+
+W 
+
+
+A 
+
+
+S 
+
+
+E 
+
+
+G 
+
+
+V 
+
+
+E 
+
+
+0 
+
+
+X 
+
+
+I 
+
+
+L 
+
+
+E X N 
+
+
+P L I E M 
+
+
+H 
+
+
+T 
+
+
+S 
+
+
+R 
+
+
+0 
+
+
+A 
+
+
+R 
+
+
+R 
+
+
+0 
+
+
+E 
+
+
+A 
+
+
+T 
+
+
+G 
+
+
+N 
+
+
+C 
+
+
+D 
+
+
+0 
+
+
+A 
+
+
+C 
+
+
+R 
+
+
+A 
+
+
+E 
+
+
+S K F 
+
+
+T X A S E 
+
+
+I 
+
+
+H 
+
+
+S 
+
+
+N 
+
+
+R 
+
+
+H 
+
+
+A 
+
+
+C 
+
+
+E 
+
+
+R 
+
+
+H 
+
+
+G 
+
+
+G 
+
+
+N 
+
+
+s 
+
+
+E 
+
+
+I 
+
+
+E 
+
+
+I 
+
+
+R 
+
+
+D 
+
+
+
+
+
+
+OSM V COS 
+ALACHI— 152 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R R S C H 
+
+
+N 
+
+
+S 
+
+
+E 
+
+
+A 
+
+
+T 
+
+
+N 
+
+
+W 
+
+
+E 
+
+
+N 
+
+
+T 
+
+
+U 
+
+
+R 
+
+
+Z 
+
+
+A 
+
+
+F 
+
+
+L 
+
+
+B 
+
+
+D 
+
+
+L 
+
+
+M 
+
+
+I 
+
+
+E 
+
+
+A E E 
+
+
+F A I R L 
+
+
+R 
+
+
+0 
+
+
+M 
+
+
+G 
+
+
+H 
+
+
+N 
+
+
+E 
+
+
+N 
+
+
+M 
+
+
+F 
+
+
+N 
+
+
+N 
+
+
+S 
+
+
+I 
+
+
+U 
+
+
+Z 
+
+
+T 
+
+
+D 
+
+
+L 
+
+
+I 
+
+
+0 
+
+
+R 
+
+
+F A J 
+
+
+E N F J N 
+
+
+I 
+
+
+A 
+
+
+U 
+
+
+B 
+
+
+T 
+
+
+0 
+
+
+E 
+
+
+T 
+
+
+R 
+
+
+C 
+
+
+A 
+
+
+E 
+
+
+R 
+
+
+I 
+
+
+S 
+
+
+R 
+
+
+K 
+
+
+R 
+
+
+A 
+
+
+D 
+
+
+F 
+
+
+A 
+
+
+I I T 
+
+
+L L E U A 
+
+
+H 
+
+
+B 
+
+
+H 
+
+
+R 
+
+
+S 
+
+
+E 
+
+
+N 
+
+
+G 
+
+
+I 
+
+
+0 
+
+
+V 
+
+
+0 
+
+
+A 
+
+
+L 
+
+
+T 
+
+
+R 
+
+
+R 
+
+
+J 
+
+
+B 
+
+
+U 
+
+
+I 
+
+
+E 
+
+
+I G T 
+
+
+T E T L N 
+A T 
+
+
+N 
+
+
+E 
+
+
+W 
+
+
+E 
+
+
+L 
+
+
+I 
+
+
+T 
+
+
+A 
+
+
+E 
+
+
+Z 
+
+
+F 
+
+
+P 
+
+
+K 
+
+
+E 
+
+
+T 
+
+
+L 
+
+
+N 
+
+
+I 
+
+
+T 
+
+
+P 
+
+
+S 
+
+
+G 
+
+
+M H B 
+
+
+
+The first message resisted all efforts at a solution directed along simple principles. The C’s 
+which were matched for trial with the H’s gave no promising syllables. 
+
+In the second message there were 2. C’s and 5 H’s. 
+
+There was nothing to do but try each against the other. The columns were run tentatively 
+a distance of two or more letters in either direction from the C. 
+
+
+
+
+
+
+R 0 
+
+
+(First set) 
+
+RE R A 
+
+
+R S 
+
+
+E 0 
+
+
+(Second set) 
+EE E A E S 
+
+
+E R 
+
+
+R M 
+
+
+R U 
+
+
+R H 
+
+
+R G 
+
+
+T M 
+
+
+T U 
+
+
+T H 
+
+
+T G 
+
+
+T S 
+
+
+S G 
+
+
+S A 
+
+
+S B 
+
+
+S M 
+
+
+R G 
+
+
+R A 
+
+
+R B 
+
+
+R M 
+
+
+R C 
+
+
+C H 
+
+
+C H 
+
+
+C H 
+
+
+C H 
+
+
+, C H 
+
+
+C H 
+
+
+C H 
+
+
+C H 
+
+
+C H 
+
+
+H N 
+
+
+H B 
+
+
+H R 
+
+
+H B 
+
+
+A N 
+
+
+A B 
+
+
+A R 
+
+
+A B 
+
+
+A N 
+
+
+N E 
+
+1 j. 
+
+
+N H 
+
+
+N S 
+
+
+N A 
+
+
+E E 
+
+
+E H 
+
+
+E S 
+
+
+E A 
+
+
+E S 
+
+
+;[ S N 
+
+
+S R 
+
+
+S E 
+
+
+S T 
+
+
+R N 
+
+
+R R 
+
+
+R E 
+
+
+R T 
+
+
+R E 
+
+
+
+In the first set the last pair of columns was finally chosen from amongst the four. It was 
+hardly probable that the C would precede the H which immediately followed it in the cipher in 
+the first group. If this pair of columns Was correct the syllables formed as a result of the con- 
+junction of the letters should suggest parts of German words. “NA” in the second line below 
+the CH seemed to offer the best suggestion. “NA” might be the first letters in “NACH”. 
+
+Since the “NA” was taken from a pair of columns in which one of the two CH’s in the message 
+had been formed, there was the single alternative of fitting the “NA” in this pair of columns 
+against the proper CJH combination of columns which was to be found somewhere among the five 
+pairs in the second set. 
+
+The column chosen in . the first set, was placed against each of the five columns in the 
+second set in succession, the “NA” being placed each time in the same horizontal line with 
+the CH in order to form the word “NACH”. The correct pairs should prove themselves by the 
+appearance of other German words or syllables when once the two pairs were correctly 
+fitted. 
+
+The first CH in the second set #hen placed against the NA in the last column of the first 
+set gave ho result. '< 
+
+'*• ' R S 
+
+R G 
+
+S M E 0 
+C H T M 
+HBRG 
+NACH 
+STAN 
+
+The combination “HBRG” which appeared in the line above “NACH” eliminated this 
+choice. 
+
+The second attempt appeared much better: 
+
+R S 
+R G 
+
+SMEE 
+C HT U 
+H B R A 
+NACH 
+STAB 
+
+
+
+REF ID : A68206 
+
+
+
+11 
+
+Another German word “STAB” had appeared in addition to the syllables “BRA”, “CH” 
+“TU”, and “MEE”. ' : •' • x 7 7 ■ . ; ' ' ' 7 • ' 7 7 7 
+
+A count was made of the hum&e? of letters which separated -the “C” from the “H”, the “H” 
+from the “T”, and the “T” from the “U” in “CHTlf”. This gave 145, 76, and 21 letters, respec- 
+tively. The latter was divisible by 7, the 79 was ope short of -a seven factor and the 145 two 
+short. The columns were probably 7 letters in length. There werel52 letters in the mes- 
+sage which would give 20 columns of 7 letters in length and 2 of. 6, This would account for 
+the discrepancy of two and one in the count between H ‘C” and “H’* and “T”. 
+
+These deductions Were soon afterwards confirmed. The whrd ‘‘STAB ” was a word of 
+frequent occurrence in the signature “GENERAL STAB POLITIX BERLIN, ” with which we were 
+familiar. This enabled us. to reconstruct the entire rectangle; “ 
+
+18 4 8 1 22 11 14 Bl 8 3 19 ’ 13 7 20 10 8 12 18 15 2 9 17 
+
+0 BE RSTLEUT NAN T F R EX H E R R 
+
+VDERG 01 TZU N DM A JO R G R AFJ 
+OLFSMEELTREFFENMITST;AB 
+A N A C H T U.NDZW ANZIGSTENJU 
+L IINBR A I L A E I N F A H R E N W E J. 
+
+T E R N A C H T I F L I S PUUTG EKE ,, " 
+
+RALS.T A B P.OLITIKB E. R LIN ; , > 
+
+The cipher was a simple columnar transpositioii. The message read When tirauslated: 
+“Lieut. Colonel Baron von der Goltz and Major Count Graf Jolfsmeql, with staff, will 
+| arrive in Braila on July 28th;. they will then continue their journey to Tifhs. General Staff, 
+
+! Political Section, Berlin.” . • , . ... .. ; ; 
+
+i .i ; The key onoe solved by the reconstruction of the transposition in tho, one “Alachi”, the 
+
+I second message should be decipherable by the application; -of the same key. 
+
+
+
+18 
+
+
+4 
+
+
+6 
+
+
+i 
+
+
+22 
+
+
+ii 
+
+
+14 
+
+
+2i’. 
+
+
+'8 
+
+
+3 
+
+
+19 
+
+
+13 
+
+
+7 20 
+
+
+10 
+
+
+» 
+
+
+12 
+
+
+18' 
+
+
+18 2 
+
+
+*■»' 
+
+
+17 
+
+
+u 
+
+
+R 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+N 
+
+
+B 
+
+
+A 
+
+
+I 
+
+
+M 
+
+
+R 
+
+
+L 
+
+
+E D 
+
+
+K 
+
+
+N 
+
+
+E 
+
+
+L 
+
+
+0 I 
+
+
+H 
+
+
+E 
+
+
+A 
+
+
+I 
+
+
+E 
+
+
+H 
+
+
+H 
+
+
+5 
+
+
+R 
+
+
+S 
+
+
+N 
+
+
+E 
+
+
+0 
+
+
+S 
+
+
+L 1 6* 
+
+
+U 
+
+
+S> 
+
+
+T 
+
+
+E 
+
+
+D R 
+
+
+S 
+
+
+a ' : 
+
+
+fc 
+
+
+T 
+
+
+B 
+
+
+N 
+
+
+G 
+
+
+F 
+
+
+G 
+
+
+E 
+
+
+N 
+
+
+E 
+
+
+A 
+
+
+0 
+
+
+R A 
+
+
+E 
+
+
+B 
+
+
+X 
+
+
+X 
+
+
+S A 
+
+
+s 
+
+
+w ' 
+
+
+E 
+
+
+U 
+
+
+0 
+
+
+T 
+
+
+G 
+
+
+T 
+
+
+P 
+
+
+i 
+
+
+
+
+D 
+
+
+R 
+
+
+' ' \ 
+
+c 
+
+
+EC 
+
+
+a" 
+
+
+Y 
+
+
+t 
+
+
+n 
+
+
+F I 
+
+
+H 
+
+
+\ ' i ■ 
+
+A 
+
+
+N 
+
+
+E 
+
+
+T 
+
+
+I 
+
+
+U 
+
+
+F 
+
+
+R 
+
+
+H 
+
+
+p 
+
+
+E 
+
+
+R 
+
+
+0 
+
+
+G R 
+
+
+G 
+
+
+N 
+
+
+N 
+
+
+B 
+
+
+R C 
+
+
+X 
+
+
+s 
+
+
+I 
+
+
+S 
+
+
+E 
+
+
+X 
+
+
+s 
+
+
+T 
+
+
+I 
+
+
+S 
+
+
+E 
+
+
+G 
+
+
+0 
+
+
+N 
+
+
+E iA, 
+
+
+T. 
+
+
+0 
+
+
+P 
+
+
+L 
+
+
+T E 
+
+
+R 
+
+
+-E ’ 
+
+
+D 
+
+
+A 
+
+
+T 
+
+
+N 
+
+
+D 
+
+
+E 
+
+
+N 
+
+
+N 
+
+
+N 
+
+
+X 
+
+
+E 
+
+
+Z 
+
+
+Z E 
+
+
+R 
+
+
+E 
+
+
+0 
+
+
+I 
+
+
+ii i 
+
+
+T 
+
+
+G- 
+
+
+H 
+
+
+U 
+
+
+I 
+
+
+F 
+
+
+I 
+
+
+B 
+
+
+R 
+
+
+R 
+
+
+0 
+
+
+D 
+
+
+A 
+
+
+E 
+
+
+V S 
+
+
+E 
+
+
+H, 
+
+
+E 
+
+
+E 
+
+
+I T 
+
+
+0 
+
+
+V 
+
+
+N 
+
+
+C 
+
+
+I 
+
+
+M 
+
+
+E 
+
+
+Z 
+
+
+E 
+
+
+H 
+
+
+M 
+
+
+N 
+
+
+T 
+
+
+N 
+
+
+U K 
+
+
+T 
+
+
+E 
+
+
+E 
+
+
+N 
+
+
+R A 
+
+
+M 
+
+
+E '* 
+
+
+E 
+
+
+E 
+
+
+Q 
+
+
+U 
+
+
+I 
+
+
+U 
+
+
+H 
+
+
+A 
+
+
+N 
+
+
+G 
+
+
+G 
+
+
+R 
+
+
+I F 
+
+
+G 
+
+
+E. 
+
+
+I 
+
+
+H 
+
+
+U W 
+
+
+R 
+
+
+0 ' 
+
+
+M 
+
+
+P 
+
+
+L 
+
+
+
+
+R 
+
+
+S 
+
+
+L 
+
+
+C 
+
+
+E 
+
+
+R 
+
+
+N 
+
+
+X 
+
+
+E T 
+
+
+H 
+
+
+S 
+
+
+H 
+
+
+T 
+
+
+I A 
+
+
+I 
+
+
+X 
+
+
+V 
+
+
+C 
+
+
+N 
+
+
+A 
+
+
+D 
+
+
+R 
+
+
+E 
+
+
+E 
+
+
+R 
+
+
+0 
+
+
+c 
+
+
+N 
+
+
+E X 
+
+
+X 
+
+
+N 
+
+
+F 
+
+
+S 
+
+
+A N 
+
+
+N 
+
+
+I 
+
+
+
+B U 
+
+This operation was now repeated. The message was written under the same series of 
+numbers, reading from the first horizontal line of the first transposition and writing the letters 
+in succession vertically down the columns in numerical order from 1 to 22. 
+
+
+
+68652 — 35 3 
+
+
+
+HOiSr. 
+
+
+
+12 
+
+16 4 S 1 22 U 14 21 8 8 19 13 7 20 10 8 12 18 18 2 9 17 
+
+ZUFUENFV I EREI NSXAHHEER 
+ESGRXEICHHORNXISTGEDRA 
+HTETXABNAHMEDESANGEKOM 
+MENENTRANSPORTESDRINGE 
+NDERPORDERLICHXWEITERE 
+TRANSPORTSMUESSENFOLGE 
+NSOBALDEINRICHTUNGVONQ 
+
+uarantaenestationeninu 
+
+KRAINEERFOLGTISTXICHBI 
+
+TTEMJRVORSCHLAEGEHIERU 
+
+EBERBESCHLEUNIGTZUMACH 
+
+ENXLUDENDORFFXOPZWEIXA 
+
+
+
+"ZU FUENF VIER EINS. AN HEERES GR. EICHHORN 1ST GEDRAHTET 
+ABNAHME DES ANGEKOMMENEN TRANSPORTES DRINGEND ERFORDERLICH. WEITERE 
+TRANSPORTS MUESSEN FOLGEN SOBALD EINRICHTUNG VON QUARANTAENE 
+STATIONEN IN UKRAINE ERFOLGT 1ST. ICH BITTE MIR VORSCHLAEGE HIERUEBER 
+BESCHLEUNJGT ZU MACHEN. LUDENDORFF 0 P ZWEI ANG." 
+
+When translated: 
+
+"Referring to no. 541. Army Group Efchhorh has been advised by wire that the unloading 
+of the transport which has arrived is urgently necessary. Further transports must follow 
+as soon as arrangement of quarantine stations in Ukraine is made. Please expedite suggestions 
+to me in regard to this. Ludendorff. OP2 ANG.” 
+
+The “Alachi” was a double transposition. Every deduction which had been made had 
+proved correct. 
+
+Until the day of the armistice and for some few days afterwards the “Alachi” double 
+transposition cipher continued tp pass between Berlin and the East. Although it was never 
+possible to anagram any two messages since no messages were ever found identical in length, 
+yet on more than this one occasion after having solved the key from a single operation of the 
+transposition, it was possible to read all other messages for the same day without further 
+experimentation by the mere double application of the solved key. 
+
+It was never the Berlin operator who was guilty of this error, but always the encipherer 
+from one of the numerous smaller stations at Poti, Nicolaiev, Constantinople, or Sebastopol 
+located in the area of the Black Sea. 
+
+The encipherer at Constantinople was probably indifferent enough to consider that a 
+single transposition was Sufficient for security. 
+
+
+
+REF ID : A6820 6 
+
+
+
+13 
+
+III. THE ADFGVX CIPHER (WESTERN FRONT) 
+
+This cipher which combined the use of transposition and substitution methods, was probably 
+one of the most intricate and most widely used systems of cipher ever employed by the Germans 
+in the course of their military operations from 1914 to 1918. The system first sprang into use 
+on March 1, 1918, 3 weeks before the initial spring drive of the Germans. Its appearance was 
+almost coincident with that of a number of new codes and ciphers such as the Trinumeral 
+Code, which suddenly came into existence at this time. At first, only 5 letters were used in 
+this cipher A, D, F, G, and X. These letters formed the radicals of a square which contained 
+the letters of the alphabet with J omitted. Twenty-five 2-letter combinations were possible 
+with these 5 letters. The digraphs thus formed such as AA, AD, AF, AG, AX, etc., were substitu- 
+tions for the various letters of the alphabet. After the substitution had been effected, the letters 
+were then subjected to a simple columnar transposition. The keys were found to change daily. 
+
+The number of messages which were intercepted in the cipher varied from 25 a day upon 
+the inception of the system to as great a number as 148 during the last days of May. 
+
+The first solution of a key in this cipher was made by Capt. George Painvin of the French 
+Cipher Bureau on April 6 and was the key for messages of the 1st of April. 
+
+The cipher continued to be extensively used as late as the last offensive operations of the 
+Germans in June. From that time until the conclusion of the armistice, the volume of messages 
+diminished very considerably. Although only 10 keys covering a period of 10 days were ever 
+solved the proportion of the messages which were deciphered by means of these keys was about 
+50 percent of the total number of messages which were ever received. This was true because 
+of the fact that the keys which were solved, were those for days on which the greatest number 
+of messages were received. 
+
+The cipher was used by the Germans in their communications between higher headquarters, 
+principally, between the headquarters of divisions and army corps. 
+
+Much valuable information was contained in these ciphers. On one occasion, the solution 
+of a key was accomplished so rapidly by the French that it was possible for an important 
+movement which the Germans had given notice of in an order enciphered by this system, to 
+be completely frustrated. 
+
+On June 1, the additional letter “V” was added to the other five. By the use of this addi- 
+tional radical, a total of 6, ADFGVX, a rectangle 6 by 6 was substituted for the 5 by 5 square 
+which permitted the additional substitution of the numbers 0 to 9 and the letter J which had 
+previously been omitted from the square. 
+
+On account of the fact that this cipher was used principally by army corps in the com- 
+munication of orders and directions for an advance, it became possible to forecast the approx- 
+imate time of some of the later German offensives of the spring and summer of 1918 from an 
+activity chart of the cipher. Several days prior to an operation the volume of messages which 
+were intercepted always increased noticeably above the normal. 
+
+
+
+
+14 
+
+IV> THE ADFGVX CIPHER (EASTERN FRONT) 
+
+In the month of July 1918, this cipher, which had formerly been used exclusively on the 
+Western Front, began to be employed for the first time by Berlin in communication with the 
+German occupied territories of Russia, the station OSM (Constantinople), and the German 
+controlled Black Sea ports, Sebastopol, Nicolaiev, Poti, and other stations in the vicinity of the 
+region. The only difference in the similarity of this cipher with that which waB used on the 
+Western Front was the preamble of the messages. Those which were sent to the eastern theater 
+of war were distinguished by the prefatory word “RICHI” from the western ADFGVX mes- 
+sages, which were prefaced by “CHI.” 
+
+The keys of the western ADFGVX messages changed daily; those of the eastern, the RICHI 
+messages, had a life at first of 2 days and beginning September 1, they commenced to run in 
+3-day cycles. A total of 17 keys, covering a total of 44 days was solved in this cipher from its 
+beginning in July to the end of November. 
+
+The first few messages which were solved, in August, contained information that Was of 
+little value. That is often the surprise which a cipher holds in store. Ciphers which prove a 
+puzzle for weeks and months oftentimes when solved contain nothing more than a barren sum- 
+mary of statistics of station call signs or reports of wireless traffic. One of the most important 
+messages which was solved by the cipher section was enciphered by simple substitution methods. 
+
+From the time of the.debacle of Bulgaria and Turkey, until a few weeks after the conclusion 
+of the armistice, the content of the solved messages increased in importance. On November 2, 
+the key for November 2 and 3 was successfully solved within a period of an hour and a half by 
+the method which similar endings in t#o messages makes possible, and which is described in one 
+of the enclosed notes. A message in 13 parts which was deciphered by means of this key 
+contained the entire plans by which General Mackensen proposed to retreat from Rumania. 
+
+t • ’if- ; . >' i . . ' - • ‘ * '7- : i ' ’ ] 
+
+
+
+
+REF ID : A68206 
+
+
+
+I 
+
+i 
+
+
+
+i 
+
+i 
+
+
+
+15 
+
+
+
+V. MISCELLANEOUS NOTES 
+
+The following notes on the solution of the ADFGVX and other ciphers are appended: 
+
+1. Known solutions for the ADFGVX cipher. 
+
+2. Note on “RICHI” ADFGVX Cipher: Messages for the month of September. 
+
+3. Note on “RICHI” ADFGVX Cipher: The “exact factor” method of solution. 
+
+4. Note on “RICHI” ADFGVX Cipher: Solution of key of October 28, 29, 30, 31. 
+
+5. Note on “RICHI” ADFGVX Cipher: Solution of key of November 1, 2, 3. 
+
+6. Special note on “RICHI” ADFGVX Cipher. 
+
+7. Note by First Lt. H. C. Skinher, M.L'D;: “Reconstruction of an incomplete ADFGVX 
+message.” 
+
+8. Note on ADFGVX Cipher (Western^ Front): Solution of key of October 8. 
+
+9. Special report on the double transposition cipher. 
+
+10. Special report on ciphers. 
+
+11. Translation of a captured German document: “Instructions for Grill Ciphers.” 
+
+12. Note by First Lt. William. F. Friedman, M.I.D.: “A mechanical method for determining 
+the key for the transposition in ADFGVX Ciphers, given two messages with similar endings.” 
+
+1. KNOWN SOLUTIONS FOR THE ADFGVX CIPHER 
+(A) SOLUTION BY SIMILAR BEGINNINGS 
+
+The first step in this solution is to idqntify the number of columns employed in the trans- 
+position by the comparison of two messages whose text begins the same and runs so over two 
+or more lines of transposition. 
+
+To understand how this is done, let us study first, two specimen messages whose beginnings 
+are the same and which have been enciphered and transposed without however destroying the 
+identity which originally characterized them. 
+
+No. 1. "150 TAUSEND R PATRONEN MOEGLICHT GEGUERTET" 
+
+No. 2. "150 TAUSEND S PATRONEN EMPFANGEN" 
+
+Effecting the cipher substitution according to the following key: 
+
+
+
+
+
+A 
+
+
+D 
+
+
+F 
+
+
+G 
+
+
+V 
+
+
+X 
+
+
+A 
+
+
+J 
+
+
+5 
+
+
+Y 
+
+
+D 
+
+
+W 
+
+
+N 
+
+
+D 
+
+
+H 
+
+
+0 
+
+
+M 
+
+
+X 
+
+
+4 
+
+
+8 
+
+
+F 
+
+
+R 
+
+
+F 
+
+
+Z 
+
+
+9 
+
+
+K 
+
+
+V 
+
+
+G 
+
+
+0 
+
+
+U 
+
+
+7 
+
+
+S 
+
+
+E 
+
+
+B 
+
+
+V 
+
+
+A 
+
+
+L 
+
+
+3 
+
+
+2 
+
+
+Q 
+
+
+P 
+
+
+X 
+
+
+6 
+
+
+G 
+
+
+I 
+
+
+T 
+
+
+C 
+
+
+1 
+
+
+
+
+
+
+
+16 
+
+and the following transposition, the messages are written out thus: 
+
+& 11 8 18 3 10 4 15 ; 7 9 14 16 17 2 12 X 6 13 
+
+No. 1. XXADGAXGVAGDGGGVAX 
+AGDGFADGVXVAXGFADD 
+AXGVAXDFDDGVXDVDXF 
+XVDAXGDGX D G V X D G D G V 
+FAXGGVXGDG, 
+
+No. 2. XXADGAXGVAGDGGGVAX 
+AGDGGGDGVXVAXGFADD 
+A X G V A X G V D’ F V X F D V A A X 
+X D G V A X 
+
+It will be noticed that as they stand the first, all but two letters of the second horizontal 
+lines and a part of the third are identical in the two messages. 
+
+Begi nnin g with column 1 and reading down the successive columns in numerical order the 
+messages are then communicated as follows: 
+
+12 H 40 - DJL v DFM - OHI-82 
+
+VADDG GDDGF AXGXD DDXXA AXFAD XGVVD 
+
+XDADG DXAXD DGAA X GVXGX VAGFV GXDFV 
+
+GVGGG GFGGD A V V G X X X D G V AG 
+
+12 H 40 - DJL v DFM - CHI-60 
+
+VAAGG DGGAA XDGXA A X A D A VV-DAD GGAXF 
+
+AGXXX GXDGF VXDXG VVGGV DAXGX FDGVV 
+
+They are now in the form in which intercepted. 
+
+It will be noticed that in these messages the first two letters VA are identical. Now the 
+first message (CHI-82) is longer by 22 than the second (CHI-60). Then we shall look for a 
+longer interval in the first separating the letters which are the same as those in the second. 
+Suppose we divide the two messages roughly by 20, as the columnar transposition usually em- 
+ployed runs between 16-21. In that case if we count four in the first message we find GGD and 
+if we count three in the second we also find GGD. To check this let us see if the letter preceding 
+GGD is identical in the two messages. It is not. Therefore, we take for the point of division 
+VADD-GGD, etc., in the one message and VAA-GGD, etc., in the other. 
+
+Continuing from the points of division, we count four as before in the first message and find 
+GFA, and counting three in the second message we find GGA. Here the second letter is not the 
+same in both cases but the first is identical and so also the third. We are safe in assuming then 
+that the second letter in one case may be an error and that we have again three letters which are 
+identical. However, a new difficulty confronts us. The letter preceding GFA and GGA is in 
+both cases D. Are we to include this in the series with GFA and GGA? 
+
+One of two courses is open to us. Either we can count a multiple of our factor 4 in the one 
+message and a multiple of 3 in the other and leave this doubtful division for the present, or we can 
+begin from the ends of the messages and work backwards. 
+
+Suppose for the moment we choose the latter course. Counting backwards four in the first 
+message, we reach GV, and in the second, GV. But we are confronted here again with the diffi- 
+culty we have just left. There is apQther letter D which precedes GV in both messages. Are we 
+
+
+
+REF ID : A68206 
+
+
+
+
+17 
+
+to include it or not? Since we are unable then to overcome our difficulties here as before, let us 
+choose the alternative method as outlined above and instead of counting four from the end in 
+the first message, we shall count eight, and instead of three in the second, sir. This count gives 
+us in the first message XXX, etc., and in the second XFD, etc. Again in both cases a Q precedes 
+the X. Shall we include it? First let us multiply our count and count for the sake of further 
+check, 12 in the first message and 9 in the second. We have AW, etc., in the- first message and 
+AXG in the second. Again the letter D preceding is common to both. Let ua include this D 
+then in our division and we have DAV, etc., and DAX, etc. Coupling four forward from DAW, 
+we strike the next division at GXXX and in the second message after counting three our division 
+corresponding GXF. Again counting forwwdifour in the first message we strike the next division 
+between X and D in the one message and F and D in the other. There remain, at the end of the 
+first message, 5 letters and at the end Of thesecohd A, ,c ( . , t -y ,, .> i * 
+
+We are enabled now, therefore, to conclude that the columna of the first jsnosaage are of 4 
+and 5 letters in length and the second of 3 and 4 letters. . . i ’ , ;•> 
+
+We return now to the beginning of the message and we have no hesitation in making our 
+divisions 
+
+CHI .-82. tV A D D IG G D D (g F A. etc. 
+
+CHI. -60. (V A A 1S_£ D IS G A etc. 
+
+since we know now that the third division cannot include a D, as that would restrict the second 
+
+division of the second message to two letters and that is manifestly impossible since the col- 
+
+umns have been proven to be 4 and 5 letters in length in the one message and 3 and 4 in the other. 
+We now have the messages divided thus: 
+
+i. - ' . ‘ ■ 
+
+CHI-82 t 
+
+|VADDjG G D D |G_F A X G |X D D D X tX A A X F If D XGlVVD 
+
+XDjADG D X |A X D DG |£_A X G V jX G.X V A £ F V G |X D F V 
+
+j§ V G G |G GFGG6 AVV jg_£ XX|GV AG 
+
+CHI-60 
+
+IV A A |G_G D |G G A A ^ D G [X_A A X |£ D A |V_V D IO G G F 
+
+|AGXX£ G X D 1G_£ V|XDX|S V V Iff G V D A X IG X F|D G If V 
+
+Having completed our divisions along these lines, we now write the messages in vertical 
+columns, beginning a new column with each new division. 
+
+j ■ •• 
+
+1 2 3 4 8 6 7 8 « 10 U 13 13 14 IS IS 17 18 
+
+CHI -82. VGGXXAVAAAXGXGGDGD 
+AGFDADVDfCAGFDVGAXG 
+DDADAXDSDXXYFGFVXV 
+DDXDXGXDDGVGVGGVXA 
+GXF DXGVA G G 
+
+CHI.-60. VGGXXAVA£AX£XGGDG|D 
+AGGDADVDJCGGFDVGAXG 
+ADAGAADGFXXVXVVXfV 
+A X G X D V 
+
+
+
+
+18 
+
+
+
+Some of these columns are found to be longer than others; these are columns which will 
+take positions to the left- The long columns which are common to the two messages will fall to 
+the extreme left, followed by the remaining long columns. 
+
+It will be noticed that in both set-upe all of the letters of the first line are identical, all but 
+2 of the second and 9 of the third. The two in the second which are not the same may bd ac- 
+cepted as telegraphic errors. The nine letters of the third line which are identical and which 
+are not in the long columns will be placed naturally on the left and will take precedence aftor the 
+long eohimbs have been placed- . > ! •; ' 
+
+Tile fctfeps then would be as follows; >■ 
+
+(1) The placing of the long columns common to both messages 3 — 5 — 8—10 — 11 — 18 on 
+
+the extrema left. ■ 1 ' • ■ ■ i - : ■ : , 
+
+(2) The placing of the long columns remaining; 4— 7— -£—15, after these. 
+
+(8) Following these the columns 1 2-M2. 
+
+(4) After these the remaining six, 1-^6—13—14^-16— 17, 
+
+The oeluthns will then ‘Stand: ■ - : 
+
+3 5 8 10 11 18 4 7 9 15 2 12 1 8 13 14 16 17 
+
+CHI— 82. G X A A X D X V A G G G V A X G D G 
+
+FADAGG i V X G G F ADD VAX 
+
+A 4 fi O I P E D F DJ[ DX F G V X 
+
+XXDGVA DXD;G DG DGVGVX 
+G F X V A G X D G G 
+
+CHI— 60. GXAAXD XVAG GG VAX G D G 
+GADGGG D V X G GF ADDVAX 
+b 7 7i i ASX XI GDFV D V AAXVXF i 
+
+v - : A X G X D V ”, • • i ' 
+
+We are reasonably certain that these columns will be found to fall within the limits indicated. 
+
+Having completed, then, the determination of the number of columns and their relative 
+positions our next task is to ascertain their exact positions by a study of digraphic frequencies. 
+
+Begin n ing with the left hand group column 3 is selected and placed against 5, 8, 10, 
+11, 18 in turn and frequencies made of the digraphs in the vertical column. For this purpose 
+all. messages which factor evenly for 18 and also those which run 4X18+10 as the CHI-82 
+and 3X18+6 as the CHI-60 are selected. 
+
+Having made these frequencies we next choose a column from the series 4 — 7 — 9 — 15 
+and match it with the three others and make frequencies of the digraphs resulting. 
+
+We have now to match each of these three frequencies with the five previously made in 
+the series 3 — 5 — 8 — 10 — 11--18. Having found two pairs whose frequencies compare favorably 
+we assume these as correctly matched, mid with these as a basis for our frequency the operation 
+is repeated for each of the other eoltunns until all have been successfully paired. 
+
+Having paired all columns the next step is to place the pairs in their proper position. 
+For this purpose messages which;factor 2 over 18 are selected and are put up in turn with each 
+of the three pairs (3-5, 8-10, 11-18, assuming that these are the proper pairs) placed successively 
+on the left. Suppose for instance that when the.pair 3—5 is placed as the first pair on the left 
+the frequency of the digraphs in the messages in which it is thus placed, gives us a frequency 
+which compares most favorably with our original table of frequency. 
+
+1 Reference to the known key will show that this is not correct.. The letters D and V which are common 
+to these two columns in both messages are not part of thd identical beginnings and hence may be accidental 
+repetitions. — Editor’s Note. 
+
+
+
+REF ID:A68206 
+
+
+
+19 
+
+
+
+This pair is then assumed as correctly placed and the operation is repeated with messages 
+which factor 4 over 18. 
+
+A somewhat les$ accurate method in case there are no messages of this description to be 
+found, is to attempt to place the colupins with reference to the pair representing H which 
+would most usually follow the pair representing C. This method however is best adapted to 
+
+use when one or more pairs have been correctly placed. 
+
+I. 
+
+B. SOLUTION BY “EXACT FACTOR" METHOD 
+
+
+
+This solution depends, not upon two messages whose beginnings are identical but upon 
+finding enough messages, which factor precisely for the number of columns employed. 
+
+For instance, on June 3, the key of which was determined by this method there were 
+11 messages found which factored for 18. The number of columns was then assumed to be 18 
+and having made frequencies of these columns and compared them amongst themselves, this 
+supposition was confirmed. ... 
+
+Work from this point proceeded along the lines indicated in solution A. Further de- 
+tails will be found on pages 26 to 29 below. 
+
+C. SOLUTION BY SIMILAR ENDINGS 
+
+
+
+It will be convenient to describe this method by quoting from a report rendered by the 
+w iter on August 13, 1918. 
+
+r. . . at* at August 13, 1918. 
+
+Report to Major Moorman: 
+
+In accordance with instructions I proceeded first to Paris, where I acquainted Captain 
+Painvin with what I had done on the ADFGVX. We talked over in detail the result of my 
+solution and he suggested that in the final placing of pairs in position it would be convenient 
+to determine their position after the position of the first pair had been determined by tables 
+of suffixes which would show up any CH combination. He seemed very much interested in 
+what I had written him of the apparent weekly rotation in the length of the transposition key, 
+and in the face of the three coincidences' of keys falling at intervals of 7 days, was inclined to 
+accept it. 
+
+Since June 1, Captain Painvin has developed two new solutions of the cipher, one of 
+which, however, is a combination of his old solution of “cutting" similar beginnings with his 
+latest method. 
+
+The following two messages were sent on June 1 by the same station: 
+
+
+
+(1) "14 ID XX OBERBEFEHLSHABBR KOMMT NICHT NACH SELENS 7 A K" 
+Translation: “ 14th Infantry Division: Commander-in-Chief is not coming to Selens. 7 A K" 
+
+(2) "211 ID XX OBERBEFEHLSHABER KOMMT NICHT NACH SELENS 7 A K" 
+Translation: “211th Infantry Division: Commander-in-Chief is not coming to Selens. 7 A K” 
+
+
+
+NEUFCHATEL. 
+
+7 H 9 - DAX v GGI - 0005 - CHI 106 
+
+
+
+F F Al IF 
+
+
+
+<» 
+
+
+
+_ZI 
+
+_A| 
+
+
+
+IX V F X Dl IX X X A Al IV X V D X 
+
+
+
+i.r-xs — = — 
+
+IA D F D 
+
+
+XZl 
+
+_EI 
+
+
+IZ — J .,CI 
+
+IA X A D 
+
+
+-PI 
+
+
+S fT. 
+
+IG G A X 
+
+
+_x| 
+
+
+|x G,I1 
+
+
+Si 
+
+
+ip.£jt.y- 
+
+
+-Al 
+
+
+Pi P, EJL 
+
+
+IA X F G 
+
+
+x| 
+
+
+IF X V D 
+
+
+M 
+
+
+IA D X X 
+
+
+-XI 
+
+
+ID A X A 
+
+
+_A| 
+
+
+IG A X V 
+
+
+-Al 
+
+
+IF D G G 
+
+
+
+(a) 
+
+
+
+X| IF G G G FI ID A A X Dl IX A G X F l 
+
+
+
+68M2— 38 4 
+
+
+
+20 
+
+
+
+
+CHALONS 
+
+7 H 41 DTD v GGI - 0055 - CHI 108 
+
+IG G A X XI ID X X A Al lA X A D Dl |V A G X FI ID A X A Al X ID A A X 
+_Dj I V X V D X FI IX G F V Al IX G X V Gl IF V A A Gl IF G G G Fl IG A F 
+
+F Al IA D X X XI IG A X V Al IF X V D Al V IF D G G Xl IV D F D Fl ID F 
+
+X V Al IX V F X Dl IA V F G Xl IA X F G XI 
+
+jb) ’ <o5 
+
+6 16 7 6 17 2 14 10 15 9 13 1 21 12 4 8 19 3 11 20 18 
+
+V D A X G F F'X A fl A G XX X A F A D D F 
+
+XADXAVXGDGXAAGVXGVFAD 
+VXFXXAVXX^FFGFFAGFXAG 
+D A D A V A D V X X G F X V X D G G V X G 
+XAFAAGAGXXXAFADDFXADX 
+F 
+
+
+
+X V V D V D GFFXAGAGVXXAFAD 
+DFXADXAVXGDGXAAGVXGVF 
+ADVXFXXAVXXAFFGFFAGFX 
+AGDADAVADVXXGFXVXDGGV 
+XGXAFAAGAGXXXAFADDFXA 
+D X F 
+
+
+
+It will be noticed that when the messages have been set up and transposed we may expect 
+to have two messages which are practically identical but whose identities we shall have to 
+look for in different parts of the two messages. 
+
+If we take the two messages as they are intercepted and take the last 5 letters of message 
+(2), AXFGX, this same series is found in the body of message (1). Marking off this part 
+we take the 5 letters preceding AXFGX in (2) and identify and mark off these same 5 letters 
+in (1), AVFGX. Continuing this we soon have all the positions identified in the 2 messages 
+with the exception of 2 letters, the 2 letters in the message of 108 letters which are in excess 
+of 106. 
+
+
+
+(1) CHI - 106 
+
+G A F F A F V 
+FADFD fa 
+A IA X F G XI F 
+
+tin -' — 
+
+XFGGG F D 
+
+(2) CHI - 108 
+
+G G A X X D X 
+D V X V D X F 
+F A AD X X X 
+X V A X V F X 
+
+
+
+(6) 
+
+IA V F G XI 
+
+D G G A X 
+
+A A D X X 
+
+D X A G X 
+
+
+
+X A A 
+X G F 
+G A X 
+t HA V 
+
+
+
+X V F X D XX 
+X X G X V G D 
+X D A X A AG 
+
+F 
+
+
+
+V A G X F DA 
+
+V G F V A AG 
+D A V F D G G 
+
+
+
+X A A VXVDX 
+F X V AXGFV 
+A X V AFDGG 
+
+
+
+X A A X D A A X 
+FGG GFGAF 
+X V D FDFDF 
+
+
+
+A A G 
+X A D 
+X V D 
+
+A A X 
+
+
+
+A X A D D 
+
+V A X G X 
+
+V A F X V 
+
+F G Xl IA X F G XI 
+
+(to 1 ^ 1 <») ' 1 
+
+
+
+REF ID : A68206 
+
+
+
+21 
+
+Writing these messages then, as follows: ' 
+
+
+
+1 
+
+
+2 
+
+
+3 
+
+
+4 
+
+
+5 
+
+
+6 
+
+
+7 
+
+
+g 
+
+
+t 9 
+
+
+10 
+
+
+n 
+
+
+12 
+
+
+13 14 
+
+
+15 
+
+
+is 
+
+
+17 
+
+
+18 
+
+
+19 
+
+
+20 
+
+
+21 
+
+
+(1) G 
+
+
+F 
+
+
+A 
+
+
+X 
+
+
+X 
+
+
+V 
+
+
+A 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+A F 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+t 1 
+
+
+F 
+
+
+D 
+
+
+X 
+
+
+A 
+
+
+V 
+
+
+V 
+
+
+V 
+
+
+X 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+F 
+
+
+G 
+
+
+X X 
+
+
+D 
+
+
+A 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+A 
+
+
+A 
+
+
+F 
+
+
+A 
+
+
+F 
+
+
+F 
+
+
+X 
+
+
+V 
+
+
+F 
+
+
+A 
+
+
+A 
+
+
+X X 
+
+
+F 
+
+
+F V 
+
+
+X 
+
+
+X 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+A 
+
+
+G 
+
+
+F 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+A 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+X 
+
+
+V 
+
+
+V 
+
+
+V 
+
+
+G D 
+
+
+X 
+
+
+A 
+
+
+V 
+
+
+G 
+
+
+G 
+
+
+X 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+D 
+
+
+A 
+
+
+X 
+
+F 
+
+
+F 
+
+
+D 
+
+
+X 
+
+
+G 
+
+
+A A 
+
+
+X A 
+
+
+X 
+
+
+A 
+
+
+A 
+
+
+X 
+
+
+F 
+
+
+D 
+
+
+F 
+
+
+(2) G 
+
+
+D 
+
+
+A 
+
+
+V 
+
+
+D 
+
+
+(X) 
+
+
+V 
+
+
+X 
+
+
+X 
+
+
+F 
+
+
+F 
+
+
+G 
+
+
+A G 
+
+
+F 
+
+
+(V) 
+
+
+V 
+
+
+D 
+
+
+X 
+
+
+A 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+X 
+
+
+A 
+
+
+A 
+
+
+D 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+V 
+
+
+G A 
+
+
+D A 
+
+
+X 
+
+
+F 
+
+
+D 
+
+
+F 
+
+
+V 
+
+
+V 
+
+
+X 
+
+
+A 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+A 
+
+
+V 
+
+
+F 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+F 
+
+
+X X 
+
+
+V 
+
+
+D 
+
+
+F 
+
+
+X 
+
+
+F 
+
+
+F 
+
+
+F 
+
+
+X 
+
+
+A 
+
+
+D 
+
+
+X 
+
+
+A 
+
+
+A 
+
+
+D 
+
+
+V 
+
+
+V 
+
+
+A 
+
+
+G 
+
+
+F 
+
+
+X V 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+X 
+
+
+A 
+
+
+D 
+
+
+F 
+
+
+A 
+
+
+X 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+G 
+
+
+F 
+
+
+A 
+
+
+X A 
+
+
+A 
+
+
+G 
+
+
+F 
+
+
+A 
+
+
+D 
+
+
+X 
+
+
+X 
+
+
+
+D F (V) X 
+
+
+
+we find that in (1), column 6, as the only long column, fixes itself on the extreme left. Hence 
+this disposes of the extra X between columns 5 and 6, as 6 must be a long column in (2) also 
+and therefore will be included in column 6. The extra V between column 15-16 must re- 
+main unsettled as yet, as there is nothing to indicate whether it belongs with 15 or 16. 
+
+Rearranging our columns therefore we shall have column 6 on the extreme left. 
+
+Now, before proceeding further we should speculate as to what sort of phenomena we 
+have to deal with. For one thing it will be observed that there are five columns whose initial 
+letters do not agree. 5, 7, 18, 20, 21 in (1), and 2, 4, 6, 16, 17 in (2). 
+
+Assuming that one of these is a telegraphic error, what we have is probably 2 digraphs 
+which represent an address, and 2 identical messages have been sent to 2 different stations with 
+the difference of only 2 letters in the address. 
+
+Aligning the column 6 on the left therefore we shall have to choose for the next column 
+from either columns 7 and 15 or 16 and following this from amongst those columns whose 
+initial letters are not in agreement. 
+
+Now since the messages will end the same, and as (1) ends with F, column 7, as it ends 
+with F, must be placed the third from the left in (2). We have then only to determine whether 
+15 or. 16 is a long column to decide which column falls between 6 and 7. If 15 is chosen we 
+should have the digraph VF ending message (2). Since F in (1) is on the extreme left, the V 
+which should accompany it in case this supposition is correct, should be found and placed on 
+the extreme right. But there is nowhere in the fifth horizontal line of (1) a V. Hence we must 
+accept 16 as the long column which falls between 6-7 and which gives us an XF as ending mes- 
+sage (2). An X is sought for in the fifth horizontal line of (1) to complete the similar digraph 
+
+
+
+
+mOi 1 ' liOils 
+
+
+
+XF in (2). As there are several we return to (2) and find that reading vertically upwards we 
+
+G| 
+
+have G in column 16 in (2). Thus: 
+
+X 
+
+
+
+
+J A_|G)__D | | 
+
+X (G) X I ■ 1 I ' . I I 
+
+D (X). F 
+
+g] [d] g| 
+
+As G unites with X in (2) so also ought a G to be found in one of the columns in (1) 
+X [f X 
+
+D 
+
+which when placed on the extreme right will unite also with X in (1). 
+
+F 
+
+This is found in column 18 and this column is placed on the extreme right and the process 
+repeated until all the columns thus fall correctly into place. (For another example of this 
+method, see "Note on ‘Richi’ ADFGVX cipher: Solution of October 28, 29, 30, 31”, p. 29.) 
+
+While working with Captain Painvin he gave me access to the voluminous quantity of 
+cipher notes which he has accumulated since 1914. I interested myself principally in double 
+transposition as this is the method frequently employed by the Germans between Berlin and 
+Constantinople, the East and Russia. 
+
+From Paris t proceeded to London where I reported to Colonel Slocum and put myself 
+in touch with Major Hay. He immediately put me in the hands of Captain Brooke-Hunt, 
+who has been working at ciphers in the East for 2 years and who has recently come to London. 
+I found him working on the ADFGYX messages, particularly those which pass between Berlin 
+and Constantinople. He was also working on the von Kress double transposition messages, so 
+many of which have been received here recently. In the case of a double transposition the 
+only possible method of solution is to find two or more messages which are equal in length and, 
+writing them under each other, attempt to anagram them. For example, if after writing 
+
+
+
+
+
+REF ID : A68206 
+
+
+
+2S 
+
+two message®, one under the other we found on cutting' them into columns, a column as 
+follows: 
+
+•- C 
+
+E 
+
+we should look for a column with an H and an N or R to form two digraphs. 
+
+C H 
+E N 
+
+Such a method as this is of course greatly simplified with the addition of more messages. 
+Having anagrammed the messages the method employed may then be reconstructed. 
+
+The double transposition is effected by transposing a message according to a simple trans- 
+position key. 
+
+A message : 
+
+“Forty-sixth Infantry Division: Objective for tomorrow Montigny” 
+would be written out according to the key. 
+
+41633876 11 9 10 
+
+FORTYSXXTHX 
+INFANTRYDIV 
+ISIONXOBJEC 
+TIVEFORTOMO 
+RROWMONTIGN 
+Y X X Q S M 
+
+The dummy letters or signature OSM will now be added 1 and the message transposed as 
+follows, according to the same key: 
+
+41623870 11 » 10 
+
+ONSIRXTAOEW 
+OYNNFMSFIIT 
+RYRFIVOXXYB 
+TTIRORNSTXO 
+OMHIEMGXVCO 
+N T D J 0 I 
+
+reading down the columns 1 — 1 1 in order and writing out horizontally. 
+
+The message would now be sent NYYTM TINFR etc. , 
+
+In solving, the process is reversed. After anagramming and having discovered the dummy 
+letters we are enabled to determine by the position of the dummy letter in the text after some 
+experimentation the position of the columns under which they fall and whether long or short 
+columns. Having determined this we have the letters in the columns fixed in both transposi- 
+tions, and by a process of trying and fitting the whole system is built up. , , 
+
+1 The writer was certainly in error in regard to when the dummy letters were added, if such addition took 
+place. A memorandum by Capt. Brooke-Hunt (referred to on p. 22) shows that the dummy letter (or letters) 
+were added to the end of the second transposition rectangle. This makes a very important difference. However, 
+the double transposition ciphers solved during the time of A. E. F. participation in the World War failed to 
+contain any eases in which dummy letters were added, either at the end of the first or the second transposition 
+rectangle. See also, in this connection the quoted statement on p. 47. — W. F. F. 
+
+
+
+
+
+
+v- 
+
+
+
+
+
+
+
+24 
+
+I have also discovered while in London that a cipher intercepted some time ago by os passing 
+between the Turkish Embassies in Berlin and Madrid was enciphered in Turkish and not in 
+French as we had supposed. The British have a cipher man who is acquainted with Turkish 
+and I suggest that any such messages intercepted here should be turned over to them as we have 
+at present no one with a knowledge of Turkish in pur office. 
+
+Captain Brooke-Hunt was attempting his solution of ADFGVX along the lines first laid 
+down by Captain Painvin: That of finding two identical beginnings and failing that, along the 
+fines by which I arrived at a solution, of looking for this identity within the body of the messages, 
+having once determined the length of transposition. Since leaving London we have received a 
+solution from him which indicates from the contents of the messages solved that his solution was 
+accomplished along these fines. 
+
+Captain Painvin and Captain Brooke-Hunt both agreed that as yet no general method had 
+been evolved and that solution must depend as it has in the past upon constant study and experi- 
+mentation with new ideas and methods. 1 
+
+From Major Hay 1 learned that work was continuing on the FLG in his office and that his 
+study has revealed three FLG codes instead of the original assumption of one. Solution of the 
+whole is dependent upon the arrival of certain maps which will give the names of towns and geo- 
+graphical points already located. Major Hky expects to be able to send us these solutions 
+shortly. . . 
+
+While in London I arranged to have a. copy of all cipher keys solved there forwarded to us 
+and promised in return that we should send them any solutions we made. 
+
+At British G.H.Q., I found that very little cipher work was done there, as they depended 
+more or less upon their office in London for this. The man who had been working on cipher 
+was absent but I spent my time instructing the man to whom they had assigned this work in 
+
+what I knew, particularly of ADFGVX- , , ; 
+
+The British acknowledge that they have had difficulty with the German 3.-letter codes, 
+both on account of the increasing complexity of the German code methods and also from the 
+small quantity of text received. There was one code which was, however, proceeding very 
+satisfactorily. 
+
+I learned of several matters in connection with their handling of codes which I shall briefly 
+outline and to illustrate which I submit three memoranda given me by them. 
+
+1. This is the form in which information obtained from decoded messages is submitted to 
+the proper authorities. This form, for example, excludes practice messages or other information 
+which can be of interest to no one but the partiete to whom the messages are addressed. 
+
+2. This is a map issued daily, showing in a visualized form the position of stations in divisions 
+in the region which a particular code may include q,nd indicates also stations which have been in 
+communication with one another. 
+
+3. Captain Hitchins informed me' that he had fdtlnd that it was imperative that a check be 
+kept upon the work of Solution done at the armies. Each day each army sends to him a form such 
+as this containing all solution^ made and any suggestions as to other possible values. These are 
+then checked up by the men In charge of the codes affected. While at G.H.Q., I visited the 
+Second and Fifth British Armies with one of Captain Hitchins' officers who wished to correct the 
+careless work which these forms were bringing to fight. 
+
+While at British G.H.Q, , a message in the KRiUSA Code was received in blocks of five letters, 
+sent as such obviously to resemble cipher. Such practice may be looked for in our own work. 
+
+1 It IS a strange and interesting fiot that no gehfrett solution for this cipher system was evolved by the 
+oryptanalytic servioes of any of the Allied during the World War, despite almost a full year’s concentrated study. 
+See S. I. S. Technical Paper A General Solution for Ihe ADFGVX Cipher System. — W. F. F. 
+
+
+
+REF ID : A68206 
+
+
+
+85 
+
+
+
+Returning to Paris I found that in my absence'Captain Painvin had solved one of the mes- 
+sages passing between Eiehhom and Berlin and also one from von Kress, the latter a Simple 
+transposition. This was the only message, however, which yielded to a simple transposition 
+and that this was not their general practice is indicated in the decipherment of one of the 
+ADPGYX messages sent to Tiflis which reads: 
+
+“The cipher method prepared by General vbn Kress was solved here at once. Its further 
+use by OP is forbidden. ALACHI method, is only to be used in cases which employ the ‘divid- 
+ing system’ (in ciphers). For other cases, the new ITOCHI method, with dividing system, has 
+been on the way to Kress since July 18. New instructions regarding double transposition are 
+shown. — Wireless Section, General Staff.” (Berlin.) 
+
+2. NOTE ON “RICHI” ADFGVX CIPHER 
+(Employed between Berlin and the Black Sea area) 
+
+MESSAGES FOR THE MONTH OF SEPTEMBER 
+
+
+
+A study of the RICHI messages for the month of September indicates the following facts: 
+
+(a) The same key was employed for a period of 3 successive days beginning September 1,2, 
+and 3, and the keys ran in cycles of three throughout the month: 4, 5, 6; 7, 8, 9; 10, 11, 12; 
+13, 14, 15; 16, 17, 18; 19, 20, 21; 22, 23, 24; 25, 26, 27; 28, 29, 30 — a total of 10 keys for the month. 
+
+(b) A study of messages previously solved indicates that the length of the transposition key 
+may be determined by excluding all numbers between 15-22, inclusive, for which messages sent 
+by LP may be factored (LP has never been known to send a filled-up rectangle), and isolating 
+from those numbers which remain the number for which the majority of messages sent by NKJ 
+may be factored. (NKJ in contradistinction to LP makes a practice of filling up the rectangle 
+when the enciphered message falls 2, 3, or 4 digraphs short of the end.) 
+
+(c) Previous study of the messages for September 13, 14, 15 had indicated that the length of 
+transposition key was 22 and also that the key for the series of September 10, 11, 12 was 21. 
+Work has also shown that the transposition key for September 19, 20, 21 is 22. We have here, 
+therefore, a recurrence of the transposition key, 22 separated by a space of 3 days, September 
+16, 17, 18. This would indicate the use of two transposition lengths 21 and 22 recurring alter- 
+nately over a 3-day period. 
+
+If the messages of LP and NKJ are checked it will be found, if the series is arranged as follows: 
+
+
+
+
+8 >22 
+9 i 
+
+10 1 
+11 >21 
+
+12J 
+
+
+
+l3 \ 
+
+14 >22 
+
+15J 
+
+
+
+3 - 
+
+19 1 
+
+20 >22 
+
+2lJ 
+
+22 ) 
+
+23 >21 
+
+24J 
+
+25) 
+
+26 >22 
+27/ 1 
+
+28) 
+
+29 >21 
+
+3oJ 
+
+
+
+m 
+
+
+
+that in not one of these series in which the transposition length is assumed has LP made use of 
+an exact rectangle of that length, and, further, .that so far as the material at hand is concerned, 
+the majority of the messages of NKJ which factor on those days indicates the factor whieh we 
+have assumed. 
+
+Enough material is not yet at hand to postulate any theories of the practice for October, 
+but so far it would seem that the key continues to rim fpr a period of 3 days, October 1, 2, and 3, 
+and that it is likely that two different factors have been substituted for 21 and 22. 
+
+October 6, 1918, , 
+
+a. NOTE ON “RJCBI” ADFGVX CIPHER 
+
+THE “EXACT FACTOR” METHOD OF SOLUTION 
+
+In partial confirmation of our note of October 6 (see previous note), the key for September 
+19, 20, 21 has been solved and the supposition established that the key was not only the same 
+for the 3 days, but that the length of the transposition was 22. 
+
+The method employed in solution was the same as the one with which we succeeded in 
+solving the Western Front ADFGVX messages of June 3. 
+
+A count of the letters of the messages for September 20 and 21 had indicated that the 
+same key was employed on both days. In confirmation, the factor 22 appeared to predominate 
+in the messages of NKJ for both days. The messages for September 19 were examined next, 
+and a count of the letters also indicated that these messages had been enciphered by the same 
+key as those of September 20 and 21. In the order of frequency the letters for the 3 days were 
+as follows: 
+
+September 19 F X G D A V 
+September 20 XFGDVA 
+, September 21 G X F D V A 
+
+As on the 20th and 21st, 22 was again the predominant factor. 
+
+There were 7 messages for the 3 days which factored for 22. When set up in vertical 
+columns, there were 61 horizontal lines from which to make frequencies for the pairing of the 
+columns. 
+
+The frequencies were made by setting column 1 against the remaining 21 columns in suc- 
+cession, and following this, the operation was ^repeated with column 2, and so on throughout 
+the 21 columns. Column 1 was easily matched with 13, and 12 with 2, and from these 2 
+
+
+
+REF ID : A68206 
+
+
+
+pairs the prominent digraphs; FG, XD^. XF^ XX were 1 identified as eommon to both paiife and 
+thus capable of being used as a test for otty* pairs. A final frequency of pairs was as follows: 
+
+
+
+12 — 2 8-*-l6 th-rlfi 21 — 8 7 — 20 11 — 12 14 — 4 3 — 17 9 — 18 !0-^-19 
+
+
+
+// / 
+
+
+
+mi in m 
+
+ii if 
+
+/ 
+
+n ii 
+
+
+
+mm \m.r 
+
+
+
+mi m 
+/ / , 
+
+
+
+mi II 
+
+I : 
+
+I .11 
+
+nu , mi 
+
+II II 
+
+
+
+. / ' 
+m nil, 
+mm mm 
+in ii 
+
+i 
+
+it ■ .i 
+
+/ in 
+
+
+
+7 . / ' 
+
+.//. 
+
+u , nn 
+
+m i in 
+
+m ni. 
+n 
+
+mini un 
+
+
+
+mm \ mi 
+ii 
+rn 
+
+i 
+
+//• 
+
+/ 
+
+n 
+
+ii 
+n 
+/ 
+
+/ 
+
+in 
+
+i . / 
+
+/ m 
+
+i 
+
+if 
+
+in ... in . 
+
+w . / 
+
+/ , 
+
+/ 7 . 
+
+m i m 
+
+
+
+
+
+fcHHDii' Mil S 
+
+
+
+28 
+
+
+
+A consolidated frequency of the whole was as follows: 
+
+
+
+a a mmrnm/i cdj 
+
+AD -miff (8) 
+
+AF I fit (fl) 
+
+A a.nu (I) 
+
+AV / (8) 
+
+AX / (a) 
+
+DAM (9) 
+
+BB'ii/m 
+Drill// (B) 
+
+do mmmmmmmmmm <») 
+
+D v MIMMIHIMI (O) 
+
+DX 1/ (0) Zero 
+FAI«I//(H) 
+
+I'D HI (Y) 
+
+F F I HI (8) 
+
+<b> 
+
+f v mmmmmmm hud 
+
+FXHiIi//(S) 
+
+
+
+OA'M(J) 1 
+
+od mmmmmmn nr) 
+
+OF MMMMMMM/II (T) 
+
+QQ MMU (Z) 
+
+G7II///1F) 
+
+ox mm/i (c) 
+
+TA l/ (W) 
+
+vd mm m (7) 
+
+vf M/W/// (V) 
+
+VO M / (F). 
+
+w mmm (m> 
+
+TXH////(1) 
+
+XA M III (2) 
+
+xd mmmmmmmm (a> 
+xf mmmmmmmm (») 
+xo mmm //// (o> 
+
+XV M/ (4)i ■ 
+
+xx mmmmmmmmmmmi w 
+
+
+
+The greatest difficulty was experienced , in pairing 3 — 17, 11—22, and 14 — 4. In two of 
+these FG totaled but 7, while FV, an almost unknown digraph, appeared a total of 18 times. The 
+final selection was made after setting up several messages which fell two short of an even factor 
+and observing the behavior of the different doubtful pairs. In this manner 3 — 10, 14— 16, 
+which had been originally selected, were discarded; and 3 — 17, the poorest of the 11 pairs, proved 
+by elimination. 
+
+Early in the work, having established the length of the transposition as 22, two messages, 
+RICHI-168 and 222, from LP to OSM, were discovered which bore evidence of possessing similar 
+beginnings over a line or part of a line. It wals almost impossible to attempt to make the correct 
+cuts in the columns by means of this identity, small as it was, but it seemed evident enough from 
+the messages when a tentative division was made, that in RICHI-222, 12 and 2 Were the long 
+columns. A substantiation was afforded by setting up RICHE222 with each of the 1 1 pairs in 
+succession on the left, and as 12 — 2 alone gave XX as a final digraph, which had been previously 
+identified as X, the position of 12 — 2 was thus fixed. After our solution it was proved that the 
+difficulty of establishing the division of columns by means of the identity which we correctly 
+assumed as existing, had been further complicated by the fact that the identity ran for 14 cipher 
+letters at the beginning and there ceased, and was resumed after an interval of two digraphs and 
+ran over 6 additional letters. 
+
+The fact that XX was X, was determined from its frequency which followed almost parallel 
+with DG (N) and after having observed that in the last lines of the 7 messages that factored 22, 
+XX appeared in the same vertical columns, in 5 — 15 twice and 1 — 12 three times. 
+
+
+
+
+
+i 
+
+
+2 
+
+
+3 
+
+
+4 
+
+
+5 
+
+
+e 
+
+
+7 
+
+
+8 
+
+
+9 
+
+
+10 
+
+
+11 
+
+
+12 
+
+
+13 
+
+
+14 
+
+
+15 
+
+
+16 
+
+
+17 
+
+
+18 
+
+
+19 
+
+
+20 
+
+
+21 
+
+
+22 
+
+
+1 
+
+
+F 
+
+
+F 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+G 
+
+
+F 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+D 
+
+
+G 
+
+
+F 
+
+
+G 
+
+
+F 
+
+
+G 
+
+
+G 
+
+
+G 
+
+
+G 
+
+
+F 
+
+
+G 
+
+
+2 
+
+
+V 
+
+
+F 
+
+
+D 
+
+
+A 
+
+
+X 
+
+
+F 
+
+
+F 
+
+
+G 
+
+
+G 
+
+
+V 
+
+
+F 
+
+
+G 
+
+
+X 
+
+
+A 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+D 
+
+
+X 
+
+
+G 
+
+
+X 
+
+
+X 
+
+
+3 
+
+
+G 
+
+
+G X 
+
+
+V 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+F 
+
+
+X 
+
+
+F 
+
+
+F 
+
+
+D 
+
+
+D 
+
+
+X 
+
+
+F 
+
+
+X 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+V 
+
+
+V 
+
+
+4 
+
+
+X 
+
+
+D 
+
+
+D 
+
+
+X 
+
+
+G D 
+
+
+D 
+
+
+A 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+X 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+D 
+
+
+5 
+
+
+F 
+
+
+A 
+
+
+- 
+
+
+X 
+
+
+X 
+
+
+X 
+
+
+V 
+
+
+G 
+
+
+- 
+
+
+V 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+V 
+
+
+X 
+
+
+- 
+
+
+V 
+
+
+F 
+
+
+V 
+
+
+A 
+
+
+F 
+
+
+X 
+
+
+6 
+
+
+X 
+
+
+V X 
+
+
+V 
+
+
+F 
+
+
+D 
+
+
+X 
+
+
+V 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+V 
+
+
+X 
+
+
+F 
+
+
+F 
+
+
+A 
+
+
+F 
+
+
+G 
+
+
+V 
+
+
+X 
+
+
+X 
+
+
+X 
+
+
+7 
+
+
+X 
+
+
+G 
+
+
+F 
+
+
+D 
+
+
+F 
+
+
+D 
+
+
+D 
+
+
+VD X 
+
+
+F 
+
+
+D 
+
+
+X 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+X 
+
+
+V 
+
+
+D 
+
+
+D 
+
+
+V 
+
+
+V 
+
+
+
+
+REF ID : A68206 
+
+
+
+Arranged in proper order the columns fell! as follows; 
+
+
+
+
+
+12—2 
+
+
+7—20 
+
+
+10-19 
+
+
+1—13 
+
+
+9-rlS 
+
+
+3—17 
+
+
+21— S’ 
+
+
+14 — 4 
+
+
+6^18 
+
+
+11—22 
+
+
+-8^-18 
+
+
+1 
+
+
+DF 
+
+
+FG 
+
+
+DG 
+
+
+FG 
+
+
+DG! 
+
+
+GG 
+
+
+fG 
+
+
+FV 
+
+
+GF i 
+
+
+G 
+
+
+-DG 
+
+
+2 
+
+
+GF 
+
+
+FG 
+
+
+VX 
+
+
+VX 
+
+
+GD 
+
+
+DG 
+
+
+XG 
+
+
+AA 
+
+
+FG ' 
+
+
+FX* 
+
+
+XX 
+
+
+3 
+
+
+FG 
+
+
+DG 
+
+
+XD 
+
+
+GD 
+
+
+FA 
+
+
+XX 
+
+
+VG 
+
+
+DV 
+
+
+GF " 
+
+
+FV 1 
+
+
+DX 
+
+
+4 
+
+
+XD 
+
+
+DG 
+
+
+XX 
+
+
+XX 
+
+
+DG' 
+
+
+DD 
+
+
+GA 
+
+
+XX 
+
+
+DG 
+
+
+DD 
+
+
+GA 
+
+
+5 
+
+
+AA 
+
+
+VA 
+
+
+vv 
+
+
+FG 
+
+
+_F: 
+
+
+-V 
+
+
+FG 
+
+
+VX 
+
+
+X- 
+
+
+XX 
+
+
+XX 
+
+
+6 
+
+
+W 
+
+
+XX 
+
+
+XV 
+
+
+XX 
+
+
+dg ! 
+
+
+XF 
+
+
+XV 
+
+
+FV 
+
+
+DA : 
+
+
+DX 
+
+
+FF 
+
+
+7 
+
+
+DG 
+
+
+DD 
+
+
+XD 
+
+
+XX 
+
+
+DV 
+
+
+FX 
+
+
+W 
+
+
+XD 
+
+
+DG ‘ 
+
+
+#V 
+
+
+FG 
+
+
+
+From the appearance of XX in the first table it ^ras deduced tbateither 5 — 15 or 1 — 13 fell 
+on the extreme right. RICHI-152 which factored for 22 less 2, was set up and frequencies 
+of the pairs taken, first with 1 — 13 on the right and then 5 — 15. yhe latter gavqa very much 
+better frequency, and a frequency of the digraphs made with 5 — 15 on the right and 12 — 2 on 
+the left gave excellent results. The digraph GX was followed two out of three times by FA. 
+GX-FA was assumed as CH and working upon this clue the pairs very quickly thereafter fell into 
+their proper positions in the rectangle. 
+
+October 9, 1918. ■ , ■ 
+
+4. NOTE ON “RICHI” ADFGVX CIPHER 
+
+
+
+SOLUTION OF KEY OF OCTOBER 28, 29, 80, 31 
+
+The solution of this key was accomplished in the space of [2 hours and was obtained 
+without the use of a single 'frequency tabulation. ; The method employed was the one which 
+has been described in a former note: the method formulated by Captain Painvin, where two 
+messages enciphered by the same key are found to possess similar endings. 
+
+On October 30 it was observed that two messages had been" sent from LP to NKJ for 
+COS addressed to the Kaukasus Delegation, the one RICHI 338 and the other RICHI 274. 
+It was found upon inspection that the RICHI 274 was a duplicate of RICHI 338 minus three 
+prefatory lines in the RICHI 338. 
+
+; {_ ’ >. \ "v ' ./> ." v 7 ; K ; • j 
+
+The messages were divided as follows: * 1 
+
+RICHI 338 VAX V V V A X G A F A A A D A A .X VI IV A A A G A 
+
+
+
+
+
+
+
+
+fcHHDii' JO):: 
+
+
+
+* 
+
+
+
+SO 
+
+
+
+RICHI274 1A A X F A V DXF D.DA G A Al IAAFAA DAVDA 
+
+
+
+X A A D XI 
+
+
+IG X A A A 
+
+
+X F F A X 
+
+
+V A A V Dl 
+
+
+IA A G V G 
+
+
+& X % V G 
+
+
+A A V D Al 
+
+
+’ IG X D X G 
+
+
+X F X X V 
+
+
+,V D X G VI 
+
+
+vx q f x 
+
+
+V F D A F 
+
+
+FADFA 
+
+
+G||V X D A 
+
+
+X F A X X 
+
+
+GVFXV 
+
+
+VI IA D A V 
+
+
+’ A A A D G 
+
+
+F X D X A 
+
+
+Dl IF D A V 
+
+
+A V.FGA 
+
+
+IT F AD A 
+
+
+Al IF X F D 
+
+
+F X X D A 
+
+
+X V D X A 
+
+
+Al IF D X G 
+
+
+X A D r _X X 
+
+
+X D X F X 
+
+
+XI ID F F A 
+
+
+A F X G A 
+
+
+D D F G V 
+
+
+4 XI K D F 
+
+
+G D X X D 
+
+
+F X X A G 
+
+
+A DMA F V 
+
+
+A F X, X X 
+
+
+A F F F A 
+
+
+G FI IV V V 
+
+
+A X G A F 
+
+
+A A A D A 
+
+
+A X VI IA G 
+
+
+A D V G V 
+
+
+V D A A A 
+
+
+V V X Dl IX 
+
+
+F G X F A 
+
+
+FVGFX 
+
+
+'F D A VI IG 
+
+
+iF D G D V 
+
+
+X F F D D 
+
+
+X X X XI 
+
+
+
+1 2 8 4 S ft 7 8 « ' 10 IX 12 13 14 18 1» 17 18 
+
+RICH! 274 AAGAGVVAFFFDXAVAXG 
+AAXAXXXDDXDFDFVGFF 
+XFAGDGDAAFXFFVVAGD 
+F A A V X F A V V J D GAGAADXG 
+AAAGGXXAAFXADFXVFD 
+VDXDXVFAVXAFXXGGAV 
+DAFXFFAA FX DXXXAVFX 
+XVFXXDXDGDXGDXFVVF 
+FDAVXAXGAAXAFAADGF 
+DAXGVFGFFXXDXFAAFD 
+DXVAVFVXFVDDXFAAXD 
+AAAADAFD AD XFAFDAFX 
+GAAVXDXXDXFGGAAVDX 
+ADVDGFVAAAXVAGAVAX 
+AXDAVAVDAAXADFXXVX 
+G X V D 
+
+RICHI 338 VVDAFVAXFDADADGDGX 
+AADDFAAX DA DDXAXFFG 
+XAFGVAVXXXGAGFAXFG 
+VAVAFDDXAGVXAXDXDA 
+VGXGXXAFAXXFGFAAFF 
+VADXFDADGDGDFXDAFV 
+A D A A 5 F F A V X F X D F A X A A 
+XVXAXGAVGGX GG D V F A F 
+GGFAFDf ADXVXDFAAFX 
+A V A X A X P V % F F A V X A i X X 
+
+F V X F F X A F X X D D X X A D G X 
+
+ADXFVDV GVXAXFDDXAA 
+AAGAGFDAGVFXFAGFDF 
+AAVXFXAFAVFXDXFDDF 
+DAFVXAXFADADDVXDFF 
+A V X A F A A A V X,D X X D D A G A 
+
+avvadgaddgffxxxgvg 
+
+X X V V A A D A A V A X X A A A A F 
+
+V D D V D X A G X X A 0 A X 
+
+
+
+REF ID : A6820 6 
+
+
+
+31 
+
+When set up, the length of the transposition key proved to be 18, giving 4 long columns 
+in one message and 14 in the other. The difficulty which confronted us now was the determi- 
+nation of the relative position of the 4 long columns 6—12 — 15 — 16 which naturally placed them- 
+selves on the extreme left. To accomplish this without the laborious compilation of frequency 
+tables was our aim. 1 This we succeeded in doing in the following manner: 
+
+(1) In RICHI 274, the 4 long columns 6—12 — 15 — 16 were placed on the extreme left. 
+The position of these columns was thus limited to the first 4 columns. 
+
+(2) If RICHI 274 ended GXVD, RICHI 338 must end the same and the columns which 
+corresponded to these in RICHI 338 (2 — 1 — 17 — 11) therefore aligned themselves within the 
+limits of the numerical order 11 — 14, inclusive. 
+
+(3) In RICHI 338 there were four short columns) 3 — 9 — 10 — 18, which placed themselves 
+on the extreme right and which thus fixed DAAX as immediately preceding GXVD in RICHI 274. 
+
+(4) If DAAX preceded GXVD in RICHI 274 it must ulso precede GXVD in RICHI 338. These 
+columns were found to be 4 — 8—13 — 14 and their limits were fixed within columns 7 — 10, 
+inclusive. 
+
+(5) Two columns remained, 5 — 7, and thus these were proven by elimination to be the 
+fifth and sixth columns. 
+
+6 12 15 16 | 5 7 | 4 8 18 14 | 2 1 17 11 | 3 9 19 18 
+
+RICHI 274 IV D V A G V A A XAAAXFGFFG 
+XFVGXXADDFAAFDXDXF 
+GFVADDGAF, VFXGXAAFD 
+FAADXAVVGAAFXGAVDG 
+XAXVGXGAD FA A F X A A F D 
+VFGGXFDAXXDVAAXVXV 
+F X A V FAXAXXADFDFFXX 
+DGFVXXXDDXVXVXFGDF 
+A A A D X X V G F A D F G X A A A F 
+FDAAVGGFXFADFXXFXD 
+FDAAVVAXXFXDXDVFVD 
+AFDADFADAFAAFXAADX 
+DGAVXXVXGAAGDFA-DXX 
+FVAVGVDAA. GDAAXVAAX 
+AAXXVVADDFXAVXDAAX 
+GXVD 
+
+
+
+1 See in this connection note 12, A Mechanical Method for Determining the Key for the Transposition in 
+ADFGVX Ciphers, Given Two Messages Having Identical Endings. — TV. F. F. 
+
+
+
+
+
+
+% 
+
+
+
+
+32: 
+
+6 12 15 16 1 5 7 | 4. 8 13 14 1 2 1 17 11 1 3 9 10 18 
+
+RICHI 338 VDGDFAA'XADVVGADFDX 
+ADXFFADXXAAAFDDDAG 
+AAAXVVGXGFAXFGFXXG 
+DXDXFDAXAX 1A V D V V A G A 
+X F* A A X AG FGFGVFXXAXF 
+DDDAFAXDFXAVFGDGDV 
+FXAXGFAADFDAAFAVXA 
+GGVFXAAVGDVXAXXGGF 
+DXAAFAAADFGGFVFDXX 
+XAAVADXVVXVAXFAXFX 
+XDADFAFFX.XVFGDXXXX 
+DXDXVVFGFDDAAAXVXA 
+FXGFGDAAFAAADFGGVF 
+X X F D F A X F D X A A D F V A V F 
+AD X D XXVFDVADFAFADF 
+AXDAFAAAXDVAGDXVXA 
+GFXGDAADXXVAVFVDGG 
+A X A A A D V A X A X X A A V A V F' 
+DXDAVXDAXADVXG 
+
+(6) Having thus fixed the position of two columns there remained simply to place together 
+in RICHI 338 the columns which contained the same letters and which would naturally take 
+position as the sixteenth and seventeenth columns or, 10 columns removed from the fixed 
+columns, 5 and 7 in RICHI 274. (This followed from the fact that the text of RICHI 338 
+ran 10 letters ahead of the similar text of RICHI 274.) These columns were 3 — 10. 
+
+(7) The placing of the remaining pairs was accomplished by continuing to build up upon 
+this sequence by the same sort of cross fire between the two messages. 
+
+(8) Inspection of 5 — 7 had indicated FA as E and therefore the arrangement of columns, 
+when once paired in their relative order, was very easily determined by pairing them in such a 
+way as to bring out FA as the prominent digraph. Thus 10 — 3 was chosen in preference to 
+3 — 10 because of the number of AF's which would appear if the pair was placed in the latter order. 
+
+(9) To return to the system of cross fire building up of the pairs in the rectangle, the position 
+of 5 — 7 having been fixed as columns 5 and 6, respectively, in RICHI 274, the columns correspond- 
+ing or those which contained the identical letters with 5—7 in RICHI 274 were identified in 
+RICHI 338 as columns 10 — 3 and were placed for reasons which we have stated in a previous 
+paragraph as the fifteenth and sixteenth columns. 
+
+
+
+REF XD:A68206 
+
+
+
+33 
+
+
+
+(10) Our skeleton rectangles appeared then as follows: 
+
+
+
+1 2 3 4 S 8 7 8 9 10 11 12 13 14 13 10 17 13 
+
+
+
+RICHI 274 
+
+
+
+2 3 4 
+
+
+
+RICHI 338 
+
+
+
+1 7 
+
+
+10 8 
+
+
+G V 
+
+
+F G 
+
+
+X X 
+
+
+X X 
+
+
+D D 
+
+
+F A 
+
+
+X A 
+
+
+D A 
+
+
+G X 
+
+
+F A 
+
+
+X F 
+
+
+X X 
+
+
+F A 
+
+
+X F 
+
+
+X X 
+
+
+D F 
+
+
+X X 
+
+
+A A 
+
+
+V G 
+
+
+X X 
+
+
+V V 
+
+
+V V 
+
+
+D F 
+
+
+D A 
+
+
+X X 
+
+
+X A 
+
+
+G V 
+
+
+A V 
+
+
+V V 
+
+
+A D 
+
+
+5 « 7 
+
+
+8 9 10 U 12 13 14 11 IB 
+
+
+1 7 
+
+
+10 8 
+
+
+F A 
+
+
+D D 
+
+
+F A 
+
+
+AD 
+
+
+V V 
+
+
+X F 
+
+
+F D 
+
+
+G V 
+
+
+X A 
+
+
+X X 
+
+
+F A 
+
+
+D D 
+
+
+G F 
+
+
+X A 
+
+
+X A 
+
+
+G X 
+
+
+F A 
+
+
+X F 
+
+
+A D 
+
+
+F A 
+
+
+F A 
+
+
+X X 
+
+
+V V 
+
+
+X X 
+
+
+G D 
+
+
+V G 
+
+
+FJl 
+
+
+V V 
+
+
+X X 
+
+
+D F 
+
+
+F A 
+
+
+X X 
+
+
+D A 
+
+
+G V 
+
+
+A D 
+
+
+V V 
+
+
+V X 
+
+
+
+
+
+34 
+
+
+
+(11) Our 10 — 3 having been properly placed in BICHI 338 as the fifteenth and sixteenth 
+columns, the 10 and 3 columns in RICHI 274 quite naturally place themselves in the same 
+numerical order of columns, i.e., 15 and 16. 
+
+(12) There remain now in the last of our five, divisions in RICHI 274 columns 9 — 18 which 
+cannot take position as the fifteenth and sixteenth columns since these are occupied by 10 — 3. 
+They therefore fall into position as the seventeenth and eighteenth columns, in the order 18 — 9 
+rather than 9 — 18 for the sake of the greater number of FA’s in the former, a digraph which has 
+been identified as having the highest frequency. ! ■ 
+
+(13) The process Just outlined is now repeated. The columns which are identical with 
+18 — 9 in RICHI 274 are sought for in RICHI 338. Since the text of these columns in RICHI 
+274 contain in their last line the digraph, XA, 4 liters removed from the end of the message, the 
+same text must appear in JIICHI 338, 4 letters removed from the end. XA is found in columns 
+13 — 8, which therefore faU into columns 9 and LQ. *. Columns 14 — 4, which are left in this, the 
+third of our five divisions, 1 accordingly take the position of columns 7 and 8. 
+
+(14) The final position of the columns was as follows: 
+
+t 15 12 U S 7 It 113 l 11 1 17 2 10 3 18 8 
+
+RICHI 274 VVDAGVAA XAFAXAFGGF 
+XVFGXXFADDDAFAXXFD 
+GVFADDVGFAXXGFFADA 
+FAADXAAVGVGFXADAGV 
+XXAVGXFGDAXAFAFADA 
+VjGFGXFXDXAAVADXXVV 
+.FAXVFAXHADDFAXFXF 
+PFGVXXXXDpXXVVDFFG 
+AAADXXAVFGXFGDAAFA 
+FADAVGFGXFXDFAXXDF 
+FADAVVFAXXD. DXXVVDF 
+adfadffaapxafadaxa 
+
+DAGVXXAVGXFGDAXAXD 
+FAVVGVGDAAXAADAVXA 
+AXAXVVFADpXAVXADXA 
+G V X D 
+
+
+
+REF ID : A68206 
+
+
+
+35 
+
+« Mr 12 16 8 7 H A 18 8 U 1 17 2 10 3 18 9 
+
+RICHI 338 V GDDFADAAXAV GV DDXF 
+A X D F F A A D 'X X D A F A A D G D 
+AAA.XVVFGGXGXFAXFGX 
+DDXXFDXAAX VVDAGVAA 
+XAFAXAFGGFXVFGXXFA 
+DDDAFAXXFDGVFADDVG 
+FAXXGF.FmFAAD.XAAV 
+G V G F X A D A G V X X A V G X F G 
+D A X A F AFADAVGFGXFXD 
+X A A V AD X X V V F A X V F A XX 
+XADDFAXFXFDFGVXXXX 
+DDXXVVDFFGAAADXXAV 
+FGXFGDAAFAFADAVGFG 
+XFXDFAXXDFFADAVVFA 
+AXDDXXVVDFA D, F A D F F A 
+A D X A F A D A X A D A G V X X A V 
+GXFGDAXAXDFAVVGVGD 
+> - A A X A A D A V X A A X A X V V F A 
+
+D D X A V X A D X A G V X D 
+
+5. NOTE ON “BICHI” ADPGVX CIPHER 
+
+SOLUTION OS' KEY OF NOVEMBER 1, 2, 3 
+
+As this last solution was accomplished by principles involving an interesting combination 
+of several familiar methods, it has been thought worth while to include this in a further 
+memorandum. 
+
+At 4 a.m., on November 1 a first and second part of a RICHI ADFGYX was communi- 
+cated to OSM by LP, the second part of which contained 264 letters. 
+
+On November 2 this second part was repeated but bearing a preamble RICHI 266 instead 
+of 264. 
+
+The text of the two messages follows: 
+
+2-TL RICHI 264 DVDVF DVFAG XVXFF FVGGG AGGXA 
+XDXGF XVVDD GFGFD FAVGV DAFGF 
+
+GXDFD XVVDG DGVFF GDXDG AXAXV 
+
+GVGAA AVFVG VFDGD XAFDX AXGVF 
+
+AGDDD VGDVV GGDGG GVAAD DGDVF 
+
+VDDDX DVXDX DVDVA VGXVV DFVFD 
+
+AXDGD AVGXD DDADG FVGDG A V A X D 
+
+ADDGG FDFAG GFAXG FFXDG GGVGA 
+
+FDFXX DAGAV GDVVF GXGFV FDXAA 
+
+VAGAG AAVGD GGGFD VAGGV XAADD 
+
+DDAVA VVADG DGDD 
+
+
+
+
+36 
+
+
+
+2-TL RICHI 266 D 
+
+
+V 
+
+
+V 
+
+
+D 
+
+
+F 
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+V 
+
+
+G 
+
+
+F 
+
+
+F 
+
+
+V 
+
+
+G 
+
+
+G 
+
+
+G 
+
+
+A 
+
+
+X 
+
+
+D 
+
+
+A 
+
+
+D 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+G 
+
+
+F 
+
+
+X 
+
+
+V 
+
+
+y 
+
+
+D 
+
+
+D 
+
+
+A 
+
+
+A 
+
+
+D 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+V 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+A 
+
+
+F 
+
+
+G 
+
+
+G 
+
+
+F 
+
+
+G 
+
+
+F 
+
+
+D 
+
+
+F 
+
+
+A 
+
+
+V 
+
+
+V 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+F 
+
+
+V 
+
+
+V 
+
+
+D 
+
+
+A 
+
+
+X 
+
+
+G 
+
+
+A 
+
+
+X 
+
+
+A 
+
+
+X 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+F 
+
+
+V 
+
+
+G 
+
+
+V 
+
+
+F 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+F 
+
+
+G 
+
+
+X 
+
+
+D . 
+
+
+F 
+
+
+D 
+
+
+X 
+
+
+G 
+
+
+V 
+
+
+F 
+
+
+A 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+V 
+
+
+G 
+
+
+A 
+
+
+A 
+
+
+A 
+
+
+V 
+
+
+F 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+A 
+
+
+X 
+
+
+G 
+
+
+V 
+
+
+F 
+
+
+X 
+
+
+D 
+
+
+F 
+
+
+F 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+X 
+
+
+G 
+
+
+F 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+V 
+
+
+X 
+
+
+F 
+
+
+V 
+
+
+A 
+
+
+V 
+
+
+G 
+
+
+X 
+
+
+V 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+X 
+
+
+A 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+A 
+
+
+V 
+
+
+G 
+
+
+X 
+
+
+D 
+
+
+F 
+
+
+F 
+
+
+X 
+
+
+D 
+
+
+A 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+A 
+
+
+V 
+
+
+A 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+D 
+
+
+F 
+
+
+A 
+
+
+G 
+
+
+G 
+
+
+F 
+
+
+V 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+A 
+
+
+F 
+
+
+G 
+
+
+X 
+
+
+G 
+
+
+F 
+
+
+V 
+
+
+F 
+
+
+D 
+
+
+A 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+V 
+
+
+F 
+
+
+V 
+
+
+F 
+
+
+F 
+
+
+G 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+A 
+
+
+A 
+
+
+V 
+
+
+A 
+
+
+G 
+
+
+A 
+
+
+G 
+
+
+y 
+
+
+X 
+
+
+A 
+
+
+A 
+
+
+D 
+
+
+D 
+
+
+X3 
+
+
+G 
+
+
+F 
+
+
+D 
+
+
+V 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+A 
+
+
+F 
+
+
+D 
+
+
+X 
+
+
+A 
+
+
+X 
+
+
+D 
+
+
+D 
+
+
+A 
+
+
+V 
+
+
+A 
+
+
+V 
+
+
+V 
+
+
+G 
+
+
+A 
+
+
+A 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+It was at once concluded from a comparison 
+
+
+of the 
+
+
+two messages 
+
+
+that the 
+
+
+RICHI 266 
+
+
+
+was the correct version of RICHI 264 which had probably been garbled in its encipherment. 
+If this were the case then we might expect to find an identical beginning in the two messages 
+which would extend as far as the garbled portion and from there, following an hiatus of 2 letters 
+(266-264), a similar ending which would extend in RICHI 266 in an order 2 letters removed 
+from the same similar ending in RICHI 264. 
+
+The messages were therefore divided off or cut with reference to their identical beginnings. 
+The cuts indicated a transposition key length of 19. This meant that RICHI 266 was an 
+exact factor of 19 (19X14). We had then, therefore, but to set up RICHI 266 in 19 columns 
+of 14 letters in length and follow the division thus made as a check in the cutting of RICHI 264. 
+
+
+
+The messages were then set up 
+
+
+as follows: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i 
+
+
+2 
+
+
+3 
+
+
+4 
+
+
+8 
+
+
+6 
+
+
+7 
+
+
+8 
+
+
+9 
+
+
+10 
+
+
+u 
+
+
+12 
+
+
+13 
+
+
+14 
+
+
+15 
+
+
+16 
+
+
+17 
+
+
+18 
+
+
+19 
+
+
+RICHI 266 D 
+
+
+F 
+
+
+G 
+
+
+V 
+
+
+V 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+G 
+
+
+F 
+
+
+V 
+
+
+D 
+
+
+V 
+
+
+F 
+
+
+G 
+
+
+A 
+
+
+X 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+F 
+
+
+F 
+
+
+G 
+
+
+V 
+
+
+A 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+F 
+
+
+A 
+
+
+G 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+V 
+
+
+A 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+V 
+
+
+X 
+
+
+V 
+
+
+D 
+
+
+X 
+
+
+V 
+
+
+F 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+G 
+
+
+A 
+
+
+F 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+G 
+
+
+A 
+
+
+F 
+
+
+A 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+A 
+
+
+G 
+
+
+A 
+
+
+V 
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+V 
+
+
+F 
+
+
+G 
+
+
+V 
+
+
+A 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+D 
+
+
+X 
+
+
+V 
+
+
+A 
+
+
+G 
+
+
+G 
+
+
+V 
+
+
+A 
+
+
+V 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+F 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+X 
+
+
+V 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+A 
+
+
+V 
+
+
+G 
+
+
+A 
+
+
+V 
+
+
+V 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+X 
+
+
+X A 
+
+
+F 
+
+
+F 
+
+
+F 
+
+
+A 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+V 
+
+
+A 
+
+
+F 
+
+
+G 
+
+
+D 
+
+
+A 
+
+
+V 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+X 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+A 
+
+
+F 
+
+
+F 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+F 
+
+
+D 
+
+
+X 
+
+
+X 
+
+
+F 
+
+
+V 
+
+
+A 
+
+
+A 
+
+
+G 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+X 
+
+
+A 
+
+
+G 
+
+
+G 
+
+
+X 
+
+
+X 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+F 
+
+
+X 
+
+
+F 
+
+
+A 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+V 
+
+
+A 
+
+
+D 
+
+
+A 
+
+
+V 
+
+
+X 
+
+
+A 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+F 
+
+
+G 
+
+
+A 
+
+
+D 
+
+
+V 
+
+
+V 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+A 
+
+
+F 
+
+
+V 
+
+
+X 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+A 
+
+
+X 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+F 
+
+
+A 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+X 
+
+
+X 
+
+
+D 
+
+
+A 
+
+
+D 
+
+
+V 
+
+
+F 
+
+
+X 
+
+
+D 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+V 
+
+
+A 
+
+
+X 
+
+
+F 
+
+
+X 
+
+
+F 
+
+
+D 
+
+
+F 
+
+
+X 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+X 
+
+
+G 
+
+
+
+REF ID:A68206 
+
+
+
+37 
+
+RICHI 264 D F G V V G V G G FVDVFGAXGD 
+VFFGHGVDVAGGDGVAGD 
+DVXVDXVFGDVDDFGGAFA 
+VGVDGAFAGDGAGAVDVDV 
+FGVADXDGGDXVAGGVAVA 
+DGDFGVGDVXVGVGAVGAV 
+VADGVGDDADVXAFFFAGV 
+FGGFFVXDAVDDXADGGGA 
+AGFGFGAVDXF D D X F X A V D 
+GXGXGAFGDDVDAGXGAXG 
+X A F DDADDGXFADVXFVAD 
+V X D F X A X V D D,D DDFDVGAG 
+XDFDDVAVVVAGGXAFDDD 
+F X A X FXG DXFGDCDGDD 
+
+In cutting RICHI 264 we had only to follow the beginning of the columns as cut in RICHI 
+266. The division between columns 1 and 2 in RICHI 264 followed naturally from the identity 
+with the similar be ginning s in RICHI 266. Since column 2 in RICHI 266 began FFVGGGA 
+(providing, of course, that our theory was correct) column 2 in RICHI 266 must likewise 
+begin FFVGGGA. 
+
+A further check, if further check were needed, was given by the possession of the two mes- 
+sages of identical endings. Having cut columns 1 and 2 in RICHI 264 by meanB of a comparison 
+of the beginnings, we had now to look in RICHI 266 for a column ending as column 1 in RICHI 
+264 with AGXVXF. This column was found in RICHI 266 in the position of the tenth column 
+ending with these identical letters. In the same way when column 2 had been cut in RICHI 264 
+its ending GGXAXDX was found in RICHI 266, in the eleventh column. Employing this double 
+check, the columns in their proper length in RICHI 264 were very quickly reconstructed and the 
+short columns fixed upon as 5 and 9. 
+
+From this point the solution followed as described in our last note of November 1 . The suc- 
+cessive steps were, in their order: ! 
+
+First: The short columns 5 and 9 in RICHI 264 were placed on the extreme right of the 
+rectangle. It was, of course, impossible to determine immediately the relative order of 5 and 9 
+but it was enough for the present to know that 5 and 9 would occupy in one order or another the 
+position a» the eighteenth and nineteenth columns taken in the numerical succession of the 
+columns. 
+
+To avoid a repetition of an unnecessary number of letters we subjoin only the three final 
+lines of each message. 
+
+1 2 3 * 8 8 7 8 9 10 11 12 13 14 15 16 17 118 191 
+
+|S 9 1 
+
+RICHI 266 D F 
+
+A X 
+X D 
+
+RICHI 264 X D 
+
+D V 
+
+Second: If columns 5 and 9 occupied the position of columns 18 and 19 in RICHI 264, then 
+the columns containing at their ends the same letters as 6 — 9 would, in RICHI 266, occupy 
+
+
+
+39 
+
+
+
+the position of the first and second columns, since the concluding text of RICHI 266 ran two 
+letters in advance of the same text in RICHI 264. These columns were identified in RICHI 
+266 as columns 16 and 3 and they were accordingly placed in the position of the first and second 
+columns. 
+
+
+
+RICHI 266 
+
+
+
+RICHI 264 
+
+
+
+ji 
+
+[18 
+
+D 
+
+X_ 
+
+D 
+
+
+
+2 
+3 1 
+
+G 
+
+D 
+
+V 
+
+
+
+3 4 8 6 7 3 
+
+
+
+V D 
+F F . 
+D A ' 
+
+
+
+10 11 12 13 14 18 16 17 118 19 
+| 8 9 [ 
+
+D F 
+A X 
+X D 
+
+X D 
+D V 
+
+
+
+Third: With columns 16 and ,3 placed in position, in RICHI 266, the same columns must 
+occupy a position as the first and second columns in RICHI 264. We had then to look in RICHI 
+266 for the columns which ended similarly to 16 and 3 in RICHI 264. These columns were 
+found to be 15 and 4, and for reasons which wehad stated in the former paragraph they must 
+follow 16 and 3, since the identity of RICHI 264 will follow two spaces removed from RICHI 266. 
+
+
+
+RICHI 266 
+
+
+Il2|34|6t78 
+,16 3| IS 4[ 
+
+D G V D 
+
+
+•9 10 11 12 13 14 15 16 17 118 19l 
+
+1 5 9 1 
+
+D F 
+
+
+
+
+X D F F 
+
+
+A X 
+
+
+
+
+D V D A 
+
+
+X D 
+
+
+RICHI 264 
+
+
+V D D F 
+
+
+X D 
+
+
+
+
+F F AD 
+
+
+D V 
+
+
+
+
+D A G X 
+
+
+
+
+
+Fourth: In the same way columns 12 and 7 were placed in their positions as the fifth and 
+sixth columns in RICHI 266 following the identity contained in columns 15 — 4 in RICHI 264- 
+
+8 9 10 11 12 13 14 18 16 17 
+
+
+
+RICHI 266 
+
+
+
+RICHI 264 
+
+
+
+II 2 3 4 5 6 7 
+
+1 16 3| IS 4l 12 7| 
+
+D G V D D F 
+
+XDFFA.D 
+D V D A G X 
+
+
+
+18 19- 
+5 sl 
+
+D F 
+A X 
+X D 
+
+
+
+V D D F D X / X D , 
+
+F F A D G A D V 
+
+D A G_X F X 
+
+Fifth: This criss-cross building up was continued by the same process as has been 
+described. It can be followed without the necessity of further explanation from the outlines 
+as given: 
+
+RICHI 266 
+
+
+
+RICHI 264 
+
+
+
+|i 
+
+
+2| 
+
+
+3 
+
+
+4| 
+
+
+8 6l 7 8 j 9 
+
+
+10 11 12 13 14 18 IS 17 111 19! 
+
+
+1 16 
+
+
+3[ 
+
+
+15 
+
+
+4f 
+
+
+12 7| 6 181 
+
+
+15 9 j 
+
+
+D 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+D F D X 
+
+
+D F 
+
+
+X 
+
+
+D 
+
+
+F 
+
+
+F 
+
+
+A D G A 
+
+
+A X 
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+A 
+
+
+G X F X 
+
+
+X D 
+
+
+V 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+D X A A ' ‘ 
+
+
+X D 
+
+
+F 
+
+
+F 
+
+
+A 
+
+
+D 
+
+
+G A V D 
+
+
+D V 
+
+
+D 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+F X FD 
+
+
+
+
+
+REF XD:A68206 
+
+
+
+39 
+
+
+
+16 17 1 18 191 
+Is 9| 
+
+D F 
+A X 
+X D 
+
+
+
+RICHI 264 V 'D D F D X A_A V G X D 
+
+F F A D G A V_D V D D V 
+
+DAGXFXFDGG 
+
+Seventh: 
+
+|l 3] 8 41 5 6j 7 8 1 9 10j . 11 12} 13 14 IS 16 17 |18 19| 
+
+116 8] 15 i\ 12 7| 8 is| 8 17| 1 Wj |B : 9) 
+
+RICHI 266 DGVDDFDXAA V_G DF 
+
+XDFFADGAVD VJD AX 
+
+DVDAGXFXFDGG X D 
+
+RICHI 264 V D D F D X A A V_G V G X D 
+
+FFADGAVD V_D X D D V 
+
+' „ ' D A G X F X F D GGFD 
+
+Eighth: 
+
+|1 2] 3 4| 8 6| 1 8 1 9 10| 11 12} 13 14]' 18 18 17- |l» 19} 
+
+|l6 a| 16 4| 12 71 6 18| 8 17| 1 1 b| ID 13| , IS b| 
+
+RICHI 266 DGVDDFDXAAVG V_G D F 
+
+X D F F A D G A V D V D X_D AX 
+
+DVDAGXFXFDGG F_D XD 
+
+RICHI 264 V D D F D X A A V G V G D D X D 
+
+F FAD 6AYDT D X DVG DV 
+
+
+
+D A G X F X F D G G' F_D D G 
+
+1. '■ ■ % 
+
+Ninth: 
+
+
+
+12 3 
+
+
+4 5 6 
+
+
+7 l 
+
+
+i 9 
+
+
+10} 
+
+
+n i 
+
+
+2 13 
+
+
+14 
+
+
+15 16 
+
+
+18 3 15 
+
+
+4 1 
+
+
+6 1 
+
+
+8 8 
+
+
+
+
+: i: i 
+
+
+9 10 
+
+
+13 
+
+
+14 2 
+
+
+
+RICHI 266 D G V D D F D X A A V G V G D_D D F 
+XDFFADGAVDVDXDVG AX 
+D V D A G X - F X F D G G ' F D D_G X D 
+
+
+
+RICHI 264 VDDFDXAAVGVG D_D F X X D 
+FFADGA YDVDXDVGXD DV 
+DAGXFXFDGGFD D_G D X 
+
+
+
+
+Sixth: 
+
+
+
+RICHI 266 
+
+
+
+1 1 2} 3 
+
+
+4] 
+
+
+s 
+
+
+8} 
+
+
+7 8 
+
+
+9 
+
+
+10| 11 12 13 14 15 
+
+
+lie sr is 
+
+
+4 
+
+
+12 
+
+
+7l 
+
+
+\ 6 181 
+
+
+8 
+
+
+i n 
+
+
+D G rv 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+D X 
+
+
+A_ 
+
+
+A 
+
+
+XDF 
+
+
+F 
+
+
+A 
+
+
+D 
+
+
+G A 
+
+
+V D 
+
+
+DVD 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+F X 
+
+
+F 
+
+
+D 
+
+
+
+40 
+
+
+
+Tenth: 
+
+
+
+
+
+|i 
+
+
+2| 
+
+
+3 
+
+
+4! 
+
+
+5 8| 
+
+
+7 
+
+
+81 
+
+
+ft 101 
+
+
+u 
+
+
+121 
+
+
+18 
+
+
+141 
+
+
+is 
+
+
+181 
+
+
+17 
+
+
+118 
+
+
+191 
+
+
+
+
+ha 
+
+
+31 
+
+
+IS 
+
+
+4| 
+
+
+12 7| 
+
+
+6 
+
+
+1S| 
+
+
+8 171 
+
+
+i 
+
+
+lft| 
+
+
+10 
+
+
+13l 
+
+
+14 
+
+
+2 1 
+
+
+11 
+
+
+U 
+
+
+»l 
+
+
+RICHI 266 
+
+
+D 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+D F 
+
+
+D 
+
+
+X 
+
+
+A A 
+
+
+V 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+F 
+
+
+
+
+X 
+
+
+D 
+
+
+F 
+
+
+F 
+
+
+A D 
+
+
+G 
+
+
+A 
+
+
+V D 
+
+
+V 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+A 
+
+
+X 
+
+
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+A 
+
+
+G X 
+
+
+F 
+
+
+X 
+
+
+F D 
+
+
+G 
+
+
+G 
+
+
+F 
+
+
+D 
+
+
+D 
+
+
+G 
+
+
+X 
+
+
+X 
+
+
+D 
+
+
+RICHI 264 
+
+
+V 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+D X 
+
+
+A 
+
+
+A 
+
+
+V G 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+F 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+
+
+F 
+
+
+F 
+
+
+A 
+
+
+D 
+
+
+G A 
+
+
+V 
+
+
+D 
+
+
+V D 
+
+
+X 
+
+
+D 
+
+
+V 
+
+
+G 
+
+
+X 
+
+
+D 
+
+
+A 
+
+
+D 
+
+
+V 
+
+
+
+
+D 
+
+
+A 
+
+
+G 
+
+
+X 
+
+
+F X 
+
+
+F 
+
+
+D 
+
+
+G G 
+
+
+F 
+
+
+D 
+
+
+D 
+
+
+G 
+
+
+D 
+
+
+X 
+
+
+X 
+
+
+
+
+
+
+
+Having located the precise position of column 11 in RICHI 266 as the seventeenth col- 
+umn, our task was now a very simple one. Column 2 in RICHI 264 which corresponded in the 
+identity of its letters with column 11 in RICHI 266 or the seventeenth column must occupy a 
+position in RICHI 264 two columns removed from the seventeenth column. Accordingly upon 
+the identification of this column in RICHI 264 as column 2 it was placed in its position as the 
+fifteenth column. Column 14 adjusted itself by elimination, within the limits set by the division 
+which has been described above, as the sixteenth column. 
+
+Column 14, now that it had been fixed as the sixteenth column, fixed also column 10 in the 
+division alongside as the fourteenth column since the identity DVD in column 14 or the six- 
+teenth column in RICHI 266 must be preceded by two columns in RICHI 264 with the same 
+identity. This, therefore, at the same time fixed the position of column 13 as the thirteenth 
+column since column 10 had been proved to be the fourteenth column as the columns were limit- 
+ed to one of the two columns, the thirteenth or fourteenth by the limits which had been fixed 
+earlier in the study; 
+
+The two messages as they finally appeared were as follows: 
+
+
+
+RICHI 266 
+
+
+
+3 
+
+G 
+
+
+16 
+
+A 
+
+
+4 
+
+V 
+
+
+15 
+
+G 
+
+
+7 12 18 
+
+V D G 
+
+
+6 
+
+G. 
+
+
+17 
+
+X 
+
+
+8 10 1 
+G D D 
+
+
+13 
+
+v 
+
+
+10 
+
+F 
+
+
+2 
+
+F 
+
+
+14 
+
+F 
+
+
+11 
+
+V 
+
+
+9 
+
+G 
+
+
+5 
+
+V 
+
+
+F 
+
+
+V 
+
+
+G 
+
+
+G 
+
+
+G G.G 
+
+
+A 
+
+
+A 
+
+
+V. D V 
+
+
+G 
+
+
+F 
+
+
+FDA 
+
+
+D 
+
+
+V 
+
+
+X 
+
+
+G 
+
+
+V. G V' D F 
+
+
+X 
+
+
+A 
+
+
+F A. V D 
+
+
+D 
+
+
+V 
+
+
+G 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+D 
+
+
+V FA D 
+
+
+A 
+
+
+V 
+
+
+A V D 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+A 
+
+
+G 
+
+
+G 
+
+
+G 
+
+
+V 
+
+
+V 
+
+
+A 
+
+
+G 
+
+
+D V V 
+
+
+X 
+
+
+A 
+
+
+G A F 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+G 
+
+
+X 
+
+
+G 
+
+
+D 
+
+
+D 
+
+
+V 
+
+
+F, 
+
+
+A. G .G A 
+
+
+V 
+
+
+G 
+
+
+DVD 
+
+
+V 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+V 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+F 
+
+
+G 
+
+
+F 
+
+
+DXGG 
+
+
+A 
+
+
+D V V 
+
+
+A 
+
+
+G 
+
+
+A 
+
+
+F 
+
+
+X 
+
+
+G 
+
+
+V 
+
+
+A 
+
+
+X 
+
+
+_G_ 
+
+
+X 
+
+
+F D X 
+
+
+X 
+
+
+X 
+
+
+V G D 
+
+
+A 
+
+
+F X 
+
+
+x 
+
+
+X 
+
+
+x 
+
+
+x 
+
+
+A 
+
+
+X 
+
+
+F 
+
+
+X 
+
+
+G F A 
+
+
+D 
+
+
+x 
+
+
+G A V 
+
+
+X 
+
+
+A 
+
+
+x 
+
+
+_X 
+
+
+X 
+
+
+X 
+
+
+_F 
+
+
+D_ 
+
+
+X 
+
+
+<2 
+
+
+
+
+X X F 
+
+
+D X A A G G 
+
+
+G. 
+
+
+A 
+
+
+k 
+
+
+X 
+
+
+x 
+
+
+2 
+
+
+D_ 
+
+
+X 
+
+
+X 
+
+
+z. 
+
+
+DXD 
+
+
+A A 
+
+
+A V D 
+
+
+D X D 
+
+
+x 
+
+
+X 
+
+
+x 
+
+
+V 
+
+
+G 
+
+
+X 
+
+
+_D_ 
+
+
+x 
+
+
+F D X 
+
+
+x 
+
+
+A A G V 
+
+
+X 
+
+
+x 
+
+
+x 
+
+
+x 
+
+
+X 
+
+
+X 
+
+
+_D 
+
+
+D_ 
+
+
+X_ 
+
+
+T 
+
+
+X 
+
+
+D A A 
+
+
+G_ 
+
+
+DVDV 
+
+
+D 
+
+
+X 
+
+
+x 
+
+
+V 
+
+
+D 
+
+
+x 
+
+
+_A 
+
+
+V_ 
+
+
+D_ 
+
+
+_A_ 
+
+
+x 
+
+
+X G X 
+
+
+X 
+
+
+D_ 
+
+
+F G G 
+
+
+D 
+
+
+F 
+
+
+x 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+X 
+
+
+
+DEM NACH GEHEN NUMEHR SAEMTLICHE 
+
+SCHIFFE VON K0SP0LI NACH ODESSA BEZW. NIKOLAJEW. 
+
+
+
+REF XD:A68206 
+
+
+
+41 
+
+
+
+RICHI 264 
+
+
+
+15 7 12 18 6 17 8 19 
+
+GAVGVDGG 
+
+
+1 
+
+X 
+
+
+18 
+
+G 
+
+
+10 
+
+D 
+
+
+2 
+
+D 
+
+
+14 
+
+V 
+
+
+n 
+
+F 
+
+
+0 
+
+F 
+
+
+5 
+
+F V 
+
+
+G V 
+
+
+F 
+
+
+V 
+
+
+G 
+
+
+GGGGAAVDV 
+
+
+G 
+
+
+V 
+
+
+F D A D V 
+
+
+X 
+
+
+G 
+
+
+V 
+
+
+G V D 
+
+
+F 
+
+
+X A 
+
+
+F 
+
+
+A 
+
+
+D 
+
+
+D 
+
+
+D 
+
+
+V 
+
+
+F V G D 
+
+
+V 
+
+
+D 
+
+
+D 
+
+
+V F 
+
+
+A 
+
+
+D 
+
+
+A 
+
+
+V 
+
+
+A 
+
+
+V 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+G 
+
+
+A G 
+
+
+G G 
+
+
+V 
+
+
+V 
+
+
+A 
+
+
+G D 
+
+
+V 
+
+
+V 
+
+
+X 
+
+
+A 
+
+
+G A 
+
+
+F 
+
+
+A 
+
+
+D 
+
+
+G 
+
+
+G X 
+
+
+G D 
+
+
+D 
+
+
+V 
+
+
+F 
+
+
+A G 
+
+
+G 
+
+
+A 
+
+
+V 
+
+
+G 
+
+
+D 
+
+
+V 
+
+
+D 
+
+
+V 
+
+
+X 
+
+
+G 
+
+
+G V 
+
+
+V G 
+
+
+D 
+
+
+F G F D 
+
+
+X 
+
+
+G 
+
+
+G 
+
+
+A 
+
+
+D 
+
+
+V V A 
+
+
+D 
+
+
+A 
+
+
+F V 
+
+
+A V 
+
+
+G_ 
+
+
+X 
+
+
+=4 
+
+
+D X 
+
+
+x 
+
+
+x 
+
+
+Y-& p. 
+
+
+x 
+
+
+F X V 
+
+
+G A D A F 
+
+
+F_ 
+
+
+x 
+
+
+X 
+
+
+F A 
+
+
+x 
+
+
+x 
+
+
+G 
+
+
+A 
+
+
+x 
+
+
+D 
+
+
+x 
+
+
+D 
+
+
+x 
+
+
+x 
+
+
+X F 
+
+
+D F 
+
+
+G_ 
+
+
+G 
+
+
+x 
+
+
+X F 
+
+
+x 
+
+
+X 
+
+
+A 
+
+
+x 
+
+
+G 
+
+
+G G 
+
+
+A 
+
+
+x 
+
+
+x 
+
+
+G V 
+
+
+D G 
+
+
+F_ 
+
+
+F 
+
+
+D_ 
+
+
+X D 
+
+
+x 
+
+
+A 
+
+
+A 
+
+
+x 
+
+
+D 
+
+
+D 
+
+
+X 
+
+
+D 
+
+
+x 
+
+
+x 
+
+
+V F 
+
+
+G D 
+
+
+D_ 
+
+
+V 
+
+
+JL 
+
+
+D X 
+
+
+D 
+
+
+A 
+
+
+A 
+
+
+x 
+
+
+V 
+
+
+x 
+
+
+x 
+
+
+D 
+
+
+x 
+
+
+x 
+
+
+F D 
+
+
+D X 
+
+
+F_ 
+
+
+F 
+
+
+X 
+
+
+A A 
+
+
+G D 
+
+
+V 
+
+
+x 
+
+
+V 
+
+
+D 
+
+
+x 
+
+
+G 
+
+
+V 
+
+
+D 
+
+
+X A 
+
+
+V D 
+
+
+X 
+
+
+D X G X 
+
+
+x 
+
+
+4= 
+
+
+JL 
+
+
+x 
+
+
+x 
+
+
+D 
+
+
+JL 
+
+
+x 
+
+
+DXDX 
+
+
+
+
+
+DEM NACH GEHEN NUMEHR SAEMTLICHE SCHIFFE 
+VON KOSPOLI NACH ODESSA BEZW. NIKOLJEW. 
+
+The omission of the letter A in “NIKOLAJEW” in RICHI 264 was the only difference, 
+beyond a few errors in transmission which distinguished the two messages. 
+
+It is interesting to add that work on the solution of the key was begun in the afternoon 
+of November 2 and completed within an horn 1 and a half. 
+
+Although we had no confirmation as to the number of days for which the key ran since 
+we had received up to November 2 only messages of November 1, we had no hesitation in 
+notifying the French and British Cipher Bureaus in Paris and London that the key which 
+we telegraphed them was the key for November 2 and 3 as well as the 1st. Our supposition 
+proved correct and we were enabled to decipher the messages for the following 2 days as soon 
+as they were received from our wireless station. 
+
+November 4, 1918. 
+
+
+
+6. SPECIAL NOTE ON “RICHI” ADFGVX CIPHER 
+
+(a) The activity of the RICHI ADFGVX Cipher, although having abated somewhat since 
+the conclusion of the armistice, continues greatly above its former normal record of August and 
+September. 
+
+The solution of the key for messages of November 16, 17, 18 brings the total number of 
+successive days for which the messages have been read to 22.' The solutions comprise 7 differ- 
+ent keys, 4 of which were solved by our office. 
+
+Since, from December 1 to the 21st of the month, messages will have been ciphered by the 
+same keys as those of November 10-30, according to directions from the Chief Signal Officer in 
+Berlin to the Black Sea stations as embodied in a deciphered telegram, it will be possible 
+without further work to translate the messages of December 1-9, inclusive, with the keys 
+which we have now solved. 
+
+(b) Commencing several days prior to the conclusion of the armistice, RICHI ADFGVX 
+messages began to be intercepted which proved upon translation to indicate that stations in 
+the rear of the German lines had begun to use this cipher in communication with German 
+General Headquarters and amongst themselvee. The same key in use between Berlin and 
+the Black Sea area was employed. Traffic of this kind was particularly noted between two 
+
+
+
+
+
+
+
+42 
+
+stations, CM and CZ in tlie region of Metz, and between SY (Spa) and neighboring stations. 
+This communication continued simultaneously with the use of the CHI ADFGVX Cipher which 
+had been employed on the Western Front since March. While the key for RICHI ADFGVX 
+has a life of 3 days, the keys for CHI ADFGVX have never been known to continue in use 
+for more than 1 day. 
+
+(c) At the same time that the RICHI ADFGVX Cipher appeared on the Western Front, 
+a form of transposition cipher suddenly appeared and was employed from a period beginning 
+shortly before the armistice until only several days since. 
+
+The fact that the principle employed was that of a double transposition was confirmed in 
+a message sent in the RICHI ADFGVX Cipher recently deciphered. 
+
+From station SY (Spa) to station RW (location unknown), via station N4 (location unknown) 
+Sent at 21:03, 9 November; intercepted by station at G.H.Q., American E.F. 
+
+German text: 
+
+"UEBER 2 BAYRISCHE GENERAL-KOMMANDO , MUENCHEN: AN 7 RESERVENDIVI- 
+SION: LANDWEHR REGIMENT; AN FECH: NICHT DURCH KABEL. ARMEE- 
+SCHLUESSEL ijOPPELT. EMPFANG BESTAETIGEN: O.H.L. ROEM. 1 ANR. 
+11338. GEHEIMORDRE," 
+
+Translation: 
+
+"To the 7th Reserve Division, Landwehr Rgt., for the Director of Railways, via the 
+2d Bavarian Army Staff: Do not send by cable. Key for the army is a double 
+encipherment. Acknowledge receipt: Higher Conimahd; T ANR 11338. Secret 
+Order.” ; ' ' : _ - 3 
+
+November 20, 1918. 
+
+7. NOTE ON RECONSTRUCTION OF AN INCOMPLETE ADFGVX “MESSAGE 
+
+On November 3, 1918, a 13-part message from NKJ to LP (Constantinople to Berlin) was 
+intercepted. Two of the parts were missing and the thirteenth, RICHI 222, lacked the last 67 
+and 11 additional letters. It was, however, translated without great difficulty, and it is worth 
+while quoting as an interesting example of the treatment of the numerous garbled ADFGVX 
+messages which are intercepted. ! ‘ * 
+
+The message when properly set up appeared as follows: 
+
+3 18 4 15 7 12 18 6 17 8 19 1 13 10 2 14 11 9 5 
+
+F-V D-F-G-GGAVGDAD 
+
+X-F D-X-D-VDVGVGGA 
+
+V — G-VD-G-A-VDDVFGAA 
+A-A-DV-A-G-FFXGDAGG 
+X-A — AV-G-V — GDAD — DDV : ’ 
+
+F-F-GD-A-V GXG-GDF 
+
+A - F - - A — G - X — G G G D - V G A 
+
+D-G V-D-D-FX-G-G'GG 
+
+G-G D-V-V-GDAG-VGF ‘ 
+
+X — G — r- — — D — — - D X V V * XV- 
+D-D-VD-X— . F — XXGX — XFF i 
+
+■ ■ • * F — A — D D — A — V - D X ■ 
+
+
+
+REF ID : A68206 
+
+
+
+
+
+
+43 
+
+Now, by reference to the key-square which had already been obtained by the solution of 
+the ADFGVX key for November 1, 2, and 3* it is evident that the initial-combination (F-) may 
+stand for any one of six letters or numbers', i.e., 0, 2, G, 7, Q, or T, and so on for the remaining 
+pairs. Fortunately, the missing letters fall in such a way that in all cases but five we are limited 
+to a choice among six values. Therefore, by setting up the translation in the following fashion 
+it was possible to pick out the correct letter by a process of elimination. 
+
+
+
+0 J 
+
+
+I_ 
+
+
+_L 
+
+
+0 
+
+
+0 
+
+
+
+
+
+
+
+
+
+
+L 
+
+
+
+
+R 
+
+
+y 
+
+
+R 
+
+
+
+
+
+
+
+
+
+
+J. D 
+
+
+0 
+
+
+U 
+
+
+F 
+
+
+
+
+
+
+
+
+
+
+U 
+
+
+I 
+
+
+J 
+
+
+U 
+
+
+D 
+
+
+
+
+
+
+2 M 
+
+
+C 
+
+
+Z 
+
+
+V 
+
+
+V 
+
+
+
+
+
+
+
+
+
+
+Z 
+
+
+
+
+C 
+
+
+4 
+
+
+C 
+
+
+
+
+
+
+
+
+
+
+M. 8 
+
+
+V 
+
+
+R_ 
+
+
+_S 
+
+
+
+
+
+
+
+
+
+
+R 
+
+
+C 
+
+
+M 
+
+
+I 
+
+
+8 
+
+
+
+
+
+
+G H 
+
+
+2 
+
+
+G 
+
+
+7 
+
+
+7 
+
+
+D 
+
+
+I 
+
+
+R 
+
+
+X 
+
+
+G 
+
+
+— 
+
+
+Z 
+
+
+I 
+
+
+Z 
+
+
+M 
+
+
+I 
+
+
+I 
+
+
+D 
+
+
+H W H 7 0 
+
+
+Q C 
+
+
+H 
+
+
+D 
+
+
+U 
+
+
+0 
+
+
+2 
+
+
+H 
+
+
+L 
+
+
+W 
+
+
+
+
+
+
+7 E 
+
+
+8 
+
+
+W 
+
+
+N 
+
+
+N 
+
+
+
+
+
+
+
+
+
+
+W 
+
+
+
+
+V 
+
+
+A 
+
+
+V 
+
+
+
+
+
+
+
+
+
+
+E N 
+
+
+N 
+
+
+D 
+
+
+B 
+
+
+
+
+
+
+
+
+
+
+D 
+
+
+8 
+
+
+E 
+
+
+0 
+
+
+H 
+
+
+
+
+
+
+Q K 
+
+
+M 
+
+
+H 
+
+
+I 
+
+
+E 
+
+
+
+
+
+
+
+
+
+
+H 
+
+
+
+
+S 
+
+
+3 
+
+
+S 
+
+
+
+
+
+
+
+
+
+
+K B 
+
+
+E 
+
+
+J 
+
+
+K 
+
+
+
+
+
+
+
+
+
+
+J 
+
+
+M 
+
+
+K 
+
+
+F 
+
+
+B 
+
+
+
+
+
+
+T P 
+
+
+4 
+
+
+1 
+
+
+A 
+
+
+A 
+
+
+
+
+
+
+
+
+
+
+1 
+
+
+
+
+X 
+
+
+6 
+
+
+X 
+
+
+
+
+
+
+
+
+
+
+P 5 
+
+
+A 
+
+
+y 
+
+
+3 
+
+
+
+
+
+
+
+
+
+
+Y 
+
+
+4 
+
+
+P 
+
+
+9 
+
+
+5 
+
+
+
+
+
+
+
+
+
+
+
+
+y 
+
+
+U 
+
+
+
+
+0 
+
+
+F 
+
+
+0 
+
+
+
+
+R 
+
+
+
+
+
+
+L 
+
+
+0 
+
+
+R 
+
+
+U 
+
+
+J 
+
+
+0 
+
+
+0 
+
+
+U 0 U 
+
+
+0 
+
+
+9 
+
+
+0 
+
+
+
+
+R 
+
+
+
+
+
+
+0 
+
+
+
+
+J 
+
+
+
+
+
+
+
+
+4 
+
+
+I 
+
+
+
+
+V 
+
+
+S 
+
+
+V 
+
+
+
+
+C 
+
+
+
+
+
+
+Z 
+
+
+V 
+
+
+C 
+
+
+I 
+
+
+H 
+
+
+V 
+
+
+V 
+
+
+1 
+
+
+2 
+
+
+R 
+
+
+V 
+
+
+X 
+
+
+V 
+
+
+
+
+C 
+
+
+
+
+
+
+V 
+
+
+
+
+M 
+
+
+IQ 
+
+l> 
+
+
+R 
+
+
+N 
+
+
+I 
+
+
+L 
+
+
+F 7 
+
+
+Q 
+
+
+7 
+
+
+R 
+
+
+Z 
+
+
+c 
+
+
+H 
+
+
+G 
+
+
+7 
+
+
+Z 
+
+
+L 
+
+
+H 7 £ 7 Z 
+
+
+L 
+
+
+G 0 
+
+
+7 
+
+
+T 
+
+
+7 
+
+
+H 
+
+
+Z 
+
+
+E 
+
+
+I 
+
+
+7 
+
+
+- 
+
+
+H 
+
+
+
+
+
+
+
+
+A 
+
+
+0 
+
+
+
+
+N 
+
+
+B 
+
+
+N 
+
+
+
+
+V 
+
+
+
+
+
+
+W 
+
+
+N 
+
+
+V 
+
+
+0 
+
+
+E 
+
+
+N 
+
+
+N 
+
+
+0 
+
+
+7 
+
+
+D 
+
+
+N 
+
+
+5 
+
+
+N 
+
+
+
+
+V 
+
+
+
+
+
+
+N 
+
+
+
+
+I 
+
+
+
+
+
+
+
+
+3 
+
+
+F 
+
+
+
+
+E 
+
+
+K 
+
+
+E 
+
+
+
+
+S 
+
+
+
+
+
+
+H 
+
+
+I 
+
+
+s 
+
+
+F 
+
+
+K 
+
+
+E 
+
+
+E 
+
+
+F 
+
+
+Q J 
+
+
+E 
+
+
+P 
+
+
+E 
+
+
+
+
+s 
+
+
+
+
+
+
+E 
+
+
+
+
+K 
+
+
+
+
+
+
+
+
+6 
+
+
+9 
+
+
+
+
+A 
+
+
+3 
+
+
+A 
+
+
+
+
+X 
+
+
+
+
+
+
+1 
+
+
+A 
+
+
+X 
+
+
+9 
+
+
+P 
+
+
+A 
+
+
+A 
+
+
+9 
+
+
+T 
+
+
+Y 
+
+
+A 
+
+
+6 
+
+
+A 
+
+
+
+
+X 
+
+
+
+
+
+
+A 
+
+
+
+
+P 
+
+
+R R 
+
+
+
+
+0 
+
+
+0 
+
+
+
+
+D 
+
+
+D 
+
+
+I 
+
+
+F 
+
+
+F 
+
+
+0 
+
+
+
+
+D 
+
+
+
+
+
+
+0 
+
+
+
+
+
+
+R 
+
+
+
+
+9 
+
+
+J 
+
+
+R 
+
+
+R 
+
+
+
+
+9 
+
+
+L 
+
+
+9 
+
+
+
+
+Y 
+
+
+
+
+U 
+
+
+I 
+
+
+C C 
+
+
+
+
+V 
+
+
+V 
+
+
+
+
+8 
+
+
+8 
+
+
+C 
+
+
+S 
+
+
+S 
+
+
+V 
+
+
+
+
+8 
+
+
+
+
+
+
+V 
+
+
+
+
+
+
+C 
+
+
+
+
+X 
+
+
+M 
+
+
+C 
+
+
+C 
+
+
+
+
+X 
+
+
+Z 
+
+
+X 
+
+
+
+
+4 
+
+
+
+
+R 
+
+
+C 
+
+
+Z Z 
+
+
+T 7 
+
+
+7 
+
+
+N 
+
+
+W 
+
+
+W 
+
+
+2 
+
+
+Q Q 
+
+
+7 
+
+
+R 
+
+
+W 
+
+
+E 1 
+
+
+7 
+
+
+— 
+
+
+- 
+
+
+Z - 
+
+
+X K 
+
+
+T 
+
+
+H 
+
+
+Z 
+
+
+Z 
+
+
+M 
+
+
+T 
+
+
+G 
+
+
+T 
+
+
+A 
+
+
+1 
+
+
+G 
+
+
+0 2 
+
+
+V V 
+
+
+
+
+N 
+
+
+N 
+
+
+
+
+N N 
+
+
+8 
+
+
+B 
+
+
+B 
+
+
+N 
+
+
+
+
+N 
+
+
+
+
+
+
+N 
+
+
+
+
+
+
+V 
+
+
+
+
+5 
+
+
+E 
+
+
+V 
+
+
+V 
+
+
+
+
+5 
+
+
+W 
+
+
+5 
+
+
+
+
+A 
+
+
+
+
+D 
+
+
+8 
+
+
+S S 
+
+
+
+
+E 
+
+
+I 
+
+
+
+
+B 
+
+
+B 
+
+
+M 
+
+
+K 
+
+
+K 
+
+
+E 
+
+
+
+
+B 
+
+
+
+
+
+
+E 
+
+
+
+
+
+
+S 
+
+
+
+
+P 
+
+
+K 
+
+
+S 
+
+
+S 
+
+
+
+
+P 
+
+
+H 
+
+
+P 
+
+
+
+
+3 
+
+
+
+
+J 
+
+
+M 
+
+
+X X 
+
+
+
+
+A 
+
+
+A 
+
+
+
+
+5 
+
+
+5 
+
+
+4 
+
+
+3 
+
+
+3 
+
+
+A 
+
+
+
+
+5 
+
+
+
+
+
+
+A 
+
+
+
+
+
+
+X 
+
+
+
+
+6 
+
+
+P 
+
+
+X 
+
+
+X 
+
+
+
+
+6 
+
+
+1 
+
+
+6 
+
+
+
+
+6 
+
+
+
+
+Y 
+
+
+4 
+
+
+R U 
+
+
+J 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C I 
+
+
+M 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Z L 
+
+
+H 
+
+
+X 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V 0 
+
+
+E 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+S F 
+
+
+K 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+X 9 
+
+
+P 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+44 
+
+
+
+A study of the message when set up in this manner produced the following translation, in 
+which there are two doubtful values, both of which .are numbers: 
+
+(Continuation of Teil XII) 
+
+TEILEN DER X 11 X ARMEE DEN MARSCH DURCH UNGARN AUF OBER SCHLESIEN 
+ANZUTRETEN X EINVERSTAENDNISS ERBETEN XX0XKXMXRMX1X A-GR 
+-X OPX 
+
+ADFGVX KEY FOR NOVEMBER 1, 2, AND 3 
+
+
+
+
+
+A 
+
+
+D 
+
+
+F 
+
+
+G 
+
+
+V 
+
+
+X 
+
+
+A 
+
+
+U 
+
+
+I 
+
+
+L 
+
+
+0 
+
+
+F 
+
+
+9 
+
+
+D 
+
+
+R 
+
+
+C 
+
+
+Z 
+
+
+V 
+
+
+S 
+
+
+X 
+
+
+F 
+
+
+0 
+
+
+2 
+
+
+G 
+
+
+7 
+
+
+Q 
+
+
+T 
+
+
+G 
+
+
+D 
+
+
+8 
+
+
+W 
+
+
+N 
+
+
+B 
+
+
+5 
+
+
+V 
+
+
+J 
+
+
+M 
+
+
+H 
+
+
+E 
+
+
+K 
+
+
+P 
+
+
+X 
+
+
+Y 
+
+
+4 
+
+
+1 
+
+
+A 
+
+
+3 
+
+
+6 
+
+
+
+November 4, 1918. 
+
+
+
+H. C. Skinner, 
+First Lieutenant, M.I.D. 
+
+
+
+8. NOTE ON ADFGVX CIPHER 
+
+(Western Front) 
+
+STUDY OF KEY OF OCTOBER 8 
+
+The following trench messages were identified upon their interception as having similar 
+beginnings. The third message, CHI 92 which factored similarly to the first message CHI 136 
+when a transposition length of 22 was assumed, was found to possess a signature of 26 letters 
+which agreed with 26 of the 36 letters which formed the identical beginnings of CHI 136 and 
+CHI 164. 
+
+Although five more lines were to be had in a message of CHI 110 which factored precisely 
+for 22, experimentation with a few frequencies proved that, without more material, further work 
+was useless. This was true despite the fact that frequencies were limited in one division to four 
+columns, the long columns 1 — 14 — 21 — 22 and in another division to 4 — 18 — 20 — 15. 
+
+These facts more or less demonstrated the impossibility of a solution of ADFGVX where 
+the number of lines fall short of 45 — 50. (The method of solution with similar endings where 
+the key may be solved with but two messages is, of course, excepted.) 
+
+Previous work on the RICHI messages of September 13, 14, 15, where the transposition length 
+was clearly 22, had proved that even with 35 lines, hope of a successful solution might be vain, 
+particularly in this case where E was evidently the doublet W and the text of the messages 
+available for our purposes varied so greatly in subject matter as indicated by a count of the 
+cipher letters. 
+
+Certainly, so far as the method of solution with a number of messages which factor exactly 
+for the assumed transposition length is concerned, from experience with a number of such prob- 
+lems it would seem that, without as many as 40 lines at the least from which to base frequencies, 
+one may entertain little hope of a solution.' 
+
+The following numbers of lines were used in the three solutions by the exact factor method: 
+
+
+
+
+REF XD:A68206 
+
+
+
+Lines ^ 
+
+June 3 87 
+
+Sept. 19, 20, 21 61 
+
+Opt. 4, 6, 6--'- — 69 
+
+
+
+I. SOUILLY 07.43 PPN v 
+
+CHI-136 |A_X V D X G V |F_G A V 
+
+A (F V X A G D |V_V X X 
+
+G |X_A GA XAJGGG V 
+A A |V_G D V X D |A G A 
+
+X X fe_V A V D V V IV V 
+
+II. G.H.Q. 09.36 DOD v — 
+
+CHI-164 |A_X A V X VGA )F_G F 
+IVXADD D D| X G F 
+IAGFXG G A (F A V V 
+A A F V G V X g_V V V 
+X X V F D D XXX 
+A X G G A D |V_V X V X 
+
+III. FRENCH ST A. 18.47 
+
+CHI-92 D A A A_X| G A A F] D F 
+VVG|AA VA|XAV FI 
+X X| G D A VJDAVA D 
+V VI 
+
+
+
+DOD 08.20 
+
+DD[VD X A A D j3L_V D V G A 
+AA1G_G D X X G|A XGXVD 
+X A |G_A D V G X IX V GDVG 
+
+D F G |X G V G X A [D_G A X A 
+
+DV AX D NF DOD UM 
+
+
+
+- 09.35 
+
+V A D V D (V V X F 
+
+X V G IV V F X V V 
+
+VXD IX A V V F D 
+
+X F X A |3L_V XXX 
+
+X X 1D_G F G A A X 
+
+A A G 
+
+
+
+X V G |X_V 
+A V |G_G V 
+V A JG V V 
+G D |V V A 
+A [G_G V F 
+
+
+
+V] D A V A 
+
+
+
+v PPN 19.15 
+
+X V| X D VXIVX-^ V] A A X El 
+DVVXj XVFDfA D V D| X X 
+V U X| G V D G| G V VG|DDG 
+
+
+
+CHI-136 
+PPN v DOD 
+
+
+
+| 1 14 21 22 1 i 7 8 
+
+A X D V F V G 
+
+X V V V G V G 
+
+V G A D A X D 
+
+D D V V V X X 
+
+X V D A D A X 
+
+G G V X D A G 
+
+V X V D 
+
+
+
+11 18 19 j 4 18 20 15 1 3 
+
+XCDXXGXVVFAFGVA 
+A1GVGGV DFVVXGGG 
+GDADVDVXXXGGGDA 
+AfXVGVGAVAXVVVD 
+
+xGagxxaAvgvaxxf 
+
+axxaaxadaddgadg 
+
+
+
+» 10 12 16 17 1 
+
+
+
+CHI-164 
+DOD v — 
+
+
+
+AXDVFVGXGDXXGXVVFAFGVA 
+XVVVGVGAAGVGGV VXXGAVVX 
+AVAXFFVVAGVXVX X A G F V V A X 
+VVXVVXVVFGAXFXFDFXVDFV 
+XXGXAVAFVAXXAXXDXGVDAF 
+VFGADVVDGAXXXGVDVGXGVD 
+GXAAVA-VVXGXADGDGADXDD 
+AADGDVGAkA 
+
+
+
+CHI-92 
+~ v PPN 
+
+
+
+46 
+
+
+
+DXDDGVDDAGXDGGDVAAXXGD 
+AXDAAGVVDVDVVVFXAAAVDA 
+A F G X A A V V V D H V X X - X V V F A V 
+AXDVFVGXGGjXjXGXVV FA F D V A 
+X V V V 
+
+Novembeb 4, 1918. ‘ 
+
+9. SPECIAL REPORT ON THE DOUBLE TRANSPOSITION CIPHER 
+
+(Employed between the German General Staff and General von Kress, Tiflis) 
+
+The inference that the transposition ciphers, which have been passing between Berlin and 
+Tiflis were double transpositions, has been confirmed by two telegrams of July 23. 
+
+On July 23 two of these ALACHI telegrams were intercepted; One sent by LP (Berlin) to 
+COS (Tiflis), and the other sent by OSM (Constantinople). This latter telegram was solved, 
+having been found to consist of a simple transposition only. The first telegram, however, 
+failed to yield to the same method. 
+
+The telegram was then subjected to a double operation of the transposition by which the one 
+message had been solved, and it was found to yield itself immediately to solution. 
+
+Following are the two messages: 
+
+
+
+From LP to NKJ for COS. • ALACHI 266: 
+
+
+
+E 
+
+
+H N 
+
+
+T 
+
+
+I 
+
+
+X 
+
+
+N 
+
+
+F 
+
+
+M- U 
+
+
+M 
+
+
+A 
+
+
+I 
+
+
+R 
+
+
+A 
+
+
+I 
+
+
+C 
+
+
+E 
+
+
+I 
+
+
+T 
+
+
+A 
+
+
+W 
+
+
+A 
+
+
+N 
+
+
+N 
+
+
+E 
+
+
+E 
+
+
+D 
+
+
+E 
+
+
+G 
+
+
+X 
+
+
+D N 
+
+
+G 
+
+
+R 
+
+
+0 
+
+
+R 
+
+
+I 
+
+
+T U 
+
+
+E 
+
+
+S 
+
+
+A 
+
+
+U 
+
+
+C 
+
+
+E 
+
+
+P 
+
+
+C 
+
+
+U 
+
+
+T 
+
+
+E 
+
+
+B 
+
+
+0 
+
+
+T 
+
+
+E 
+
+
+T 
+
+
+I 
+
+
+F 
+
+
+Q 
+
+
+L 
+
+
+N 
+
+
+N S 
+
+
+E 
+
+
+T 
+
+
+N 
+
+
+0 
+
+
+E 
+
+
+H E 
+
+
+E 
+
+
+S 
+
+
+N 
+
+
+E 
+
+
+L 
+
+
+R 
+
+
+E 
+
+
+G 
+
+
+E 
+
+
+Z 
+
+
+V 
+
+
+U 
+
+
+I 
+
+
+E 
+
+
+E 
+
+
+I 
+
+
+N 
+
+
+N 
+
+
+N 
+
+
+D 
+
+
+E 
+
+
+N 0 
+
+
+M 
+
+
+N 
+
+
+E 
+
+
+R 
+
+
+H 
+
+
+S S 
+
+
+H 
+
+
+X 
+
+
+R 
+
+
+T 
+
+
+0 
+
+
+M 
+
+
+R 
+
+
+I 
+
+
+N 
+
+
+K 
+
+
+U 
+
+
+E 
+
+
+A 
+
+
+G 
+
+
+T 
+
+
+R 
+
+
+E 
+
+
+T 
+
+
+G 
+
+
+H 
+
+
+X 
+
+
+N S 
+
+
+F 
+
+
+T 
+
+
+F 
+
+
+T 
+
+
+E 
+
+
+B Z 
+
+
+U 
+
+
+s 
+
+
+R 
+
+
+E 
+
+
+T 
+
+
+X 
+
+
+L 
+
+
+N 
+
+
+P 
+
+
+0 
+
+
+E 
+
+
+E 
+
+
+I 
+
+
+H 
+
+
+F 
+
+
+L 
+
+
+S 
+
+
+0 
+
+
+C 
+
+
+0 
+
+
+N 
+
+
+Z E 
+
+
+N 
+
+
+R 
+
+
+X 
+
+
+N B 
+
+
+R G 
+
+
+P 
+
+
+R 
+
+
+I 
+
+
+N 
+
+
+R' 
+
+
+E 
+
+
+H 
+
+
+L 
+
+
+E 
+
+
+0 
+
+
+D 
+
+
+S 
+
+
+F 
+
+
+R 
+
+
+T 
+
+
+U 
+
+
+I 
+
+
+R 
+
+
+U 
+
+
+I 
+
+
+A U A R 
+
+
+E 
+
+
+N 
+
+
+I 
+
+
+D 
+
+
+H N 
+
+
+E 
+
+
+M 
+
+
+V 
+
+
+B 
+
+
+E 
+
+
+A 
+
+
+W 
+
+
+A 
+
+
+S 
+
+
+E 
+
+
+G 
+
+
+V 
+
+
+E 
+
+
+0 
+
+
+X 
+
+
+I 
+
+
+L 
+
+
+E 
+
+
+X 
+
+
+N 
+
+
+B 
+
+
+L I 
+
+
+E 
+
+
+N 
+
+
+H 
+
+
+T 
+
+
+S 
+
+
+R 0 
+
+
+A 
+
+
+R 
+
+
+R 
+
+
+0 
+
+
+E 
+
+
+A 
+
+
+T 
+
+
+G 
+
+
+N 
+
+
+C 
+
+
+D 
+
+
+0 
+
+
+A 
+
+
+C 
+
+
+R 
+
+
+A 
+
+
+E 
+
+
+S 
+
+
+K 
+
+
+F 
+
+
+T 
+
+
+X A 
+
+
+E 
+
+
+E 
+
+
+I 
+
+
+H 
+
+
+S 
+
+
+N R 
+
+
+H A 
+
+
+C 
+
+
+E 
+
+
+R 
+
+
+H 
+
+
+G 
+
+
+G 
+
+
+N 
+
+
+s 
+
+
+D 
+
+
+I 
+
+
+E 
+
+
+I 
+
+
+R 
+
+
+D 
+
+
+
+
+
+
+
+
+
+
+om OSM to COS. 
+
+
+ALACHI 
+
+
+152: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R 
+
+
+R S 
+
+
+C 
+
+
+H 
+
+
+N 
+
+
+S 
+
+
+E 
+
+
+A T 
+
+
+N 
+
+
+W 
+
+
+E 
+
+
+N 
+
+
+T 
+
+
+U 
+
+
+R 
+
+
+Z 
+
+
+A 
+
+
+G 
+
+
+L 
+
+
+B 
+
+
+D 
+
+
+L 
+
+
+M 
+
+
+I 
+
+
+E 
+
+
+A 
+
+
+E 
+
+
+E 
+
+
+G 
+
+
+A I 
+
+
+R 
+
+
+L 
+
+
+R 
+
+
+0 
+
+
+M 
+
+
+G H 
+
+
+N 
+
+
+E 
+
+
+N 
+
+
+M 
+
+
+F 
+
+
+N 
+
+
+N 
+
+
+s 
+
+
+I 
+
+
+U 
+
+
+Z 
+
+
+T 
+
+
+D 
+
+
+L 
+
+
+I 
+
+
+0 
+
+
+R 
+
+
+F 
+
+
+A 
+
+
+J 
+
+
+E 
+
+
+N F 
+
+
+J 
+
+
+N 
+
+
+I 
+
+
+A 
+
+
+U 
+
+
+B T 
+
+
+0 
+
+
+E 
+
+
+T 
+
+
+R 
+
+
+C 
+
+
+A 
+
+
+E 
+
+
+R 
+
+
+I 
+
+
+S 
+
+
+R 
+
+
+K 
+
+
+R 
+
+
+A 
+
+
+D 
+
+
+F 
+
+
+A 
+
+
+I 
+
+
+T 
+
+
+T 
+
+
+L 
+
+
+L E 
+
+
+U 
+
+
+A 
+
+
+H 
+
+
+B 
+
+
+H 
+
+
+R S 
+
+
+E 
+
+
+N 
+
+
+G 
+
+
+I 
+
+
+0 
+
+
+V 
+
+
+0 
+
+
+A 
+
+
+L 
+
+
+T 
+
+
+R 
+
+
+R 
+
+
+J 
+
+
+B 
+
+
+U 
+
+
+I 
+
+
+E 
+
+
+I 
+
+
+G 
+
+
+T 
+
+
+T 
+
+
+E T 
+
+
+L 
+
+
+N 
+
+
+N 
+
+
+E 
+
+
+W 
+
+
+E L 
+
+
+I 
+
+
+T 
+
+
+A 
+
+
+E 
+
+
+Z 
+
+
+F 
+
+
+P 
+
+
+K 
+
+
+E 
+
+
+T 
+
+
+L 
+
+
+N 
+
+
+I 
+
+
+T 
+
+
+P 
+
+
+S 
+
+
+G 
+
+
+M 
+
+
+H 
+
+
+B 
+
+
+
+A T 
+
+The key for solution of the second message was the simple transposition: 
+
+16-4-5-1-22-11-14-21-8-3-19-13-7-20-10-6-12-18-15-2-9-17 
+
+
+
+REF XD:A68206 
+
+
+
+47 
+
+
+
+The first step in 
+
+
+the solution of i 
+
+
+the 
+
+
+i first 
+
+
+message was 
+
+
+to 
+
+
+transpose 
+
+
+it 
+
+
+thus: 
+
+
+i« 
+
+
+4 
+
+
+e 
+
+
+i 
+
+
+22 
+
+
+u 
+
+
+14 
+
+
+21 
+
+
+8 ' 
+
+
+‘3 
+
+
+19 
+
+
+13 
+
+
+7 
+
+
+20 
+
+
+10 
+
+
+6 
+
+
+12 
+
+
+18 
+
+
+16 
+
+
+2 
+
+
+9 
+
+
+17 
+
+
+U 
+
+
+R 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+N 
+
+
+B 
+
+
+A 
+
+
+I 
+
+
+M 
+
+
+R 
+
+
+L 
+
+
+E 
+
+
+D 
+
+
+K 
+
+
+N 
+
+
+E 
+
+
+L 
+
+
+0 
+
+
+I 
+
+
+H 
+
+
+E 
+
+
+A 
+
+
+I 
+
+
+E 
+
+
+H 
+
+
+H 
+
+
+S 
+
+
+R 
+
+
+E 
+
+
+N 
+
+
+E 
+
+
+0 
+
+
+S 
+
+
+L 
+
+
+0 
+
+
+U 
+
+
+S 
+
+
+T 
+
+
+E 
+
+
+D 
+
+
+R 
+
+
+S 
+
+
+A 
+
+
+R 
+
+
+T 
+
+
+B 
+
+
+N 
+
+
+G 
+
+
+F 
+
+
+G 
+
+
+E 
+
+
+N 
+
+
+E 
+
+
+A 
+
+
+0 
+
+
+R 
+
+
+A 
+
+
+E 
+
+
+E 
+
+
+X 
+
+
+X 
+
+
+S 
+
+
+A 
+
+
+s 
+
+
+W 
+
+
+E 
+
+
+U 
+
+
+0 
+
+
+T 
+
+
+G 
+
+
+T 
+
+
+P 
+
+
+I 
+
+
+N 
+
+
+D 
+
+
+R 
+
+
+C 
+
+
+E 
+
+
+C 
+
+
+A 
+
+
+T 
+
+
+L 
+
+
+N 
+
+
+F 
+
+
+I 
+
+
+H 
+
+
+A 
+
+
+N 
+
+
+E 
+
+
+T 
+
+
+I 
+
+
+N 
+
+
+F 
+
+
+R 
+
+
+N 
+
+
+D 
+
+
+E 
+
+
+R 
+
+
+0 
+
+
+G 
+
+
+R 
+
+
+G 
+
+
+N 
+
+
+N 
+
+
+B 
+
+
+R 
+
+
+C 
+
+
+X 
+
+
+S 
+
+
+I 
+
+
+S 
+
+
+E 
+
+
+X 
+
+
+S 
+
+
+T 
+
+
+I 
+
+
+S 
+
+
+E 
+
+
+G 
+
+
+0 
+
+
+N 
+
+
+E 
+
+
+A 
+
+
+T 
+
+
+0 
+
+
+P 
+
+
+L 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+E 
+
+
+D 
+
+
+A 
+
+
+T 
+
+
+N 
+
+
+D 
+
+
+E 
+
+
+N 
+
+
+N 
+
+
+N 
+
+
+X 
+
+
+E 
+
+
+Z 
+
+
+Z 
+
+
+E 
+
+
+R 
+
+
+E 
+
+
+0 
+
+
+I 
+
+
+U 
+
+
+I 
+
+
+T 
+
+
+G 
+
+
+H 
+
+
+U 
+
+
+I 
+
+
+F 
+
+
+I 
+
+
+B 
+
+
+R 
+
+
+R 
+
+
+0 
+
+
+D 
+
+
+A 
+
+
+E 
+
+
+V 
+
+
+S 
+
+
+E 
+
+
+H 
+
+
+E 
+
+
+E 
+
+
+I 
+
+
+T 
+
+
+0 
+
+
+V 
+
+
+N 
+
+
+C 
+
+
+F 
+
+
+M 
+
+
+E 
+
+
+Z 
+
+
+E 
+
+
+H 
+
+
+M 
+
+
+N 
+
+
+T 
+
+
+N 
+
+
+U 
+
+
+K 
+
+
+T 
+
+
+E 
+
+
+E 
+
+
+N 
+
+
+R 
+
+
+A 
+
+
+M 
+
+
+E 
+
+
+E 
+
+
+E 
+
+
+Q 
+
+
+U 
+
+
+I 
+
+
+U 
+
+
+H 
+
+
+A 
+
+
+N 
+
+
+G 
+
+
+G 
+
+
+R 
+
+
+I 
+
+
+F 
+
+
+G 
+
+
+E 
+
+
+I 
+
+
+H 
+
+
+U 
+
+
+W 
+
+
+R 
+
+
+0 
+
+
+M 
+
+
+P 
+
+
+L 
+
+
+M 
+
+
+R 
+
+
+S 
+
+
+L 
+
+
+C 
+
+
+E 
+
+
+R 
+
+
+N 
+
+
+X 
+
+
+E 
+
+
+T 
+
+
+H 
+
+
+S 
+
+
+H 
+
+
+T 
+
+
+I 
+
+
+A 
+
+
+I 
+
+
+X 
+
+
+V 
+
+
+C 
+
+
+N 
+
+
+A 
+
+
+D 
+
+
+R 
+
+
+E 
+
+
+E 
+
+
+R 
+
+
+0 
+
+
+C 
+
+
+N 
+
+
+E 
+
+
+X 
+
+
+X 
+
+
+N 
+
+
+F 
+
+
+S 
+
+
+A 
+
+
+N 
+
+
+N 
+
+
+I 
+
+
+B 
+
+
+u 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The transposition is then repeated, 
+
+
+, as follows 
+
+
+i: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16 
+
+
+4 
+
+
+6 
+
+
+i 
+
+
+22 
+
+
+u 
+
+
+14 
+
+
+21 
+
+
+8 
+
+
+3 
+
+
+19 
+
+
+13 
+
+
+7 
+
+
+20 
+
+
+10 
+
+
+6 
+
+
+12 
+
+
+18 
+
+
+16 
+
+
+2 
+
+
+9 
+
+
+17 
+
+
+Z 
+
+
+u 
+
+
+F 
+
+
+U 
+
+
+E 
+
+
+N 
+
+
+F 
+
+
+V 
+
+
+I 
+
+
+E 
+
+
+R 
+
+
+E 
+
+
+I 
+
+
+N 
+
+
+S 
+
+
+X 
+
+
+A 
+
+
+N 
+
+
+H 
+
+
+E 
+
+
+E 
+
+
+R 
+
+
+E 
+
+
+s 
+
+
+G 
+
+
+R 
+
+
+X 
+
+
+E 
+
+
+I 
+
+
+c 
+
+
+H 
+
+
+H 
+
+
+0 
+
+
+R 
+
+
+N 
+
+
+X 
+
+
+I 
+
+
+s 
+
+
+T 
+
+
+G 
+
+
+E 
+
+
+D 
+
+
+R 
+
+
+A 
+
+
+H 
+
+
+T 
+
+
+E 
+
+
+T 
+
+
+X 
+
+
+A 
+
+
+B 
+
+
+N 
+
+
+A 
+
+
+H 
+
+
+M 
+
+
+E 
+
+
+D 
+
+
+E 
+
+
+s 
+
+
+A 
+
+
+N 
+
+
+G 
+
+
+E 
+
+
+K 
+
+
+0 
+
+
+M 
+
+
+M 
+
+
+E 
+
+
+N 
+
+
+E 
+
+
+N 
+
+
+T 
+
+
+R 
+
+
+A 
+
+
+N 
+
+
+S 
+
+
+P 
+
+
+0 
+
+
+R 
+
+
+T 
+
+
+E 
+
+
+S 
+
+
+D 
+
+
+R 
+
+
+I 
+
+
+N 
+
+
+G 
+
+
+E 
+
+
+N 
+
+
+D 
+
+
+E 
+
+
+R 
+
+
+F 
+
+
+0 
+
+
+R 
+
+
+D 
+
+
+E 
+
+
+R 
+
+
+L 
+
+
+I 
+
+
+C 
+
+
+H 
+
+
+X 
+
+
+w 
+
+
+E 
+
+
+I 
+
+
+T 
+
+
+E 
+
+
+R 
+
+
+E 
+
+
+T 
+
+
+R 
+
+
+A 
+
+
+N 
+
+
+S 
+
+
+P 
+
+
+0 
+
+
+R 
+
+
+T 
+
+
+E 
+
+
+M 
+
+
+U 
+
+
+E 
+
+
+S 
+
+
+s 
+
+
+E 
+
+
+N 
+
+
+F 
+
+
+0 
+
+
+L 
+
+
+G 
+
+
+E 
+
+
+N 
+
+
+S 
+
+
+0 
+
+
+B 
+
+
+A 
+
+
+L 
+
+
+D 
+
+
+E 
+
+
+I 
+
+
+N 
+
+
+R 
+
+
+I 
+
+
+C 
+
+
+H 
+
+
+T 
+
+
+U 
+
+
+N 
+
+
+G 
+
+
+V 
+
+
+0 
+
+
+N 
+
+
+Q 
+
+
+U 
+
+
+A 
+
+
+R 
+
+
+A 
+
+
+N 
+
+
+T 
+
+
+A 
+
+
+E 
+
+
+N 
+
+
+E 
+
+
+S 
+
+
+T 
+
+
+A 
+
+
+T 
+
+
+I 
+
+
+0 
+
+
+N 
+
+
+E 
+
+
+N 
+
+
+I 
+
+
+N 
+
+
+U 
+
+
+K 
+
+
+R 
+
+
+A 
+
+
+I 
+
+
+N 
+
+
+E 
+
+
+E 
+
+
+R 
+
+
+F 
+
+
+0 
+
+
+L 
+
+
+G 
+
+
+T 
+
+
+I 
+
+
+S 
+
+
+T, 
+
+
+X 
+
+
+I 
+
+
+C 
+
+
+H 
+
+
+B 
+
+
+I 
+
+
+T 
+
+
+T 
+
+
+E 
+
+
+M 
+
+
+I 
+
+
+R 
+
+
+V 
+
+
+0 
+
+
+R 
+
+
+S, 
+
+
+C 
+
+
+H 
+
+
+L 
+
+
+A 
+
+
+E 
+
+
+G 
+
+
+E 
+
+
+H 
+
+
+I 
+
+
+E 
+
+
+R 
+
+
+U 
+
+
+E 
+
+
+B 
+
+
+E 
+
+
+R 
+
+
+B 
+
+
+E 
+
+
+S 
+
+
+C 
+
+
+H 
+
+
+L 
+
+
+E 
+
+
+U 
+
+
+N 
+
+
+I 
+
+
+G 
+
+
+T 
+
+
+Z 
+
+
+U 
+
+
+M 
+
+
+A 
+
+
+C 
+
+
+H 
+
+
+E 
+
+
+N 
+
+
+X 
+
+
+L 
+
+
+U 
+
+
+D 
+
+
+E 
+
+
+N 
+
+
+D 
+
+
+0 
+
+
+R 
+
+
+F 
+
+
+F 
+
+
+X 
+
+
+0 
+
+
+P 
+
+
+z 
+
+
+W 
+
+
+E 
+
+
+I 
+
+
+X 
+
+
+A 
+
+
+
+N G 
+
+V 
+
+The encipherer at Constantinople was probably indifferent enough to consider that a single 
+transposition was sufficient for security. That the practice, however, of using a single trans- 
+position in the ALACHI is not an isolated occurrence is indicated by a communication from the 
+British which says: 
+
+“ITO CHI and ALACHI are both double transpositions for certain. The Boche has been 
+making the error of using ALACHI as a single transposition in the Black Sea area; the keys 
+change daily, and when used as a double transposition, no ‘dummy’ letter is inserted.” 
+
+It is interesting to note the contrast between the careful methods of the encipherers at 
+Berlin and those in the East. In the ADFGVX telegrams, Berlin never sends a filled-up rec- 
+tangle, or if the rectangle fills itself up naturally, it is run over with the addition of X’s. Among 
+the Black Sea stations, the practice has generally been to fill the rectangle. 
+
+
+
+
+I 
+
+
+
+September 10, 1918. 
+
+
+
+48 
+
+
+
+10. SPECIAL REPORT ON CIPHERS 
+
+During the week of August 12-19, quite a few miscellaneous ciphers were intercepted by 
+the high-powered station located at G.H.Q. 
+
+One of these was a simple substitution cipher passing between General von Kress at Tiflis, 
+and Helferich at Moscow. It was probably the use of this system by General von Kress which 
+was referred to in the solved messages of ADFGVX of August 8 and 9 in the following terms: 
+
+“The cipher method prepared by General von Kress was solved here at once. Its further 
+use by OP is forbidden.” 
+
+This same cipher had been noted previously as passing between SEW, a Russian station 
+at Nicolave, and Army Group Eichhorn at Kieff. It would seem to indicate, therefore, that 
+the use of this cipher was in mpre or less general use among German representatives in the 
+Caucasus. No simple substitution ciphers have ever before been intercepted by us, so far as 
+we are aware ; in fact, the use of purely substitution methods of encipherment by the Germans 
+on the Western Front is, and has been, since 1914, with the exception of a very short period, a 
+thing utterly unknown. 
+
+A key for the ADFGVX , cipher, employed between Berlin and Constantinople and the 
+East, for July 22 was solved by means of the method formulated by Captain Painvin of the 
+French Cipher Section in Paris, and explained in the report of last week. By this method it 
+is possible to arrive at a solution with the text of but two messages, and without the labor of 
+preparing great numbers of frequency tables. In fact, at the time of the first application of 
+this method by Capt. Painvin on June 1, he completed the entire solution of the key within 
+less than an hour, and from information contained in the telegrams he was able to warn the 
+French of a heavy attack impending north of Montdidier. 
+
+Since July 3 messages passing between Berlin and General von Kress have been intercepted 
+every few days. These messages give every appearance of being transposition ciphers, and in 
+the opinion of the French and British experts, they are most probably a form of double trans- 
+position which the Germans have been known to make use of at various times since 1914. The 
+system was in fact, the first employed by them on the Western Front. 
+
+Some hints as to the nature of the method are contained in the ADFGVX messages which 
+were solved for August 8 and which read as follows: t 
+
+“* * * The Alachi method is only to be used in communicating with places which employ 
+
+the ‘dividing system’ (in ciphers). For other places, the new Itochi method with ‘dividing 
+system’ was sent to Kress on July 18. New instructions regarding double transposition are 
+shown. Wireless section, General Staff” (Berlin). 
+
+From this information it would seem that the preamble “Alachi”, “Gechi”, “Itochi”, 
+“Richi”, etc., which always accompanies the German transposition ciphers, indicates in each 
+case the particular method employed. 
+
+August 20, 1918. 
+
+11. TRANSLATION OF A CAPTURED GERMAN DOCUMENT 
+
+INSTRUCTIONS FOR GRILL CIPHERS 
+
+Preparation of the Grill. — (1) A square sheet of paper is taken and divided into smaller or 
+larger squares, according to whether it is to serve as a grill for long or short messages. The fol- 
+lowing grill is for 100 letters, its sides being equal to 10 small squares. It is advisable to prepare 
+the grill from colored paper, e.g,, a cover for legal documents. 
+
+
+
+REF ID : A68206 
+
+
+
+
+Example 
+
+
+
+(2) The squares are then numbered consecutively in rings from the outside to the center, 
+always with one figure less than that of the number of the small squares forming the outer edge. 
+
+(3) Each figure is then cut out once from each receding ring (lettered from outside to center 
+as (a), ( b ), (c), (d), and (e)), thus: 1 once, 2 once, etc. Nine grill-holes are thus formed in the 
+outermost ring ( a ) through the removal of figures 1-9, seven holes in the ring ( b ) (figs. 1-7), five 
+holes in the ring (c), three in the ring (d), through the removal of 1, 2, and 3, and lastly, one hole 
+in the center ring (e) through the removal of 1. 
+
+Since each figure appears once in each square, and a great many methods of arrangement 
+are consequently possible, this system is proof against incompetent or unauthorized attempts 
+at decipherment. 
+
+In the example, the small squares which, as a possible form, are cut out, are inked over. 
+
+(4) The following should be written at the corners of the grill: Left top 1; left bottom 2; 
+right bottom 3; right top 4. 
+
+(5) If the side of the square is composed of an uneven number of small squares, the inner 
+ring will not, as in the illustration, consist of four squares, but of one only, which, if the grill 
+be turned, remains in the center. Such a single square is not to be cut out. The vacant space 
+thus left is to be filled in with ink. 
+
+(6) Grills for 25, 36, 49, 64, 81, and 100 letters are to be prepared each week, and marked 
+(25)Anna, (36) Berta, (49) Clara, (64) Dora, (81) Emil, (100) Franz. 
+
+
+
+
+
+
+
+
+
+
+50 
+
+
+
+Preparation of the cipher. — (7). The grill Is chosen according to the length of the text, thus: 
+for 38 letters, the Berta grill, for 55 letters, the Dora grill, for more than 100 letters, the Franz 
+grill, etc. The grill is laid on a squared paper, as described in (1), the corner figure 1 at left top. 
+The letters of the plain text are then written through the holes of the grill, from left to right, 
+as in ordinary writing, up to the last hole. CH is taken as a single letter, there being a special 
+Morse sign for it. The corner figure 2 is then placed at left top and the following plain text 
+letters written through the holes which remain. The corner figure 3 is next placed at left top 
+and writing resumed, the corner figure 4 finally being placed at left top, writing being continued 
+through the holes. 
+
+(8) With a text longer than 100 letters, a new square is described in the same way, the 
+corner figure 1 at left top, the gpll being the same, or a smaller size. This second square may, 
+or may not, be filled with text letters. When the clear text is finished, the word “End”, or 
+an X, may be written through the unfilled holes, the grill removed and the remaining space filled 
+out with nulls. 
+
+(9) If a hole has inadvertently been omitted and remains unfilled at the end, an X is inserted 
+
+in it. 
+
+(10) If the text contains fewer than 100 letters, so that not all the holes are filled, the 
+word “End” or an X should be inserted in them and the process at the end of (8) continued. 
+In the case of nulls, letters are not used in alphabetical sequence, as e.g., X, Y, Z, but in their 
+order of frequency, thus many E’s fewer N’s, T’s, etc., or, words quite irrelevant to the text are 
+written in after the word “End.” 
+
+(11) When the cipher is finished, a different figure, chosen at random, is each time attached 
+to the null and the whole divided into groups, of 5, regardless of square and grill. 
+
+(12) Grills vary according to the length of the cipher text. Each telegram must therefore 
+begin with the name in clear text of the grill or grills used. If “Franz, Anna” be used, the 
+telegram must contain more than 100 letters, etc. The large Franz-grill is used for messages 
+up to 100 letters, then the Berta-grill. 
+
+(13) The cipher-text follows in groups, of five letters, with a period after each group. The 
+receiving station returns each group as received to insure correctness; but the telegram is not 
+repeated in entirety at the end. 
+
+(14) Reception and decipherment of cipher. — -Paper squared in conformity with grills is kept 
+in readiness at stations. The cipher letters, as received are written cross-wise on squared 
+paper in the form of the grill whose name, in clear text, is the first word of the message. This 
+name is noted down, but not spelled out nor recorded in the plain text. 
+
+(16) If the grill i3 now laid on the text, first with figure 1 at left top, the beginning of the 
+message can be read through the holes. Thereupon, 2, 3, and 4 are laid in turn at left top, 
+until the entire text has been read. 
+
+(16) This grill-process. is adapted as well to telephonic conversations and to correspondence 
+in which secret orders are given and in which the so-called “General Staff Process” must not 
+be employed. . . ■> ~ y 
+
+Translated October 23, 1918. 
+
+12. A MECHANICAL METHOD FOR DETERMINING THE KEY FOR THE TRANSPOSITION IN 
+ADFQVX CIPHERS, GIVEN TWO MESSAGES WITH SIMILAR ENDINGS 
+
+This memorandum will use for its examples the messages given in the memoranda dated 
+November 1, and November 4, 1918, this- office. 
+
+
+
+REF ID : A68206 
+
+
+
+51 
+
+
+
+MEMORANDUM OF NOVEMBER t. 
+
+
+
+After having identified the similar sections, the messages were set up as shown below (cf. 
+pp. 36 and 37): 
+
+
+
+RICHI 374 
+
+
+
+RICHI 338 
+
+
+
+lit 
+
+
+4 5 0 7 8 8 
+
+
+it 11 U 18 14 10 
+
+
+16 17 
+
+
+18 
+
+
+A A 6 
+
+
+AGVVAF 
+
+
+FFDXAV 
+
+
+A X 
+
+
+G 
+
+
+A A X 
+
+
+AXXXDDXDFDFV 
+
+
+G F 
+
+
+F 
+
+
+X F A 
+
+
+G D G D A A 
+
+
+F X F F V V 
+
+
+A G 
+
+
+D 
+
+
+F A A 
+
+
+V X F A V V 
+
+
+DGAGAA 
+
+
+D X 
+
+
+G 
+
+
+AAA 
+
+
+G G X X A A 
+
+
+FXADFX 
+
+
+V F 
+
+
+D 
+
+
+V D X 
+
+
+DXVFAVXAFXXG 
+
+
+G A V 
+
+
+D A F 
+
+
+X F F A A F X D X X X A 
+
+
+V F 
+
+
+X 
+
+
+X V F 
+
+
+X X D X D G 
+
+
+D X G D X F 
+
+
+V V 
+
+
+F 
+
+
+FDA 
+
+
+V X A X G A A X A F A A 
+
+
+D G 
+
+
+F 
+
+
+D A X 
+
+
+G VFGFFXXDXF A 
+
+
+A F 
+
+
+D 
+
+
+b x v 
+
+
+A V F V X F V D D X F A 
+
+
+A X 
+
+
+D 
+
+
+AAA 
+
+
+A D A F D A D X F A F D 
+
+
+A F 
+
+
+X 
+
+
+G A A 
+
+
+VXDXXPXF.GGAA 
+
+
+V D 
+
+
+X 
+
+
+A D V 
+
+
+D G F V A A A X V A G A 
+
+
+V A 
+
+
+X 
+
+
+A X D 
+
+
+A V A V DA A X A D F X 
+
+
+X V 
+
+
+X 
+
+
+
+
+G 
+
+
+X V 
+
+
+D 
+
+
+
+
+V V D 
+
+
+A F V A X F 0 A DAD G D G X 
+
+
+A A D 
+
+
+D F A A X D 
+
+
+A D D X A X 
+
+
+F F 
+
+
+G 
+
+
+X A F 
+
+
+6 V A V X X X G A G F A 
+
+
+X f G 
+
+
+V A V 
+
+
+A F D D X A 
+
+
+G V X A X D 
+
+
+X D 
+
+
+A 
+
+
+V G X 
+
+
+G X X A F A 
+
+
+X X F G F A A F 
+
+
+F 
+
+
+V A D 
+
+
+XFDADG 
+
+
+D G D F X D 
+
+
+A F 
+
+
+V 
+
+
+ADA 
+
+
+AG'FFAV 
+
+
+X F X D F A 
+
+
+X A 
+
+
+A 
+
+
+X V X 
+
+
+A X G A V G 
+
+
+GXOGDV 
+
+
+F A 
+
+
+F 
+
+
+G G F 
+
+
+A FDA A D 
+
+
+X V x D F A 
+
+
+A F 
+
+
+X 
+
+
+A V A 
+
+
+X A XDV X 
+
+
+F F A V X A 
+
+
+V X 
+
+
+X 
+
+
+F V X 
+
+
+F F X A F X 
+
+
+X D D X X A 
+
+
+D G 
+
+
+X 
+
+
+A D X 
+
+
+F V D V G V 
+
+
+X A X F D D 
+
+
+X A 
+
+
+A 
+
+
+A A G 
+
+
+A G F D A G 
+
+
+VFXFAG 
+
+
+F D 
+
+
+F 
+
+
+AAV 
+
+
+X F X A F A 
+
+
+VFXDXF 
+
+
+D D 
+
+
+F 
+
+
+D A F 
+
+
+V X A X F A 
+
+
+DADDVX 
+
+
+D F 
+
+
+F 
+
+
+A V X 
+
+
+A F A A A V 
+
+
+X D X X D D 
+
+
+A G 
+
+
+A 
+
+
+A V V 
+
+
+A D G A D D 
+
+
+G F F X X X 
+
+
+G V 
+
+
+G 
+
+
+XXV 
+
+
+V A A D A A 
+
+
+V A X X A A 
+
+
+A A 
+
+
+F 
+
+
+V D 
+
+
+D V D X A 
+
+
+G X X A D 
+
+
+A X 
+
+
+
+
+
+52 
+
+
+
+Let us now draw up a table showing the equivalency. of the various columns, upon the basis 
+of each pair of columns whose last three or four letters are identical. 
+
+RICHI 274 RICHI 338 
+
+
+
+
+• V v ' 
+
+
+
+j f ' 
+
+
+
+U * /' k 
+
+
+
+
+
+
+Column ^ Column 
+
+1 equals 16 . 
+
+2 equals 7 ' 
+
+‘‘ “ 3 equeds 4 
+
+' 4 equals 9 
+
+5 equals 10 
+: 6. equals 11; 
+
+v v 7 equals Z 
+
+, ,, 8 equals 15. ... 
+
+9 'equals 8 
+10 ‘equals 14 
+llequals *12 A 
+i f 12\equdls'17' \ 
+l } lftiequals 6. ■=■ 
+-j t JAequals,l&> k 
+15,eqnals .1,. 
+'16 equals 2 
+17 equals*' 5 
+•l8 equalsT3' ’ 
+
+
+
+
+( ; : 
+
+
+
+v ;; a 
+
+
+
+
+As regards the mathematical relations alone, the sequence of numbers in the transposition 
+key may be regarded in the nature df & cycle. Hie determination <*>f the transposition key, 
+therefore, consists of two steps: >, j • <s : 
+
+1. Building up the numerical sequence in the key, i.e fJ the cycle. 
+
+2. Finding the exact ^position of ope column in, the cycle^ 
+
+1. Since RICHI 338 has 14 long columns, and RICHI 274' Ms 4 long columns, then it is 
+evident that the identities in tbfese t#o messages run along at an interval of 14 minus 4, or 
+10 spaces. The columns* whose equivalencies are shown- in the preceding table, therefore, will 
+be 10 spaces apart in the cycle. That is, for example, if We begin to build up the numerical 
+sequence by placing column 1 under a space marked “ 1”, on cross-section paper, then the equiva- 
+lent of column 1, which is column 16, should be placed 10 spaces removed from the position 
+occupied by column 1 in the cycle, i.e., under the space marked “ll”; and the equivalent of 
+col umn 16, which is column 2, should be placed 10 spaces removed from the position occupied by 
+column 16, etc. Since the numerical sequence is in the nature of a cycle, as stated above, when 
+one arrives at the extreme right of the series, one merely comes back to the extreme left and 
+continues. To make the procedure perfectly clear the successive placements for six columns, 
+beginning arbitrarily with column J, are shown herewith: 
+
+
+
+1 
+
+1 
+
+1 
+
+1 
+
+1 
+
+
+
+3 4 5 6 7 8 9 10 XI 1* 1*' J4 16 17 18 
+
+16 
+
+.2 16 
+
+2 ■ . 16 7 , , - 
+
+2 .3 , . ,, .16 X . :■ v 
+
+2 3 , 16 7 4 
+
+
+
+2 
+
+
+
+REF ID:A68206 
+
+
+
+53 
+
+
+
+Continuing this procedure, the completed cycle is as follows: . • , 
+
+1234567, 8 C 10 U;J3 J3 14 15 16 17 18 
+
+1 17 2 10 3 18 , 9 . 6*15 12 1 $ 5 7 14 4 13 8 11 
+
+2. Referring to the set-up of RICHI 274 as shown above, it is seen that the long columns 
+are 6, 12, 15, and 16, and therefore they constitute the first four columns on the left. The cycle 
+shows that column 6 precedes the others in the sequence; that is, it is on the extreme left in the 
+transposition key. The completed key may be written, therefore, merely by advancing the 
+series of numbers in the cycle so that 6 comes first. Thus: 
+
+
+
+6 - 15 - 12 - 16 - 5 - 7 - 14 - 4 - 13 - 8 - 11 - 1 - 17 - 2 - 10 - 3 - 18-9 
+
+
+
+MEMORANDUM OF NOVEMBER 4 
+
+. 1 f pie.:-.- 
+
+The two messages, after the identities had been, found, were set up as follows: 
+
+1 2 3 4 5 6 7 8 8,10 11 13 13 14 15 16 17 18 19 
+
+RICHI 264 DFGVVGVG Gl F V DVFGAXGD 
+VFFGVAGt Df V> A ’GGDGVAGD 
+DVXVDXVF d. D V D D F G G A F A 
+VGVDGAFA G' D“GA G A V D V D V 
+FGVADXDG G D XVAGGVAVA 
+D G D F G V GO V X VQVGAVGAV 
+
+V A D G V G D D A D V X A F F F A G V 
+
+F G G F F VXD.A V D D X A D G G G A 
+
+A G F G F G A V D X F D D X F X A V D ' . ^ 
+
+G X G X G A F G DDVDAGXGAXG 
+X A F D D A DP GXFADVXFVAD 
+. . VXDFXA. XVDDDDDFDVGAG 
+
+‘ X D F D D V A' V V V A G ‘G X A F D D D 
+
+F X A X F X G D X F G D G D ?DD /V.,. : 
+
+RICHI 266 DFGVVGVGGFV DVFGAXGD 
+
+V F F G V A G V D F A G G D G V A G D 
+VVXVDXVFGDVDDGGGAFA 
+D G V D G A F A G D G A G A V D V p V 
+FGVADXDGGDXVAGGVAVA 
+DGDFGVGDVXVGVGAVGAV 
+VADGVGDDGGXXAFFFAGV 
+D X A G DDFVAFGDAVGVGXG 
+
+V D A F F D G G X A G F D X X F V A A 
+GADGVDXAGGXXGDGFXFA 
+DDDFVADAVXAXDXFGADV 
+VDGDDDFAFVXDGDVDAXG 
+VGDFAGDVXXDADVFXDAD 
+GGVAXFXFDFXGDDDDDXG 
+
+
+
+
+
+54 
+
+
+
+The table of equivalents is as follows: 
+
+RICHI 264 RICH I 266 
+
+Catamn Column 
+
+1 equals 10 
+
+2 equal? 11 
+
+3 equals 4 
+
+4 equals 7 
+
+5 equals 16 
+
+6 equals 8 
+
+7 equals 18 
+
+v 8 equals 1 
+
+9 equals 8 
+
+10 equ als 14 
+
+11 equals 5 
+
+12 equals 6 
+
+, 13 equals 2 
+
+14 equals 9 
+
+15 equals 12 
+
+16 equals 15 
+
+17 equals 19 
+
+18 equals 17 
+
+19 equals 13 
+
+The identities in these two messages run along at an interval of two spaces (RICHI 266 
+may be considered as having 19 long columns, RICHI 264, 17). Therefore, the equivalents 
+will have to be placed two spaces apart. The completed cycle is a a follows: 
+
+IS S 4 t # 7 8 9 10 11 12 13 14 13 M 17 18 1# 
+
+1 13 10 2 14 11 9 5 3 16 4 15 7 12 18 6 17 8 19 
+
+The set-up of RICHI 264 shows that columns 5 and 9, being the only short ones, fall on 
+
+the extreme right. The cycle shows that column 5 follows column 9 in the sequence. The 
+completed key may be written, therefore, by advancing the series of numbers in the sequence 
+so that number 5 occupies the position on the extreme right. Thus: 
+
+3 - 16 — 4 - 15 - 7 - 12 - 18 - 6 — 17 - 8 - 19 — 1 - 13 - 10 — 2 - 14 - 11 - 9-5 
+
+The interval, i.e., the number of spaces which must be left between equivalents in construct- 
+ing the cycle, will be even in number in all cases, since it takes two cipher letters to make one 
+clear-text letter. In cases where the number of columns and the interval possess a common 
+factor, the condition might arise where the cycle cannot be completed in one step, for after 
+a few placements have been made, one comes back to the starting point. In such a case, how- 
+ever, one can complete it by taking advantage of such clues as are offered by the set-up of the 
+messages, specifically, the number and identities of long and short columns. It may be well to 
+
+
+
+REF ID : A68206 
+
+
+
+55 
+
+illustrate by one artificial example. Given Wo messages in which the interval is 2, the long 
+columns 9, 10, 14, and 18, and the following table of equivalents: 
+
+Table 3 
+
+Col umn Column 
+
+1 equals 15 
+
+2 equals 13 
+
+3 equals 16 
+
+4 equals 1 
+
+5 equals 12 
+
+6 equals 20 
+
+7 equals 5 
+
+8 equals 17 
+
+9 equals 10 
+
+10 equals 4 
+
+11 equals 9 
+
+12 equals 19 
+
+13 equals 8 
+
+14 equals 18 
+
+15 equals 3 
+
+16 equals 6 
+
+17 equals 7 
+
+18 equals 2 
+
+19 equals 14 
+
+20 equals 11 
+
+Starting with column 1, the following partial sequence is constructed: 
+
+12 3 4 3 8 7 8 8 10 11 12 U 14 15 18 17 18 19 20 
+
+1 15 3 16 6 20 11 9 10 4 
+
+The equivalent of column 4 is column 1, and we are then brought back again at our starting 
+
+point. The cycle shows, however, that column 10 succeeds column 9, with one column inter- 
+
+vening. Since columns 14 and 18 are long also, and since the table shows column 18 to be the 
+equivalent of column 14, it is evident that the latter must be placed between columns 9 and 10, 
+and column 18 between columns 10 and 4. From there on the sequence can be completed 
+without further difficulty. 
+
+The advantage of this method is that it is almost entirely a mechanical one, and may save 
+time in determining the transposition-key in this cipher. It is also evident that it may be 
+used in ordinary simple, transposition ciphers of the columnar type. 
+
+William F. Friedman, 
+
+First Lieutenant, M.l.D. 
+
+January 6, 1919. 
+
+
+
+O 
+
+
+

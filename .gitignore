@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtuelle Umgebungen
+venv/
+.venv/
+env/
+ENV/
+.conda/
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Test- und Coverage-Artefakte
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Editor und IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+
+# Sicherungen und Zwischenstaende
+*.bak
+*.old
+*.orig
+*.tmp

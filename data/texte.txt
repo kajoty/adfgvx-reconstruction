@@ -1,0 +1,629 @@
+Stichworte:
+ADFGVX, George Lasry, Ingo Niebel
+Teilen:
+ Mehr
+Kommentare (56)
+#1Thomas
+23. Februar 2017
+The (general) solution of ADFGVX ciphers is provided by Friedman: https://archive.org/stream/41761079080022#page/n85/mode/2up
+Have fun!
+
+#2George Lasry
+23. Februar 2017
+Klaus, thanks for your kind words. I would suggest to also post the list of keys which I found. There are high chances that most of cryptograms were encrypted using one of those keys, which were used for a 3-day period each, but some error occurred, either at encryption time, at transmission or at interception. I was able with a lot of trial-and-error to recovery similar messages, where the problem was that some groups were either missing or superfluous. For those posted here I had no success. Good luck!
+George
+
+#3Thomas
+23. Februar 2017
+Are there other cryptograms from Nov. 1st till Nov. 16th 1918 that are solved?
+
+#4George Lasry
+24. Februar 2017
+Thomas@ – yes, there are quite a few.
+
+Here is a list of the keys recovered – hope this helps.
+
+Period – Transposition Key (Length) + Substitution Key – Cryptograms Recovered
+Sep 19 – 21 – 12,2,7,20,10,19,1,13,9,18,3,17,21,8,14,4,6,16,11,22,5,15 (22)
+“D5613Q9KBNO0HY8EISJUTZFCW7VPML2ARG4X” 15
+Oct 4 – 6 – 4,13,3,14,1,16,9,15,5,19,10,18,6,17,7,20,11,21,8,12,22,2 (22)
+“YN87PJ3WRUCIEO1SKLZX0DFBH6MT9A2QV54G” 24
+Oct 28 – 31 – 6,15,12,16,5,7,14,4,13,8,11,1,17,2,10,3,18,9 (18)
+“HI20SXRUWQY8EK7O619CBJAP453FDZTGLMVN” 33
+Nov 1 – 3 – 3,16,4,15,7,12,18,6,17,8,19,1,13,10,2,14,11,9,5 (19)
+“UILOF9RCZVSX02G7QTD8WNB5JMHEKPY41A36” 100
+Nov 4 – 6 – 7,10,8,14,3,11,16,1,6,13,4,9,15,5,12,17,2 (17)
+“17WHFLJ5D2UPEXKVZ9O0Q3Y6R8ABGITCMS4N” 106
+Nov 7 – 9 – 6,12,7,15,1,11,16,5,8,14,3,18,9,13,2,17,20,10,19,4 (20)
+“PRMYUW3LZGES8C71QOV29ITB40-KXH-AJNDF” 93
+Nov 10 – 12 – 9,12,7,11,3,8,16,6,14,2,10,15,5,13,1,4 (16)
+“4ARUT1OIFSKN3-BZPVLD-JMXCWHQ2E-G0-Y-” 46
+Nov 13 – 15 – 13,8,6,16,7,18,1,14,9,20,10,15,17,2,3,11,5,19,4,12 (20)
+“JZLH-R–S-T-MKDWU-V-B-P–FAO-GIX-CNE” 13
+Nov 13 – 15 – 4,11,5,14,9,7,16,1,12,15,6,10,3,13,8,2 (16)
+“H–BMUF15PX0DJLR—-S6VONKZ-AWITEGC-” 52
+Nov 16 – 18/ Dec 7 – 9 – 7,12,1,14,8,16,13,9,19,3,15,4,10,18,6,2,11,17,5 (19)
+“WG-EITNHUB2R–FDZJS—PY-VQL-1OAXMKC” 36
+Nov 19 – 21 – 13,20,3,16,7,14,4,12,8,11,5,15,2,18,17,10,19,6,1,9 (20)
+“LC58QH7VI2YB9EURO60GX3MTFAKP1D4NJZSW” 12
+Nov 22 – 24 – 6,12,16,7,14,22,11,18,1,15,8,10,20,2,13,21,3,17,19,5,9,4 (22)
+“QNZ72XS4C0IJY3RBEKL9FD6GMTHUVWA5O8P1” 26
+Nov 25 – 28 – 21,9,6,14,10,20,1,16,18,7,15,4,11,22,5,17,23,2,12,8,19,3,13 (23)
+“HQ05DKZAOYM6BEIWTJ7PSCFLV94132NGURX8” 33
+Nov 28 – Dec 1 – 9,3,14,10,2,8,15,4,16,11,5,13,6,12,1,7 (16)
+“782GPY5OQHF91UDNI364TLVXEAR0JZBKMCSW” 29
+Total: 618
+
+#5Klaus Schmeh
+24. Februar 2017
+@George:
+The keys are now available on page where the cryptograms are listed: https://scienceblogs.de/klausis-krypto-kolumne/unsolved-adfxvx-messages-from-world-war-i/
+
+#6Thomas
+24. Februar 2017
+On (pencil and paper) cryptanalysis of the “RICHI” ADFGVX ciphers (by Childs and Friedman): https://ia801305.us.archive.org/30/items/41784789082381/41784789082381.pdf (pp. 14…)
+
+#7Thomas
+25. Februar 2017
+Is there an error in the copy of page 171 (https://scienceblogs.de/klausis-krypto-kolumne/unsolved-adfxvx-messages-from-world-war-i/)? It seems that the cryptogram of page 176 (RICHI-224) partially covers the cryptogram of page 171 (RICHI-?).
+
+#8Norbert
+26. Februar 2017
+@George:
+Two of the given substitution keys seem to have a length of 33 characters:
+
+(Nov 13-15) "H–BMUF15PX0DJLR—-S6VONKZ-AWITEGC-"
+(Nov 16-18) "WG-EITNHUB2R–FDZJS—PY-VQL-1OAXMKC"
+
+Looks a bit like MS Word’s auto correction (several consecutive hyphens replaced by a dash?). Clarifying much appreciated 🙂
+
+Another question, regarding the first cryptogram (Childs page 73): Was this message transmitted/intercepted on Oct 26th or Nov 8th?
+
+#9Norbert
+26. Februar 2017
+Also this one is too short (34 chars):
+(Nov 13-15) "JZLH-R–S-T-MKDWU-V-B-P–FAO-GIX-CNE"
+
+#10George Lasry
+27. Februar 2017
+The first one:
+“H BMU”,
+“F15PX0”,
+“DJLR “,
+” S6VO”,
+“NKZ AW”,
+“ITEGC “,
+
+#11George Lasry
+27. Februar 2017
+(Ignore the previous message)
+
+Here they are again, this time with + for unknown
+
+“H++BMU”,
+“F15PX0”,
+“DJLR++”,
+“++S6VO”,
+“NKZ+AW”,
+“ITEGC+”,
+
+“WG+EIT”,
+“NHUB2R”,
+“++FDZJ”,
+“S+++PY”,
+“+VQL+1”,
+“OAXMKC”,
+
+“JZLH+R”,
+“++S+T+”,
+“MKDWU+”,
+“V+B+P+”,
+“+FAO+G”,
+“IX+CNE”,
+
+#12George Lasry
+27. Februar 2017
+Regarding the message on page 73 – this is not clear. The interception log is marked as Oct 26, the message itself is marked as Nov 8. I don’t know what to say.
+
+#13Armin
+1. März 2017
+The unsolved message of page 100 can be decrpyted if the third last ciphertext block FGDDF is replaced by DGFGDDF, i.e. adding DG at the beginning of the block. Then we get this:
+
+KEINESTOERUNGDURCHFEINDXMITTAGS2FEINDLXDIVXIMMARSCHAUFBELGRADX
+
+#14Narga
+1. März 2017
+Gratulations Armin! Excellent work! What did you use for the substitution and transposition key?
+
+#15Norbert
+1. März 2017
+Some ciphertext modifications that yield readable text passages, still needing optimization.
+
+Page 105:
+Group 10: Cancel X
+Group 20: Cancel DG
+
+resulting ciphertext:
+GAGVA AXADF XVAXV XGVDA XDGAF ADFFG FXXXV DAGDX DXDXX VVGGA VDAGG GFDGG AFXDX AGAAF FDGDX GDVDV GGAFX DXAFA VDXFV VXDDF FXDAD DGVGD GDXVX XGDGD DGFFF GVADV XDVXF XDGXA ADDVX XGVDA XXVAX DXGFD DVVFV DAVXA DDGFA FDGAV XAGVD GAFFD DDGAG AGDGF DFXFD XGGFD DGVGA FAXFG AVDGG VFXGD GDFDX VXXAX GDXGG GVGDX GXXGV DFVXA AVGDX DXDGA DXGVA ADFXG GVDGG AX
+key = 3,16,4,15,7,12,18,6,17,8,19,1,13,10,2,14,11,9,5 (19) UILOF9RCZVSX02G7QTD8WNB5JMHEKPY41A36
+
+plaintext:
+GERMANIAATAPPEKONSTANTINOPELXRFUERMITTEHMEERDIVIC9
+VNZUXTEL9VRX62XDOV2TTELEGRXN0X58XISTELTX32141XQ4XA
+XVOMX4CNOVEMBERNULEDIGTXA8MIRALSTAFX32398XB
+
+#16Max Baertl
+1. März 2017
+@Norbert
+
+Gratulation zu dieser Leistung !
+
+Korrigiert und mit Leerzeichen lautet der Text vermutlich wie folgt:
+
+GERMANIA ETAPPE KONSTANTINOPEL XX FUER MITTELMEER DIVISION ZU X TEL X NR X 62 X DIV X TELEGR X NR X 58 X ERSTELLT X 32141 X Q4 X AN X 32141 X Q4 X A X VOM X 4 X NOVEMBER ERLEDIGT X ADMIRALSTAB X 32398 X B
+
+#17Max Baertl
+1. März 2017
+@Norbert und Armin
+
+Gratulation zu eurer Leistung !
+
+Der von Norbert entschlüsselte Text lautet korrigiert und mit Leerzeichen vermutlich wie folgt:
+
+GERMANIA ETAPPE KONSTANTINOPEL XX FUER MITTELMEER DIVISION ZU X TEL X NR X 62 X DIV X TELEGR X NR X 58 X ERSTELLT X 32141 X Q4 X AN X 32141 X Q4 X A X VOM X 4 X NOVEMBER ERLEDIGT X ADMIRALSTAB X 32398 X B
+
+#18Norbert
+1. März 2017
+
+page 109:
+Group 16-19 (XXAXA DDVVV XXFXV DVDDG): reduce to XXAVV XXDDG
+
+resulting ciphertext:
+XGDFG GADFD GAXGF VFVGG VDDGV GADXF DGVGX AAGDF DADGF AGXAG GADDV FGDXD FGVVG XXAXA DDVVV XXAVV XXDDG VDAAD DXDAA VFXAX GDVGG GDAVG FDVGD GVFGF VDVVX DFFDD VVXDX VDADX XVVXV VDFGF GVVVV AGXGG XGFDA FGADV VDAFG AGDAD GDXXV GGXVA AADGV XGGDX GAGGD VGGXV FAFAX GDVGV FADGD FAXAD GVFDD DAVGV FAGAG VGD
+
+key = 3,16,4,15,7,12,18,6,17,8,19,1,13,10,2,14,11,9,5 (19) UILOF9RCZVSX02G7QTD8WNB5JMHEKPY41A36
+
+plaintext:
+
+OXKXMXABECDPELUNGXS4V4XUMBJRGA8GLETZTEVTVILEBEEVUE
+TX1WEITEDEFDUXNIV5IMMARSCH4UFBELGRADERKAVV2XSONSTK
+EINEEDMILNISSEXXASOXK511
+
+#19Norbert
+1. März 2017
+This one looks good:
+
+page 146
+
+Insert FVXAA before group 10
+Reduce fourth/third to last group (XAAXV XAFDX) to XAAXX
+
+resulting ciphertext:
+FVFAF DXAXX GXDXA GVVXX FFFAX DXDXF AGVFV AXAXV VAFXA FVXAA XFGVD XGAXA VAVVX XVDVA AXAFA FFFXV DVXAV AXFGA DFFGA XAADG DAVAX GVGVA VXVGX AXXFX XVFAX XXAVV FAAVA FXAVX VGAGX FGFFV AFAVD FXADA DVAVX XXVGA FXDGX AAAFD AVAAF GVVFA DXVFX AFFVA FVFGX DVFDA XGXXF VFAVD XAAAV XAAXV XAAXX AXDGF GXXV
+
+key = 7,10,8,14,3,11,16,1,6,13,4,9,15,5,12,17,2 (17) 17WHFLJ5D2UPEXKVZ9O0Q3Y6R8ABGITCMS4N
+
+plaintext:
+FUNKSTELLEKERTSCHERHAE9TRB12X1FXR4FNAMENRICHARDEMI
+LKARLXFUNKSTELLENDORTIGENBEREICHSBENACHRICHTIGENXN
+ACHRICHTENCHEF4BG7834X
+
+#20Norbert
+1. März 2017
+
+page 171 (from transcript, as scan is corrupted)
+
+group 10: replace first char by X
+group 19: first (unknown) char: X
+group 25: replace ADDVV by ADDFX
+group 27/28: reduce GDVFA ..FFA to GDFFA
+(old) group 30: replace G.VVD by XDVVD
+(old) group 34: replace GXVXV by VXXVV
+(old) group 50: after this group (DDDAX) insert DDDAA
+
+resulting ciphertext:
+AAVGF DDADX XDAAV GXAGX AFVAA ADDXD AXDDD DGDDD AAGDV XGVXD GDVDV GVVVV VVGXV VDFVG GVVDV DDVGX DVXVX XGAXA XDDDX XDDXD XXAXD VDXFX ADAGD AGXGA ADDFX XGXDD GDFFA XGDDX XDVVD VVXDF GVVDG VGVAG VXXVV VVVVD VXVGG VGGXG GVVGD GXXVG GVVXX DXDDG VDVVV DDDGG XVVGD DXXDD GGVDX XVVVD GGXGV DGVFA DDDAX DDDAA ADDGD VGDDX XVDVD DVVDV XGVGX XVXXV XXGVA GAGFD XDDAD AXGXD AXXAV DXXGX DXAX
+
+key = 6,12,7,15,1,11,16,5,8,14,3,18,9,13,2,17,20,10,19,4 (20) PRMYUW3LZGES8C71QOV29ITB405KXH6AJNDF
+
+plaintext:
+INUKRAINEUNDPOLENRUBELKURSETARKSTEIGENDINFOLGEBRUC
+HESZWISCHENDEUTSCHLANDUNDSOWJETREGIERUNGUNDERWARTU
+NGDERWIEDERHERSTELLUNGRUSSLANDSDURCHDEUTSCHLANDUND
+ENTENTE
+
+#21George Lasry
+1. März 2017
+Norbert, Armin
+
+Great job! It is so great to see progress on those elusive messages.
+
+Did you use a particular/automated method, or mainly trial and error (this is what I did for other corrupted messages).
+
+Congratulations!
+George
+
+#22Thomas
+1. März 2017
+@Norbert, Armin: Fantastic!
+
+Do your algorithms calculate the index of coincidence of the transposition results or directly apply a monoalphabetic substitution solver with n-gram fitness function after the transposing steps?
+
+#23Norbert
+1. März 2017
+Not a very sophisticated code on my part: Just trying to add or remove up to 5 characters at two different positions, performing an exhaustive search with a n-gram value function. Could be optimized in several details, but the more messages we can sort out by a first run, the better 🙂
+
+#24Norbert
+2. März 2017
+
+page 187:
+Scan and transcript show different messages. I assume the scanned one is not intended to be there and has been solved already, because no extra character is needed:
+group 13: unknown char is probably D: VADXX
+group 21: XXXDV should probably read XXDXV
+
+key = 4,11,5,14,9,7,16,1,12,15,6,10,3,13,8,2 (16) H23BMUF15PX0DJLR4789S6VONKZQAWITEGCY
+
+plaintext:
+SELLVXGENXKOMX9XAXKXBRESLAUXXBITTEWEGENDRINGENDER
+NOTLAGEINBEKLEIDUNGX4000XPAARSTIEFELZUNAECHSTNACH
+XODERBERG
+
+#25Thomas
+2. März 2017
+Who can explain the abbreviations of the radio stations? I’ve found only these ones:
+
+LP: Berlin
+NKJ: Nicolaev (Ukraine)
+UKS: Sevastopol (Krim)
+OSM: Constantinople
+COS: Tiflis (Georgia)
+POT: 2 ships in the port of Poti (Georgia)
+
+What does “ZÖN” mean? (station in Silesia?, see Norberts decryption of page 187)
+
+#26Norbert
+2. März 2017
+
+page 176 ("missing 10 letters")
+after group 03 (DFGGV): insert five letter group FVFFF
+(old) groups 25/26 (AFDV. ADV..): replace by AFFGA ADVAX DAVVV
+
+Quite a few additional minor changes required. The used key is:
+9,12,7,11,3,8,16,6,14,2,10,15,5,13,1,4 (16) 4ARUT1OIFSKN35BZPVLD6JMXCWHQ2E7G08Y9
+
+Suggested plaintext:
+DURCHBRUCHVORBEREITETXDURCHBRUCHSRICHTUNGNACHNORDEN
+ODERNORDOSTENERFOLGENWIRDXKANNJETZTNOCHNICHTBEEURTEILTWERDENX
+
+#27Thomas
+2. März 2017
+Page 132:
+Key Nov 4-6 yields plaintext fragment “WIEDERHOLE TELEG..” The rest is silence.
+
+#28George Lasry
+2. März 2017
+Thomas – this is a good start. It might be possible to extract more by playing with missing/superfluous symbols.
+OSM, OS = Constantinople
+COS = Tiflis
+POZ = Nauen (Germany)
+SP – Varna
+RAT – Odessa
+NKJ or SEW – Nikolaiev (main relay station)
+SFA – Sofia
+ASO, RKI – Sevastopol
+VC or CVS – Constanza
+RAK – Kiev
+UKS or MAC – Bucharest Mackensen HQ (OKM)
+also uses ZON
+POT is Poti
+
+Let me know if I missed anything you need.
+George
+
+#29George Lasry
+2. März 2017
+Norbert@ – Page 187 – mistake, this is not the correct page for the mutilated message (even though they start with the same group, which is the source of my error).
+
+Given your descriptions and Armin’s, have we got anything left?
+🙂
+
+If needed, I can send a copy of the book.
+
+Thanks to all for making progress!
+Regards,
+George
+
+#30Thomas
+2. März 2017
+@George
+Thank you!
+Do you have also the keys of the western front ( for the CHI-messages)?
+
+#31George Lasry
+2. März 2017
+I think I have one key.
+
+#32Norbert
+3. März 2017
+page ?? (between “page 176” and “page 187”)
+
+This message uses the key from Nov 22-24.
+After group 6 (D.F..) insert new five-letter group and after group 43 (FDFFX) as well.
+
+resulting plaintext:
+ABSXMI.I5XNA6M.LD.XS4NXS4.XN.R.DAKER.SC.XBRINGTENT.N.E
+FLHTTEZWO.IVI.IONENX.EUSRELAEND.RXENGLXUXF.ATZ.XMITX
+N..OHLXKOR1S..OSCHX3Y52
+
+This looks promising. Some potential plaintext fragments are:
+XEILMELDGX, or maybe XEILMELDGX24NX24NX (24N: from Nov 24?), KERTSCHXBRINGTENTENTEFLOTTEZWODIVISIONENX, LAENDERXENGLXUXFRANKRXMITX, and OHLX (OHL – oberste Heeresleitung).
+Kertsch (Kerch) is a seaport in the east of the Crimea; Entente troops landed in the Crimea in November 1918 (source).
+I am stuck at this point…
+
+#33Thomas
+3. März 2017
+Some messages are about the withdrawal of the german occupation troops from Belgrade and the Crimea. I suppose George has deciphered messages that have the same subject matter and could help clarify some uncertainties.
+
+#34George Lasry
+3. März 2017
+If anyone needs/wants additional material, I can send via email. You can find my coordinates here:
+https://www.uni-kassel.de/eecs/fachgebiete/ais/mitarbeiter/george-lasry-bsc-mba.html
+I will be happy to share other decryptions.
+
+#35Norbert
+3. März 2017
+Thanx for the offer – just sent you an email 🙂
+
+#36Klaus Schmeh
+3. März 2017
+@Norbert:
+Congratulations! Great job! Apparently, most (or all?) of the cryptograms are solved now. It went so fast that I could hardly read all the comments. Thanks also to Armin, Max Baertl, Thomas and George. I plan to write a follow-up article, as soon as I have read and understood all the comments.
+
+#37Norbert
+11. März 2017
+I found out something interesting about “AAXAX FXAVF” (page 132, key Nov 4-6). The sender made a mistake during the first stage of enciphering: at one point, he encrypted the plaintext letter “G” by “VVV” instead of “VV”. This lead to the “impossible” message size of 155 characters. I hope the following rectangle makes it clear – the superfluous “V” is marked, and suggestions for the two missing letters are in italics.
+
+
+  1   1   1 1     1     1   1 1
+7 0 8 4 3 1 6 1 6 3 4 9 5 5 2 7 2
+
+A V A V F A V A F A V X A X F G F
+ f   f   e   r   e   i   l   v   e
+A X G F A F D A F V X F A D F F A
+   s   e   x   w   i   e   d   e
+V A A G G A A X F A X A X A F A A
+ r   h   o   l   e   t   t   e   l
+X F A V V<V>V A F D F G G A X X F
+   e   g     r   x   v   o   n   v
+G V X F A V A X A F A V A D X F A
+   i   e   r   t   e   r   p   e
+V A V X G A D F F A V X X X A V D
+ r   i   o   d   e   i   n   f   u
+V X A X X A V X A F A V A F D V V
+   t   n   f   t   e   r   x   g
+F A V G F A X A X G G A V A A G F
+ e   b   e   t   s   o   r   h   e
+A V A D D X F V X X X F D F G F G
+   r   5   m   i   n   x   v   v
+F G
+ v
+
+ffereilvese x wiederhole ttelegr x
+von vierter periode in futnfter [fuenfter] x
+gebetsorher [gebetsorder] 5 min x vvv
+
+#38Thomas
+11. März 2017
+Interesting finding. What do you think is meant by “fünfter Gebetsorder”? Any idea?
+
+#39Max Baertl
+11. März 2017
+@Norbert
+Hier die Entschlüsselten Texte mit Leerzeichen und korrigierten Fehlern.
+
+GERMANIA ETAPPE KONSTANTINOPEL XX FUER MITTELMEER DIVISION ZU X TEL X NR X 62 X DIV X TELEGR X NR X 58 X ERSTELLT X 32141 X Q4 X AN X 32141 X Q4 X A X VOM X 4 X NOVEMBER ERLEDIGT X ADMIRALSTAB X 32398 X B
+
+IN UKRAINE UND POLEN RUBELKURSE STARK STEIGEND INFOLGE BRUCHES ZWISCHEN DEUTSCHLAND UND SOWJETREGIERUNG UND ERWARTUNG DER WIEDERHERSTELLUNG RUSSLANDS DURCH DEUTSCHLAND UND ENTENTE
+
+FUNKSTELLE KERTSCHER HAT BETRIEB X 1F X RUFNAMEN RICHARD EMIL KARL X FUNKSTELLEN DORTIGEN BEREICHS BENACHRICHTIGEN X NACHRICHTENCHEF 4B X 7834 X
+
+O X K X M X ABENDMELDUNG X S4V4 X UNTERBRINGUNG LETZTER TEILE BEENDET X 1 WEITERER DU X DIV 5 IM MARSCH AUF BELGRADER KAVV X 2 X SONST KEINE EREIGNISSE XX ASO X K511
+
+STELLV X GEN X KOM X 9 X A X K X BRESLAU XX BITTE WEGEN DRINGENDER NOTLAGE IN BEKLEIDUNG X 4000 X PAAR STIEFEL ZUNAECHST NACH X ODERBERG
+
+DURCHBRUCH VORBEREITET X DURCHBRUCHS RICHTUNG NACH NORDEN ODER NORDOSTEN ERFOLGEN WIRD X KANN JETZT NOCH NICHT BEURTEILT WERDEN X
+
+ABS X MIDIV 5 X EILMELDG X 24N X 24N X ARMADA KERTSCH X BRINGT ENTENTE FLOTTE ZWO DIVISIONEN X NEUSEELAENDER X ENGL X U X FRANZO X MIT X NUR OHL X KORPS FRISCH X 3Y52
+
+FUER EILVESE X WIEDERHOLET TELEGR X VON VIERTER PERIODE IN FUENFTER X
+GEBETSORDER 5 MIN X VVV
+
+#40Norbert
+12. März 2017
+@Thomas: Naja, ich dachte, dass die Gebetsorder der vierten Periode (was auch immer darunter zu verstehen ist) in der fünften wiederholt wurde. GEBETSORHER könnte allerdings auch “Gebet vorher” heißen und wäre dann vom resultierenden Geheimtext her sogar etwas näher dran (s = XG, v = FG, also nur ein Zeichen zu ändern statt zweien bei “Gebetsorder”). Die Order schien mir nur naheliegender.
+
+@Max Baertl: Very impressive! I think the one solved by Armin is missing:
+KEINE STOERUNG DURCH FEIND X MITTAGS 2 FEINDL X DIV X IM MARSCH AUF BELGRAD X
+
+@Klaus Schmeh: Thanks to Max Baertl’s listing, it’s easy to count 🙂 Eight messages have been solved by now (the ninth was the scan of a message already solved by the Kassel team which mistakenly appeared on the list). We are not even half-finished …
+
+#41Norbert
+13. März 2017
+VFGAG DDFFX (page 164: “5 TL Richi-177”): Decrypted with key from Nov 7-9, the text adumbrates SONST KEINE EREIGNISSE VON BEDEUTUNG. Here is a suggested partial completion of the ciphertext:
+
+VFGAGD DFFXF DVDDA XA[.]DV FGDa. ..xVX DXGGA VDGGG
+VGVDD DDXDX VDDDV VDGGV FXGFA DGDAF FVFFX DGFVX
+FvXXVA GGGVA Fvgv. ..VVD GVGVA XXXXFg XVGVV gADVG
+VFXXD VVXGX VGXXG GVXXV VGXVv vVVDD .vx.g xv...
+vdfaf d..dv ddgx. ..
+
+Original characters (Childs) always uppercase, my suggestions lowercase.
+A: delete character
+f: suggestion for missing character
+Af: suggested correction
+[f]: insert new character here
+
+ELXDIEHOEHEX828HOEHELX9IR.OX
+SONSTKEINEEREIGNISSEVONBEDEUTUNGXX
+.KM.1A..31.XO.XR..SF.2O.D.
+
+If the first ciphertext character was G instead of V, the plaintext would begin with TL, i. e. the station shortcut quoted by Childs, but I don’t know if this was usual.
+
+#42Norbert
+14. März 2017
+F.G.X FGXXD (page 164: 3 TL Richi-242, November 9th)
+was apparently also encrypted with the Nov 7-9 key. The actual problem with this message is the sheer amount of unknown ciphertext letters (btw, the transcript lacks one complete line of unknown letters). However, it turned out that in many cases, one half of the adfgvx bigram is given which means we can choose from at most six plaintext letters. In other words, it is pure anagramming fun 😉 Here is my suggestion for a partial ciphertext completion. No guarantee, of course, but I think most of it should fit.
+
+FdG.X FGXXD DAFxVD AX.GD XXDGV XXGVA VAADF DVVVV
+FVDVg dgvVVx VFG.x GdXvvvx .dx.. .gfxa axv.a a...d
+xaddd .gx.. .xvdd gdgag .a.ad dgadv xv.vv dvvvv
+f.vg. XGADG Ggd.v XVDAG XGXXG VGDGV VVFVV GFVFA
+VDGXG XXDAV XFDDV VVGVV VVVDD VXFFF XVDGG VXAGV
+GXVVG VVDGA VDVXV VXXGD DGAXF DxaDG VGVXX VAGDGd
+DD
+
+(same notation convention as in my last post)
+
+
+... X . X IN X TEMESVAR X BEFRIEDNIS X E...5.V.P.T..FN. X UND M..1..R.. X DIE VON X MIRCO NACH WESTEN UND SUEDEN WEG X LEIDER WEGE VOM GEGNER BESETZT X
+
+#43Norbert
+14. März 2017
+Addendum: “DIV VON X MIRCO” would probably make more sense (but requires one more ciphertext letter correction). A historian may help.
+
+#44Norbert
+14. März 2017
+Addendum to page 164, VFGAG DDFFX:
+Mysterious MIRCO seems to appear in this message as well, so one of the following readings should be closer to the original text than the previously posted one:
+
+EL X DIE HOEHE X 828 X (or: EL X D.. HOERE X 828 X)
+O X H X L X MIRCO X
+SONST KEINE EREIGNISSE VON BEDEUTUNG XX (etc.)
+
+#45Max Baertl
+14. März 2017
+Möglicherweise steht “Mirco” für Prinz Mirko von Montenegro siehe: https://de.m.wikipedia.org/wiki/Mirko_von_Montenegro
+
+#46Max Baertl
+14. März 2017
+Ich Vermute ” … X . X ” am Anfang der Nachricht von Seite 164 lautet Vollständig ” VON X 9 X ” da die Nachricht vom 9. November stammt.
+
+#47Norbert
+14. März 2017
+@Max Baertl
+Wie ich gerade sehe, könnte der Anfang sogar lauten
+
+... X 9 X 11 X TEMESVAR
+
+Hierbei würde das F in der dritten Fünfergruppe des Geheimtextes unverändert bleiben (eine “Korrektur” weniger). Damit das erste Wort VOM, VON oder NOV lautet, müsste man wiederum einen anderen Geheimtext-Buchstaben “korrigieren” (Auswahl für das zweite Klartextzeichen WSOBHF, also möglich, für das dritte jedoch 8C71QO).
+
+Ich frage mich aber inzwischen, ob es überhaupt sinnvoll bzw. üblich war, das Sendedatum in die Nachricht einzupflegen. Militärische Absender-/ Adressaten- und Ortskürzel kann ich mir gut vorstellen, aber das aktuelle Datum war doch eh klar und konnte vom Empfänger notiert werden, ohne dass der Sender es erwähnen musste, oder?
+
+#48Thomas
+15. März 2017
+@ Norbert
+
+Das Sendedatum würde ich im Text auch nicht vermuten. Möglicherweise aber das Datum eines bestimmten Ereignisses in Temesvar (statt “heute”).
+
+Zu #41: “TL” steht vermutlich für “Teile” (bei mehrteiligen Nachrichten wegen der beschränkten Zeichenzahl in einer Sendung). Die Stationskürzel stehen, wenn ich das richtig sehe, nur in den Sender- und Empfängerangaben jeweils in der ersten Zeile (…. v ….), hier taucht “TL” nie auf, auch nicht in Georges Liste #28.
+
+Was für eine Puzzlearbeit! Bestimmt wärst Du mittlerweile in der Lage, ein Handbuch der ADFGVX-Verschlüsselungsfehler zu schreiben
+
+#49Norbert
+30. April 2017
+I have located the “page ??” messages in Childs’s book.
+
+Childs page 215:
+22nd NOVEMBER, 1918
+C) UKS v BSL (08.42 p.m., November 22nd)
+   1905 (11/22)
+   
+   RICHI-248  VGADA FAXAD etc.
+
+Childs page 187:
+(The scanned “FXVVF” message appears on page 191)
+13th NOVEMBER, 1918
+A) SU v LP (07.52 a.m., November 13th)
+   10.50 MK (13/11) 2 TLE
+   
+   1 TL    FFVXV GVVXA etc.
+   CHI-212
+   
+   2 TL       AFAFF AXDVA etc.
+   RICHI-142
+
+The two-part message of November 13th is remarkable: It seems very unlikely that both parts were encrypted with different keys (CHI/RICHI). Could it be possible that the sender erroneously encrypted both parts with the CHI key of that day? Then the radio operator might have noticed the discrepancy only after transmitting the first part, and probably changed for the second one the CHI indication to RICHI (mistakenly) because the receiving station “SU” was in East Europe?
+
+@George: Have you already tried to apply your algorithm to exactly these two message parts (FFVXV and AFAFF)?
+
+#50George Lasry
+3. Mai 2017
+Very well guessed!
+This is a new key which does not exist in the list:
+This is the combined decryption
+
+russischetundpolnheeresvergehrvollerfassenkwichtimesbesondersauspolnvergehrueberohlstationverziffertfungensoweitfernschreiberverbdmnithtarbeicetkrestschriftlichknachchefjkjx
+
+and the transposition key (length 16)
+
+CMBLAKOHIDENFJGP
+
+Can you try and format the German text (word spplit, maybe correct garbles). I am interested to understand the context.
+
+Congratulations for the accurate gut feeling!
+
+(also happy to see that my program works on 173 plaintext = 356 ciphertext letters for length 16).
+
+#51George Lasry
+3. Mai 2017
+This is my best take:
+
+russische und polen Heeres verkehr voll erfassen wichtiges besonders aus polen verkehr ueber ohl station entziffert funken soweit fern schreiber verbdmnithtarbeicetkrest schriftlich
+Nachrichten chef
+
+Does that make sense, and what about verbdmnithtarbeicetkrest?
+
+#52George Lasry
+3. Mai 2017
+fern schreiber verbd ? = ? fernschreiber verbindung
+
+#53Norbert
+3. Mai 2017
+I am glad to see that my guess was not so bad 🙂
+
+I think the substitution key can be improved:
+change g to k, m to g, and k to x. j and x might be numbers.
+
+This yields:
+
+russischetundpolnheeresverkehrvollerfassenx
+wichtigesbesondersauspolnverkehrueberohlstationverziffertfunken
+soweitfernschreiberverbdgnithtarbeicetx
+restschriftlichxnachchef 0 x 01 (or any digits)
+
+Apparently, this is exactly the same message as sent a few hours before (Childs p. 186, not on your list for Klausis Krypto Kolumne, but already deciphered by your team), but with a different key. What a mess!
+
+With a few corrections:
+Russischen und poln[ischen] Heeresverkehr voll erfassen. Wichtiges besonders aus poln[ischem] Verkehr ueber OHL Station verziffert funken soweit Fernschreiberverbdg [=Fernschreiberverbindung] nicht arbeitet. Rest schriftlich. Nach[richten] Chef 0.01 (or any digits)
+
+An amateurish translation (without garantee!):
+
+Capture complete radio traffic of Russian and Polish armies. If relevant, especially from Polish traffic, transmit encrypted via OHL station unless radioteleprinter (?) is working. Rest follows in written form (or: send the rest in written form). Head of intelligence 0.01 (or any digits)
+
+#54Thomas
+4. Mai 2017
+@Norbert, George: Congratulations!
+
+#55George Lasry
+Israel
+4. Mai 2017
+Great work Norbert, happy to see two more down 🙂
+
+Maybe we could summarize all those findings (in this comment thread) in a table form, so that Klaus may publish them as a new blog entry.
+
+#56Norbert
+17. September 2017
+@George:
+I am currently working on such a table 🙂
+
+I think you definitely should try your algorithm on Childs page 153 “VFVAX” and “AXVAA” as well (combined and separately), because these two have also a “CHI” identifier, just like p.187 “FFVXV”. Maybe too few ciphertext letters, but worth a try!
