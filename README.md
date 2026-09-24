@@ -5,7 +5,8 @@ Ersten Weltkriegs (Ostfront, 1918).
 
 **Erst die Daten reparieren, dann entschlüsseln.**
 
-Das Projekt hat **12 von 22** historischen Funksprüchen entschlüsselt.
+Das Projekt hat **12 von 22** Korpus-Funksprüchen entschlüsselt — plus vier
+Nachrichten aus dem Childs-Buch, die außerhalb des Korpus liegen.
 Die Methode: bekannte Schlüssel aus der Literatur nehmen, beschädigte
 Geheimtexte rekonstruieren, das Ergebnis exakt beweisen.
 
@@ -20,6 +21,7 @@ Diese Datei hat drei Ebenen. Lies nur so tief, wie du brauchst.
 | in 2 Minuten wissen, was das ist | diese README bis hier |
 | verstehen, wie ADFGVX funktioniert | [Handbuch](docs/HANDBUCH.md), Abschnitt 2 |
 | die Beweise nachvollziehen | [Handbuch](docs/HANDBUCH.md), Abschnitt 5 |
+| Schlüssel und Sprüche nachschlagen | das Verzeichnis unten |
 | jeden Befund im Detail prüfen | das Arbeitsprotokoll unten |
 | den Code benutzen | Abschnitt „Loslegen" unten |
 
@@ -31,8 +33,8 @@ Im Ersten Weltkrieg verschlüsselte das deutsche Heer seine Funksprüche mit der
 Chiffre **ADFGVX**. Viele dieser Sprüche sind erhalten. Einige davon hat bis
 heute niemand entziffert.
 
-Dieses Projekt sammelt sie, prüft sie, korrigiert Lesefehler und versucht, sie
-zu entschlüsseln.
+Dieses Projekt sammelt sie, prüft sie, korrigiert Lesefehler und entschlüsselt
+sie.
 
 Das klingt nach Kryptanalyse. Ist es aber nur zum Teil. Die eigentliche Arbeit
 ist **Datenrekonstruktion** — und das ist die wichtigste Erkenntnis des
@@ -63,7 +65,7 @@ Zeichen, stimmt etwas nicht. Die Konfliktzahl zählt diese Widersprüche.
 - `conflicts == 0` — Quadrat, Permutation und Geheimtext passen exakt zusammen.
 - `conflicts > 0` — mindestens ein Zeichen ist falsch.
 
-**11 von 11 gelösten Seiten zeigen nach der Korrektur null Konflikte.**
+**Alle 11 geprüften Korpus-Seiten zeigen nach der Korrektur null Konflikte.**
 Vorher lagen sie bei 34 bis 107 Konflikten. Das Kriterium trennt scharf — kein
 Schwellenwert, kein Graubereich. Es ist ein Beweis, kein Gefühl.
 
@@ -76,12 +78,17 @@ Schwellenwert, kein Graubereich. Es ist ein Beweis, kein Gefühl.
 | noch offen | 10 |
 | bekannte Schlüssel | 14 |
 | Seiten mit Anomalie | 3 |
+| Childs-Nachrichten außerhalb | 4 (264, 222, 274, 338) |
 
-**Seite 217 (RICHI-170)** ist gelöst und bewiesen. Das Schlüsselwort
-`TRUPPENVERSCHIEBUNG` liefert **beide** Stufen: das 6×6-Quadrat (als
-Keyword-Quadrat mit eingestreuten Ziffern) und die Transpositions-Permutation
-(alphabetische Rangfolge). Drei unabhängige Tests bestätigen das Ergebnis:
-Transposition, Substitution, Roundtrip.
+Die Headline-Ergebnisse:
+
+- **Seite 217 (RICHI-170)** — gelöst und bewiesen. Das Schlüsselwort
+  `TRUPPENVERSCHIEBUNG` liefert **beide** Stufen: das 6×6-Quadrat (als
+  Keyword-Quadrat mit eingestreuten Ziffern) und die Transpositions-Permutation.
+- **RICHI-264** — gelöst und bewiesen (2 Reparaturen, exakter Roundtrip).
+- **RICHI-222** — Struktur bewiesen; die Lückenfüllung ist nicht eindeutig.
+- **RICHI-274 / RICHI-338** — verifiziert am Schlüssel `Oct28-31`.
+- **RICHI-240** — verifiziert, aber nicht von diesem Projekt gelöst.
 
 ## Loslegen
 
@@ -102,6 +109,9 @@ python3 analysis/verify_article_claim.py
 
 # Alle gelösten Seiten prüfen
 python3 analysis/verify_solutions.py
+
+# Konfliktzahl als Kriterium belegen
+python3 analysis/rank_conflicts.py
 ```
 
 `bootstrap.py` setzt den Projektpfad auf `sys.path`. Man muss es nur einmal
@@ -200,12 +210,14 @@ CT = Geheimtext in ADFGVX-Zeichen. Klartext in Zeichen ohne Worttrenner
 
 ## Das Verfahren
 
-ADFGVX ist eine zweistufige Chiffre:
+ADFGVX ist eine zweistufige Chiffre. Details, Beispiele und Bilder stehen im
+[Handbuch](docs/HANDBUCH.md), Abschnitt 2. Hier nur die Konventionen, die der
+Code braucht:
 
-1. **Substitution** — ein 6x6-Polybius-Quadrat (26 Buchstaben + 10 Ziffern)
+1. **Substitution** — ein 6×6-Polybius-Quadrat (26 Buchstaben + 10 Ziffern)
    bildet jedes Klartextzeichen auf ein Bigramm aus `A D F G V X` ab.
 2. **Spaltentransposition** — der Bigramm-Text wird zeilenweise in `n` Spalten
-   geschrieben und in der Reihenfolge eines zweiten Schluesselworts ausgelesen.
+   geschrieben und in der Reihenfolge eines zweiten Schlüsselworts ausgelesen.
 
 **Wichtig:** Die Permutationslisten sind **Rangordnungen**, nicht Leseordnungen:
 
@@ -213,339 +225,222 @@ ADFGVX ist eine zweistufige Chiffre:
 order = sorted(range(n), key=lambda c: perm[c])
 ```
 
+Wer das verwechselt, bekommt Unsinn. Das Projekt hat genau diesen Fehler
+dokumentiert (siehe Seite 217 unten).
+
 ## Projektstruktur
 
 ```
 adfgvx/
-├── bootstrap.py          # setzt das Projektverzeichnis auf sys.path
-├── core/                 # Kernbibliothek
-│   ├── adfgvx.py         # encrypt/decrypt/transpose, KEYS (14 Schluessel)
-│   └── langmodel.py      # deutsches Sprachmodell (de_50k.txt)
-├── data/                 # Daten und Quelltexte
-│   ├── corpus.py         # CORPUS: 22 Original-Chiffrate (unrein)
+├── bootstrap.py             # setzt das Projektverzeichnis auf sys.path
+├── core/                    # Kernbibliothek
+│   ├── adfgvx.py            # encrypt/decrypt/transpose, KEYS (14 Schlüssel)
+│   └── langmodel.py         # deutsches Sprachmodell (de_50k.txt)
+├── data/                    # Daten und Quelltexte
+│   ├── corpus.py            # CORPUS: 22 Original-Chiffrate (unrein)
 │   ├── corpus_corrected.py  # korrigierte/synthetische Chiffrate
-│   ├── solutions.py      # SOLVED: 12 geloeste Seiten mit Klartext
-│   ├── childs_additional.py # Beispiele aus Childs/Friedman
-│   ├── de_50k.txt        # Worthaeufigkeitsliste (50k)
-│   └── texte.txt         # vollstaendiger Cipherbrain-Kommentarthread
-├── solvers/              # Loesungsansaetze
-│   ├── blind_solver.py      # Simulated Annealing ueber Perm+Quadrat
+│   ├── solutions.py         # SOLVED: 12 gelöste Seiten mit Klartext
+│   ├── childs_additional.py # Nachrichten aus dem Childs-Buch
+│   ├── de_50k.txt           # Worthäufigkeitsliste (50k)
+│   └── texte.txt            # vollständiger Cipherbrain-Kommentarthread
+├── solvers/                 # Lösungsansätze
+│   ├── blind_solver.py      # Simulated Annealing über Perm+Quadrat
 │   ├── analytic_solver.py   # analytischer Quadrat-Solver
 │   ├── guided_solver.py     # gezielter Quadrat-Solver (Coverage)
-│   ├── conflict_solver.py   # Fehlersuche ueber Konfliktzahl
+│   ├── conflict_solver.py   # Fehlersuche über die Konfliktzahl
 │   ├── friedman_solver.py   # Friedman-Ansatz (negativer Befund)
 │   ├── sub_solver.py        # Quadrat bei bekannter Permutation
-│   └── reverse_square.py    # Quadrat aus geloesten Nachrichten
-├── analysis/             # Einzeluntersuchungen und Verifikation
-│   ├── verify_217.py, exhaustive_217.py, new_approach_217.py, refine_217.py
-│   ├── verify_article_claim.py   # Verifikation des GPT-6-Artikels (S. 217)
-│   ├── reconstruct_171.py, repair_171.py
-│   ├── solve_152.py, solve_73.py
-│   ├── search_all.py, search_fix.py, search_fix2.py, fix_search.py
-│   ├── run_corpus.py, verify_solutions.py
-├── tests/                # Tests und Testfaelle
-│   ├── testcases.py      # 12 synthetische Testfaelle (Roundtrip garantiert)
-│   ├── test_171.py       # harter Solver-Test auf synthetischem Chiffrat
-│   └── test_fitness.py   # Fitness-Funktion gegen Klartext vs. Zufall
-└── docs/                 # Dokumentation
+│   └── reverse_square.py    # Quadrat aus gelösten Nachrichten
+├── analysis/                # Einzeluntersuchungen und Verifikation
+│   ├── dump_keys.py         # erzeugt das Schlüssel-/Spruchverzeichnis oben
+│   ├── verify_article_claim.py  # Verifikation des GPT-6-Artikels (S. 217)
+│   ├── verify_richi_264.py  # Beweis für RICHI-264
+│   ├── richi_222_reconstruct.py # RICHI-222: Struktur + Kandidat
+│   ├── rank_conflicts.py    # Konfliktzahl als exaktes Kriterium
+│   ├── anomaly_scan.py      # fehlende Zeichen in Bigramm-Positionen
+│   ├── repair_171.py / reconstruct_171.py  # Seite 171
+│   ├── pdf_page_order.py / pdf_page_text.py / map_jpgs.py  # Quellen-Arbeit
+│   └── ... (25 Skripte insgesamt, siehe Handbuch Abschnitt 6)
+├── tests/                   # Tests
+│   ├── testcases.py         # 12 synthetische Fälle (Roundtrip garantiert)
+│   ├── test_171.py          # harter Solver-Test (scheitert bewusst)
+│   └── test_fitness.py      # Fitness gegen Klartext vs. Zufall
+└── docs/                    # Quellen, Scans, Handbuch
+    ├── HANDBUCH.md          # das Handbuch (Ebene 2)
+    ├── childs_book.pdf      # Childs: German Military Ciphers (63 Seiten)
+    ├── childs_pages/        # 63 JPG-Scans (page_NN.jpg = PDF-Seite NN+1)
+    ├── childs_djvu.txt      # OCR-Text des Childs-Buchs
+    └── 41761079080022.pdf   # Friedman: Military Cryptanalysis, Part IV
 ```
 
 ## Verwendung
 
-Alle Skripte koennen direkt aus dem Projektverzeichnis gestartet werden:
+Alle Skripte laufen direkt aus dem Projektverzeichnis:
 
 ```bash
-cd /home/user/Projekte/adfgvx
-
-python3 tests/testcases.py        # 12/12 Testfaelle, Roundtrip OK
-python3 tests/test_fitness.py     # Sprachmodell-Sanity-Check
-python3 tests/test_171.py         # Solver-Test (scheitert bewusst)
-python3 analysis/run_corpus.py    # Korpus gegen alle Schluessel
-python3 analysis/verify_article_claim.py
+python3 tests/testcases.py                 # 12/12 Testfälle, Roundtrip OK
+python3 analysis/verify_article_claim.py   # Seite 217 beweisen
+python3 analysis/verify_richi_264.py       # RICHI-264 beweisen
+python3 analysis/rank_conflicts.py         # Konfliktzahl-Tabelle
+python3 analysis/dump_keys.py              # Verzeichnis (stdout)
 ```
-
-Die Skripte setzen ihren Importpfad selbst ueber `bootstrap.py`; ein
-`PYTHONPATH` ist nicht noetig.
 
 Als Bibliothek:
 
 ```python
-from core.adfgvx import decrypt, make_square
+from core.adfgvx import decrypt, KEYS
 from data.corpus import CORPUS
 from data.solutions import SOLVED
 
 name, pt, src = SOLVED["146"]
-perm, sub, _ = __import__("core.adfgvx", fromlist=["KEYS"]).KEYS[name]
+perm, sub, _ = KEYS[name]
 print(decrypt(CORPUS["146"], perm, sub))
 ```
 
-## Wichtige Erkenntnisse
+## Die gelösten Fälle
 
-### Datenqualitaet
-- `corpus.py` enthaelt die **unreinen** Original-Transkriptionen. Sie sind
-  beschaedigt (Empfangs-/Uebertragungsfehler) und mit den bekannten Schluesseln
-  **nicht** entschluesselbar — das ist Lasrys eigentliche Aufgabenstellung.
-- Die Klartexte in `solutions.py` gehoeren zu **korrigierten** Chiffraten.
-  Re-Encryption-Tests gegen `corpus.py` sind daher sinnlos.
-- Fuer Solver-Tests immer `tests/testcases.py` verwenden: die Chiffrate werden
-  synthetisch aus dem verifizierten Klartext erzeugt
-  (`transpose(bigrams(pt), perm)`), der Roundtrip ist damit garantiert.
+### Seite 217 (RICHI-170) — der Beweisfall
 
-### Sprachmodell
-- `langmodel.score`: echter deutscher Text −16…−21, Zufall −27…−32.
-  Lesbarkeitsschwelle ca. −24.
-- `word_hits` diskriminiert nur, wenn die Trefferzahl deutlich ueber dem
-  Zufallsniveau derselben Textlaenge liegt (bei L≈100 ist der Abstand zu klein).
-- Das Trigramm-Modell ist fuer historischen Militaertext **aktiv schaedlich**:
-  das echte Quadrat ist kein lokales Optimum (4 von 630 Nachbarn sind besser).
+Der Artikel „GPT-6 Astra solves a WWI German radio message" (prinzai.com,
+17.09.2026) behauptet die Lösung. Das Projekt hat sie geprüft — und bestätigt.
 
-### Bekannte Sackgassen
-- **Friedman-Ansatz** (IoC/Bigramm-MI zur Spaltenrekonstruktion): scheitert
-  grundsaetzlich bei diesen kurzen Texten mit Zufallsquadrat.
-- **`word_hits` als alleinige Zielfunktion**: Plateau — 107 Swaps liefern
-  denselben Wert. Erst die Beschraenkung auf die 21 tatsaechlich genutzten
-  Quadrat-Positionen beseitigt das Plateau.
-- **Greedy-Alignment** zur Fehlerkorrektur ist defekt (erkennt nur
-  Einfuegungen). Immer Edit-Distance-Alignment verwenden.
-- **Wort-Sperrung** erkannter Woerter verschlechtert das Ergebnis.
-- **Militaer-Woerterbuch** mit kurzen Abkuerzungen verschlechtert den Solver.
-- **Blind-Suche nach Perm+Quadrat** (`blind_solver.py`, `guided_solver.py`):
-  loest das FALSCHE Problem — beide Komponenten sind fuer die meisten Seiten
-  bereits bekannt (siehe `KEYS`). Siehe „Astras Methode“ unten.
+Das Schlüsselwort `TRUPPENVERSCHIEBUNG` (Childs S. 214–215) liefert **beide**
+Stufen:
 
-### Astras Methode: Datenrekonstruktion, nicht Kryptanalyse
+1. **Die Permutation** — alphabetische Rangfolge der 19 Buchstaben.
+2. **Das Quadrat** — ein Keyword-Quadrat mit **eingestreuten Ziffern**.
 
-**Zentrale Einsicht:** GPT-6 Astra hat bei RICHI-170 und RICHI-240 **nicht den
-Code gebrochen**. In beiden Faellen waren die Schluessel bereits bekannt und
-veroeffentlicht. Der Engpass war nie die Kryptographie, sondern die
-**Datenqualitaet**.
-
-| | RICHI-170 (Seite 217) | RICHI-240 |
-|---|---|---|
-| Schluessel | `TRUPPENVERSCHIEBUNG` (Childs S. 214-215) — liefert Quadrat UND Permutation | Nov10-12 (Lasry-Liste) |
-| Problem | Transkriptions-/Empfangsfehler | 20 von 240 Zeichen fehlen |
-| Astras Beitrag | korrekte Konvention anwenden | Position der Luecke finden |
-| Verifikation | Roundtrip + 0 Konflikte | histor. Telegramm → 7/9/6 |
-
-Astras Vorgehen in drei Schritten:
-1. **Schluessel aus der Literatur nehmen** — nicht suchen.
-2. **Beschaedigte Zeichen ergaenzen** — Sprachmuster-Scoring ueber
-   verschiedene Anordnungen der fehlenden Symbole.
-3. **Restluecken mit externem Wissen schliessen** — das franzoesische
-   Aufklaerungstelegramm lieferte die Ziffern, die aus dem Chiffrat allein
-   nicht bestimmbar waren.
-
-Das deckt sich exakt mit Lasrys Original-Aussage: *„the challenge is to
-understand how the cryptograms were MUTILATED or AFFECTED, probably by
-RECEPTION PROBLEMS, or maybe even by WRONG TRANSMISSION or ENCODING.“*
-
-**Konsequenz:** Der produktive Ansatz ist nicht Perm+Quadrat-Suche, sondern
-**Fehlerrekonstruktion bei bekanntem Schluessel** — genau das, was
-`solvers/conflict_solver.py` (Konfliktzahl als exaktes Kriterium) verfolgt.
-
-### Seite 217 (RICHI-170)
-Der Artikel „GPT-6 Astra solves a WWI German radio message“ (prinzai.com,
-17.09.2026) ist **verifiziert** — siehe `analysis/verify_article_claim.py`.
-
-> **Korrektur der frueheren Einschaetzung:** Eine erste Version dieses
-> Projekts behauptete, den Artikel *widerlegt* zu haben. Das war **falsch**.
-> Die drei damaligen „Beweise“ hatten Denkfehler:
-> - *Bijektions-Beweis*: verglich 6 Chiffrat-Zeichen mit 23 Klartextzeichen.
->   Bei ADFGVX bildet die Substitution aber **Bigramme** (36 moegliche) auf
->   Klartextzeichen ab; `A D F G V X` sind nur die Zeilen-/Spaltenlabels.
-> - *Konflikt-Beweis*: benutzte die 13 Cryptologia-Schluessel statt des im
->   Artikel genannten Schluesselworts `TRUPPENVERSCHIEBUNG`.
-> - *Multiset-Beweis*: Zeichenhaeufigkeiten sind bei ADFGVX irrelevant.
-
-Verifikation (drei Tests, alle BESTANDEN):
-1. Transposition mit `TRUPPENVERSCHIEBUNG` rueckgaengig machen.
-2. Substitution: jedes Bigramm → genau EIN Klartextzeichen (0 Konflikte).
-3. Re-Encryption: Klartext → Bigramme → Transposition == Original-CT.
-
-Klartext (Artikel):
-`EIN ENGLISCHER KREUZER EINLIEG X SEWASTOPOL X S4STEN X EIN GESCHWADER
-DER X ALLIIERTEN FOLGT 26STEN X`
-
-Status: **geloest** (Schluesselwort `TRUPPENVERSCHIEBUNG`, Childs S. 214-215).
-
-### Seite RICHI-240 (Nachtrag)
-Der Folgeartikel „Another WWI German Radio Cipher Falls to GPT-6 Astra“
-(prinzai.com, 19.09.2026) behandelt **RICHI-240** (11.11.1918).
-
-- Von den urspruenglich 240 Zeichen sind nur **220** ueberliefert.
-- Der Schluessel ist bekannt (Liste der ADFGVX-Schluessel Sep–Dez 1918),
-  aber die Position der 20 fehlenden Zeichen ist unbekannt.
-- Astra probierte publizierte Schluessel mit verschiedenen Anordnungen der
-  fehlenden Symbole und bewertete die Ergebnisse mit deutschen
-  Sprachmustern. Treffer: Einfuegen der 20 Zeichen **zwischen Zeile 4 und 5**.
-- Fehlende Zeichen ergaenzt: `VFFXX DXXVV XDXDX GXXAF`.
-- Die drei fehlenden Ziffern (5–9, eindeutig) wurden ueber historische
-  Fakten bestimmt: ein franz. Aufklaerungstelegramm (Franchet d'Esperey an
-  Clemenceau/Foch, 19.11.1918) nennt 11. Armee, Alpenkorps, 217.–219. Inf.-Div.
-  und 6. Reserve-Div. → Ziffern **7, 9, 6**.
+Die Ziffern-Einmischung ist der Knackpunkt. Die naive Füllregel (Keyword ohne
+Doppel + Restalphabet) liefert nur 29 von 85 Übereinstimmungen — Unsinn. Das
+historische Quadrat mischt die Ziffern zwischen die Buchstaben
+(`TRUPE4 / NVSC2H / 1I6B?G / 6AQD8F / 5?JKLM / 0?WXYZ`). Im Artikel-Bild sind
+alle Ziffern handschriftlich nachgetragen. Die 23 aus dem Klartext belegten
+Quadratzellen decken sich mit dieser Version (82/85, 0 Konflikte).
 
 Klartext:
-`AN O H L 11 ARMEE ALPENKORPS RAUM PETERREVE VERBASZ 217 219 6 RDD LINIE
-NAGYBESSKEREK VERSECZ VERSECZ VON SERBEN BESETZT`
 
-Deutsch: *An Oberste Heeresleitung. 11. Armee: Alpenkorps im Raum
-Peterreve–Verbasz. 217.–219. Divisionen und 6. Reserve-Division an der Linie
-Nagybecskerek–Versec. Versec von Serben besetzt.*
+```
+EINENGLISCHERKREUZEREINLIEGXSEWASTOPOLXS4STENX
+EINGESCHWADERDERXALLIIERTENFOLGT26STENX
+```
 
-Historische Bestaetigung: Die deutsche Armee zog sich am 10.11.1918 aus Vrsac
-(Versec) zurueck; serbische Einheiten unter Major Dusan Dodic rueckten ein —
-wenige Stunden vor dem Funkspruch (11.11.1918, 03:38 Uhr).
+Deutsch: *Ein englischer Kreuzer liegt in Sewastopol. (am) 24. Ein Geschwader
+der Alliierten folgt (am) 26.* — Historisch bestätigt: Die HMS Canterbury lief
+am 24.11.1918 in Sewastopol ein, das alliierte Geschwader folgte am 26.
 
-> **Hinweis:** RICHI-240 ist **nicht** Teil des 22-Seiten-Korpus in
-> `data/corpus.py` und daher im Code noch nicht abgebildet.
+Verifikation: `python3 analysis/verify_article_claim.py`
+(Transposition + Substitution 0 Konflikte + Roundtrip).
 
-### RICHI-274 / RICHI-338 (30.10.1918) — Oct28-31 verifiziert
+> **Korrektur der früheren Einschätzung:** Eine erste Version des Projekts
+> behauptete, den Artikel *widerlegt* zu haben. Das war falsch. Die drei
+> damaligen „Beweise" hatten Denkfehler: ein Bijektions-Vergleich (6 CT-Zeichen
+> gegen 23 Klartextzeichen), ein Konflikt-Test mit den falschen Schlüsseln und
+> ein Zeichen-Häufigkeits-Vergleich, der bei ADFGVX irrelevant ist. Der Fehler
+> lag in der Rangfolge der Permutation.
 
-Verifikation zweier Childs-Nachrichten ausserhalb des Korpus. Die im Buch
+### RICHI-264 — bewiesen
+
+Marine-Funkspruch vom 1.11.1918 (Schlüssel `Nov1-3`). Der OCR-Geheimtext hat
+264 Zeichen, der Klartext 133 — die Lückenzahl beweist: Im CT fehlt ein
+Bigramm. Die Dekodierung stimmte an 130 von 131 Stellen exakt. Zwei Fehler:
+
+1. **Bigramm 63: `AD` → `AG`** — D/G-Verwechslung, Morse-plausibel
+   (`D = -..`, `G = --.`).
+2. **`XG` fehlt nach Bigramm 64** — Löschung im CT.
+
+Nach beiden Reparaturen: Dekodierung == Klartext und Re-Encryption == CT.
+Exakter Roundtrip.
+
+Klartext: *Demnach gehen nunmehr sämtliche Schiffe von Kospoli nach Odessa
+bzw. Nikolajew. Verteilt wie Fr. 52751 und B.V.G. rum. L7 Ch. Röm. 2. Groß B.
+Fr. 52787.*
+
+Verifikation: `python3 analysis/verify_richi_264.py`
+
+### RICHI-222 — Struktur bewiesen, Lücken offen
+
+13. Teil einer 13-teiligen Nachricht (Konstantinopel nach Berlin, 3.11.1918).
+Der Schlüssel `Nov1-3` bestätigt sich zum dritten Mal — die Spaltenköpfe der
+Tabelle sind exakt die bewiesene Permutation (das OCR las `18`, gemeint ist
+`16`).
+
+Die Nachricht ist schwer beschädigt: 79 Empfangslücken, dazu fehlt das Ende
+(67 + 11 Zeichen, laut Childs S. 42). Von 114 Bigrammen sind nur 37
+vollständig; 70 haben genau eine Lücke (je 6 Kandidaten aus dem Quadrat),
+7 sind ganz weg.
+
+Der Beweis gilt für die **Struktur**: Re-Encryption deckt alle 144
+überlieferten CT-Zeichen exakt (0 Mismatches). Die Lückenfüllung ist dagegen
+**nicht eindeutig**. Der beste Kandidat (Beam-Search mit dem Sprachmodell,
+64 Worttreffer):
+
+```
+TECHENDERXGESARMEEDENMERSCHDURMEINGARNAUFESERSCHLESIENANZIT
+UNTENSEINDERSTENNDWISSERDETERESEXKTERRMTLTAA1GRISISCASS
+```
+
+Childs hat die Lücken per Elimination gefüllt (Buch S. 43). Das Projekt trennt
+beides: Struktur = bewiesen. Füllung = Kandidat.
+
+Verifikation: `python3 analysis/richi_222_reconstruct.py`
+
+### RICHI-274 / RICHI-338 — verifiziert
+
+Zwei Childs-Nachrichten vom 30.10.1918, Schlüssel `Oct28-31`. Die im Buch
 dokumentierte Beziehung (RICHI-274 = RICHI-338 minus drei einleitende Zeilen)
-wird durch die Entschluesselung **im Kern bestaetigt**: RICHI-338 beginnt mit
-dem Praefix „FUER SAUL WEINREICH DOPPELPUNKT", danach folgt derselbe Text.
-Die Klartexte weichen danach allerdings ab (Aehnlichkeit ~0.77), vermutlich
-wegen OCR-Fehlern in der RICHI-338-Tabelle. Kein neuer Schluessel und
-keine neue Methode — der Schluessel `Oct28-31` stammt aus der Lasry-Liste,
-die Tabellen aus dem OCR des Childs-Buchs. Neu ist allein, dass dieser
-bisher unverifizierte Schluessel erstmals an echtem Klartext geprueft ist.
+wird bestätigt: RICHI-338 beginnt mit dem Präfix „FUER SAUL WEINREICH
+DOPPELPUNKT", danach folgt derselbe Text. Die Klartexte weichen danach ab
+(Ähnlichkeit ~0,77) — vermutlich OCR-Fehler in der RICHI-338-Tabelle.
 
-| | RICHI-274 | RICHI-338 |
-|---|---|---|
-| Tabelle | 15 Zeilen × 18 Zeichen | 18 Zeilen × 18 Zeichen |
-| Quelle | `childs_djvu.txt` Index 76326 | `childs_djvu.txt` Index 77542 |
-| Score | **−18.25** (100 hits) | **−21.46** (90 hits) |
+Neu ist allein, dass der Schlüssel `Oct28-31` erstmals an echtem Klartext
+geprüft ist. Eingetragen in `data/childs_additional.py`.
 
-- **Schluessel:** `Oct28-31` (n=33) — bisher als **UNVERIFIED** gefuehrt,
-  jetzt an zwei unabhaengigen Klartexten **verifiziert**.
-- **Permutation:** `6-15-12-16-5-7-14-4-13-8-11-1-17-2-10-3-18-9`
-  (Rangordnung, direkt als `perm` an `untranspose`).
-- **Leserichtung:** spaltenweise (Spalte 1..18), dann `untranspose(ct, perm)`.
+### RICHI-240 — verifiziert, nicht selbst gelöst
 
-Klartext RICHI-274:
-`DRAHTETOBVONEURENKAEUFENBEREITSABTRANSPORTEERFOLGTSINDEVENTUELLWANNUNDWOHINSOLCHEERFOLGENWERDENUNDWIEWEITERTRANSPORTGEDACHTISTXXDEUTZIT`
+Der Artikel „Another WWI German Radio Cipher Falls to GPT-6 Astra"
+(prinzai.com, 19.09.2026) behandelt RICHI-240 (11.11.1918). Von 240 Zeichen
+sind nur 220 überliefert. Astra ergänzte die 20 fehlenden Zeichen zwischen
+Zeile 4 und 5 (`VFFXX DXXVV XDXDX GXXAF`) und bestimmte drei Ziffern über ein
+französisches Aufklärungstelegramm (Franchet d'Esperey an Clemenceau/Foch,
+19.11.1918) → **7, 9, 6**.
 
-Klartext RICHI-338 (mit den drei Praefix-Zeilen):
-`FUERXSAULXWEINREICHXDOPPELPUNKTXDRAHTETOBVONEURENKAEUF1REH6TIENABTRANSPORT7ERFOLGNNSN24VHLTUELLWANNUNDWOHINSOLCHEERFOLGENWERDEXUNDWIEWEITERTRANSPORTGEDACHTISTXXDE`
+Klartext: *An Oberste Heeresleitung. 11. Armee: Alpenkorps im Raum
+Peterreve–Verbasz. 217.–219. Divisionen und 6. Reserve-Division an der Linie
+Nagybecskerek–Versec. Versec von Serben besetzt.* — Historisch bestätigt: Die
+deutsche Armee zog sich am 10.11.1918 aus Vrsac zurück; serbische Einheiten
+rückten am 11.11. um 03:38 Uhr ein — wenige Stunden nach dem Funkspruch.
 
-Deutsch: *Fuer Saul Weinreich Doppelpunkt: Drahtet ob von euren Kaeufen
-Abtransporte erfolgt sind. Eventuell wann und wohin solche erfolgen werden
-und wie weiter Transport gedacht ist.*
+**Hinweis:** RICHI-240 wurde **nicht von diesem Projekt** gelöst, sondern
+nachgerechnet. Und es ist nicht Teil des Korpus, daher im Code nicht
+abgebildet.
 
-Eingetragen in `data/childs_additional.py` (`RICHI_274_TABLE`,
-`RICHI_338_TABLE`, `RICHI_274_338_PERM`, `RICHI_274_338_KEY`,
-`RICHI_274_PLAINTEXT`, `RICHI_338_PLAINTEXT`, `RICHI_274_READING`,
-`RICHI_338_READING`).
+### Astras Methode — die Lehre daraus
 
-## Naechster logischer Schritt (CoT-Fahrplan)
+GPT-6 Astra hat bei RICHI-170 und RICHI-240 **nicht den Code gebrochen**. In
+beiden Fällen waren die Schlüssel bereits bekannt und veröffentlicht. Der
+Engpass war nie die Kryptographie, sondern die **Datenqualität**.
 
-Aus der Erkenntnis „Schluessel bekannt, Daten beschaedigt“ folgt eine klare
-Kette. Jede Stufe hat ein **Abbruchkriterium** — erst wenn es erfuellt ist,
-ist die naechste Stufe sinnvoll.
+Astras Vorgehen in drei Schritten:
 
-```mermaid
-flowchart TD
-    A[Stufe 0: Problemklassifikation] --> B[Stufe 1: Konflikt-Analyse]
-    B --> C{0 Konflikte?}
-    C -->|ja| D[Geloest: Klartext ausgeben]
-    C -->|nein| E[Stufe 2: Fehler-Lokalisierung]
-    E --> F[Stufe 3: Luecken-Suche]
-    F --> G[Stufe 4: Externe Verifikation]
-    G --> H[Stufe 5: Roundtrip-Beweis]
-```
+1. **Schlüssel aus der Literatur nehmen** — nicht suchen.
+2. **Beschädigte Zeichen ergänzen** — Sprachmuster-Scoring über verschiedene
+   Anordnungen der fehlenden Symbole.
+3. **Restlücken mit externem Wissen schließen** — das französische
+   Aufklärungstelegramm lieferte die Ziffern.
 
-### Stufe 0 — Problemklassifikation (pro Seite)
-**Frage:** Ist der Schluessel bekannt und das Chiffrat intakt?
+Das deckt sich mit Lasrys Original-Aussage: *„the challenge is to understand
+how the cryptograms were MUTILATED or AFFECTED, probably by RECEPTION
+PROBLEMS, or maybe even by WRONG TRANSMISSION or ENCODING."*
 
-- Schluessel bekannt? → `data/solutions.py` nennt ihn pro Seite.
-- Chiffrat intakt? → `decrypt(corpus[page], perm, sub)` gegen
-  `langmodel.score` pruefen (Schwelle −24).
+**Konsequenz:** Der produktive Ansatz ist nicht Perm+Quadrat-Suche, sondern
+**Fehlerrekonstruktion bei bekanntem Schlüssel** — genau das, was
+`solvers/conflict_solver.py` verfolgt.
 
-**Ergebnis fuer unseren Korpus:** 12 Seiten geloest (Schluessel bekannt),
-10 ungeloest. Von den 10 sind laut `corpus_corrected.py` mindestens 2
-(105, 146) reine Transkriptionsfehler-Faelle.
+## Die Konfliktzahl als Beweis
 
-### Stufe 1 — Konflikt-Analyse (exaktes Kriterium)
-**Werkzeug:** `solvers/conflict_solver.py`
+**Werkzeug:** `analysis/rank_conflicts.py` (`--validate`, `--unsolved`, `--blind`)
 
-Bei korrektem Quadrat + korrekter Permutation darf jede Quadratzelle nur
-**EINEN** Klartextwert haben. Jeder Widerspruch ist ein **bewiesener**
-Fehler im Chiffrat — kein statistisches Signal.
-
-```
-Konfliktzahl == 0  <=>  Chiffrat + Quadrat + Permutation konsistent
-```
-
-**Abbruchkriterium:** 0 Konflikte → fertig. Sonst weiter zu Stufe 2.
-
-### Stufe 2 — Fehler-Lokalisierung
-**Werkzeug:** `analysis/repair_171.py` (`edit_alignment`)
-
-Levenshtein-Alignment mit Backtracking liefert die **minimale** Zahl von
-Einfuegungen/Loeschungen/Ersetzungen und deren **Positionen**.
-
-- **Nicht** Greedy verwenden (erkennt nur Einfuegungen, halluziniert).
-- Ergebnis fuer Seite 171: Edit-Distanz 70 (8 ins, 4 del, 58 sub) —
-  Fehlerrate 22.3%, Hotspot bei Position 150–249.
-
-**Abbruchkriterium:** Fehlerpositionen bekannt → Stufe 3.
-
-### Stufe 3 — Luecken-Suche (Astras Kernschritt)
-**Werkzeug:** `analysis/search_fix.py`, `analysis/fix_search.py`
-
-Wenn Zeichen **fehlen** und die Position unbekannt ist:
-1. Kandidaten-Anordnungen der fehlenden Zeichen durchprobieren.
-2. Jeden Kandidaten entschluesseln und mit `langmodel.score` +
-   `word_hits` bewerten.
-3. **Zufalls-Baseline derselben Laenge messen** — sonst ist der Score
-   nicht interpretierbar (siehe Sackgassen).
-
-**Astras Trick:** Nicht blind alle Positionen, sondern zuerst nach
-**halb-lesbaren Fragmenten** suchen (`11XARM?E`, `ALPEN?ORPS`) — die
-verraten die richtige Einfuegestelle.
-
-**Abbruchkriterium:** Lesbarer Klartext (Score deutlich ueber Baseline).
-
-### Stufe 4 — Externe Verifikation
-**Werkzeug:** noch nicht implementiert
-
-Wenn Zeichen aus dem Chiffrat allein **nicht bestimmbar** sind (z.B. Ziffern
-aus {5,6,7,8,9}), muss externes Wissen herangezogen werden:
-- Historische Dokumente (Telegramme, Divisionslisten, Ortschroniken).
-- Militaerische Nomenklatur (Einheiten, Orte, Rangbezeichnungen).
-
-**Astras Beispiel:** Franz. Telegramm vom 19.11.1918 → Ziffern 7, 9, 6.
-
-**Abbruchkriterium:** Alle Luecken gefuellt und plausibilisiert.
-
-### Stufe 5 — Roundtrip-Beweis
-**Werkzeug:** `data/corpus_corrected.py` (`verify`)
-
-Der **einzige gueltige Test**:
-```python
-encrypt(pt_rekonstruiert, perm, sub) == original_ct
-```
-
-Bigramm-Multimengen-Vergleiche sind **untauglich** (die Transposition
-sortiert Zeichen um, nicht Bigramme).
-
-**Abbruchkriterium:** Exakter Match → Seite ist geloest.
-
-### Konkrete naechste Aktionen
-
-| # | Aktion | Werkzeug | Aufwand | Status |
-|---|---|---|---|---|
-| 1 | `conflict_solver.py` auf alle ungeloesten Seiten | vorhanden | klein | **erledigt** |
-| 2 | Konfliktzahl als Ranking-Metrik nutzen | `rank_conflicts.py` | klein | **erledigt** |
-| 3 | `edit_alignment` auf die Top-3-Kandidaten anwenden | vorhanden | mittel | offen |
-| 4 | Luecken-Suche mit Zufalls-Baseline | `search_fix.py` erweitern | mittel | offen |
-| 5 | Externe Quellen fuer Ziffern/Eigennamen erschliessen | neu | gross | offen |
-
-### Ergebnis von Aktion 1+2 (`analysis/rank_conflicts.py`)
-
-**Das exakte Kriterium ist validiert.** Gegen die verifizierten Klartexte der
-geloesten Seiten:
+Gegen die verifizierten Klartexte der gelösten Seiten:
 
 | Seite | Key | ORIG-CT | Konflikte | KORR-CT | Konflikte |
 |---|---|---|---|---|---|
@@ -561,25 +456,22 @@ geloesten Seiten:
 | 164b | Nov7-9 | 136 | 42 | 180 | **0** |
 | 153a | Nov13-15a | 132 | 34 | 352 | **0** |
 
-**11/11 geloeste Seiten: exakt 0 Konflikte nach der Korrektur, 34–107 vorher.**
-Das Kriterium trennt scharf — kein Schwellenwert, kein Graubereich.
+**11/11 gelöste Seiten: exakt 0 Konflikte nach der Korrektur, 34–107 vorher.**
 
 **Aber: Es gibt kein brauchbares blindes Ersatzkriterium.** Zwei Kandidaten
-wurden geprueft und verworfen (`--blind`):
+wurden geprüft und verworfen:
 
 | Kriterium | Befund |
 |---|---|
-| **Zell-Reinheit** (Anteil des haeufigsten Werts je Zelle) | **Unbrauchbar.** Geloeste Seiten haben *niedrigere* Reinheit (0.083–0.132) als ungeloeste (0.085–0.190). Korreliert **negativ** mit Korrektheit — bei falschem Schluessel streut die Transposition weniger. |
-| **Zellenzahl** (belegte Quadratzellen) | **Schwach.** Richtiger Schluessel liefert nur in **5/10** Faellen die minimale Zellenzahl. Besser als Zufall, aber kein Beweis. |
+| **Zell-Reinheit** (Anteil des häufigsten Werts je Zelle) | Unbrauchbar. Gelöste Seiten haben *niedrigere* Reinheit als ungelöste. Korreliert **negativ** mit Korrektheit. |
+| **Zellenzahl** (belegte Quadratzellen) | Schwach. Der richtige Schlüssel liefert nur in 5/10 Fällen die minimale Zellenzahl. Besser als Zufall, aber kein Beweis. |
 
-**Konsequenz:** Fuer die ungeloesten Seiten muss der Klartext
-**kandidatenweise geraten** und die Konfliktzahl **minimiert** werden — genau
-das tut `solvers/conflict_solver.py`. Das Ranking kann die Auswahl nicht
-abkuerzen.
+**Konsequenz:** Für ungelöste Seiten muss der Klartext kandidatenweise geraten
+und die Konfliktzahl minimiert werden — genau das tut `conflict_solver.py`.
 
-### Uebersicht der ungeloesten Seiten (`--unsolved`)
+## Die ungelösten Seiten
 
-| Seite | CT | Bigramme | Zellen | Luecken (`-`) |
+| Seite | CT | Bigramme | Zellen | Lücken |
 |---|---|---|---|---|
 | 73 | 176 | 88 | 31 | 1 |
 | 152 | 104 | 52 | 23 | 0 |
@@ -587,19 +479,83 @@ abkuerzen.
 | 158 | 240 | 120 | 32 | 1 |
 | 170 | 106 | 53 | 25 | 0 |
 | 176b | 220 | 110 | 35 | 0 |
-| 215 | 237 | 118 | 32 | 9 |
 | 187b | 142 | 71 | 28 | 0 |
 | 189 | 84 | 42 | 21 | 5 |
 | 198 | 165 | 82 | 32 | 0 |
+| 215 | 237 | 118 | 32 | 9 |
 | 217 | 170 | 85 | 35 | 0 |
 
-**Priorisierung nach Reparierbarkeit:** Seiten mit **0 Luecken** (152, 170,
-176b, 187b, 198, 217) sind ohne externe Quellen angreifbar. Seiten mit vielen
-Luecken (153b: 15, 215: 9, 189: 5) brauchen Stufe 4 (externe Verifikation).
+Seite 217 steht mit in der Tabelle, weil das *Korpus-Chiffrat* unkorrigiert
+ist — seine Lösung (`TRUPPENVERSCHIEBUNG`) ist aber bewiesen und in
+`analysis/verify_article_claim.py` reproduziert.
 
-**Empfehlung fuer Aktion 3:** Mit **Seite 217** beginnen — sie hat 0 Luecken,
-170 Zeichen, und der Schluessel `TRUPPENVERSCHIEBUNG` ist aus Childs' Buch
-bekannt (siehe Abschnitt „Seite 217“). Danach 170 und 152 (klein, 0 Luecken).
+**Priorisierung nach Reparierbarkeit:** Seiten mit **0 Lücken** (152, 170,
+176b, 187b, 198) sind ohne externe Quellen angreifbar. Seiten mit vielen
+Lücken (153b: 15, 215: 9, 189: 5) brauchen externe Verifikation. 217 ist
+gelöst — der nächste Kandidat ist **170** (0 Lücken), dann **152**.
+
+## Der Fahrplan
+
+Aus der Erkenntnis „Schlüssel bekannt, Daten beschädigt" folgt eine klare
+Kette. Jede Stufe hat ein **Abbruchkriterium**.
+
+```mermaid
+flowchart TD
+    A[Stufe 0: Problemklassifikation] --> B[Stufe 1: Konflikt-Analyse]
+    B --> C{0 Konflikte?}
+    C -->|ja| D[Gelöst: Klartext ausgeben]
+    C -->|nein| E[Stufe 2: Fehler-Lokalisierung]
+    E --> F[Stufe 3: Lücken-Suche]
+    F --> G[Stufe 4: Externe Verifikation]
+    G --> H[Stufe 5: Roundtrip-Beweis]
+```
+
+- **Stufe 0 — Klassifikation:** Ist der Schlüssel bekannt, ist das Chiffrat
+  intakt? 12 Seiten gelöst, 10 ungelöst.
+- **Stufe 1 — Konflikt-Analyse:** Bewiesene Fehler zählen
+  (`conflict_solver.py`). 0 Konflikte → fertig.
+- **Stufe 2 — Fehler-Lokalisierung:** Levenshtein-Alignment mit Backtracking
+  (`repair_171.py`). Ergebnis Seite 171: Edit-Distanz 70, Fehlerrate 22,3 %,
+  Hotspot bei Position 150–249. *Nicht* Greedy verwenden — der erkennt nur
+  Einfügungen.
+- **Stufe 3 — Lücken-Suche:** Kandidaten-Anordnungen durchprobieren und mit
+  Sprachscore bewerten (`search_fix.py`, `fix_search.py`). Immer die
+  Zufalls-Baseline derselben Länge messen — sonst ist der Score nicht
+  interpretierbar.
+- **Stufe 4 — Externe Verifikation:** Historische Dokumente für Ziffern und
+  Eigennamen (bei RICHI-240 erfolgreich vorgemacht).
+- **Stufe 5 — Roundtrip-Beweis:** `encrypt(pt, perm, sub) == original_ct` —
+  der einzige gültige Test. Bigramm-Multimengen-Vergleiche sind untauglich.
+
+| Aktion | Status |
+|---|---|
+| `conflict_solver.py` auf alle ungelösten Seiten | **erledigt** |
+| Konfliktzahl als Ranking-Metrik (`rank_conflicts.py`) | **erledigt** |
+| Seite 217 lösen (0 Lücken, Schlüssel bekannt) | **erledigt** |
+| RICHI-264 und RICHI-222 aus dem Childs-Buch | **erledigt** |
+| Seite 170 (0 Lücken) mit Stufe 3 angreifen | offen |
+| Lücken-Suche mit Zufalls-Baseline systematisieren | offen |
+| Externe Quellen für Ziffern/Eigennamen erschließen | offen |
+
+## Sackgassen
+
+Diese Wege wurden gegangen und verworfen. Die Lehren stehen hier, damit
+niemand sie zweimal geht:
+
+- **Friedman-Ansatz** (IoC/Bigramm-MI zur Spaltenrekonstruktion): scheitert
+  grundsätzlich bei diesen kurzen Texten mit Zufallsquadrat.
+- **Trigramm-Modell als Hauptkriterium:** aktiv schädlich — das echte Quadrat
+  ist kein lokales Optimum (4 von 630 Nachbarn sind besser).
+- **`word_hits` als alleinige Zielfunktion:** Plateau — 107 Swaps liefern
+  denselben Wert. Erst die Beschränkung auf die tatsächlich genutzten
+  Quadrat-Positionen beseitigt das Plateau.
+- **Greedy-Alignment** zur Fehlerkorrektur: defekt (erkennt nur Einfügungen).
+  Immer Edit-Distance-Alignment verwenden.
+- **Wort-Sperrung** erkannter Wörter: verschlechtert das Ergebnis.
+- **Militär-Wörterbuch** mit kurzen Abkürzungen: verschlechtert den Solver.
+- **Blind-Suche nach Perm+Quadrat:** löst das falsche Problem — beide
+  Komponenten sind für die meisten Seiten bereits bekannt (siehe `KEYS`).
+- **Anomalie-Reparatur durch Zeichen-Rückdrehen:** Artefakt (siehe unten).
 
 ## Anomalie-Scan: fehlende Zeichen in Bigramm-Positionen
 
@@ -607,8 +563,8 @@ bekannt (siehe Abschnitt „Seite 217“). Danach 170 und 152 (klein, 0 Luecken)
 `--repair`).
 
 Ausgangspunkt war Seite 170: Dort kommt das ADFGVX-Zeichen `D` als **erstes**
-Zeichen eines Bigramms (Position 1 = Polybius-**Zeile**) **nie** vor. Der Scan
-ueber alle 22 Seiten zeigt: Das ist **nicht einzigartig**.
+Zeichen eines Bigramms (Polybius-**Zeile**) **nie** vor. Der Scan über alle
+22 Seiten zeigt: Das ist nicht einzigartig.
 
 | Seite | Position | fehlendes Zeichen | N (Bigramme) | P(Gleichverteilung) |
 |---|---|---|---|---|
@@ -616,115 +572,45 @@ ueber alle 22 Seiten zeigt: Das ist **nicht einzigartig**.
 | 152 | P2 (Spalte) | `G` | 52 | 7.6e-05 |
 | 170 | P1 (Zeile) | `D` | 53 | 6.4e-05 |
 
-Alle anderen 19 Seiten — **inklusive aller 12 geloesten** — haben in beiden
+Alle anderen 19 Seiten — **einschließlich aller gelösten** — haben in beiden
 Positionen alle 6 Zeichen.
 
-**Wichtig:** Ein fehlendes Zeichen heisst *nicht*, dass Zeichen fehlen. Es
-heisst: An **allen** Stellen, wo dieses Zeichen stehen sollte, wurde etwas
+**Wichtig:** Ein fehlendes Zeichen heißt nicht, dass Zeichen fehlen. Es
+heißt: An **allen** Stellen, wo dieses Zeichen stehen sollte, wurde etwas
 anderes transkribiert. Das ist ein **systematischer** Fehler.
 
-### Ist das ein Laengen-Artefakt? Nein.
+**Kein Längen-Artefakt.** Monte-Carlo mit den korrigierten CTs der gelösten
+Seiten, gekürzt auf die jeweilige Länge (200 Stichproben pro Seite): Bei
+Zufallstext ist P(fehlt) < 0,003. Bei den drei anomalen Seiten: 100 %.
+Die drei Seiten sind zwar die kürzesten des Korpus (Ränge 1, 3, 4), aber
+Rang 2 (153b) und Rang 5 (187b) haben **keine** Anomalie — Länge allein
+erklärt es nicht.
 
-Monte-Carlo mit den korrigierten CTs der geloesten Seiten, gekuerzt auf die
-jeweilige Laenge (200 Stichproben pro Seite):
-
-| N | P(fehlt P1) | P(fehlt P2) |
-|---|---|---|
-| 42 | 0.017 | 0.057 |
-| 52 | 0.000 | 0.005 |
-| 53 | 0.000 | 0.003 |
-
-Bei Zufallstext: P < 0.003. Bei den drei anomalen Seiten: **100 %**.
-=> **Echtes Signal, P < 0.001.**
-
-Die drei anomalen Seiten sind die drei kuerzesten des Korpus (Raenge 1, 3, 4
-von 22). Aber Rang 2 (153b, 46 Bigramme) und Rang 5 (187b, 71) haben **keine**
-Anomalie — Laenge allein erklaert es also nicht.
-
-### Morse-Hypothese
-
-ADFGVX-Zeichen sind Morsecodes:
+**Morse-Hypothese.** ADFGVX-Zeichen sind Morsecodes:
 
 | A | D | F | G | V | X |
 |---|---|---|---|---|---|
 | `.-` | `-..` | `..-.` | `--.` | `...-` | `-..-` |
 
 `D` (`-..`) und `G` (`--.`) unterscheiden sich um **einen** Punkt/Strich.
-`D` (`-..`) und `X` (`-..-`) unterscheiden sich um **ein angehaengtes**
-Zeichen. Bei schwachem Signal (QSB) ist genau das die typische Verwechslung.
+`D` und `X` (`-..-`) um **ein angehängtes** Zeichen. Bei schwachem Signal
+(QSB) ist genau das die typische Verwechslung. Das erklärt alle drei
+Anomalien: `D` wurde als `G` oder `X` gelesen (bei 170 teilen sich `G` und
+`X` die Fehlmenge von `D` etwa 50/50).
 
-Das erklaert alle drei Anomalien:
+**Der Reparatur-Versuch war ein Artefakt.** Greedy-Hill-Climbing (ersetze
+`G`/`X` durch `D`, wenn der Sprachscore steigt) hob den Score auf allen
+Seiten — auch auf den **gelösten** (+6,93 dort, +3,23 auf den anomalen). Der
+Algorithmus flutet jeden Text mit dem häufigsten Zeichen. Verworfen.
 
-- **170:** `D` fehlt P1 → `D` wurde als `G` oder `X` gelesen
-- **152:** `G` fehlt P2 → `G` wurde als `D` oder `X` gelesen
-- **189:** `D` fehlt P2 → `D` wurde als `G` oder `X` gelesen
-
-Bei 170 teilen sich `G` (+9.8 Prozentpunkte) und `X` (+8.0) die Fehlmenge von
-`D` (−17.0) etwa 50/50 → zwei Verwechslungspfade.
-
-### Reparatur-Versuch: ARTEFAKT (verworfen)
-
-Greedy-Hill-Climbing (ersetze `G`/`X` an Position 1 durch `D`, wenn der
-Sprachscore steigt) liefert auf den anomalen Seiten:
-
-| Seite | Basis | Repariert | Delta | Schritte |
-|---|---|---|---|---|
-| 170 | −29.93 | −26.70 | **+3.23** | 35 |
-| 152 | −30.86 | −27.35 | **+3.51** | 40 |
-| 189 | −32.62 | −27.88 | **+4.74** | 34 |
-
-Auf den ersten Blick ein Durchbruch (P(Zufall ≥ echt) = 0.000). **Aber der
-Kontrolltest auf geloesten Seiten entlarvt ihn:**
-
-| Seite | Basis | Repariert | Delta |
-|---|---|---|---|
-| 105 | −31.33 | −28.36 | +2.97 |
-| 109 | −31.14 | −25.87 | +5.27 |
-| 146 | −31.59 | −28.75 | +2.84 |
-| 171 | −32.63 | −30.34 | +2.30 |
-| 187 | −30.17 | −27.16 | +3.02 |
-| 176a | −31.14 | −27.58 | +3.55 |
-| 132 | −29.74 | −26.40 | +3.35 |
-| 164a | −33.23 | −26.53 | **+6.69** |
-| 164b | −33.06 | −26.13 | **+6.93** |
-| 153a | −31.25 | −27.68 | +3.56 |
-
-Die **geloesten** Seiten zeigen sogar **groessere** Deltas (+6.93) als die
-anomalen (+3.23). Der Algorithmus flutet jeden Text mit dem haeufigsten
-Zeichen und hebt damit den Score — unabhaengig davon, ob eine Anomalie
-vorliegt. Die „reparierten“ Texte sind auch nicht lesbar (fast nur `D` und
-`G`).
-
-**=> Der Reparatur-Ansatz ist ein Artefakt. Verworfen.**
-
-### Fazit
+**Fazit:**
 
 1. Die **Beobachtung** (fehlendes Zeichen) ist echt und signifikant.
-2. Die **Reparatur** (Zeichen zurueckdrehen) ist ein Artefakt.
-3. Die richtige Frage lautet nicht „wie repariere ich das?“, sondern
-   „warum fehlt das Zeichen genau bei diesen drei kurzen Seiten?“.
-4. Die Morse-Hypothese ist plausibel, aber nicht beweisbar, solange wir
-   nicht wissen, **welche** `G`/`X` eigentlich `D` waren.
-5. Kryptanalytisch bleibt der Korpus erschoepft. Der Engpass ist die
-   **Quelle** (Transkription), nicht das Verfahren.
-
-## Status
-
-| Kategorie | Anzahl |
-|---|---|
-| Korpus-Seiten | 22 |
-| Geloeste Seiten | 12 |
-| Ungeloeste Seiten | 10 |
-| Bekannte Schluessel | 14 |
-| Anomalie-Seiten (fehlendes Zeichen) | 3 (170, 152, 189) |
-
-Die 10 ungeloesten Seiten sind beschaedigt; ihre Loesung erfordert
-Fehlerkorrektur im Chiffrat, nicht nur das Finden des Schluessels.
-
-Drei Seiten (170, 152, 189) zeigen zusaetzlich ein **fehlendes Zeichen** in
-einer Bigramm-Position — ein systematischer Transkriptionsfehler, vermutlich
-Morse-Verwechslung bei schwachem Signal. Details im Abschnitt
-„Anomalie-Scan“.
+2. Die **Reparatur** (Zeichen zurückdrehen) ist ein Artefakt.
+3. Die Morse-Hypothese ist plausibel, aber nicht beweisbar, solange wir nicht
+   wissen, **welche** `G`/`X` eigentlich `D` waren.
+4. Kryptanalytisch ist der Korpus erschöpft. Der Engpass ist die **Quelle**
+   (Transkription), nicht das Verfahren.
 
 ## Quellen
 
@@ -740,10 +626,10 @@ Morse-Verwechslung bei schwachem Signal. Details im Abschnitt
 - prinz (Alex Willen), *Another WWI German Radio Cipher Falls to GPT-6 Astra*,
   19.09.2026 — <https://www.prinzai.com/p/another-wwi-german-radio-cipher-falls>
   (RICHI-240).
-- Franchet d'Esperey an Clemenceau/Foch, franz. Aufklaerungstelegramm vom
+- Franchet d'Esperey an Clemenceau/Foch, franz. Aufklärungstelegramm vom
   19.11.1918 — <https://real-eod.mtak.hu/19844/13/documents.pdf#page=153>
-  (historische Bestaetigung der Ziffern 7/9/6 in RICHI-240).
-- Liste der deutschen ADFGVX-Schluessel Sep–Dez 1918 —
+  (historische Bestätigung der Ziffern 7/9/6 in RICHI-240).
+- Liste der deutschen ADFGVX-Schlüssel Sep–Dez 1918 —
   <https://scienceblogs.de/klausis-krypto-kolumne/files/2017/02/adfgvx_keys.pdf>
 
 ## Lizenz
