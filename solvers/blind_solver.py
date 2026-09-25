@@ -22,30 +22,9 @@ _sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)
 from bootstrap import setup
 setup()
 
-from core.adfgvx import ALPHA, FULL, clean
-from core import langmodel
-
-
-def untranspose(ct: str, perm: list[int]) -> str:
-    n = len(perm)
-    length = len(ct)
-    rows = (length + n - 1) // n
-    rest = length % n
-    if rest == 0:
-        rest = n
-    collen = [rows if i < rest else rows - 1 for i in range(n)]
-    order = sorted(range(n), key=lambda c: perm[c])
-    cols: list[str | None] = [None] * n
-    pos = 0
-    for c in order:
-        cols[c] = ct[pos:pos + collen[c]]
-        pos += collen[c]
-    return "".join(
-        cols[c][r]  # type: ignore[index]
-        for r in range(rows)
-        for c in range(n)
-        if r < len(cols[c])  # type: ignore[arg-type]
-    )
+from core.adfgvx import ALPHA, FULL, clean, untranspose
+from core.fitness import fitness as _fitness, fitness_parts
+from solvers.base import Budget, SolverResult, check_solution, resolve_case
 
 
 def decrypt_sq(bigrams: str, square: str) -> str:
@@ -55,38 +34,47 @@ def decrypt_sq(bigrams: str, square: str) -> str:
     )
 
 
-def evaluate(ct: str, perm: list[int], square: str) -> float:
-    return langmodel.score(decrypt_sq(untranspose(ct, perm), square))
+def solve(ct: str, n: int, seconds: float = 60.0, restarts: int = 0,
+          seed: int = 0, verbose: bool = False) -> SolverResult:
+    """SA ueber Transposition + Substitution.
 
-
-def solve(ct: str, n: int, restarts: int = 10, iterations: int = 120000,
-          seed: int = 0, verbose: bool = False):
-    """SA ueber Transposition + Substitution."""
+    Laeuft hoechstens ``seconds`` Sekunden. Bricht ab, wenn sich der beste
+    Wert 30000 Iterationen lang nicht verbessert hat.
+    """
+    if restarts <= 0:
+        restarts = 10
     rng = random.Random(seed)
-    best_overall = (-1e18, None, None)
+    budget = Budget(max_seconds=seconds, patience=30000)
+
+    best = SolverResult(name="blind_solver")
+    best_fit = -1e18
+    best_perm = list(range(n))
+    best_sq = list(FULL)
 
     for r in range(restarts):
+        if budget.should_stop():
+            break
         perm = list(range(n))
         rng.shuffle(perm)
         square = list(FULL)
         rng.shuffle(square)
-        cur = evaluate(ct, perm, "".join(square))
-        best_local = cur
-        best_state = (perm[:], square[:])
+        cur = _fitness(decrypt_sq(untranspose(ct, perm), "".join(square)))
         temp = 4.0
-        for it in range(iterations):
+        while not budget.should_stop():
             if rng.random() < 0.5:
                 # Transposition: zwei Raenge tauschen
                 i, j = rng.randrange(n), rng.randrange(n)
                 if i == j:
                     continue
                 perm[i], perm[j] = perm[j], perm[i]
-                sc = evaluate(ct, perm, "".join(square))
+                sc = _fitness(decrypt_sq(untranspose(ct, perm), "".join(square)))
+                budget.tick(sc)
                 if sc >= cur or rng.random() < pow(2.718281828, (sc - cur) / temp):
                     cur = sc
-                    if sc > best_local:
-                        best_local = sc
-                        best_state = (perm[:], square[:])
+                    if sc > best_fit:
+                        best_fit = sc
+                        best_perm = perm[:]
+                        best_sq = square[:]
                 else:
                     perm[i], perm[j] = perm[j], perm[i]
             else:
@@ -95,35 +83,66 @@ def solve(ct: str, n: int, restarts: int = 10, iterations: int = 120000,
                 if i == j:
                     continue
                 square[i], square[j] = square[j], square[i]
-                sc = evaluate(ct, perm, "".join(square))
+                sc = _fitness(decrypt_sq(untranspose(ct, perm), "".join(square)))
+                budget.tick(sc)
                 if sc >= cur or rng.random() < pow(2.718281828, (sc - cur) / temp):
                     cur = sc
-                    if sc > best_local:
-                        best_local = sc
-                        best_state = (perm[:], square[:])
+                    if sc > best_fit:
+                        best_fit = sc
+                        best_perm = perm[:]
+                        best_sq = square[:]
                 else:
                     square[i], square[j] = square[j], square[i]
             temp *= 0.99997
             if temp < 0.05:
                 temp = 0.05
-        if best_local > best_overall[0]:
-            p, sq = best_state
-            best_overall = (best_local, p, "".join(sq))
         if verbose:
-            print(f"  restart {r}: {best_local:.3f}")
+            print(f"  restart {r}: {cur:.3f} (best {best_fit:.3f})")
 
-    sc, perm, square = best_overall
-    return sc, perm, square, decrypt_sq(untranspose(ct, perm), square)
+    sq = "".join(best_sq)
+    pt = decrypt_sq(untranspose(ct, best_perm), sq)
+    sc, wh, fit = fitness_parts(pt)
+    best.perm = best_perm
+    best.square = sq
+    best.plaintext = pt
+    best.score = sc
+    best.hits = wh
+    best.fitness = fit
+    best.seconds = budget.elapsed
+    best.iterations = budget.iters
+    return best
 
 
 def main() -> None:
-    from data.corpus import CORPUS
+    import argparse
 
-    ct = clean(CORPUS["100"])
-    print(f"Seite 100 ({len(ct)} Zeichen) - Blindtest, Periode unbekannt")
-    for n in (19, 20, 21, 22):
-        sc, perm, sq, pt = solve(ct, n, restarts=4, iterations=60000, seed=7)
-        print(f"  n={n:2d}  score={sc:8.3f}  {pt[:55]}")
+    ap = argparse.ArgumentParser(description="ADFGVX-Solver: blind_solver")
+    ap.add_argument("--page", default="100")
+    ap.add_argument("--n", type=int, default=0,
+                    help="Spaltenzahl (0 = aus dem Schluessel ableiten)")
+    ap.add_argument("--seconds", type=float, default=60.0)
+    ap.add_argument("--restarts", type=int, default=0)
+    ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--quick", action="store_true")
+    ap.add_argument("--verbose", action="store_true")
+    args = ap.parse_args()
+
+    seconds = 10.0 if args.quick else args.seconds
+    ct, perm_true, sq_true, pt_true, n = resolve_case(args.page, args.n)
+    print(f"Seite {args.page} ({len(ct)} Zeichen) - Blindtest, n={n}, "
+          f"Zeitbudget {seconds:.0f}s")
+
+    res = solve(ct, n, seconds=seconds, restarts=args.restarts,
+                seed=args.seed, verbose=args.verbose)
+    res.page = args.page
+    res.n = n
+    solved, why = check_solution(res.perm, res.square, res.plaintext,
+                                 perm_true, sq_true, pt_true)
+    res.solved = solved
+    res.note = why
+    print()
+    print(res.summary())
+    print(f"\nErwartet: {pt_true[:70]}")
 
 
 if __name__ == "__main__":

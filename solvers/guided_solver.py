@@ -38,6 +38,7 @@ setup()
 
 from core.adfgvx import ALPHA, FULL, clean, untranspose, substitute
 from core import langmodel
+from solvers.base import Budget
 
 A_MAP = {c: i for i, c in enumerate(ALPHA)}
 GERMAN_ORDER = "ENISRATDHULCGMOBWFKZPVJYXQ" + "0123456789"
@@ -275,11 +276,14 @@ def solve_square(bigrams: list[str], rng: random.Random,
                  phase1_rounds: int = 60,
                  phase2_rounds: int = 40,
                  lam: float = 0.05,
-                 verbose: bool = False) -> tuple[list[str], float, int]:
+                 verbose: bool = False,
+                 budget: "Budget | None" = None) -> tuple[list[str], float, int]:
     """Zweiphasige gezielte Suche mit Restarts.
 
     Phase 1: `word_hits` maximieren (grobe Struktur finden)
     Phase 2: `score + lam*word_hits` (Feinschliff)
+
+    Bricht ab, sobald das uebergebene ``Budget`` erschoepft ist.
     """
     from solvers.analytic_solver import initial_square
 
@@ -288,6 +292,8 @@ def solve_square(bigrams: list[str], rng: random.Random,
     best_wh = -1
 
     for r in range(restarts):
+        if budget is not None and budget.should_stop():
+            break
         # Start: haeufigkeitsbasiert, danach leicht perturbieren
         start = list(initial_square("".join(bigrams), rng))
         if r > 0:
@@ -302,6 +308,8 @@ def solve_square(bigrams: list[str], rng: random.Random,
             bigrams, sq1, rng, max_rounds=phase2_rounds,
             use_score=True, lam=lam, verbose=False)
 
+        if budget is not None:
+            budget.tick(f2)
         if f2 > best_fit:
             best_fit = f2
             best_sq = sq2
@@ -366,11 +374,14 @@ def main() -> None:
         idx = sys.argv.index("--page")
         page = sys.argv[idx + 1]
         n = int(sys.argv[idx + 2]) if len(sys.argv) > idx + 2 else 20
+        seconds = float(sys.argv[idx + 3]) if len(sys.argv) > idx + 3 else 60.0
         ct = clean(CORPUS[page])
         bigrams = [ct[i:i + 2] for i in range(0, len(ct), 2)]
         rng = random.Random(1)
+        budget = Budget(max_seconds=seconds, patience=200)
         t0 = time.time()
-        sq, fit, wh = solve_square(bigrams, rng, restarts=20, verbose=True)
+        sq, fit, wh = solve_square(bigrams, rng, restarts=20, verbose=True,
+                                   budget=budget)
         pt = substitute("".join(bigrams), "".join(sq))
         hits, base, faktor = hits_signal(pt)
         print(f"\nLaufzeit : {time.time() - t0:.1f} s")

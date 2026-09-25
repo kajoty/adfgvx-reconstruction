@@ -18,6 +18,8 @@ setup()
 
 from core.adfgvx import ALPHA, FULL, clean, untranspose, substitute
 from core import langmodel
+from core.fitness import fitness as _fitness, fitness_parts
+from solvers.base import Budget
 
 # Pre-calculated Index mapping for fast execution
 A_MAP = {c: i for i, c in enumerate(ALPHA)}
@@ -95,8 +97,10 @@ def solve_square_for_perm(untransposed_ct: str, steps: int = 1500,
                 pt.append(square_list[r * 6 + c])
         return "".join(pt)
 
+    # WICHTIG: Die gemeinsame Fitness (score + lam*word_hits) statt nur
+    # langmodel.score. Nur der Score fuehrt zu Overfitting (siehe Seite 152).
     curr_pt = decode_fast(sq)
-    curr_score = langmodel.score(curr_pt)
+    curr_score = _fitness(curr_pt)
 
     best_sq = list(sq)
     best_score = curr_score
@@ -107,7 +111,7 @@ def solve_square_for_perm(untransposed_ct: str, steps: int = 1500,
         sq[i], sq[j] = sq[j], sq[i]
 
         cand_pt = decode_fast(sq)
-        cand_score = langmodel.score(cand_pt)
+        cand_score = _fitness(cand_pt)
 
         if cand_score > curr_score:
             curr_score = cand_score
@@ -120,6 +124,23 @@ def solve_square_for_perm(untransposed_ct: str, steps: int = 1500,
     return "".join(best_sq), best_score
 
 
+def _affinity_perm(ct: str, n: int) -> list[int]:
+    """Startpermutation aus der Bigramm-Affinitaet (Beam-Search).
+
+    Nutzt die bewaehrte Spaltenordnungs-Strategie aus friedman_solver.
+    Faellt bei Fehlern auf eine Zufallspermutation zurueck.
+    """
+    try:
+        from solvers.friedman_solver import split_columns, order_columns, order_to_perm
+        cols = split_columns(ct, n)
+        order = order_columns(cols, n)
+        return order_to_perm(order)
+    except Exception:
+        p = list(range(n))
+        random.Random(0).shuffle(p)
+        return p
+
+
 def solve(
     ct: str,
     key_len: int = 20,
@@ -129,6 +150,7 @@ def solve(
     sq_steps: int = 1500,
     sq_steps_fast: int = 600,
     verbose: bool = False,
+    seconds: float = 60.0,
 ) -> tuple[float, list[int], str, str]:
     """
     Analytische Haupt-Schnittstelle.
@@ -138,8 +160,19 @@ def solve(
 
     Das Quadrat wird als Warmstart weitergereicht, damit die Bewertung
     benachbarter Permutationen vergleichbar bleibt (glatter Gradient).
+
+    Die erste Permutation kommt aus einer Beam-Search ueber Bigramm-Affinitaet
+    (siehe friedman_solver.order_columns). Reines Zufalls-Shuffle findet bei
+    20 Spalten (20! Moeglichkeiten) nie die richtige Reihenfolge.
+
+    Laeuft hoechstens ``seconds`` Sekunden (Zeitbudget), damit der Solver
+    garantiert durchlaeuft.
     """
     rng = random.Random(seed)
+    budget = Budget(max_seconds=seconds)
+
+    # Gute Startpermutation aus der Bigramm-Affinitaet.
+    start_perm = _affinity_perm(ct, key_len)
 
     global_best_score = -1e18
     global_best_perm: list[int] = []
@@ -147,9 +180,17 @@ def solve(
     global_best_pt = ""
 
     for restart in range(restarts):
-        # Initialisiere Permutation
-        curr_perm = list(range(key_len))
-        rng.shuffle(curr_perm)
+        if budget.should_stop():
+            break
+        # Initialisiere Permutation: beim ersten Restart die Affinitaets-
+        # Permutation, danach leichte Varianten davon.
+        if restart == 0:
+            curr_perm = list(start_perm)
+        else:
+            curr_perm = list(start_perm)
+            for _ in range(restart):
+                i, j = rng.sample(range(key_len), 2)
+                curr_perm[i], curr_perm[j] = curr_perm[j], curr_perm[i]
 
         untrans = untranspose(ct, curr_perm)
         curr_sq, curr_score = solve_square_for_perm(
@@ -160,8 +201,14 @@ def solve(
         best_sq = curr_sq
         warm = curr_sq  # Warmstart fuer den naechsten Schritt
 
-        temp = 1.0
+        # Die Temperatur muss zur Groessenordnung der Fitness passen.
+        # Die gemeinsame Fitness liegt bei echten Texten um 40-65, nicht
+        # bei 1.0. Eine feste Starttemperatur von 1.0 friert die Suche ein.
+        temp = max(2.0, abs(curr_score) * 0.05)
+        temp_min = temp * 0.02
         for it in range(iterations):
+            if budget.should_stop():
+                break
             # Transposition-Mutation (Tausche 2 Spalten)
             cand_perm = list(curr_perm)
             i, j = rng.sample(range(key_len), 2)
@@ -170,6 +217,7 @@ def solve(
             untrans_cand = untranspose(ct, cand_perm)
             cand_sq, cand_score = solve_square_for_perm(
                 untrans_cand, steps=sq_steps_fast, rng=rng, init=warm)
+            budget.tick(cand_score)
 
             # SA-Akzeptanz: erlaubt auch mal schlechtere Permutationen
             if (cand_score >= curr_score
@@ -183,8 +231,8 @@ def solve(
                     best_perm = list(cand_perm)
                     best_sq = cand_sq
             temp *= 0.99
-            if temp < 0.05:
-                temp = 0.05
+            if temp < temp_min:
+                temp = temp_min
 
         if best_score > global_best_score:
             global_best_score = best_score
@@ -216,7 +264,7 @@ def build_case_171() -> tuple[str, list[int], str, str]:
 
 
 def test_synthetic(restarts: int = 5, iterations: int = 200,
-                   seed: int = 1) -> bool:
+                   seed: int = 1, seconds: float = 60.0) -> bool:
     """Validiert den analytischen Solver am synthetischen 171er-Testfall."""
     ct, perm_true, sq_true, pt_true = build_case_171()
     target = langmodel.score(pt_true)
@@ -225,12 +273,13 @@ def test_synthetic(restarts: int = 5, iterations: int = 200,
     print("=" * 78)
     print(f"Geheimtext : {len(ct)} Zeichen (fehlerfrei)")
     print(f"Ziel-Score : {target:.3f}")
-    print(f"Parameter  : {restarts} Restarts x {iterations} Perm-Schritte")
+    print(f"Parameter  : {restarts} Restarts x {iterations} Perm-Schritte, "
+          f"Zeitbudget {seconds:.0f}s")
     print()
 
     t0 = time.time()
     sc, perm, sq, pt = solve(ct, 20, restarts=restarts, iterations=iterations,
-                             seed=seed, verbose=True)
+                             seed=seed, verbose=True, seconds=seconds)
     dt = time.time() - t0
 
     print()
@@ -249,18 +298,18 @@ def test_synthetic(restarts: int = 5, iterations: int = 200,
 
 
 def test_page(page: str, n: int, restarts: int = 5, iterations: int = 200,
-              seed: int = 1) -> None:
+              seed: int = 1, seconds: float = 60.0) -> None:
     """Blindtest auf einer echten (fehlerhaften) Corpus-Seite."""
     from data.corpus import CORPUS
 
     ct = clean(CORPUS[page])
     print("=" * 78)
     print(f"ANALYTISCHER SOLVER — Blindtest Seite {page} "
-          f"({len(ct)} Zeichen, n={n})")
+          f"({len(ct)} Zeichen, n={n}), Zeitbudget {seconds:.0f}s")
     print("=" * 78)
     t0 = time.time()
     sc, perm, sq, pt = solve(ct, n, restarts=restarts, iterations=iterations,
-                             seed=seed, verbose=True)
+                             seed=seed, verbose=True, seconds=seconds)
     print()
     print(f"Laufzeit : {time.time() - t0:.1f} s")
     print(f"Score    : {sc:.3f}")
@@ -274,7 +323,8 @@ def main() -> None:
         idx = sys.argv.index("--page")
         page = sys.argv[idx + 1]
         n = int(sys.argv[idx + 2]) if len(sys.argv) > idx + 2 else 20
-        test_page(page, n)
+        seconds = float(sys.argv[idx + 3]) if len(sys.argv) > idx + 3 else 60.0
+        test_page(page, n, seconds=seconds)
     else:
         test_synthetic()
 

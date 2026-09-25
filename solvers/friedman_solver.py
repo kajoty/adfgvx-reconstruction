@@ -38,6 +38,7 @@ from core.adfgvx import ALPHA, FULL, KEYS, clean, decrypt, untranspose
 from data.corpus import CORPUS
 from data.solutions import SOLVED
 from core import langmodel
+from solvers.base import Budget
 
 
 # --------------------------------------------------------------------------
@@ -303,20 +304,30 @@ def decrypt_sq(bigrams: str, square: str) -> str:
 
 
 def solve_square(bigrams: str, restarts: int = 30, iterations: int = 60000,
-                 seed: int = 0) -> tuple[float, str, str]:
-    """Loest das Quadrat per Hill-Climbing mit n-Gramm-Fitness."""
+                 seed: int = 0, budget: "Budget | None" = None) -> tuple[float, str, str]:
+    """Loest das Quadrat per Hill-Climbing mit n-Gramm-Fitness.
+
+    Bricht ab, sobald das uebergebene ``Budget`` erschoepft ist. Ohne
+    Budget gilt die alte feste Iterationszahl (fuer Einzeltests).
+    """
     rng = random.Random(seed)
     best = (-1e18, None, None)
     for _ in range(restarts):
+        if budget is not None and budget.should_stop():
+            break
         sq = list(FULL)
         rng.shuffle(sq)
         cur = langmodel.score(decrypt_sq(bigrams, "".join(sq)))
         for _ in range(iterations):
+            if budget is not None and budget.should_stop():
+                break
             i, j = rng.randrange(36), rng.randrange(36)
             if i == j:
                 continue
             sq[i], sq[j] = sq[j], sq[i]
             sc = langmodel.score(decrypt_sq(bigrams, "".join(sq)))
+            if budget is not None:
+                budget.tick(sc)
             if sc >= cur:
                 cur = sc
             else:
@@ -332,7 +343,8 @@ def solve_square(bigrams: str, restarts: int = 30, iterations: int = 60000,
 # --------------------------------------------------------------------------
 
 def solve(ct: str, widths: list[int] | None = None, verbose: bool = True,
-          quick: bool = True, lo: int = 12, hi: int = 26):
+          quick: bool = True, lo: int = 12, hi: int = 26,
+          seconds: float = 60.0):
     """Verschachtelte Pipeline: Breite x Reihenfolge x Quadrat.
 
     Da der IoC-Test bei Zufallsquadraten kein Signal liefert, wird die
@@ -340,22 +352,25 @@ def solve(ct: str, widths: list[int] | None = None, verbose: bool = True,
     Bereich [lo, hi] wird die Reihenfolge rekonstruiert und das Quadrat
     geloest. Die Breite mit dem besten Score gewinnt.
 
-    Das n-Gramm-Modell aus Phase 3 liefert sofortiges Feedback, ob die
-    Transposition stimmte - daher sind Phase 2 und 3 verschachtelt.
+    Das gesamte Budget ``seconds`` wird gleichmaessig auf die Breiten
+    verteilt, damit die Pipeline garantiert durchlaeuft.
     """
     ct = clean(ct)
     if widths is None:
         widths = list(range(lo, hi + 1))
+    per_width = max(2.0, seconds / max(1, len(widths)))
     results = []
     for n in widths:
+        budget = Budget(max_seconds=per_width, patience=8000)
         cols = split_columns(ct, n)
         order = order_columns(cols, n)
         perm = order_to_perm(order)
         bigrams = untranspose(ct, perm)
         if quick:
-            sc, sq, pt = solve_square(bigrams, restarts=4, iterations=12000)
+            sc, sq, pt = solve_square(bigrams, restarts=4, iterations=12000,
+                                      budget=budget)
         else:
-            sc, sq, pt = solve_square(bigrams)
+            sc, sq, pt = solve_square(bigrams, budget=budget)
         results.append((sc, n, perm, sq, pt))
         if verbose:
             print(f"  n={n:2d}  score={sc:7.2f}  {pt[:60]}")
@@ -367,9 +382,11 @@ def main() -> None:
     import sys
 
     page = sys.argv[1] if len(sys.argv) > 1 else "171"
+    seconds = float(sys.argv[2]) if len(sys.argv) > 2 else 60.0
     ct = clean(CORPUS[page])
     print("=" * 100)
-    print(f"Friedman-Solver: Seite {page} ({len(ct)} Zeichen)")
+    print(f"Friedman-Solver: Seite {page} ({len(ct)} Zeichen), "
+          f"Zeitbudget {seconds:.0f}s")
     if page in SOLVED:
         print(f"  (geloest mit Schluessel {SOLVED[page][0]})")
     print("=" * 100)
@@ -381,7 +398,7 @@ def main() -> None:
     print("   die Breite wird ueber den n-Gramm-Score bestimmt.)")
 
     print("\nPhase 2+3: Breite x Reihenfolge x Quadrat (verschachtelt):")
-    results = solve(ct)
+    results = solve(ct, seconds=seconds)
 
     sc, n, perm, sq, pt = results[0]
     print("\n" + "=" * 100)
