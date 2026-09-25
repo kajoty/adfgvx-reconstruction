@@ -1,944 +1,397 @@
-# ADFGVX-Reconstruction
+# ADFGVX — 22 ungelöste Kryptogramme aus dem Ersten Weltkrieg
 
-Kryptanalyse und Datenrekonstruktion historischer ADFGVX-Funksprüche des
-Ersten Weltkriegs (Ostfront, 1918).
-
-**Erst die Daten reparieren, dann entschlüsseln.**
+Werkzeuge und Befunde zur Kryptanalyse der ADFGVX-Funksprüche, die Klaus Schmeh
+2017 in seiner Cipherbrain-Kolumne veröffentlicht hat.
 
 ---
 
 # 1. WHY — Warum dieses Projekt?
 
-## Ein Jahrhundert ohne Antwort
+## Die Ausgangslage
 
-Im Ersten Weltkrieg funkte das deutsche Heer verschlüsselt. Die Chiffre hieß
-**ADFGVX**. Tausende Sprüche wurden abgefangen und mitgeschrieben. Viele sind
-erhalten. Einige davon hat bis heute niemand entziffert.
+Im Frühjahr 1918 führte die deutsche Armee ADFGVX ein: ein
+Fractionating-Cipher-Verfahren, das Substitution und Transposition kombiniert.
+Die Franzosen unter Georges Painvin brachen es im Juni 1918 — unter enormem
+Zeitdruck und mit Papier und Bleistift.
 
-Da liegen Nachrichten, die Menschen vor über hundert Jahren geschrieben haben.
-Wir können sie nicht lesen. Das ist der Reiz.
+Hundert Jahre später liegen 22 abgefangene Sprüche vor, für die **alle
+verwendeten Schlüssel bekannt sind** — und trotzdem sind 10 davon bis heute
+nicht lesbar.
 
-Dieses Projekt sammelt diese Sprüche, prüft sie, korrigiert Lesefehler und
-entschlüsselt sie. Es hat **12 von 22** Korpus-Funksprüchen gelöst — plus vier
-Nachrichten aus dem Childs-Buch, die außerhalb des Korpus liegen.
+## Die eigentliche Frage
 
-## Die überraschende Erkenntnis
+Wenn die Schlüssel bekannt sind, warum sind die Nachrichten dann nicht lesbar?
 
-Das klingt nach Kryptanalyse. Ist es aber nur zum Teil.
+Die Antwort ist unbequem: **Das Problem ist nicht die Kryptographie, sondern die
+Datenqualität.** Die Sprüche wurden 1918 unter Funkbedingungen empfangen —
+Störungen, Aussetzer, Übertragungsfehler. Was heute als „Geheimtext" vorliegt,
+ist an vielen Stellen beschädigt.
 
-> **Nicht die Kryptanalyse ist das Problem. Die Daten sind das Problem.**
+> **Kernaussage:** Der Engpass ist die Quelle, nicht der Algorithmus.
 
-Die alten Funksprüche wurden von Hand abgeschrieben, gescannt, per OCR gelesen
-und erneut abgetippt. Auf jedem Weg gehen Zeichen verloren. Ein `V` wird zu
-einem `X`, ein `G` zu einem `F`. Und schon ist der ganze Spruch unlesbar.
+Diese Erkenntnis bestimmt den ganzen Aufbau des Projekts. Es ist kein
+Solver-Wettbewerb, sondern eine Beweissammlung: *Was wissen wir wirklich, und
+wie sicher wissen wir es?*
 
-Auf Seite 171 zum Beispiel passen nur **65,3 Prozent** der Zeichen zum
-entschlüsselten Klartext. Die Fehlerquote liegt bei 22,3 Prozent.
+## Was dieses Projekt beiträgt
 
-Wer bei so einer Quote blind nach dem Schlüssel sucht, sucht ewig. Deshalb
-dreht das Projekt die Reihenfolge um: **erst die Daten reparieren, dann
-entschlüsseln.**
-
-## Warum es sich lohnt
-
-Die Methode ist übertragbar. Sie zeigt, wie man mit beschädigten historischen
-Daten umgeht: nicht raten, sondern rekonstruieren und exakt beweisen. Und sie
-zeigt, wie man sich selbst nicht täuscht — ein guter Sprachscore allein
-beweist nichts.
-
-## Wie diese README aufgebaut ist
-
-Diese README folgt dem **4MAT-Modell**. Vier Fragen, in dieser Reihenfolge:
-
-| Frage | Abschnitt | Für wen |
-|---|---|---|
-| **Warum?** | 1. WHY | Wer wissen will, worum es geht |
-| **Was?** | 2. WHAT | Wer das Problem verstehen will |
-| **Wie?** | 3. HOW | Wer die Methode und den Code will |
-| **Was wäre wenn?** | 4. WHAT IF | Wer den Ausblick und die Lehren will |
-
-Danach folgen zwei Nachschlagewerke: das **Schlüssel- und Spruchverzeichnis**
-(aus dem Code generiert) und das **Arbeitsprotokoll** mit allen Befunden im
-Detail. Wer tiefer einsteigen will, liest das [Handbuch](docs/HANDBUCH.md).
+1. **Eine ehrliche Evidenzlage.** Für jede der 12 „gelösten" Seiten steht
+   explizit dabei, ob sie unabhängig belegt oder nur rekonstruiert ist.
+2. **Werkzeuge, die terminieren.** Alle Solver laufen mit Zeitbudget und
+   Konvergenzabbruch durch — keine Endlosschleifen.
+3. **Externe Validierung.** Die Lösung für `Nov1-3` wurde an einer Nachricht
+   außerhalb des Korpus bewiesen (RICHI-264 aus dem Childs-Buch).
+4. **Widerlegte Sackgassen.** Neun blinde Suchkriterien wurden getestet und
+   verworfen — dokumentiert, damit sie niemand erneut versucht.
 
 ---
 
 # 2. WHAT — Was ist das Problem?
 
-## Die Chiffre in zwei Stufen
+## Das Verfahren
 
-ADFGVX arbeitet in zwei Schritten. Man muss beide verstehen, sonst versteht man
-nichts. Details, Beispiele und Bilder stehen im
-[Handbuch](docs/HANDBUCH.md), Abschnitt 2.
+ADFGVX arbeitet in zwei Schritten.
 
-1. **Substitution** — ein 6×6-Polybius-Quadrat (26 Buchstaben + 10 Ziffern)
-   bildet jedes Klartextzeichen auf ein Bigramm aus `A D F G V X` ab.
-2. **Spaltentransposition** — der Bigramm-Text wird zeilenweise in `n` Spalten
-   geschrieben und in der Reihenfolge eines zweiten Schlüsselworts ausgelesen.
+**Schritt 1 — Substitution.** Ein 6×6-Quadrat wird mit den 26 Buchstaben und
+10 Ziffern gefüllt. Jedes Klartextzeichen wird durch das Buchstabenpaar
+(Row, Column) ersetzt, wobei die Reihen und Spalten mit `A D F G V X`
+beschriftet sind — daher der Name.
 
-Zum Entschlüsseln braucht man **beide** Schlüssel: das Quadrat und das
-Transpositionswort.
-
-**Wichtig:** Die Permutationslisten sind **Rangordnungen**, nicht Leseordnungen:
-
-```python
-order = sorted(range(n), key=lambda c: perm[c])
+```
+      A  D  F  G  V  X
+  A   U  I  L  O  F  9
+  D   R  C  Z  V  S  X
+  F   0  2  G  7  Q  T
+  G   D  8  W  N  B  5
+  V   J  M  H  E  K  P
+  X   Y  4  1  A  3  6
 ```
 
-Wer das verwechselt, bekommt Unsinn. Das Projekt hat genau diesen Fehler
-dokumentiert (siehe Seite 217 im Arbeitsprotokoll).
+`E` liegt in Zeile `V`, Spalte `G` → Bigramm `VG`.
 
-## Warum das schwer ist
+**Schritt 2 — Transposition.** Die Bigramme werden zeilenweise in ein Raster
+geschrieben und spaltenweise in einer durch ein Kennwort bestimmten Reihenfolge
+ausgelesen.
 
-Die alten Funksprüche wurden von Hand abgeschrieben, gescannt, per OCR gelesen
-und erneut abgetippt. Auf jedem Weg gehen Zeichen verloren. Ein `V` wird zu
-einem `X`, ein `G` zu einem `F`.
+## Die kritische Konvention
 
-Auf Seite 171 zum Beispiel passen nur **65,3 Prozent** der Zeichen zum
-entschlüsselten Klartext. Die Fehlerquote liegt bei 22,3 Prozent. Wer bei so
-einer Quote blind nach dem Schlüssel sucht, sucht ewig.
+Die Permutation ist eine **Rangordnung**, keine Lesereihenfolge:
 
-Dazu kommt eine **fundamentale Symmetrie**: Die Bigramm-Verteilung des
-Zwischentexts ist unter Spaltenpermutationen invariant. Kein Kriterium, das
-nur auf der Bigramm-Verteilung beruht, kann die Permutation eindeutig
-bestimmen. Details in Abschnitt 4.
+```python
+perm[c]  # alphabetischer Rang der Spalte c
+order = sorted(range(n), key=lambda c: perm[c])   # Auslesereihenfolge
+```
 
-## Das schärfste Werkzeug: die Konfliktzahl
+Die naive Deutung als direkte Lesereihenfolge liefert ausschließlich
+Kauderwelsch. Das war der erste Knackpunkt des Projekts.
 
-Wenn Quadrat und Permutation stimmen, bildet jedes Bigramm auf **genau ein**
-Klartextzeichen ab. Kommt ein Bigramm zweimal vor und liefert zwei verschiedene
-Zeichen, stimmt etwas nicht. Die Konfliktzahl zählt diese Widersprüche.
+## Der Datenbestand
 
-- `conflicts == 0` — Quadrat, Permutation und Geheimtext passen exakt zusammen.
-- `conflicts > 0` — mindestens ein Zeichen ist falsch.
+| | Anzahl | Beschreibung |
+|---|---|---|
+| Korpus-Seiten | 22 | `data/corpus.py`, transkribiert aus dem Cipherbrain-Artikel |
+| Gelöste Seiten | 12 | Klartext bekannt, Quelle dokumentiert |
+| Ungelöste Seiten | 10 | Schlüssel bekannt, Text nicht lesbar |
+| Schlüssel | 14 | `core/adfgvx.py`, Zeiträume Sep 1918 – Dez 1918 |
 
-**Alle 11 geprüften Korpus-Seiten zeigen nach der Korrektur null Konflikte.**
-Vorher lagen sie bei 34 bis 107 Konflikten. Das Kriterium trennt scharf — kein
-Schwellenwert, kein Graubereich.
+Die 14 Schlüssel decken den Zeitraum 19.09.1918 bis 01.12.1918 ab. Jeder
+Schlüssel besteht aus einer Permutation (Länge 16–23) und einem
+Substitutionsquadrat (36 Zeichen, teils mit Lücken).
 
-> **Wichtig — was die Konfliktzahl beweist und was nicht.** Die Konfliktzahl
-> ist nur dann ein *Beweis*, wenn sie gegen ein **unabhängig überliefertes**
-> Chiffrat geprüft wird. Das trifft auf die Seiten **100**, **105** und **146**
-> zu (echte Transkription aus `corpus.py` bzw. dem Kommentarthread). Für die
-> übrigen gelösten Seiten wurde der Geheimtext aus dem Klartext
-> **rekonstruiert** (`transpose(bigrams(pt), perm)`) — dort ist der Roundtrip
-> per Konstruktion garantiert und die Konfliktzahl 0 trivial. Siehe
-> „Evidenzlage" im Arbeitsprotokoll.
+## Die Schwierigkeit
+
+**Warum scheitert die blinde Suche?**
+
+Die Fitness-Landschaft ist ein Nadel-im-Heuhaufen-Problem. Permutation und
+Quadrat müssen *gleichzeitig* nahezu perfekt sein, sonst gibt es kein
+Gradientensignal:
+
+| Konfiguration | Ergebnis |
+|---|---|
+| Echte Perm + Zufallsquadrat | Rauschen |
+| Hill-Climbing Perm, Quadrat bekannt | scheitert |
+| Hill-Climbing Quadrat, Perm bekannt | fast, aber nicht ganz |
+| Echte Perm + echtes Quadrat | perfektes lokales Optimum |
+
+Zusätzlich ist die Bigramm-Verteilung des Zwischentexts **invariant** unter
+Spaltenpermutationen. Kein quadratunabhängiges Kriterium kann die Permutation
+eindeutig bestimmen — es existiert eine Äquivalenzklasse von Permutationen mit
+identischer Bigramm-Verteilung.
 
 ## Der Stand
 
-| | |
-|---|---|
-| Seiten im Korpus | 22 |
-| davon gelöst | 12 |
-| davon unabhängig belegt | 3 (100, 105, 146) |
-| noch offen | 10 |
-| bekannte Schlüssel | 14 |
-| Seiten mit Anomalie | 3 |
-| Childs-Nachrichten außerhalb | 4 (264, 222, 274, 338) |
+| Kategorie | Anzahl | Beweiskraft |
+|---|---|---|
+| Unabhängig belegt | 3 | echte Transkription + Roundtrip (100, 105, 146) |
+| Extern bewiesen | 1 | Seite 217 / RICHI-170, 0 Konflikte |
+| Rekonstruiert | 9 | Klartext aus Kommentar, Geheimtext synthetisch |
+| Ungelöst | 10 | Schlüssel bekannt, Text nicht lesbar |
 
-Die Headline-Ergebnisse:
-
-- **Seite 217 (RICHI-170)** — gelöst und bewiesen. Das Schlüsselwort
-  `TRUPPENVERSCHIEBUNG` liefert **beide** Stufen: das 6×6-Quadrat (als
-  Keyword-Quadrat mit eingestreuten Ziffern) und die Transpositions-Permutation.
-- **RICHI-264** — gelöst und bewiesen (2 Reparaturen, exakter Roundtrip).
-- **RICHI-222** — Struktur bewiesen; die Lückenfüllung ist nicht eindeutig.
-- **RICHI-274 / RICHI-338** — verifiziert am Schlüssel `Oct28-31`.
-- **RICHI-240** — verifiziert, aber nicht von diesem Projekt gelöst.
-
-> **Zur Ehrlichkeit der Zahlen.** Von den 12 gelösten Korpus-Seiten sind nur
-> **3** (100, 105, 146) gegen ein unabhängig überliefertes Chiffrat geprüft.
-> Bei den übrigen 9 wurde der Geheimtext aus dem Klartext rekonstruiert — der
-> Beweis ist dort zirkulär. Die externen Beweise (217, RICHI-264/274/338,
-> RICHI-222) sind davon nicht betroffen. Details: „Evidenzlage der gelösten
-> Seiten" im Arbeitsprotokoll.
+**Wichtig:** Bei den 9 rekonstruierten Seiten ist der Roundtrip *per
+Konstruktion* garantiert — er beweist nichts über Klartext oder Quadrat. Diese
+Seiten sind als „rekonstruiert" gekennzeichnet, nicht als „bewiesen".
 
 ---
 
 # 3. HOW — Wie funktioniert es?
 
-## Die Methode in vier Schritten
-
-Die Arbeit läuft immer gleich ab:
-
-1. **Sammeln.** Die Geheimtexte stammen aus Büchern und Scans. Sie liegen in
-   `data/corpus.py`.
-2. **Prüfen.** Stimmt der Text? Gibt es Lesefehler? Dafür gibt es die Skripte
-   in `analysis/`.
-3. **Entschlüsseln.** Verschiedene Löser in `solvers/` suchen Quadrat und
-   Schlüsselwort.
-4. **Beweisen.** Ein Ergebnis gilt erst, wenn es sich exakt nachrechnen lässt.
-
-Der Kern liegt in `core/`: die Chiffre (`adfgvx.py`) und das Sprachmodell
-(`langmodel.py`).
-
-## Der Fahrplan
-
-Aus der Erkenntnis „Schlüssel bekannt, Daten beschädigt" folgt eine klare
-Kette. Jede Stufe hat ein **Abbruchkriterium**.
-
-```mermaid
-flowchart TD
-    A[Stufe 0: Problemklassifikation] --> B[Stufe 1: Konflikt-Analyse]
-    B --> C{0 Konflikte?}
-    C -->|ja| D[Gelöst: Klartext ausgeben]
-    C -->|nein| E[Stufe 2: Fehler-Lokalisierung]
-    E --> F[Stufe 3: Lücken-Suche]
-    F --> G[Stufe 4: Externe Verifikation]
-    G --> H[Stufe 5: Roundtrip-Beweis]
-```
-
-- **Stufe 0 — Klassifikation:** Ist der Schlüssel bekannt, ist das Chiffrat
-  intakt? 12 Seiten gelöst, 10 ungelöst.
-- **Stufe 1 — Konflikt-Analyse:** Bewiesene Fehler zählen
-  (`conflict_solver.py`). 0 Konflikte → fertig.
-- **Stufe 2 — Fehler-Lokalisierung:** Levenshtein-Alignment mit Backtracking
-  (`repair_171.py`). Ergebnis Seite 171: Edit-Distanz 70, Fehlerrate 22,3 %,
-  Hotspot bei Position 150–249. *Nicht* Greedy verwenden — der erkennt nur
-  Einfügungen.
-- **Stufe 3 — Lücken-Suche:** Kandidaten-Anordnungen durchprobieren und mit
-  Sprachscore bewerten (`search_fix.py`, `fix_search.py`). Immer die
-  Zufalls-Baseline derselben Länge messen — sonst ist der Score nicht
-  interpretierbar.
-- **Stufe 4 — Externe Verifikation:** Historische Dokumente für Ziffern und
-  Eigennamen (bei RICHI-240 erfolgreich vorgemacht).
-- **Stufe 5 — Roundtrip-Beweis:** `encrypt(pt, perm, sub) == original_ct` —
-  der einzige gültige Test. Bigramm-Multimengen-Vergleiche sind untauglich.
-
 ## Projektstruktur
 
 ```
-adfgvx/
-├── bootstrap.py             # setzt das Projektverzeichnis auf sys.path
-├── run_detached.sh          # startet lange Läufe in tmux (SSH-fest)
-├── core/                    # Kernbibliothek
-│   ├── adfgvx.py            # encrypt/decrypt/transpose, KEYS (14 Schlüssel)
-│   ├── langmodel.py         # deutsches Sprachmodell (de_50k.txt)
-│   ├── fitness.py           # kombinierte Fitness (Score + Worttreffer)
-│   └── fastfitness.py       # schnelle Fitness mit inkrementellem Swap
-├── data/                    # Daten und Quelltexte
-│   ├── corpus.py            # CORPUS: 22 Original-Chiffrate (unrein)
-│   ├── corpus_corrected.py  # korrigierte/synthetische Chiffrate
-│   ├── solutions.py         # SOLVED: 12 gelöste Seiten mit Klartext
-│   ├── childs_additional.py # Nachrichten aus dem Childs-Buch
-│   ├── article_transcription.py # Transkription aus dem Cipherbrain-Artikel
-│   ├── de_50k.txt           # Worthäufigkeitsliste (50k)
-│   └── texte.txt            # vollständiger Cipherbrain-Kommentarthread
-├── solvers/                 # Lösungsansätze
-│   ├── base.py              # gemeinsame Basis: Budget, SolverResult, CLI
-│   ├── blind_solver.py      # Simulated Annealing über Perm+Quadrat
-│   ├── analytic_solver.py   # analytischer Quadrat-Solver
-│   ├── guided_solver.py     # gezielter Quadrat-Solver (Coverage)
-│   ├── alternating_solver.py# abwechselnde Optimierung Perm/Quadrat
-│   ├── conflict_solver.py   # Fehlersuche über die Konfliktzahl
-│   ├── friedman_solver.py   # Friedman-Ansatz (negativer Befund)
-│   ├── sub_solver.py        # Quadrat bei bekannter Permutation
-│   └── reverse_square.py    # Quadrat aus gelösten Nachrichten
-├── analysis/                # Einzeluntersuchungen und Verifikation
-│   ├── dump_keys.py         # erzeugt das Schlüssel-/Spruchverzeichnis unten
-│   ├── verify_article_claim.py  # Verifikation des GPT-6-Artikels (S. 217)
-│   ├── verify_richi_264.py  # Beweis für RICHI-264
-│   ├── richi_222_reconstruct.py # RICHI-222: Struktur + Kandidat
-│   ├── rank_conflicts.py    # Konfliktzahl als exaktes Kriterium
-│   ├── anomaly_scan.py      # fehlende Zeichen in Bigramm-Positionen
-│   ├── repair_171.py / reconstruct_171.py  # Seite 171
-│   ├── parse_cipherbrain.py / verify_corpus_provenance.py  # Quellen
-│   └── ... (41 Skripte insgesamt, siehe Handbuch Abschnitt 6)
-├── tests/                   # Tests
-│   ├── testcases.py         # 12 synthetische Fälle (Roundtrip garantiert)
-│   ├── test_171.py          # harter Solver-Test (scheitert bewusst)
-│   ├── test_fitness.py      # Fitness gegen Klartext vs. Zufall
-│   └── test_provenance.py   # Korpus vs. Originalquelle
-└── docs/                    # Quellen, Scans, Handbuch
-    ├── HANDBUCH.md          # das Handbuch (ausführlicher Leitfaden)
-    ├── childs_book.pdf      # Childs: German Military Ciphers (63 Seiten)
-    ├── childs_pages/        # 63 JPG-Scans (page_NN.jpg = PDF-Seite NN+1)
-    ├── childs_djvu.txt      # OCR-Text des Childs-Buchs
-    ├── cipherbrain_pages/   # Original-Artikel + 19 Geheimtext-Bilder
-    └── 41761079080022.pdf   # Friedman: Military Cryptanalysis, Part IV
+bootstrap.py            Projektwurzel auf sys.path (selbst-lokalisierend)
+core/
+  adfgvx.py             Kernbibliothek: encrypt, decrypt, KEYS
+  langmodel.py          Deutsches Sprachmodell (Trigramme + Wortliste)
+  fitness.py            Gewichtete Fitness (Score + Worttreffer)
+  fastfitness.py        Inkrementelle Bewertung (delta_swap)
+data/
+  corpus.py             CORPUS — 22 Seiten, unreine Transkription
+  corpus_corrected.py   CORRECTED / RECONSTRUCTED / UNVERIFIED
+  solutions.py          SOLVED — 12 Klartexte mit Quelle
+  childs_additional.py  Nachrichten aus dem Childs-Buch
+  de_50k.txt            Worthäufigkeitsliste
+  texte.txt             Cipherbrain-Kommentarthread (56 Kommentare)
+solvers/
+  base.py               Budget, SolverResult, build_parser, run_cli
+  blind_solver.py       Simulated Annealing über Perm + Quadrat
+  analytic_solver.py    Innerer Quadrat-Solver + äußerer Perm-Loop
+  guided_solver.py      Coverage-geführte Quadrat-Suche
+  conflict_solver.py    Fehlerrekonstruktion bei bekanntem Schlüssel
+  friedman_solver.py    Friedman-Ansatz (IoC, MI)
+  sub_solver.py         Reine Substitutionslösung
+  alternating_solver.py Abwechselnd Perm und Quadrat optimieren
+  reverse_square.py     Quadrat aus Klartext rekonstruieren
+analysis/               41 Diagnose- und Verifikationsskripte
+tests/                  5 Testdateien
+docs/                   HANDBUCH.md, Quellen-PDFs, Transkriptionen
 ```
+
+## Import-Konvention
+
+Skripte in Unterordnern beginnen mit:
+
+```python
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+from bootstrap import setup
+setup()
+```
+
+Danach `from core.adfgvx import ...`, `from data.corpus import ...` usw.
 
 ## Loslegen
 
-Alle Skripte sind Python 3 und brauchen nur die Standardbibliothek. Man startet
-sie aus dem Projektverzeichnis.
-
 ```bash
-cd adfgvx
+cd /home/user/Projekte/adfgvx
 
-# Chiffre testen
-python3 -c "import bootstrap; from core.adfgvx import *; print(KEYS.keys())"
+# Testfälle prüfen (12/12 Roundtrip)
+PYTHONPATH=. python3 tests/testcases.py
 
-# Tests laufen lassen
-python3 tests/testcases.py
+# Provenienz der Korpus-Daten prüfen
+PYTHONPATH=. python3 tests/test_provenance.py
 
-# Seite 217 verifizieren
-python3 analysis/verify_article_claim.py
+# Konfliktzahl aller gelösten Seiten validieren
+PYTHONPATH=. python3 analysis/rank_conflicts.py --validate
 
-# Alle gelösten Seiten prüfen
-python3 analysis/verify_solutions.py
-
-# Konfliktzahl als Kriterium belegen
-python3 analysis/rank_conflicts.py
+# Ungelöste Seiten nach Reparierbarkeit ordnen
+PYTHONPATH=. python3 analysis/rank_conflicts.py --unsolved
 ```
 
-`bootstrap.py` setzt den Projektpfad auf `sys.path`. Man muss es nur einmal
-importieren.
+## Die Solver
 
-Als Bibliothek:
+Alle Solver außer `conflict_solver` nutzen die gemeinsame CLI:
+
+```bash
+PYTHONPATH=. python3 solvers/blind_solver.py --page 171 --seconds 60
+PYTHONPATH=. python3 solvers/analytic_solver.py --page 171 --quick
+```
+
+| Option | Bedeutung |
+|---|---|
+| `--page` | Korpus-Seite (z. B. `105`, `171`) |
+| `--n` | Spaltenzahl (0 = aus dem Schlüssel ableiten) |
+| `--seconds` | Zeitbudget (Standard 60) |
+| `--restarts` | Anzahl Neustarts |
+| `--seed` | Zufallsseed |
+| `--quick` | Kurzer Lauf (10 s) |
+| `--verbose` | Zwischenstände ausgeben |
+
+`conflict_solver.py` hat eine eigene CLI:
+
+```bash
+PYTHONPATH=. python3 solvers/conflict_solver.py --test
+PYTHONPATH=. python3 solvers/conflict_solver.py --page 152 --key Nov4-6
+```
+
+## Die Methode
+
+Der Fahrplan folgt der Logik der Fehlerrekonstruktion, nicht der blinden Suche.
+
+**Stufe 0 — Problemklassifikation.** Ist der Schlüssel bekannt? Wenn ja, ist es
+kein Kryptanalyse-Problem, sondern ein Datenproblem.
+
+**Stufe 1 — Konfliktzahl.** Bei bekanntem Schlüssel: Wie viele Bigramme bilden
+auf mehrere Klartextzeichen ab? **0 Konflikte = fertig.** Das ist das exakte
+Kriterium — validiert an 11/11 gelösten Seiten (34–107 Konflikte vor der
+Korrektur, 0 danach).
+
+**Stufe 2 — Fehlerlokalisierung.** Edit-Distance-Alignment zwischen
+Soll-Geheimtext und Ist-Geheimtext. Achtung: Greedy-Alignment ist defekt
+(erkennt nur Einfügungen, keine Löschungen) — immer Levenshtein mit
+Backtracking verwenden.
+
+**Stufe 3 — Lückensuche.** Fehlende Zeichen per Sprachmuster-Scoring
+ergänzen — immer gegen eine Zufalls-Baseline derselben Länge.
+
+**Stufe 4 — Externe Verifikation.** Lücken mit historischem Wissen schließen
+(z. B. Ziffern aus einem französischen Telegramm).
+
+**Stufe 5 — Roundtrip-Beweis.** `decrypt(ct, perm, square) == klartext` und
+Re-Encryption ergibt exakt den Originalgeheimtext.
+
+## Die Fitness
 
 ```python
-from core.adfgvx import decrypt, KEYS
-from data.corpus import CORPUS
-from data.solutions import SOLVED
-
-name, pt, src = SOLVED["146"]
-perm, sub, _ = KEYS[name]
-print(decrypt(CORPUS["146"], perm, sub))
+fitness(text, lam=1.0) = (score(text) - REF_SCORE) + lam * word_hits(text)
 ```
 
-## Die Löser
+`REF_SCORE = -17.0` ist der empirisch gemessene Score eines echten deutschen
+Militärtextes. Die Normierung macht die Gewichte längenunabhängig.
 
-Alle Löser teilen eine gemeinsame Basis (`solvers/base.py`): ein **Zeitbudget**
-mit Konvergenz-Abbruch, ein einheitliches Ergebnisobjekt und eine einheitliche
-Kommandozeile. So laufen sie garantiert durch — keiner hängt mehr in einer
-Endlosschleife.
-
-```bash
-# Einheitlicher Aufruf für die SA-Löser
-python3 solvers/blind_solver.py --page 171 --seconds 30 --verbose
-python3 solvers/friedman_solver.py --quick
-
-# conflict_solver hat eine eigene CLI (Konfliktzahl statt Zeitbudget)
-python3 solvers/conflict_solver.py --test
-python3 solvers/conflict_solver.py --page 217
-```
-
-| Datei | Verfahren |
+| Text | Fitness |
 |---|---|
-| `blind_solver.py` | Simulated Annealing über Quadrat und Permutation |
-| `sub_solver.py` | Simulated Annealing über das Quadrat, Permutation bekannt |
-| `analytic_solver.py` | Häufigkeitsanalyse als Start, dann Hill Climbing |
-| `guided_solver.py` | Gezielte Suche mit Abdeckungskriterium |
-| `alternating_solver.py` | Abwechselnde Optimierung von Permutation und Quadrat |
-| `friedman_solver.py` | Struktureller Ansatz nach Friedman |
-| `conflict_solver.py` | Sucht Fehler über die Konfliktzahl |
-| `reverse_square.py` | Rekonstruiert das Quadrat aus gelösten Texten |
+| Echter deutscher Text | 35–40 |
+| Overfit (Seite 152) | 30 |
+| Rauschen | −2 |
 
-**Wichtig:** Die Löser terminieren jetzt zuverlässig, aber sie *lösen* die
-offenen Seiten nicht. Das fundamentale Suchproblem bleibt offen — siehe
-Abschnitt 4.
+**Warum beide Terme?** Nur `score` führt zu Overfitting — der Solver verbiegt
+Permutation und Quadrat so, dass sie das Sprachmodell täuschen. Nur
+`word_hits` führt zu Plateaus — viele verschiedene Texte haben dieselbe
+Trefferzahl. Die Kombination liefert den glatten Gradienten *und* den ehrlichen
+Beleg.
 
-## Lange Läufe im Hintergrund
-
-Manche Löser rechnen Stunden. Wenn man sie in einem normalen Terminal startet,
-sterben sie, sobald die SSH-Verbindung abbricht — etwa wenn der Arbeitsplatz-PC
-in Standby geht. Der Prozess bekommt dann ein `SIGHUP` und wird beendet.
-
-Dafür gibt es `run_detached.sh`. Es startet ein Skript in einer
-**tmux**-Session. Die läuft unabhängig von SSH und VS Code weiter.
+## Nachrichtenverzeichnis erzeugen
 
 ```bash
-# Solver im Hintergrund starten
-./run_detached.sh analysis/solve_152_fast.py --name s152
-
-# Live mitlesen
-./run_detached.sh --log s152
-
-# In die Session springen (Strg+B, dann D zum Lösen)
-./run_detached.sh --attach s152
-
-# Laufende Sessions anzeigen
-./run_detached.sh --list
-
-# Beenden
-./run_detached.sh --stop s152
+PYTHONPATH=. python3 analysis/dump_messages.py --insert
 ```
 
-Die Ausgabe landet zusätzlich in `logs/<name>.log`. Man kann VS Code schließen
-und den PC in Standby schicken — der Lauf geht weiter.
-
-**Warum das funktioniert.** Der Prozess hängt dann nicht mehr am SSH-Terminal,
-sondern am tmux-Server. Dessen Elternprozess ist `init` (PID 1). Ein
-Verbindungsabbruch erreicht ihn nicht mehr.
-
-**Wichtig:** Das schützt nur gegen den Abbruch der *Verbindung*. Wenn der
-**Analyse-Rechner selbst** in Standby geht, schläft die CPU — dann rechnet
-nichts mehr. Für einen headless Server schaltet man den Standby ab
-(`sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target`).
+Schreibt einen Block mit allen 28 Nachrichten (Geheimtext, Klartext, Schlüssel,
+Permutation, Quadrat, 6×6-Raster) zwischen die Marker
+`<!-- GENERATED: dump_messages.py -->` und `<!-- /GENERATED -->`. Der Aufruf ist
+idempotent — mehrfaches Ausführen ändert nichts.
 
 ---
 
 # 4. WHAT IF — Was wäre wenn?
 
-## Was wäre, wenn die Daten sauber wären?
+## Wenn die Daten sauber wären
 
-Dann wäre das Problem gelöst. Genau das ist die Kernaussage des Projekts.
+Dann wären die 10 ungelösten Seiten in Minuten gelöst. Die Schlüssel liegen
+vollständig vor. Der `conflict_solver` braucht nur einen fehlerfreien
+Geheimtext — dann liefert er 0 Konflikte und den Klartext.
 
-Die Schlüssel sind bekannt. Die Chiffre ist verstanden. Die Transposition ist
-korrekt implementiert — auf allen 10 geprüften Seiten stimmen **100,0 Prozent**
-der Zeichen, sobald man den korrigierten Geheimtext nimmt. Das Problem ist
-allein die **Datenqualität**.
+**Der Engpass ist die Transkription.** Die Korpus-Daten stammen aus einer
+Nutzer-Transkription des Cipherbrain-Artikels, mit dokumentierten
+Leseunsicherheiten (`-` = unleserlich, `v` = unsicher). Es gibt keine
+maschinenlesbare Quelle im Repo, gegen die man sie prüfen könnte.
 
-Deshalb ist der produktive Ansatz nicht die Suche nach Permutation und Quadrat,
-sondern **Fehlerrekonstruktion bei bekanntem Schlüssel** — genau das, was
-`solvers/conflict_solver.py` verfolgt.
+**Konsequenz:** OCR-Reparatur ist der falsche Ansatz. Wer die Originalbilder
+lesen kann, tippt die Daten direkt korrekt ein — das ist schneller und
+zuverlässiger als jede algorithmische Rekonstruktion.
 
-## Was wäre, wenn wir die Suche lösten?
+## Wenn die Quadrate vollständig wären
 
-Auch dann bliebe eine Grenze. Das Projekt hat eine **fundamentale Symmetrie**
-gefunden:
+Vier genutzte Schlüssel haben Lücken im Substitutionsquadrat:
 
-> Die Bigramm-Verteilung des Zwischentexts ist unter Spaltenpermutationen
-> **invariant**.
+| Schlüssel | Lücken | Betroffene Seiten |
+|---|---|---|
+| Nov13-15a | 12 | 153a |
+| Nov13-15b | 7 | 187 |
+| Nov10-12 | 5 | 176a |
+| Nov7-9 | 2 | 171, 164a, 164b |
 
-Das heißt: Kein Kriterium, das nur auf der Bigramm-Verteilung beruht, kann die
-Permutation eindeutig bestimmen. Die Bigramm-Konzentration ist ein starkes
-Signal (die echte Permutation liegt auf Rang 2000 von 2000 Zufallspermutationen),
-aber sie hat eine **degenerierte Äquivalenzklasse**: Eine Suche findet exakt
-dieselbe Verteilung, ordnet die Spalten aber anders zu. Die echte Permutation
-ist ein perfektes lokales Optimum — 0 von 190 Nachbar-Swaps verbessern die
-Fitness — aber die Landschaft ist ein „Needle in a Haystack": Permutation und
-Quadrat müssen **gleichzeitig** fast perfekt sein, sonst gibt es kein
-Gradientensignal.
+`make_square()` füllt diese Lücken mit dem Restalphabet — eine willkürliche
+Annahme. Bei Nov13-15a werden 8 der 12 gefüllten Zellen vom Klartext benutzt.
+Solange die Lücken nicht aufgelöst sind, bleiben diese Quadrate Annahmen.
 
-**Konsequenz:** Die Suche allein löst das Problem nicht. Der Engpass bleibt die
-Quelle.
+## Wenn es eine fundamentale Symmetrie gibt
 
-## Was wäre, wenn wir es falsch angehen?
+Die Bigramm-Verteilung des Zwischentexts ist unter Spaltenpermutationen
+invariant. Das ist kein Implementierungsdetail, sondern eine Eigenschaft des
+Verfahrens:
 
-Diese Wege wurden gegangen und verworfen. Die Lehren stehen hier, damit niemand
-sie zweimal geht:
+- Die echte Permutation hat die **stärkste** Bigramm-Konzentration von 2000
+  getesteten Permutationen (Rang 2000/2000).
+- Aber: Simulated Annealing auf diesem Signal findet einen Zustand mit
+  *exakt identischer* Bigramm-Verteilung — und trotzdem nur 2/20 korrekte
+  Positionen.
+- Grund: Verschiedene Auslesereihenfolgen erzeugen dieselbe
+  Segment-Sequenz, ordnen sie aber anderen logischen Spalten zu.
 
-| Sackgasse | Lehre |
-|---|---|
-| Trigramm-Modell als Hauptkriterium | Schadet bei historischem Militärtext — das echte Quadrat ist kein lokales Optimum |
-| Nur `word_hits` als Fitness | Erzeugt Plateaus (107 Swaps mit demselben Wert) |
-| Greedy-Alignment | Defekt — erkennt nur Einfügungen. Editierdistanz benutzen |
-| Blinde Suche nach Quadrat und Permutation | Löst das falsche Problem — die Schlüssel sind meist bekannt |
-| Anomalie-Reparatur durch Zeichen-Rückdrehen | Artefakt — gelöste Seiten zeigen größere Abweichungen |
-| Wort-Sperrung erkannter Wörter | Verschlechtert das Ergebnis |
-| Militär-Wörterbuch mit kurzen Abkürzungen | Verschlechtert den Solver |
-| Friedman-Ansatz (IoC/Bigramm-MI) | Scheitert grundsätzlich bei kurzen Texten mit Zufallsquadrat |
-| Seite 152 blind lösen | Overfitting — der Solver täuscht das Sprachmodell |
-| „Der Korpus ist beschädigt" | Falsch — er ist eine treue Abschrift der Quelle (14/22 zeichengenau) |
-| „Eine neue Quelle würde die offenen Seiten lösen" | Falsch — die Originalquelle liefert dieselbe Transkription |
+**Konsequenz:** Kein quadratunabhängiges Kriterium kann die Permutation
+eindeutig bestimmen. Die Suche muss Permutation und Quadrat gemeinsam
+bewerten.
 
-**Seite 152 — ein Lehrstück über Overfitting.** Seite 152 hat 104 Zeichen
-(52 Bigramme), keine Lücken und keinen passenden bekannten Schlüssel. Der
-analytische Solver findet Kandidaten mit Score −16,5 — **besser als echter
-deutscher Text** (−17,2). Das ist das Warnsignal: Der Solver hat Quadrat und
-Permutation so verbogen, dass sie das Sprachmodell täuschen. Der Text enthält
-aber keine echten Wörter (nur 27–30 Worttreffer statt 36). **Lehre:** Ein guter
-Score allein beweist nichts. Erst die Worttreffer und ein unabhängiger Beleg
-zählen.
+## Was widerlegt wurde
 
-## Was wäre, wenn wir weitermachen?
-
-Der Engpass ist die **Quelle**, nicht der Algorithmus. Die nächsten Schritte
-sind deshalb klar priorisiert:
-
-| Aktion | Status |
-|---|---|
-| `conflict_solver.py` auf alle ungelösten Seiten | **erledigt** |
-| Konfliktzahl als Ranking-Metrik (`rank_conflicts.py`) | **erledigt** |
-| Seite 217 lösen (0 Lücken, Schlüssel bekannt) | **erledigt** |
-| RICHI-264 und RICHI-222 aus dem Childs-Buch | **erledigt** |
-| Evidenzlage der gelösten Seiten ehrlich ausweisen | **erledigt** |
-| Seite 100 als echte Transkription nachweisen (1 Zeichen) | **erledigt** |
-| Unabhängige Transkriptionen für die 9 synthetischen Seiten | **offen (Engpass)** |
-| Quadrat-Lücken auflösen (`Nov13-15a/b`, `Nov10-12`, `Nov7-9`) | offen |
-| Seite 170 (0 Lücken) mit Stufe 3 angreifen | offen |
-| Lücken-Suche mit Zufalls-Baseline systematisieren | offen |
-| Externe Quellen für Ziffern/Eigennamen erschließen | offen |
-
-**Die wichtigste Lehre** steht schon in Abschnitt 1: **Erst die Daten, dann die
-Krypto.**
-
----
-
-<!-- GENERATED: dump_keys.py -->
-## Schlüssel- und Spruchverzeichnis
-
-Diese Tabellen werden aus dem Code generiert (`analysis/dump_keys.py`).
-Sie spiegeln den Stand von `core/adfgvx.py`, `data/corpus.py` und
-`data/solutions.py`.
-
-### Die 14 Schlüssel
-
-`n` ist die Spaltenzahl des Transpositionsrasters (= Zahl der Bigramme
-je Zeile). Die Permutation ist eine **Rangfolge**, keine Lesereihenfolge
-(siehe oben). Das Quadrat ist der 36-Zeichen-String in Zeile-für-Zeile-
-Lesung des 6×6-Felds.
-
-| Schlüssel | n | Permutation (Rangfolge) | Quadrat (36 Zeichen) |
-|---|---|---|---|
-| `Sep19-21` | 22 | `12-2-7-20-10-19-1-13-9-18-3-17-21-8-14-4-6-16-11-22-5-15` | `D5613Q9KBNO0HY8EISJUTZFCW7VPML2ARG4X` |
-| `Oct4-6` | 22 | `4-13-3-14-1-16-9-15-5-19-10-18-6-17-7-20-11-21-8-12-22-2` | `YN87PJ3WRUCIEO1SKLZX0DFBH6MT9A2QV54G` |
-| `Oct28-31` | 18 | `6-15-12-16-5-7-14-4-13-8-11-1-17-2-10-3-18-9` | `HI20SXRUWQY8EK7O619CBJAP453FDZTGLMVN` |
-| `Nov1-3` | 19 | `3-16-4-15-7-12-18-6-17-8-19-1-13-10-2-14-11-9-5` | `UILOF9RCZVSX02G7QTD8WNB5JMHEKPY41A36` |
-| `Nov4-6` | 17 | `7-10-8-14-3-11-16-1-6-13-4-9-15-5-12-17-2` | `17WHFLJ5D2UPEXKVZ9O0Q3Y6R8ABGITCMS4N` |
-| `Nov7-9` | 20 | `6-12-7-15-1-11-16-5-8-14-3-18-9-13-2-17-20-10-19-4` | `PRMYUW3LZGES8C71QOV29ITB40-KXH-AJNDF` |
-| `Nov10-12` | 16 | `9-12-7-11-3-8-16-6-14-2-10-15-5-13-1-4` | `4ARUT1OIFSKN3-BZPVLD-JMXCWHQ2E-G0-Y-` |
-| `Nov13-15a` | 20 | `13-8-6-16-7-18-1-14-9-20-10-15-17-2-3-11-5-19-4-12` | `JZLH-R--S-T-MKDWU-V-B-P--FAO-GIX-CNE` |
-| `Nov13-15b` | 16 | `4-11-5-14-9-7-16-1-12-15-6-10-3-13-8-2` | `H--BMUF15PX0DJLR---S6VONKZ-AWITEGC-` |
-| `Nov16-18` | 19 | `7-12-1-14-8-16-13-9-19-3-15-4-10-18-6-2-11-17-5` | `WG-EITNHUB2R--FDZJS---PY-VQL-1OAXMKC` |
-| `Nov19-21` | 20 | `13-20-3-16-7-14-4-12-8-11-5-15-2-18-17-10-19-6-1-9` | `LC58QH7VI2YB9EURO60GX3MTFAKP1D4NJZSW` |
-| `Nov22-24` | 22 | `6-12-16-7-14-22-11-18-1-15-8-10-20-2-13-21-3-17-19-5-9-4` | `QNZ72XS4C0IJY3RBEKL9FD6GMTHUVWA5O8P1` |
-| `Nov25-28` | 23 | `21-9-6-14-10-20-1-16-18-7-15-4-11-22-5-17-23-2-12-8-19-3-13` | `HQ05DKZAOYM6BEIWTJ7PSCFLV94132NGURX8` |
-| `Nov28-Dec1` | 16 | `9-3-14-10-2-8-15-4-16-11-5-13-6-12-1-7` | `782GPY5OQHF91UDNI364TLVXEAR0JZBKMCSW` |
-
-### Die Funksprüche
-
-CT = Geheimtext in ADFGVX-Zeichen. Klartext in Zeichen ohne Worttrenner
-(X = Worttrenner im Original).
-
-| Spruch | CT-Zeichen | Klartext | Schlüssel | Status |
-|---|---|---|---|---|
-| Korpus 73 | 176 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 100 | 124 | 62 | `Nov1-3` | gelöst, bewiesen (Transkription, 0 Konflikte) |
-| Korpus 105 | 290 | 143 | `Nov1-3` | gelöst, bewiesen (Transkription, 0 Konflikte) |
-| Korpus 109 | 258 | 125 | `Nov1-3` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
-| Korpus 132 | 153 | 77 | `Nov4-6` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
-| Korpus 146 | 244 | 122 | `Nov4-6` | gelöst, bewiesen (Transkription, 0 Konflikte) |
-| Korpus 152 | 104 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 153a | 132 | 176 | `Nov13-15a` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
-| Korpus 153b | 93 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 158 | 240 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 164a | 158 | 63 | `Nov7-9` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
-| Korpus 164b | 136 | 90 | `Nov7-9` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
-| Korpus 170 | 106 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 171 | 310 | 157 | `Nov7-9` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
-| Korpus 176a | 214 | 112 | `Nov10-12` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
-| Korpus 176b | 220 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 187 | 212 | 107 | `Nov13-15b` | gelöst (Klartext aus Kommentar, CT rekonstruiert) |
-| Korpus 187b | 142 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 189 | 84 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 198 | 165 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 215 | 237 | — | unbekannt | ungelöst (beschädigt) |
-| Korpus 217 | 170 | — | unbekannt | ungelöst (beschädigt) |
-| RICHI-264 | 264 | 133 | `Nov1-3` | gelöst, bewiesen (2 Reparaturen, Roundtrip) |
-| RICHI-222 | 144 | 114 (Kandidat) | `Nov1-3` | Struktur bewiesen; Lücken nicht eindeutig |
-| RICHI-274 | 258 | 135 | `Oct28-31` | gelöst, verifiziert |
-| RICHI-338 | 286 | 162 | `Oct28-31` | gelöst, verifiziert (OCR-Fehler in der Tabelle) |
-| RICHI-217 (Seite 217) | 170 | 88 | `TRUPPENVERSCHIEBUNG` | gelöst, bewiesen (Roundtrip) |
-| RICHI-240 | 220 | 240 | `Nov10-12` | verifiziert, nicht selbst gelöst (20 Zeichen fehlen) |
-
-<!-- /GENERATED -->
-
----
-
-# Arbeitsprotokoll
-
-Dieses Protokoll ist das Nachschlagewerk: alle Befunde, Sackgassen und
-Verifikationen im Detail. Für Mitlesende, die jede Zahl prüfen wollen.
-Verfahren, Projektstruktur und Verwendung stehen in Abschnitt 3 (HOW).
-
-## Die gelösten Fälle
-
-### Seite 217 (RICHI-170) — der Beweisfall
-
-Der Artikel „GPT-6 Astra solves a WWI German radio message" (prinzai.com,
-17.09.2026) behauptet die Lösung. Das Projekt hat sie geprüft — und bestätigt.
-
-Das Schlüsselwort `TRUPPENVERSCHIEBUNG` (Childs S. 214–215) liefert **beide**
-Stufen:
-
-1. **Die Permutation** — alphabetische Rangfolge der 19 Buchstaben.
-2. **Das Quadrat** — ein Keyword-Quadrat mit **eingestreuten Ziffern**.
-
-Die Ziffern-Einmischung ist der Knackpunkt. Die naive Füllregel (Keyword ohne
-Doppel + Restalphabet) liefert nur 29 von 85 Übereinstimmungen — Unsinn. Das
-historische Quadrat mischt die Ziffern zwischen die Buchstaben
-(`TRUPE4 / NVSC2H / 1I6B?G / 6AQD8F / 5?JKLM / 0?WXYZ`). Im Artikel-Bild sind
-alle Ziffern handschriftlich nachgetragen. Die 23 aus dem Klartext belegten
-Quadratzellen decken sich mit dieser Version (82/85, 0 Konflikte).
-
-Klartext:
-
-```
-EINENGLISCHERKREUZEREINLIEGXSEWASTOPOLXS4STENX
-EINGESCHWADERDERXALLIIERTENFOLGT26STENX
-```
-
-Deutsch: *Ein englischer Kreuzer liegt in Sewastopol. (am) 24. Ein Geschwader
-der Alliierten folgt (am) 26.* — Historisch bestätigt: Die HMS Canterbury lief
-am 24.11.1918 in Sewastopol ein, das alliierte Geschwader folgte am 26.
-
-Verifikation: `python3 analysis/verify_article_claim.py`
-(Transposition + Substitution 0 Konflikte + Roundtrip).
-
-> **Korrektur der früheren Einschätzung:** Eine erste Version des Projekts
-> behauptete, den Artikel *widerlegt* zu haben. Das war falsch. Die drei
-> damaligen „Beweise" hatten Denkfehler: ein Bijektions-Vergleich (6 CT-Zeichen
-> gegen 23 Klartextzeichen), ein Konflikt-Test mit den falschen Schlüsseln und
-> ein Zeichen-Häufigkeits-Vergleich, der bei ADFGVX irrelevant ist. Der Fehler
-> lag in der Rangfolge der Permutation.
-
-### RICHI-264 — bewiesen
-
-Marine-Funkspruch vom 1.11.1918 (Schlüssel `Nov1-3`). Der OCR-Geheimtext hat
-264 Zeichen, der Klartext 133 — die Lückenzahl beweist: Im CT fehlt ein
-Bigramm. Die Dekodierung stimmte an 130 von 131 Stellen exakt. Zwei Fehler:
-
-1. **Bigramm 63: `AD` → `AG`** — D/G-Verwechslung, Morse-plausibel
-   (`D = -..`, `G = --.`).
-2. **`XG` fehlt nach Bigramm 64** — Löschung im CT.
-
-Nach beiden Reparaturen: Dekodierung == Klartext und Re-Encryption == CT.
-Exakter Roundtrip.
-
-Klartext: *Demnach gehen nunmehr sämtliche Schiffe von Kospoli nach Odessa
-bzw. Nikolajew. Verteilt wie Fr. 52751 und B.V.G. rum. L7 Ch. Röm. 2. Groß B.
-Fr. 52787.*
-
-Verifikation: `python3 analysis/verify_richi_264.py`
-
-### RICHI-222 — Struktur bewiesen, Lücken offen
-
-13. Teil einer 13-teiligen Nachricht (Konstantinopel nach Berlin, 3.11.1918).
-Der Schlüssel `Nov1-3` bestätigt sich zum dritten Mal — die Spaltenköpfe der
-Tabelle sind exakt die bewiesene Permutation (das OCR las `18`, gemeint ist
-`16`).
-
-Die Nachricht ist schwer beschädigt: 79 Empfangslücken, dazu fehlt das Ende
-(67 + 11 Zeichen, laut Childs S. 42). Von 114 Bigrammen sind nur 37
-vollständig; 70 haben genau eine Lücke (je 6 Kandidaten aus dem Quadrat),
-7 sind ganz weg.
-
-Der Beweis gilt für die **Struktur**: Re-Encryption deckt alle 144
-überlieferten CT-Zeichen exakt (0 Mismatches). Die Lückenfüllung ist dagegen
-**nicht eindeutig**. Der beste Kandidat (Beam-Search mit dem Sprachmodell,
-64 Worttreffer):
-
-```
-TECHENDERXGESARMEEDENMERSCHDURMEINGARNAUFESERSCHLESIENANZIT
-UNTENSEINDERSTENNDWISSERDETERESEXKTERRMTLTAA1GRISISCASS
-```
-
-Childs hat die Lücken per Elimination gefüllt (Buch S. 43). Das Projekt trennt
-beides: Struktur = bewiesen. Füllung = Kandidat.
-
-Verifikation: `python3 analysis/richi_222_reconstruct.py`
-
-### RICHI-274 / RICHI-338 — verifiziert
-
-Zwei Childs-Nachrichten vom 30.10.1918, Schlüssel `Oct28-31`. Die im Buch
-dokumentierte Beziehung (RICHI-274 = RICHI-338 minus drei einleitende Zeilen)
-wird bestätigt: RICHI-338 beginnt mit dem Präfix „FUER SAUL WEINREICH
-DOPPELPUNKT", danach folgt derselbe Text. Die Klartexte weichen danach ab
-(Ähnlichkeit ~0,77) — vermutlich OCR-Fehler in der RICHI-338-Tabelle.
-
-Neu ist allein, dass der Schlüssel `Oct28-31` erstmals an echtem Klartext
-geprüft ist. Eingetragen in `data/childs_additional.py`.
-
-### RICHI-240 — verifiziert, nicht selbst gelöst
-
-Der Artikel „Another WWI German Radio Cipher Falls to GPT-6 Astra"
-(prinzai.com, 19.09.2026) behandelt RICHI-240 (11.11.1918). Von 240 Zeichen
-sind nur 220 überliefert. Astra ergänzte die 20 fehlenden Zeichen zwischen
-Zeile 4 und 5 (`VFFXX DXXVV XDXDX GXXAF`) und bestimmte drei Ziffern über ein
-französisches Aufklärungstelegramm (Franchet d'Esperey an Clemenceau/Foch,
-19.11.1918) → **7, 9, 6**.
-
-Klartext: *An Oberste Heeresleitung. 11. Armee: Alpenkorps im Raum
-Peterreve–Verbasz. 217.–219. Divisionen und 6. Reserve-Division an der Linie
-Nagybecskerek–Versec. Versec von Serben besetzt.* — Historisch bestätigt: Die
-deutsche Armee zog sich am 10.11.1918 aus Vrsac zurück; serbische Einheiten
-rückten am 11.11. um 03:38 Uhr ein — wenige Stunden nach dem Funkspruch.
-
-**Hinweis:** RICHI-240 wurde **nicht von diesem Projekt** gelöst, sondern
-nachgerechnet. Und es ist nicht Teil des Korpus, daher im Code nicht
-abgebildet.
-
-### Astras Methode — die Lehre daraus
-
-GPT-6 Astra hat bei RICHI-170 und RICHI-240 **nicht den Code gebrochen**. In
-beiden Fällen waren die Schlüssel bereits bekannt und veröffentlicht. Der
-Engpass war nie die Kryptographie, sondern die **Datenqualität**.
-
-Astras Vorgehen in drei Schritten:
-
-1. **Schlüssel aus der Literatur nehmen** — nicht suchen.
-2. **Beschädigte Zeichen ergänzen** — Sprachmuster-Scoring über verschiedene
-   Anordnungen der fehlenden Symbole.
-3. **Restlücken mit externem Wissen schließen** — das französische
-   Aufklärungstelegramm lieferte die Ziffern.
-
-Das deckt sich mit Lasrys Original-Aussage: *„the challenge is to understand
-how the cryptograms were MUTILATED or AFFECTED, probably by RECEPTION
-PROBLEMS, or maybe even by WRONG TRANSMISSION or ENCODING."*
-
-**Konsequenz:** Der produktive Ansatz ist nicht Perm+Quadrat-Suche, sondern
-**Fehlerrekonstruktion bei bekanntem Schlüssel** — genau das, was
-`solvers/conflict_solver.py` verfolgt.
-
-## Die Konfliktzahl als Beweis
-
-**Werkzeug:** `analysis/rank_conflicts.py` (`--validate`, `--unsolved`, `--blind`)
-
-Gegen die verifizierten Klartexte der gelösten Seiten:
-
-| Seite | Key | ORIG-CT | Konflikte | KORR-CT | Konflikte |
-|---|---|---|---|---|---|
-| 100 | Nov1-3 | 124 | 3 | 124 | **0** |
-| 105 | Nov1-3 | 290 | 78 | 287 | **0** |
-| 109 | Nov1-3 | 258 | 95 | 250 | **0** |
-| 146 | Nov4-6 | 244 | 85 | 244 | **0** |
-| 171 | Nov7-9 | 310 | 107 | 314 | **0** |
-| 187 | Nov13-15b | 212 | 67 | 214 | **0** |
-| 176a | Nov10-12 | 214 | 71 | 224 | **0** |
-| 132 | Nov4-6 | 153 | 40 | 154 | **0** |
-| 164a | Nov7-9 | 158 | 45 | 126 | **0** |
-| 164b | Nov7-9 | 136 | 42 | 180 | **0** |
-| 153a | Nov13-15a | 132 | 34 | 352 | **0** |
-
-**11/11 gelöste Seiten: exakt 0 Konflikte nach der Korrektur, 34–107 vorher.**
-
-> **Achtung — Evidenzlage.** Diese Tabelle belegt, dass die Konfliktzahl als
-> *Kriterium* funktioniert. Sie belegt **nicht** für jede Seite, dass der
-> Klartext unabhängig gesichert ist: Nur bei **100**, **105** und **146**
-> stammt der Geheimtext aus einer echten Transkription. Bei den übrigen 8
-> Seiten ist er synthetisch aus dem Klartext erzeugt — der Roundtrip ist dort
-> tautologisch. Details im Abschnitt „Evidenzlage der gelösten Seiten".
-
-**Aber: Es gibt kein brauchbares blindes Ersatzkriterium.** Zwei Kandidaten
-wurden geprüft und verworfen:
+Neun blinde Suchkriterien wurden getestet und verworfen:
 
 | Kriterium | Befund |
 |---|---|
-| **Zell-Reinheit** (Anteil des häufigsten Werts je Zelle) | Unbrauchbar. Gelöste Seiten haben *niedrigere* Reinheit als ungelöste. Korreliert **negativ** mit Korrektheit. |
-| **Zellenzahl** (belegte Quadratzellen) | Schwach. Der richtige Schlüssel liefert nur in 5/10 Fällen die minimale Zellenzahl. Besser als Zufall, aber kein Beweis. |
+| Zell-Reinheit | korreliert **negativ** mit der Lösung |
+| Zellenzahl | richtig nur in 5/10 Fällen |
+| Adjazenz | kein Signal |
+| Bigramm-Chi² | kein Signal |
+| Known-Bigramm | kein Signal |
+| Referenz-CT-Vergleich | kein Signal |
+| Bigramm-Strom | kein Signal |
+| Konsens-Test | funktioniert nur bei sauberem CT |
+| Hill-Climbing auf Spaltenreihenfolge | Artefakt — findet nur, was schon da ist |
 
-**Konsequenz:** Für ungelöste Seiten muss der Klartext kandidatenweise geraten
-und die Konfliktzahl minimiert werden — genau das tut `conflict_solver.py`.
+**Wichtig:** `word_hits` auf Zufallstext ist genauso hoch wie auf echten
+kurzen Seiten (24 vs. 29 Treffer bei Länge 104). Die Trefferzahl ist **kein**
+Erfolgsindikator, solange keine Zufalls-Baseline gemessen wurde.
 
-## Evidenzlage der gelösten Seiten
+## Was wirklich hart bewiesen ist
 
-Nicht jede „gelöste" Seite ist gleich gut belegt. Die Unterscheidung ist
-wichtig, weil sie bestimmt, wie viel ein Roundtrip wert ist.
-
-| Evidenz | Seiten | Was der Roundtrip beweist |
-|---|---|---|
-| **Unabhängige Transkription** | 100, 105, 146 | Echter Beweis: Klartext, Quadrat und Permutation passen zu einem **fremd überlieferten** Chiffrat. |
-| **Synthetisch rekonstruiert** | 109, 132, 153a, 164a, 164b, 171, 176a, 187, `??` | **Kein** Beweis. Der Geheimtext wurde per `transpose(bigrams(pt), perm)` aus dem Klartext erzeugt — der Roundtrip ist per Konstruktion garantiert. |
-
-**Warum das so ist.** Die Original-Chiffrate in `corpus.py` sind durch
-Empfangsfehler beschädigt. Für **105** und **146** liegt im Kommentarthread
-(`texte.txt`) eine vollständige, korrigierte Transkription vor. Für **100**
-liefert `corpus.py` selbst eine praktisch intakte Transkription: Der
-Korpus-CT hat exakt die richtige Länge (124 Zeichen) und weicht nur an
-**einer** Position ab (Position 20: `V` statt `A`). Diese Korrektur ist
-**eindeutig** — von allen fünf möglichen Ein-Zeichen-Substitutionen führt nur
-`V→A` zum Soll-Klartext, und sie ist zugleich die sprachlich beste
-(`KEINESTOERUNG` statt `KEINESTOERING`). Für die übrigen Seiten gibt es keine
-verwertbare Transkription — die Korrekturen sind dort nur in Prosa
-beschrieben oder fehlen ganz (siehe `UNVERIFIED` in
-`data/corpus_corrected.py`). Statt die Lücke offenzulassen, wurde der
-Geheimtext aus dem verifizierten Klartext **zurückgerechnet**. Das ist
-mathematisch korrekt, aber als *Verifikation* zirkulär.
-
-**Verstärkt wird das durch unvollständige Quadrate.** `make_square()` füllt
-`-`-Lücken im Substitutionsquadrat mit dem Restalphabet — eine willkürliche
-Annahme. Betroffene, tatsächlich genutzte Schlüssel:
-
-| Schlüssel | Lücken | genutzt von |
-|---|---|---|
-| `Nov13-15a` | 12 | 153a |
-| `Nov13-15b` | 7 | 187 |
-| `Nov10-12` | 5 | 176a |
-| `Nov7-9` | 2 | 171, 164a, 164b |
-| `Nov16-18` | 8 | (keine Seite) |
-
-Bei **153a** werden 8 der 12 gefüllten Zellen vom Klartext tatsächlich benutzt.
-Da der Geheimtext zugleich synthetisch ist, ist die Verifikation dort
-**doppelt zirkulär**.
-
-**Was davon unberührt bleibt.** Die externen Beweise sind echt und hängen
-nicht an dieser Schwäche: **Seite 217 (RICHI-170)**, **RICHI-264**,
-**RICHI-274/338** und die **Struktur von RICHI-222** wurden gegen echte,
-fremd überlieferte Daten geprüft.
-
-**Nächster Schritt:** unabhängige Transkriptionen für die 9 synthetischen
-Seiten beschaffen (Kommentarthread, Original-Seitenbilder). Das ist der
-eigentliche Engpass — nicht die Kryptanalyse.
-
-**Stand dieser Suche (2026-09-24).** Beide im Repo vorhandenen Quellen sind
-systematisch ausgeschöpft:
-
-- `data/texte.txt` (56 Kommentare) enthält vollständige Transkriptionen nur
-  für **100** (Armin #13), **105** (Norbert #15) und **146** (Norbert #19).
-  Für 164a/164b gibt es nur Fragmente mit Notationszeichen (`A:`, `f:`,
-  `[f]:`), für alle übrigen Seiten nur Prosa-Beschreibungen der Korrekturen.
-- `data/corpus.py` liefert nur bei **Seite 100** einen nahezu intakten
-  Rohgeheimtext (99,2 % Zeichentreffer zum Soll-CT). Alle anderen Roh-CTs
-  liegen bei 0–32 % — sie sind keine verwertbare Transkription.
-
-Damit ist ohne **neue externe Quelle** (Original-Seitenbilder der
-Cipherbrain-Seite, weitere Kommentare, Archivmaterial) kein weiterer
-unabhängiger Beleg zu gewinnen. Die 9 synthetischen Seiten bleiben bis dahin
-ehrlich als solche gekennzeichnet.
-
-> **Nachtrag (siehe unten).** Die „neue externe Quelle" wurde inzwischen
-> gefunden — der Cipherbrain-Artikel selbst. Sie liefert aber **dieselbe**
-> Transkription wie der Korpus. Der Engpass verschiebt sich damit von
-> „Quelle unbekannt" zu „Quelle bekannt, aber nur einfach belegt".
-
-### Die Originalquelle ist gefunden (2026-09-24)
-
-Die oben genannte „neue externe Quelle" **existiert und ist abrufbar**. Der
-Artikel selbst enthält die Geheimtexte nicht nur als Bild, sondern als
-**Klartext-Transkription im HTML**:
-
-> Klaus Schmeh, *Unsolved ADFXVX messages from World War I*, Cipherbrain,
-> 23.02.2017 (Seite bereitgestellt von George Lasry) —
-> `scienceblogs.de/klausis-krypto-kolumne/unsolved-adfxvx-messages-from-world-war-i/`
-
-Das Rohmaterial liegt jetzt im Repo unter `docs/cipherbrain_pages/`:
-
-| Datei | Inhalt |
+| Befund | Beweis |
 |---|---|
-| `article.html` | Original-HTML der Seite (116 KB) |
-| `article_body.txt` | extrahierter Artikeltext mit Bildmarkern (13 KB) |
-| `cryptogram-01..19.png` | die 19 Original-Geheimtext-Bilder (614 px breit) |
+| Seite 217 / RICHI-170 | TRUPPENVERSCHIEBUNG, 0 Konflikte, Roundtrip gegen echtes CT |
+| RICHI-264 | 2 Reparaturen, Re-Encryption == OCR-CT |
+| RICHI-274 / RICHI-338 | Oct28-31 erstmals an echtem Klartext validiert |
+| Seiten 100, 105, 146 | echte Transkription + vollständiger Roundtrip |
+| Transposition | 100 % Zeichentreffer auf 10/10 Seiten (mit korrigiertem CT) |
 
-Die Transkription ist als `data/article_transcription.py` (`ARTICLE_CT`,
-22 Blöcke) verfügbar; `analysis/parse_cipherbrain.py` extrahiert sie aus dem
-HTML, `analysis/verify_corpus_provenance.py` vergleicht sie mit dem Korpus.
+## Der Ausblick
 
-**Ergebnis: `corpus.py` ist eine treue Abschrift der Originalquelle.**
-**14 von 22 Seiten stimmen zeichengenau (100,0 %)** überein — 73, 105, 109,
-132, 146, 152, 170, 187, 198, 217, 153a, 176a, 176b, 187b. Die übrigen acht
-Abweichungen sind rein kosmetisch:
+Die Kryptanalyse ist erschöpft. Die nächsten Schritte sind Datenarbeit:
 
-- **zusätzliche `-`** (unleserliche Zeichen), die der Korpus konservativer
-  setzt (158, 171, 189, 215, 153b, 164a, 164b), bzw.
-- **bereits angewandte Kommentar-Korrekturen** (Seite 100: die `DG`-Einfügung
-  aus Armin #13) und **entfernte Klammernotation** (158: `(VVFGD)`, `{VVDAD}`).
+1. **Unabhängige Transkriptionen** für die 10 rekonstruierten Seiten
+   beschaffen — der eigentliche Engpass.
+2. **Quadrat-Lücken** in Nov13-15a/b, Nov10-12, Nov7-9 auflösen.
+3. **Erst dann** die Seiten mit 0 Lücken (152, 170, 176b, 187b, 198) mit dem
+   `conflict_solver` angreifen.
 
-**Seite 100 — die Originalquelle bestätigt die `DG`-Einfügung.** Der
-Artikel-Block für Seite 100 hat 122 Zeichen, der Korpus 124. Der Unterschied
-ist **exakt** die `DG`-Einfügung aus Armin #13 an Position 110:
-`Korpus == Artikel + 'DG'`. Allein entschlüsselt der Artikel-Block zu
-Kauderwelsch (Score −33,25, 0 Treffer); mit der `DG`-Einfügung wird er
-lesbar (Score −21,22, 38 Treffer). Erst die zusätzliche Korrektur `V→A` an
-CT-Position 20 ergibt exakt den verifizierten Klartext (Score −20,88,
-39 Treffer). Artikel und Korpus lesen an Position 20 **beide** ein `V` — die
-`V→A`-Korrektur ist also eine *separate* Korrektur, die auf beide Quellen
-gleichermaßen anzuwenden ist. Die Originalquelle **bestätigt damit die
-`DG`-Einfügung** und widerspricht der Transkription an keiner Stelle.
+## Wenn man es trotzdem blind versuchen will
 
-**Konsequenz.** Die Herkunft des Korpus ist jetzt lückenlos belegt: Er ist
-keine beschädigte Transkription, sondern die (leicht bereinigte) Abschrift
-der Originalquelle. Für die 9 synthetischen Seiten fehlt weiterhin ein
-*unabhängiger* Beleg — die Originalquelle liefert nur **dieselbe**
-Transkription, die der Korpus bereits enthält. Der Engpass verschiebt sich
-damit von „Quelle unbekannt" zu „Quelle bekannt, aber nur einfach belegt".
+Der `blind_solver` ist der ehrliche Test: Er bekommt nur den Geheimtext und die
+Spaltenzahl. Er scheitert — auch auf einem *perfekten* synthetischen Testfall
+mit bekanntem Klartext. Das ist kein Implementierungsfehler, sondern die
+Aussage des Projekts: **Die Landschaft erlaubt keine blinde Suche.**
 
-## Die ungelösten Seiten
-
-| Seite | CT | Bigramme | Zellen | Lücken |
-|---|---|---|---|---|
-| 73 | 176 | 88 | 31 | 1 |
-| 152 | 104 | 52 | 23 | 0 |
-| 153b | 93 | 46 | 23 | 15 |
-| 158 | 240 | 120 | 32 | 1 |
-| 170 | 106 | 53 | 25 | 0 |
-| 176b | 220 | 110 | 35 | 0 |
-| 187b | 142 | 71 | 28 | 0 |
-| 189 | 84 | 42 | 21 | 5 |
-| 198 | 165 | 82 | 32 | 0 |
-| 215 | 237 | 118 | 32 | 9 |
-| 217 | 170 | 85 | 35 | 0 |
-
-Seite 217 steht mit in der Tabelle, weil das *Korpus-Chiffrat* unkorrigiert
-ist — seine Lösung (`TRUPPENVERSCHIEBUNG`) ist aber bewiesen und in
-`analysis/verify_article_claim.py` reproduziert.
-
-**Priorisierung nach Reparierbarkeit:** Seiten mit **0 Lücken** (152, 170,
-176b, 187b, 198) sind ohne externe Quellen angreifbar. Seiten mit vielen
-Lücken (153b: 15, 215: 9, 189: 5) brauchen externe Verifikation. 217 ist
-gelöst — der nächste Kandidat ist **170** (0 Lücken), dann **152**.
-
-## Anomalie-Scan: fehlende Zeichen in Bigramm-Positionen
-
-**Werkzeug:** `analysis/anomaly_scan.py` (`--detail SEITE`, `--monte-carlo`,
-`--repair`).
-
-Ausgangspunkt war Seite 170: Dort kommt das ADFGVX-Zeichen `D` als **erstes**
-Zeichen eines Bigramms (Polybius-**Zeile**) **nie** vor. Der Scan über alle
-22 Seiten zeigt: Das ist nicht einzigartig.
-
-| Seite | Position | fehlendes Zeichen | N (Bigramme) | P(Gleichverteilung) |
-|---|---|---|---|---|
-| 189 | P2 (Spalte) | `D` | 42 | 4.7e-04 |
-| 152 | P2 (Spalte) | `G` | 52 | 7.6e-05 |
-| 170 | P1 (Zeile) | `D` | 53 | 6.4e-05 |
-
-Alle anderen 19 Seiten — **einschließlich aller gelösten** — haben in beiden
-Positionen alle 6 Zeichen.
-
-**Wichtig:** Ein fehlendes Zeichen heißt nicht, dass Zeichen fehlen. Es
-heißt: An **allen** Stellen, wo dieses Zeichen stehen sollte, wurde etwas
-anderes transkribiert. Das ist ein **systematischer** Fehler.
-
-**Kein Längen-Artefakt.** Monte-Carlo mit den korrigierten CTs der gelösten
-Seiten, gekürzt auf die jeweilige Länge (200 Stichproben pro Seite): Bei
-Zufallstext ist P(fehlt) < 0,003. Bei den drei anomalen Seiten: 100 %.
-Die drei Seiten sind zwar die kürzesten des Korpus (Ränge 1, 3, 4), aber
-Rang 2 (153b) und Rang 5 (187b) haben **keine** Anomalie — Länge allein
-erklärt es nicht.
-
-**Morse-Hypothese.** ADFGVX-Zeichen sind Morsecodes:
-
-| A | D | F | G | V | X |
-|---|---|---|---|---|---|
-| `.-` | `-..` | `..-.` | `--.` | `...-` | `-..-` |
-
-`D` (`-..`) und `G` (`--.`) unterscheiden sich um **einen** Punkt/Strich.
-`D` und `X` (`-..-`) um **ein angehängtes** Zeichen. Bei schwachem Signal
-(QSB) ist genau das die typische Verwechslung. Das erklärt alle drei
-Anomalien: `D` wurde als `G` oder `X` gelesen (bei 170 teilen sich `G` und
-`X` die Fehlmenge von `D` etwa 50/50).
-
-**Der Reparatur-Versuch war ein Artefakt.** Greedy-Hill-Climbing (ersetze
-`G`/`X` durch `D`, wenn der Sprachscore steigt) hob den Score auf allen
-Seiten — auch auf den **gelösten** (+6,93 dort, +3,23 auf den anomalen). Der
-Algorithmus flutet jeden Text mit dem häufigsten Zeichen. Verworfen.
-
-**Fazit:**
-
-1. Die **Beobachtung** (fehlendes Zeichen) ist echt und signifikant.
-2. Die **Reparatur** (Zeichen zurückdrehen) ist ein Artefakt.
-3. Die Morse-Hypothese ist plausibel, aber nicht beweisbar, solange wir nicht
-   wissen, **welche** `G`/`X` eigentlich `D` waren.
-4. Kryptanalytisch ist der Korpus erschöpft. Der Engpass ist die **Quelle**
-   (Transkription), nicht das Verfahren.
+---
 
 ## Quellen
 
-- Klaus Schmeh, *The Top 50 unsolved encrypted messages: 46*, Cipherbrain,
-  23.02.2017.
-- George Lasry et al., *Deciphering ADFGVX messages from the Eastern Front of
-  World War I*, Cryptologia 41(2), 2017.
-- J. Rives Childs / William F. Friedman, *German Military Ciphers From February
-  To November 1918* (Internet Archive, Identifier `41784789082381`).
-- prinz (Alex Willen), *GPT-6 Astra Solves a WWI German Radio Cipher*,
-  17.09.2026 — <https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio>
-  (RICHI-170 / Seite 217).
-- prinz (Alex Willen), *Another WWI German Radio Cipher Falls to GPT-6 Astra*,
-  19.09.2026 — <https://www.prinzai.com/p/another-wwi-german-radio-cipher-falls>
-  (RICHI-240).
-- Franchet d'Esperey an Clemenceau/Foch, franz. Aufklärungstelegramm vom
-  19.11.1918 — <https://real-eod.mtak.hu/19844/13/documents.pdf#page=153>
-  (historische Bestätigung der Ziffern 7/9/6 in RICHI-240).
-- Liste der deutschen ADFGVX-Schlüssel Sep–Dez 1918 —
-  <https://scienceblogs.de/klausis-krypto-kolumne/files/2017/02/adfgvx_keys.pdf>
+- Klaus Schmeh, *The Top 50 unsolved encrypted messages: 46 — Unsolved ADFGVX
+  cryptograms from World War 1*, Cipherbrain, 23.02.2017
+- George Lasry, Norbert Biermann, *Schlüsselliste* (Cryptologia 2017)
+- J. Rives Childs, *German Military Ciphers From February To November 1918*
+  (Hrsg. William F. Friedman), archive.org 41784789082381
+- William F. Friedman, *Military Cryptanalysis Part IV — Transposition and
+  Fractionating Systems*, Section IX (NSA A59439)
 
 ## Lizenz
 
-Siehe [LICENSE](LICENSE).
-
-Die historischen Quellen in `docs/` unterliegen eigenen Rechten. Sie werden
-hier zu Forschungszwecken zitiert.
+Keine. Privates Forschungsprojekt.

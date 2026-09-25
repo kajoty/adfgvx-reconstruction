@@ -52,3 +52,6 @@ Thumbs.db
 
 # Laufzeit-Logs der Hintergrund-Solver (run_detached.sh)
 logs/
+
+# Externe Quellen (urheberrechtlich geschuetzte PDFs, nur lokal)
+docs/external/
