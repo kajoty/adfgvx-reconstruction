@@ -328,25 +328,28 @@ def test_synthetic(restarts: int = 8, rounds: int = 12, seed: int = 1,
 
 
 def main() -> None:
-    if "--page" in sys.argv:
-        idx = sys.argv.index("--page")
-        page = sys.argv[idx + 1]
-        n = int(sys.argv[idx + 2]) if len(sys.argv) > idx + 2 else 20
-        seconds = float(sys.argv[idx + 3]) if len(sys.argv) > idx + 3 else 60.0
-        from data.corpus import CORPUS
-        ct = clean(CORPUS[page])
-        print(f"ALTERNIERENDER SOLVER — Seite {page} ({len(ct)} Zeichen, n={n}), "
-              f"Zeitbudget {seconds:.0f}s")
-        t0 = time.time()
-        fit, perm, sq, pt = solve(ct, n, verbose=True, seconds=seconds)
-        sc, wh, _ = fitness_parts(pt)
-        print(f"\nLaufzeit : {time.time() - t0:.1f} s")
-        print(f"Fitness  : {fit:.3f}  score={sc:.3f}  hits={wh}")
-        print(f"Perm     : {perm}")
-        print(f"Quadrat  : {sq}")
-        print(f"Klartext : {pt}")
-    else:
+    from solvers.base import build_parser
+
+    ap = build_parser("alternating_solver", default_page=None)
+    args = ap.parse_args()
+    if args.page is None:
         test_synthetic()
+        return
+
+    seconds = 10.0 if args.quick else args.seconds
+    n = args.n if args.n > 0 else 20
+    from data.corpus import CORPUS
+    ct = clean(CORPUS[args.page])
+    print(f"ALTERNIERENDER SOLVER — Seite {args.page} ({len(ct)} Zeichen, n={n}), "
+          f"Zeitbudget {seconds:.0f}s")
+    t0 = time.time()
+    fit, perm, sq, pt = solve(ct, n, verbose=args.verbose, seconds=seconds)
+    sc, wh, _ = fitness_parts(pt)
+    print(f"\nLaufzeit : {time.time() - t0:.1f} s")
+    print(f"Fitness  : {fit:.3f}  score={sc:.3f}  hits={wh}")
+    print(f"Perm     : {perm}")
+    print(f"Quadrat  : {sq}")
+    print(f"Klartext : {pt[:78]}")
 
 
 if __name__ == "__main__":

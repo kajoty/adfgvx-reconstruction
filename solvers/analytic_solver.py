@@ -319,14 +319,16 @@ def test_page(page: str, n: int, restarts: int = 5, iterations: int = 200,
 
 
 def main() -> None:
-    if "--page" in sys.argv:
-        idx = sys.argv.index("--page")
-        page = sys.argv[idx + 1]
-        n = int(sys.argv[idx + 2]) if len(sys.argv) > idx + 2 else 20
-        seconds = float(sys.argv[idx + 3]) if len(sys.argv) > idx + 3 else 60.0
-        test_page(page, n, seconds=seconds)
-    else:
+    from solvers.base import build_parser
+
+    ap = build_parser("analytic_solver", default_page=None)
+    args = ap.parse_args()
+    if args.page is None:
         test_synthetic()
+        return
+    seconds = 10.0 if args.quick else args.seconds
+    n = args.n if args.n > 0 else 20
+    test_page(args.page, n, seconds=seconds)
 
 
 if __name__ == "__main__":

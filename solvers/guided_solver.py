@@ -369,30 +369,32 @@ def test_synthetic(restarts: int = 20, seed: int = 1,
 
 
 def main() -> None:
-    if "--page" in sys.argv:
-        from data.corpus import CORPUS
-        idx = sys.argv.index("--page")
-        page = sys.argv[idx + 1]
-        n = int(sys.argv[idx + 2]) if len(sys.argv) > idx + 2 else 20
-        seconds = float(sys.argv[idx + 3]) if len(sys.argv) > idx + 3 else 60.0
-        ct = clean(CORPUS[page])
-        bigrams = [ct[i:i + 2] for i in range(0, len(ct), 2)]
-        rng = random.Random(1)
-        budget = Budget(max_seconds=seconds, patience=200)
-        t0 = time.time()
-        sq, fit, wh = solve_square(bigrams, rng, restarts=20, verbose=True,
-                                   budget=budget)
-        pt = substitute("".join(bigrams), "".join(sq))
-        hits, base, faktor = hits_signal(pt)
-        print(f"\nLaufzeit : {time.time() - t0:.1f} s")
-        print(f"hits     : {wh}")
-        print(f"Baseline : {base:.1f} auf Zufall  ->  Faktor {faktor:.2f}"
-              f"  {'(Signal)' if faktor >= 1.5 else '(RAUSCHEN — Ergebnis unbrauchbar!)'}")
-        print(f"Score    : {langmodel.score(pt):.3f}")
-        print(f"Quadrat  : {''.join(sq)}")
-        print(f"Klartext : {pt[:78]}")
-    else:
+    from solvers.base import build_parser
+
+    ap = build_parser("guided_solver", default_page=None)
+    args = ap.parse_args()
+    if args.page is None:
         test_synthetic()
+        return
+
+    from data.corpus import CORPUS
+    seconds = 10.0 if args.quick else args.seconds
+    ct = clean(CORPUS[args.page])
+    bigrams = [ct[i:i + 2] for i in range(0, len(ct), 2)]
+    rng = random.Random(args.seed)
+    budget = Budget(max_seconds=seconds, patience=200)
+    t0 = time.time()
+    sq, fit, wh = solve_square(bigrams, rng, restarts=20, verbose=args.verbose,
+                               budget=budget)
+    pt = substitute("".join(bigrams), "".join(sq))
+    hits, base, faktor = hits_signal(pt)
+    print(f"\nLaufzeit : {time.time() - t0:.1f} s")
+    print(f"hits     : {wh}")
+    print(f"Baseline : {base:.1f} auf Zufall  ->  Faktor {faktor:.2f}"
+          f"  {'(Signal)' if faktor >= 1.5 else '(RAUSCHEN — Ergebnis unbrauchbar!)'}")
+    print(f"Score    : {langmodel.score(pt):.3f}")
+    print(f"Quadrat  : {''.join(sq)}")
+    print(f"Klartext : {pt[:78]}")
 
 
 if __name__ == "__main__":

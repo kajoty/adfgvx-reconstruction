@@ -379,10 +379,12 @@ def solve(ct: str, widths: list[int] | None = None, verbose: bool = True,
 
 
 def main() -> None:
-    import sys
+    from solvers.base import build_parser
 
-    page = sys.argv[1] if len(sys.argv) > 1 else "171"
-    seconds = float(sys.argv[2]) if len(sys.argv) > 2 else 60.0
+    ap = build_parser("friedman_solver", default_page="171")
+    args = ap.parse_args()
+    page = args.page
+    seconds = 10.0 if args.quick else args.seconds
     ct = clean(CORPUS[page])
     print("=" * 100)
     print(f"Friedman-Solver: Seite {page} ({len(ct)} Zeichen), "
@@ -398,7 +400,7 @@ def main() -> None:
     print("   die Breite wird ueber den n-Gramm-Score bestimmt.)")
 
     print("\nPhase 2+3: Breite x Reihenfolge x Quadrat (verschachtelt):")
-    results = solve(ct, seconds=seconds)
+    results = solve(ct, seconds=seconds, quick=args.quick)
 
     sc, n, perm, sq, pt = results[0]
     print("\n" + "=" * 100)
