@@ -483,6 +483,18 @@ Dieses Projekt hat viele davon dokumentiert.
 | Seite 170 als „einziger Astra-Kandidat" | Falsch. Nur 106 statt 240 Zeichen |
 | „Der Korpus ist beschädigt" | Falsch. Er ist eine treue Abschrift der Quelle (14/22 zeichengenau) |
 | „Eine neue Quelle würde die offenen Seiten lösen" | Falsch. Die Originalquelle liefert dieselbe Transkription |
+| Seite 152 blind lösen (SA über Quadrat + Permutation) | Overfitting. Der Solver täuscht das Sprachmodell |
+
+**Seite 152 — ein Lehrstück über Overfitting.**
+Seite 152 hat 104 Zeichen (52 Bigramme), keine Lücken und keinen passenden
+bekannten Schlüssel. Der analytische Solver (`analysis/solve_152_fast.py`)
+findet Kandidaten mit Score −16,5 — **besser als echter deutscher Text**
+(−17,2). Das ist das Warnsignal: Der Solver hat Quadrat und Permutation so
+verbogen, dass sie das Sprachmodell täuschen. Der Text enthält aber keine
+echten Wörter (nur 27–30 Worttreffer statt 36). Bei 52 Bigrammen, von denen
+30 Prozent nur einmal vorkommen, ist das Quadrat nicht rekonstruierbar.
+**Lehre:** Ein guter Score allein beweist nichts. Erst die Worttreffer und
+ein unabhängiger Beleg zählen.
 
 Die wichtigste Lehre steht schon in Abschnitt 4:
 **Erst die Daten, dann die Krypto.**
