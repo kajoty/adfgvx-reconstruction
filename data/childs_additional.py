@@ -131,12 +131,20 @@ RICHI_264_RECONSTRUCTION_DIFFS = (
 # Verifikation zweier Childs-Nachrichten ausserhalb des 22-Seiten-Korpus.
 # Die im Buch dokumentierte Beziehung (RICHI-274 = RICHI-338 minus drei
 # einleitende Zeilen "FUER SAUL WEINREICH DOPPELPUNKT") wird durch die
-# Entschluesselung bestaetigt.
+# Entschluesselung NUR IM KERN bestaetigt: Der Praefix stimmt, danach weichen
+# die Klartexte ab (Aehnlichkeit ~0.77, kein exakter Praefix-Schnitt).
 #
 # KEIN neuer Schluessel, KEINE neue Methode: Der Schluessel "Oct28-31"
 # (n=33) stammt aus der Lasry-Liste, die Tabellen aus dem OCR des
 # Childs-Buchs. Neu ist allein, dass dieser bisher UNVERIFIED-Schluessel
-# erstmals an echtem Klartext geprueft (verifiziert) ist.
+# erstmals an echtem Klartext geprueft wurde.
+#
+# EVIDENZGRAD (2026-09-25, Kommentar-Audit):
+#   * RICHI-274: Roundtrip OK (Re-Encryption == Tabelle). Verifiziert.
+#   * RICHI-338: NICHT roundtrip-verifiziert. Re-Encryption des gespeicherten
+#     Klartexts ergibt 22 Zeichen-Abweichungen zur Tabelle -> die Tabelle
+#     enthaelt mehr als die 5 sichtbaren OCR-Artefakte. Der Klartext ist
+#     sprachlich plausibel, aber nicht hart belegt.
 #
 # Quelle: docs/childs_djvu.txt
 #   * RICHI-274-Tabelle: Index 76326 (15 Zeilen x 18 Zeichen)
@@ -206,6 +214,7 @@ RICHI_274_READING = (
 
 # Klartext RICHI-338 (Score -21.46, 90 Worthits). Enthaelt die drei
 # zusaetzlichen Einleitungszeilen "FUER SAUL WEINREICH DOPPELPUNKT".
+# ACHTUNG: NICHT roundtrip-verifiziert (22 CT-Fehler in RICHI_338_TABLE).
 RICHI_338_PLAINTEXT = (
     "FUERXSAULXWEINREICHXDOPPELPUNKTXDRAHTETOBVONEURENKAEUF1REH6TIENABTRANSPORT7E"
     "RFOLGNNSN24VHLTUELLWANNUNDWOHINSOLCHEERFOLGENWERDEXUNDWIEWEITERTRANSPORTGEDACHTI"

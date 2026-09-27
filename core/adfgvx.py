@@ -6,8 +6,9 @@ Referenz: Klaus Schmeh, "The Top 50 unsolved encrypted messages: 46",
 Cipherbrain, 23.02.2017.
 https://scienceblogs.de/klausis-krypto-kolumne/2017/02/23/the-top-50-unsolved-encrypted-messages-46-unsolved-adfgvx-cryptograms-from-world-war-1/
 
-Verifiziert am Artikel-Beispiel (HOUSE/ROBIN -> AGDVAAFAAVGXXGXAGDXADF)
-und an Seite 105 (Norberts Schluessel reproduziert den Geheimtext exakt).
+Verifiziert am Selbsttest (Klartext IHAVEADREAM, Quadrat HOUSE..., perm
+[18,15,2,9,14] -> AGDVAAFAAVGXXGXAGDXADF) und an Seite 105 (Norberts
+Schluessel reproduziert den Geheimtext exakt).
 """
 
 from __future__ import annotations
@@ -249,9 +250,9 @@ def try_all_keys(ct: str, verbose: bool = True) -> list[tuple[float, str, str]]:
 
 
 if __name__ == "__main__":
-    # Selbsttest am Artikel-Beispiel
+    # Selbsttest (Klartext IHAVEADREAM, Quadrat HOUSE..., perm [18,15,2,9,14])
     sq = "HOUSEABCDFGIJKLMNPQRTVWXYZ0123456789"
     ct = encrypt("IHAVEADREAM", [18, 15, 2, 9, 14], sq)
-    print("Selbsttest (HOUSE/ROBIN):", ct)
+    print("Selbsttest (IHAVEADREAM/HOUSE):", ct)
     print("Erwartet:                AGDVAAFAAVGXXGXAGDXADF")
     print("OK" if ct == "AGDVAAFAAVGXXGXAGDXADF" else "FEHLER")

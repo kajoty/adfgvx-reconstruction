@@ -22,6 +22,14 @@ als ERSTES Zeichen eines Bigramms komplett fehlt: D kommt 0x vor.
 
 Vergleich mit Seite 176a (IDENTISCHER Key Nov10-12, IDENTISCHES Quadrat):
 
+  ACHTUNG (Kommentar-Audit 2026-09-25): 176a ist SYNTHETISCH —
+  `corrected_ct("176a")` rekonstruiert den Geheimtext aus dem Klartext
+  (`transpose(bigrams(pt), perm)`). Der Vergleich ist daher methodisch
+  zirkulaer: 176a zeigt per Konstruktion die "saubere" Verteilung des
+  Klartexts, nicht die einer echten Transkription. Die Zahlen unten sind
+  reproduzierbar, aber als Beweis fuer einen Transkriptionsfehler bei 170
+  NICHT belastbar.
+
   Position 1 (Quadrat-ZEILE):
     D: 170 =  0.0%, 176a = 17.0%   -> -17.0 Punkte (FEHLT KOMPLETT)
     G: 170 = 32.1%, 176a = 22.3%   ->  +9.8 Punkte (ZU VIEL)

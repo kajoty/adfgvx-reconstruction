@@ -11,12 +11,19 @@ WARUM DIESER TEST:
   Damit ist der Testfall garantiert konsistent:
     decrypt(ct_synth, perm, square) == pt_true   (Score -17.187)
 
-BEFUND (2026-09-21):
-  blind_solver.py scheitert AUCH auf diesem perfekten Testfall:
-    - 5 Restarts x 60k Iterationen  -> Score -26.793
-    - 20 Restarts x 100k Iterationen -> Score -25.102
+BEFUND (2026-09-21, Zahlen aktualisiert 2026-09-27):
+  blind_solver.py scheitert AUCH auf diesem perfekten Testfall.
+  Der Solver arbeitet zeitbasiert (Budget), nicht iterationsbasiert:
+    - 5 Restarts, 120 s -> Score -22.840 (Perm + Klartext falsch)
     - Ziel: -17.187
   => Der Solver ist das Problem, nicht die Daten.
+
+  HINWEIS: Fruehere Fassungen dieses Tests nannten "5 Restarts x 60k
+  Iterationen -> -26.793" und "20 Restarts x 100k -> -25.102". Diese
+  Zahlen stammten aus einer aelteren, iterationsbasierten Solver-API
+  und sind mit dem heutigen zeitbasierten Budget nicht mehr
+  reproduzierbar. Der Test rief solve() zudem mit dem nicht mehr
+  existierenden Argument `iterations` auf und brach mit TypeError ab.
 
 FITNESS-LANDSCHAFT (gemessen):
   - Echte Permutation ist ein PERFEKTES lokales Optimum (0/190 Nachbarn besser)
@@ -72,17 +79,22 @@ def test_length() -> bool:
     return ok
 
 
-def test_solver(restarts: int = 5, iterations: int = 60000) -> bool:
-    """Der Solver muss den Klartext finden (erwartet: schlaegt fehl)."""
+def test_solver(restarts: int = 5, seconds: float = 120.0) -> bool:
+    """Der Solver muss den Klartext finden (erwartet: schlaegt fehl).
+
+    blind_solver.solve() arbeitet zeitbasiert (Budget), nicht
+    iterationsbasiert. Signatur:
+        solve(ct, n, seconds=60.0, restarts=0, seed=0, verbose=False)
+    Rueckgabe ist ein SolverResult, kein Tupel.
+    """
     from solvers.blind_solver import solve
 
     ct, perm, sq, pt_true = build_case()
     target = langmodel.score(pt_true)
-    sc, p, s, pt = solve(ct, 20, restarts=restarts, iterations=iterations,
-                         seed=1)
-    ok = pt == pt_true
-    print(f"[{'OK' if ok else 'FEHLER'}] Solver: Score {sc:.3f} "
-          f"(Ziel {target:.3f}), Perm korrekt: {p == perm}")
+    res = solve(ct, 20, seconds=seconds, restarts=restarts, seed=1)
+    ok = res.plaintext == pt_true
+    print(f"[{'OK' if ok else 'FEHLER'}] Solver: Score {res.score:.3f} "
+          f"(Ziel {target:.3f}), Perm korrekt: {res.perm == perm}")
     return ok
 
 

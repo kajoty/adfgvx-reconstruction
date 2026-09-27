@@ -22,6 +22,7 @@ from data.solutions import SOLVED
 from data.childs_additional import (
     RICHI_264_CT_OCR, RICHI_264_PLAINTEXT, RICHI_264_KEY,
     RICHI_274_PLAINTEXT, RICHI_338_PLAINTEXT,
+    RICHI_274_TABLE, RICHI_338_TABLE,
 )
 
 
@@ -80,12 +81,12 @@ def build_message_table() -> str:
         "Struktur bewiesen; Lücken nicht eindeutig |"
     )
     lines.append(
-        f"| RICHI-274 | 258 | {len(RICHI_274_PLAINTEXT)} | `Oct28-31` | "
-        "gelöst, verifiziert |"
+        f"| RICHI-274 | {len(RICHI_274_TABLE)} | {len(RICHI_274_PLAINTEXT)} | `Oct28-31` | "
+        "gelöst, verifiziert (Roundtrip) |"
     )
     lines.append(
-        f"| RICHI-338 | 286 | {len(RICHI_338_PLAINTEXT)} | `Oct28-31` | "
-        "gelöst, verifiziert (OCR-Fehler in der Tabelle) |"
+        f"| RICHI-338 | {len(RICHI_338_TABLE)} | {len(RICHI_338_PLAINTEXT)} | `Oct28-31` | "
+        "gelöst, NICHT roundtrip-verifiziert (22 CT-Fehler in der Tabelle) |"
     )
     lines.append(
         "| RICHI-217 (Seite 217) | 170 | 88 | `TRUPPENVERSCHIEBUNG` | "

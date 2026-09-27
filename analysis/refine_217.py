@@ -5,6 +5,11 @@ VERFEINERUNG: Welche Transpositionskonvention liefert lesbaren Text?
 Beobachtung: asc_back liefert score -16.7 (SA) bzw -21.1 (nachgeprueft),
 mit erkennbaren deutschen Fragmenten (EIN EIGANT... ER KREUZER... THEIS...).
 
+ACHTUNG (Kommentar-Audit 2026-09-25): Diese Zahlen sind mit den im Skript
+verwendeten Parametern NICHT reproduzierbar. Gemessen mit seed=7, 6 Restarts,
+25000 Iterationen: score = -23.875 (statt -16.7). Die -16.7/-21.1 stammen
+vermutlich aus einer frueheren Konvention/Parameterwahl. Als Beleg unbrauchbar.
+
 Das ist NAH DRAN. Wir testen systematisch:
   - Zeichen-Ebene vs Bigramm-Ebene
   - asc/desc Rang
