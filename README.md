@@ -164,6 +164,8 @@ solvers/
 analysis/               41 Diagnose- und Verifikationsskripte
 tests/                  5 Testdateien
 docs/                   HANDBUCH.md, Quellen-PDFs, Transkriptionen
+  FAHRPLAN_ENTSCHLUESSELUNG.md   alle 28 Kryptogramme in einer Datei
+  fahrplan/                      dieselben 28 als Einzelseiten (MD + HTML) + Index
 ```
 
 ## Import-Konvention
@@ -281,6 +283,31 @@ Permutation, Quadrat, 6×6-Raster) zwischen die Marker
 `<!-- GENERATED: dump_messages.py -->` und `<!-- /GENERATED -->`. Der Aufruf ist
 idempotent — mehrfaches Ausführen ändert nichts.
 
+## Fahrplan erzeugen
+
+```bash
+python3 analysis/dump_fahrplan.py --write   # docs/FAHRPLAN_ENTSCHLUESSELUNG.md
+python3 analysis/dump_fahrplan.py --pages   # docs/fahrplan/*.md + Index
+python3 analysis/dump_fahrplan.py --html    # docs/fahrplan/*.html + index.html
+python3 analysis/verify_fahrplan.py         # prüft alle Roundtrips
+```
+
+Der Fahrplan stellt **jedes** der 28 Kryptogramme einzeln dar, mit sechs
+Abschnitten: (1) verschlüsselte Nachricht, (2) Schlüssel, (3) Permutation
+(Rangfolge + Leseordnung), (4) Quadrat als 6×6-Raster, (5) Entschlüsselungsweg
+Schritt für Schritt mit echten Zwischenwerten, (6) entschlüsselte Nachricht.
+
+`--write` erzeugt die Sammeldatei, `--pages` eine eigene Markdown-Seite pro
+Kryptogramm unter `docs/fahrplan/` samt Index (`docs/fahrplan/README.md`) und
+Navigation vor/zurück. `--html` erzeugt dieselben 28 Seiten als eigenständige
+HTML-Dateien mit dunklem Theme, Status-Badges, farbigem 6×6-Raster,
+Permutations-Kacheln und Index (`docs/fahrplan/index.html`) — einfach im
+Browser öffnen, keine Abhängigkeiten.
+
+`verify_fahrplan.py` bestätigt `decrypt(ct, perm, square) == pt` für 13
+Kryptogramme; 3 Abweichungen (RICHI-264, RICHI-222, RICHI-338) sind
+dokumentiert, RICHI-240 hat keinen Geheimtext im Repo.
+
 ---
 
 # 4. WHAT IF — Was wäre wenn?
@@ -359,7 +386,8 @@ Erfolgsindikator, solange keine Zufalls-Baseline gemessen wurde.
 |---|---|
 | Seite 217 / RICHI-170 | TRUPPENVERSCHIEBUNG, 0 Konflikte, Roundtrip gegen echtes CT |
 | RICHI-264 | 2 Reparaturen, Re-Encryption == OCR-CT |
-| RICHI-274 / RICHI-338 | Oct28-31 erstmals an echtem Klartext validiert |
+| RICHI-274 | Oct28-31 an echtem Klartext validiert, Roundtrip OK |
+| RICHI-338 | Oct28-31 an Klartext validiert, aber **nicht** roundtrip-verifiziert (22 CT-Fehler) |
 | Seiten 100, 105, 146 | echte Transkription + vollständiger Roundtrip |
 | Transposition | 100 % Zeichentreffer auf 10/10 Seiten (mit korrigiertem CT) |
 

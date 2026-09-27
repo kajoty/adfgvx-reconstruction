@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korpus Seite 171 — ADFGVX-Fahrplan</title>
+<style>
+:root {
+  --bg: #0f1117; --panel: #171a23; --panel2: #1e2230; --line: #2b3145;
+  --fg: #e6e9f0; --dim: #9aa3b8; --accent: #6ea8fe; --accent2: #ffd166;
+  --ok: #4ade80; --warn: #fbbf24; --bad: #f87171;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 28px 20px 80px; }
+header.top {
+  border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 26px;
+}
+header.top h1 { margin: 0 0 6px; font-size: 1.9rem; letter-spacing: -0.02em; }
+header.top .sub { color: var(--dim); font-size: 0.95rem; }
+nav.pager {
+  display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+  margin: 18px 0; font-size: 0.92rem;
+}
+nav.pager a, nav.pager span {
+  padding: 7px 13px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--panel); color: var(--fg);
+}
+nav.pager a:hover { border-color: var(--accent); background: var(--panel2); text-decoration: none; }
+nav.pager .idx { border-color: var(--accent); color: var(--accent); }
+nav.pager .off { color: #4a5169; }
+section.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  padding: 20px 22px; margin: 18px 0;
+}
+section.card > h2 {
+  margin: 0 0 14px; font-size: 1.12rem; color: var(--accent2);
+  display: flex; align-items: center; gap: 10px;
+}
+section.card > h2 .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 8px; font-size: 0.85rem;
+  background: var(--panel2); border: 1px solid var(--line); color: var(--accent);
+}
+pre {
+  background: #0b0d13; border: 1px solid var(--line); border-radius: 10px;
+  padding: 14px 16px; overflow-x: auto; font-family: var(--mono);
+  font-size: 0.86rem; line-height: 1.5; margin: 12px 0;
+}
+code { font-family: var(--mono); font-size: 0.88em; }
+p code, li code { background: var(--panel2); padding: 1px 6px; border-radius: 5px; }
+.status {
+  display: inline-block; padding: 5px 12px; border-radius: 999px;
+  font-size: 0.85rem; border: 1px solid var(--line); background: var(--panel2);
+}
+.status.ok { border-color: #2f6b45; color: var(--ok); }
+.status.warn { border-color: #6b5a2f; color: var(--warn); }
+.status.bad { border-color: #6b3030; color: var(--bad); }
+.note {
+  border-left: 3px solid var(--accent); background: var(--panel2);
+  padding: 12px 16px; border-radius: 0 10px 10px 0; margin: 14px 0;
+  font-size: 0.93rem; color: #cfd6e6;
+}
+.grid6 {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px;
+  max-width: 340px; margin: 14px 0;
+}
+.grid6 div {
+  aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  background: var(--panel2); border: 1px solid var(--line); border-radius: 8px;
+  font-family: var(--mono); font-size: 1.05rem; font-weight: 600;
+}
+.grid6 div.gap { color: #4a5169; }
+.grid6 div.hl { border-color: var(--accent); color: var(--accent); }
+.perm { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0; }
+.perm div {
+  min-width: 42px; padding: 7px 4px; text-align: center; border-radius: 8px;
+  background: var(--panel2); border: 1px solid var(--line); font-family: var(--mono);
+}
+.perm div .r { display: block; font-size: 0.72rem; color: var(--dim); }
+.perm div .c { display: block; font-size: 0.95rem; font-weight: 600; }
+.perm div.first { border-color: var(--accent); }
+.perm div.first .c { color: var(--accent); }
+.ct { font-family: var(--mono); letter-spacing: 0.06em; word-break: break-all; }
+.pt { font-family: var(--mono); letter-spacing: 0.04em; word-break: break-all; color: var(--ok); }
+.steps { counter-reset: s; }
+.step { border-left: 2px solid var(--line); padding-left: 16px; margin: 16px 0; }
+.step h3 { margin: 0 0 8px; font-size: 1rem; color: var(--accent); }
+table.idx { width: 100%; border-collapse: collapse; margin: 16px 0; }
+table.idx th, table.idx td {
+  text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line);
+  font-size: 0.94rem;
+}
+table.idx th { color: var(--dim); font-weight: 600; font-size: 0.82rem;
+  text-transform: uppercase; letter-spacing: 0.06em; }
+table.idx tr:hover td { background: var(--panel2); }
+table.idx td.n { color: var(--dim); width: 44px; font-family: var(--mono); }
+h2.sec {
+  margin: 34px 0 10px; font-size: 1.15rem; color: var(--accent2);
+  border-bottom: 1px solid var(--line); padding-bottom: 8px;
+}
+footer.foot { margin-top: 40px; color: var(--dim); font-size: 0.85rem;
+  border-top: 1px solid var(--line); padding-top: 16px; }
+@media (max-width: 620px) {
+  .wrap { padding: 18px 14px 60px; }
+  header.top h1 { font-size: 1.45rem; }
+  .grid6 { max-width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<h1>Korpus Seite 171</h1>
+<div class="sub">A. Geloeste Korpus-Seiten — Kryptogramm 9 von 28</div>
+</header>
+<nav class="pager"><a href="korpus-164b.html">← vorherige</a><a class="idx" href="index.html">Index</a><a href="korpus-176a.html">naechste →</a></nav>
+<p><span class="status ok">geloest — Klartext aus dem Kommentarthread, Geheimtext synthetisch aus dem Klartext rekonstruiert (Roundtrip zirkulaer)</span></p>
+<section class="card"><h2><span class="num">1</span>Die verschluesselte Nachricht</h2><p>314 Zeichen = 157 Bigramme. Gruppiert in Fuenfergruppen (Transkriptions-Konvention):</p><pre class="ct">AAVGF DDADX XDAAV GXAGX AFVAA ADDVD AVDDD DGDDD AAGDV XGVXD GDVXV GVVVF VFFXV VDFVD GVVDV DDVGX DVXVX XGAXA XDDDX XDDXD XXAXD VDXFX ADAGD AGXGA ADDFV XGXDD GDFFA VGDDX XDVVX FVVDA DVFDD VDVAF VXXVV VFFVD VVVGD VFDVD DVVDD DXXVG DVVXX DXDXG VDFFV DDDGG XVFGD DXXDX DDFDX GVFFD DGVGF DDVFA DDDAX DDDAA ADDDD VDDDV XVDVD XVVXV XGVGX XVXXV XVDVA GAGFD VDDAD AXGXD AVXAV DXXGX DXAX</pre></section>
+<section class="card"><h2><span class="num">2</span>Der Schluessel</h2><p><code>Nov7-9</code> — n = 20 Spalten, laut Lasry-Liste 93× verwendet.</p></section>
+<section class="card"><h2><span class="num">3</span>Die Permutation</h2><p>Rangfolge: <code>perm[c]</code> = alphabetischer Rang der Spalte <code>c</code> (1 = kleinster Rang, wird zuerst ausgelesen).</p><div class="perm"><div class=""><span class="r">Sp 0</span><span class="c">6</span></div><div class=""><span class="r">Sp 1</span><span class="c">12</span></div><div class=""><span class="r">Sp 2</span><span class="c">7</span></div><div class=""><span class="r">Sp 3</span><span class="c">15</span></div><div class="first"><span class="r">Sp 4</span><span class="c">1</span></div><div class=""><span class="r">Sp 5</span><span class="c">11</span></div><div class=""><span class="r">Sp 6</span><span class="c">16</span></div><div class=""><span class="r">Sp 7</span><span class="c">5</span></div><div class=""><span class="r">Sp 8</span><span class="c">8</span></div><div class=""><span class="r">Sp 9</span><span class="c">14</span></div><div class=""><span class="r">Sp 10</span><span class="c">3</span></div><div class=""><span class="r">Sp 11</span><span class="c">18</span></div><div class=""><span class="r">Sp 12</span><span class="c">9</span></div><div class=""><span class="r">Sp 13</span><span class="c">13</span></div><div class=""><span class="r">Sp 14</span><span class="c">2</span></div><div class=""><span class="r">Sp 15</span><span class="c">17</span></div><div class=""><span class="r">Sp 16</span><span class="c">20</span></div><div class=""><span class="r">Sp 17</span><span class="c">10</span></div><div class=""><span class="r">Sp 18</span><span class="c">19</span></div><div class=""><span class="r">Sp 19</span><span class="c">4</span></div></div><p>Leseordnung (Spalten in aufsteigender Rangfolge):</p><pre>4, 14, 10, 19, 7, 0, 2, 8, 12, 17, 5, 1, 13, 9, 3, 6, 15, 11, 18, 16</pre></section>
+<section class="card"><h2><span class="num">4</span>Das Quadrat</h2><pre class="ct">PRMYUW3LZGES8C71QOV29ITB40-KXH-AJNDF</pre><p>Als 6×6-Raster (<code>·</code> = unleserliche Zelle):</p><div class="grid6"><div>P</div><div>R</div><div>M</div><div>Y</div><div>U</div><div>W</div><div>3</div><div>L</div><div>Z</div><div>G</div><div>E</div><div>S</div><div>8</div><div>C</div><div>7</div><div>1</div><div>Q</div><div>O</div><div>V</div><div>2</div><div>9</div><div>I</div><div>T</div><div>B</div><div>4</div><div>0</div><div class="gap">·</div><div>K</div><div>X</div><div>H</div><div class="gap">·</div><div>A</div><div>J</div><div>N</div><div>D</div><div>F</div></div></section>
+<section class="card"><h2><span class="num">5</span>Wie man entschluesselt</h2><div class="steps">
+<div class="step">
+<h3>Schritt 1 — Spaltentransposition rueckgaengig machen</h3>
+<p>Der Geheimtext hat 314 Zeichen. Bei n = 20 Spalten ergibt das
+15 volle Zeilen; die Spaltenlaengen sind <code>16</code>×14 und <code>15</code>×6.</p>
+<p>Die Spalten wurden beim Verschluesseln in der Reihenfolge ihrer
+<strong>Raenge</strong> ausgelesen. Zum Entschluesseln liest man sie in genau
+dieser Reihenfolge wieder ein:</p>
+<pre>Leseordnung (Spaltenindex, 0-basiert): 4, 14, 10, 19, 7, 0, 2, 8, 12, 17, 5, 1, 13, 9, 3, 6, 15, 11, 18, 16</pre>
+<p>Danach zeilenweise lesen → <strong>Zwischentext</strong> (ADFGVX-Bigramme):</p>
+<pre class="ct">GGXDAVVFADVXGGXDDVAVXDXFAAFXDDDVXDADAVGXDVDDVFAVADDXDVGVVXAD
+VFDXGVDVGGDGDVXDXFGGXDXGFXDDDGDVGXADAVFDVVDVDXDFAXGGDXFDVVDV
+XDXFDVAVGVDXFDVVDDVXXDXFAVXDXFDXFXAXXADVGVADDVDGGGDVADAVXDDG
+AVXDXFDVADAXVXADGVAVXDDGXFDVADAXGGDVXFDVADVVDVADDXGVDVDDDDAV
+XDDGADAVDXDXDDVXXDXFDXXFAVADFDVVXFDVAVGVDXFDVVDDVXXDXFAVXDXF
+DVXDGVDVXDGVDV</pre>
+</div>
+<div class="step">
+<h3>Schritt 2 — Substitution rueckgaengig machen</h3>
+<p>Jedes Bigramm ist eine Koordinate im 6×6-Quadrat: erstes Zeichen = Zeile,
+zweites = Spalte (A=0, D=1, F=2, G=3, V=4, X=5). Das Zeichen an dieser Stelle
+ist der Klartextbuchstabe.</p>
+<pre class="pt">INUKRAINEUNDPOLENRUBELKURSETARKSTEIGENDINFOLGEBRUCHESZWISCHE
+NDEUTSCHLANDUNDSOWJETREGIERUNGUNDERWARTUNGDERWIEDERHERSTELLU
+NGRUSSLANDSDURCHDEUTSCHLANDUNDENTENTE</pre>
+</div>
+</div></section>
+<section class="card"><h2><span class="num">6</span>Die entschluesselte Nachricht</h2><p><strong>Klartext</strong> (157 Zeichen, <code>X</code> = Worttrenner):</p><pre class="pt">INUKRAINEUNDPOLENRUBELKURSETARKSTEIGENDINFOLGEBRUCHESZWISCHE
+NDEUTSCHLANDUNDSOWJETREGIERUNGUNDERWARTUNGDERWIEDERHERSTELLU
+NGRUSSLANDSDURCHDEUTSCHLANDUNDENTENTE</pre></section>
+<div class="note"><em>Quelle des Klartexts: Norbert #20 / Max Baertl #39.</em></div>
+<nav class="pager"><a href="korpus-164b.html">← vorherige</a><a class="idx" href="index.html">Index</a><a href="korpus-176a.html">naechste →</a></nav>
+<footer class="foot">
+ADFGVX-Fahrplan · erzeugt von <code>analysis/dump_fahrplan.py --html</code> ·
+<a href="../FAHRPLAN_ENTSCHLUESSELUNG.md">Gesamtdokument (Markdown)</a>
+</footer>
+</div>
+</body>
+</html>
