@@ -133,6 +133,19 @@ def _key_block(keyname: str) -> str:
     return "\n".join(out)
 
 
+def _table_to_ct(table: str, n: int) -> str:
+    """Wandelt eine zeilenweise notierte Buch-Tabelle in den CT um.
+
+    Die Tabellen in childs_additional.py sind ZEILENWEISE notiert, muessen
+    aber SPALTENWEISE gelesen werden, um den CT zu ergeben, den decrypt()
+    erwartet. Zeilenweises Lesen liefert Kauderwelsch (RICHI-274: 4/135
+    Zeichentreffer statt 135/135).
+    """
+    raw = clean(table)
+    rows = len(raw) // n
+    return "".join(raw[r * n + c] for c in range(n) for r in range(rows))
+
+
 def _message_block(
     title: str,
     ct: str,
@@ -311,14 +324,16 @@ def build_message_details() -> str:
     parts.append(
         _message_block(
             "RICHI-274",
-            clean(RICHI_274_TABLE),
+            _table_to_ct(RICHI_274_TABLE, len(RICHI_274_338_PERM)),
             RICHI_274_PLAINTEXT,
             RICHI_274_338_KEY,
             "gelöst, verifiziert",
             reading=RICHI_274_READING,
             note=(
                 "Erste Prüfung des Schlüssels `Oct28-31` an echtem Klartext. "
-                "Die Tabelle im Buch ist 15 Zeilen × 18 Zeichen."
+                "Die Tabelle im Buch ist 15 Zeilen × 18 Zeichen und wird "
+                "spaltenweise gelesen; der Roundtrip ergibt 135/135 "
+                "Zeichentreffer."
             ),
         )
     )
@@ -326,16 +341,22 @@ def build_message_details() -> str:
     parts.append(
         _message_block(
             "RICHI-338",
-            clean(RICHI_338_TABLE),
+            _table_to_ct(RICHI_338_TABLE, len(RICHI_274_338_PERM)),
             RICHI_338_PLAINTEXT,
             RICHI_274_338_KEY,
-            "gelöst, verifiziert — OCR-Fehler in der Buch-Tabelle",
+            "gelöst, aber **nicht** roundtrip-verifiziert (22 CT-Fehler)",
             reading=RICHI_338_READING,
             note=(
                 "Beginnt mit den drei zusätzlichen Einleitungszeilen "
-                "`FUER SAUL WEINREICH DOPPELPUNKT`, danach derselbe Text wie "
-                "RICHI-274. Die Tabelle ist 18 Zeilen × 18 Zeichen und "
-                "enthält OCR-Artefakte (`5`, `f`, `P`, `%`, `i`)."
+                "`FUER SAUL WEINREICH DOPPELPUNKT`; danach weicht der Text "
+                "von RICHI-274 ab (nur der Kern stimmt überein). Die Tabelle "
+                "ist 18 Zeilen × 18 Zeichen (324 Zeichen, davon 4 "
+                "Nicht-ADFGVX-Artefakte → 320 bereinigt). Nach dem "
+                "spaltenweisen Lesen bleiben 306 Zeichen (17 volle Zeilen); "
+                "die letzten 14 Zeichen passen in keine volle Zeile mehr und "
+                "entfallen. Re-Encryption des gespeicherten Klartexts ergibt "
+                "22 Abweichungen — der Klartext ist daher nicht als bewiesen "
+                "einzustufen."
             ),
         )
     )
@@ -379,14 +400,37 @@ def insert_into_readme() -> None:
     )
 
     # Alle vorhandenen Bloecke entfernen (auch versehentliche Duplikate),
-    # damit wiederholte Laeufe idempotent sind.
+    # damit wiederholte Laeufe idempotent sind. Der Trennstrich, den der
+    # Block beim Einfuegen hinterlaesst, wird mit entfernt.
     while BLOCK_BEGIN in text:
         start = text.index(BLOCK_BEGIN)
         end = text.index(BLOCK_END, start) + len(BLOCK_END)
         text = text[:start] + text[end:]
+        # direkt folgender Trenner "\n\n---\n\n" (bzw. kuerzere Varianten)
+        # gehoert zum Block und wird mit entfernt
+        rest = text[start:]
+        for sep in ("\n\n---\n\n", "\n---\n\n", "\n\n---\n", "\n---\n"):
+            if rest.startswith(sep):
+                text = text[:start] + rest[len(sep):]
+                break
 
-    marker = "# Arbeitsprotokoll"
-    idx = text.index(marker)
+    # Einfuegepunkt: vor dem Quellen-Abschnitt. Aeltere README-Fassungen
+    # hatten stattdessen ein "# Arbeitsprotokoll" — beide Marker werden
+    # akzeptiert, damit der Befehl nicht an einer Umstrukturierung scheitert.
+    # Es wird nur eine echte Ueberschrift am Zeilenanfang akzeptiert, damit
+    # ein Vorkommen im Fliesstext nicht faelschlich als Marker dient.
+    idx = None
+    for marker in ("## Quellen", "# Arbeitsprotokoll"):
+        pos = text.find("\n" + marker)
+        if pos != -1:
+            idx = pos + 1
+            break
+    if idx is None:
+        raise SystemExit(
+            "Fehler: kein Einfuegepunkt gefunden. Erwartet wird die Ueberschrift "
+            "'## Quellen' (oder '# Arbeitsprotokoll') in README.md."
+        )
+
     text = text[:idx] + block + "\n---\n\n" + text[idx:]
 
     with open(path, "w", encoding="utf-8") as f:

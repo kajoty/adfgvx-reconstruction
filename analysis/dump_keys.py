@@ -15,15 +15,22 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import bootstrap  # noqa: F401
-from core.adfgvx import KEYS
+from core.adfgvx import KEYS, clean
 from data.corpus import CORPUS
 from data.corpus_corrected import CORRECTED
 from data.solutions import SOLVED
 from data.childs_additional import (
     RICHI_264_CT_OCR, RICHI_264_PLAINTEXT, RICHI_264_KEY,
     RICHI_274_PLAINTEXT, RICHI_338_PLAINTEXT,
-    RICHI_274_TABLE, RICHI_338_TABLE,
+    RICHI_274_TABLE, RICHI_338_TABLE, RICHI_274_338_PERM,
 )
+
+
+def _table_to_ct(table: str, n: int) -> str:
+    """Zeilenweise notierte Buch-Tabelle -> spaltenweise gelesener CT."""
+    raw = clean(table)
+    rows = len(raw) // n
+    return "".join(raw[r * n + c] for c in range(n) for r in range(rows))
 
 
 def perm_str(perm: list[int]) -> str:
@@ -81,11 +88,13 @@ def build_message_table() -> str:
         "Struktur bewiesen; Lücken nicht eindeutig |"
     )
     lines.append(
-        f"| RICHI-274 | {len(RICHI_274_TABLE)} | {len(RICHI_274_PLAINTEXT)} | `Oct28-31` | "
+        f"| RICHI-274 | {len(_table_to_ct(RICHI_274_TABLE, len(RICHI_274_338_PERM)))} | "
+        f"{len(RICHI_274_PLAINTEXT)} | `Oct28-31` | "
         "gelöst, verifiziert (Roundtrip) |"
     )
     lines.append(
-        f"| RICHI-338 | {len(RICHI_338_TABLE)} | {len(RICHI_338_PLAINTEXT)} | `Oct28-31` | "
+        f"| RICHI-338 | {len(_table_to_ct(RICHI_338_TABLE, len(RICHI_274_338_PERM)))} | "
+        f"{len(RICHI_338_PLAINTEXT)} | `Oct28-31` | "
         "gelöst, NICHT roundtrip-verifiziert (22 CT-Fehler in der Tabelle) |"
     )
     lines.append(
@@ -121,8 +130,12 @@ def insert_into_readme() -> None:
         "Lesung des 6×6-Felds.\n\n"
         f"{build_key_table()}\n\n"
         "### Die Funksprüche\n\n"
-        "CT = Geheimtext in ADFGVX-Zeichen. Klartext in Zeichen ohne Worttrenner\n"
-        "(X = Worttrenner im Original).\n\n"
+        "CT = Geheimtext in ADFGVX-Zeichen, **roh** aus `data/corpus.py`\n"
+        "(unlesbare Zeichen entfernt, aber ohne Transkriptionskorrekturen).\n"
+        "Für die gelösten Seiten kann die Länge daher von der im\n"
+        "Nachrichtenverzeichnis abweichen, das den tatsächlich entschlüsselten\n"
+        "(korrigierten bzw. rekonstruierten) Geheimtext zeigt.\n"
+        "Klartext in Zeichen ohne Worttrenner (X = Worttrenner im Original).\n\n"
         f"{build_message_table()}\n\n"
         f"{BLOCK_END}\n"
     )

@@ -125,6 +125,12 @@ def _table_to_ct(table: str, n: int) -> str:
     Die Tabellen in childs_additional.py sind ZEILENWEISE notiert, muessen
     aber SPALTENWEISE gelesen werden, um den CT zu ergeben, den decrypt()
     erwartet (siehe Kommentar in data/childs_additional.py).
+
+    ACHTUNG: Enthaelt die Tabelle OCR-Artefakte, verschiebt sich nach dem
+    Bereinigen die Zeilenaufteilung. RICHI_338_TABLE hat 324 Zeichen (18x18),
+    davon 4 Nicht-ADFGVX-Artefakte -> 320 bereinigt. 320 // 18 = 17 volle
+    Zeilen = 306 Zeichen; die letzten 14 Zeichen passen in keine volle Zeile
+    mehr und werden verworfen. Genau daraus entstehen die 22 CT-Fehler.
     """
     raw = clean(table)
     rows = len(raw) // n

@@ -274,7 +274,7 @@ Der Ordner enthält 36 Skripte. Hier ist die vollständige Liste.
 | `richi_222_reconstruct.py` | RICHI-222: Struktur-Beweis + Beam-Search-Kandidat |
 | `verify_corpus_provenance.py` | Vergleicht den Korpus mit der Originalquelle |
 | `parse_cipherbrain.py` | Extrahiert die Artikel-Transkription aus dem HTML |
-| `dump_keys.py` | Erzeugt die Schlüssel- und Spruchtabellen für die README |
+| `dump_keys.py` | Erzeugt Schlüssel- und Spruchtabellen (stdout oder `--insert`) |
 | `rank_conflicts.py` | Belegt die Konfliktzahl als exaktes Kriterium |
 
 **Reparatur und Suche:**
@@ -335,10 +335,10 @@ Der Ordner enthält 36 Skripte. Hier ist die vollständige Liste.
 - 14 bekannte Schlüsselwörter (`core/adfgvx.py`)
 - 3 Seiten mit Anomalien
 - Dazu aus dem Childs-Buch: RICHI-264 (bewiesen), RICHI-222 (Struktur bewiesen),
-  RICHI-274 und RICHI-338 (verifiziert)
+  RICHI-274 (verifiziert), RICHI-338 (nicht roundtrip-verifiziert, 22 CT-Fehler)
 
 Eine vollständige Liste aller Sprüche mit Schlüsseln, Quadraten und
-Permutationen steht in der README (`analysis/dump_keys.py` erzeugt sie).
+Permutationen erzeugt `analysis/dump_keys.py` (stdout oder `--insert`).
 
 > **Provenienz.** Der Korpus ist eine **treue Abschrift der Originalquelle**.
 > 14 von 22 Seiten stimmen zeichengenau mit dem Cipherbrain-Artikel überein,
@@ -409,7 +409,13 @@ nachgetragen). Siehe oben.
 
 Beide Seiten nutzen den Schlüssel `Oct28-31`.
 Die Permutation ist `[6,15,12,16,5,7,14,4,13,8,11,1,17,2,10,3,18,9]`.
-Die Tabellen stehen in `data/childs_additional.py`.
+Die Tabellen stehen in `data/childs_additional.py` und werden **spaltenweise**
+gelesen (zeilenweises Lesen liefert Kauderwelsch).
+
+- **RICHI-274:** Roundtrip exakt (135/135 Zeichentreffer) — verifiziert.
+- **RICHI-338:** Die Tabelle enthält OCR-Artefakte; nach dem Bereinigen
+  bleiben 306 Zeichen (17 volle Zeilen), die Re-Encryption ergibt 22
+  Abweichungen. Der Klartext ist daher **nicht** als bewiesen einzustufen.
 
 ### RICHI-264 — aus dem Childs-Buch, gelöst und bewiesen
 

@@ -28,8 +28,10 @@ from core import langmodel
 REF_SCORE = -17.0
 
 # Standardgewicht der Worttreffer. Empirisch bestimmt (siehe Sweep in der
-# Commit-Historie): Bei lam=1.0 trennt die Fitness echten Text (35-40),
-# Overfit-Text (30) und Rauschen (-2) am besten.
+# Commit-Historie): Bei lam=1.0 trennt die Fitness echten Text, Overfit-Text
+# und Rauschen am besten. Achtung: die absoluten Werte wachsen mit der
+# Textlaenge (word_hits zaehlt mit). Fuer Texte um 100 Zeichen gilt grob:
+# echter Text ~35, Overfit ~30, Rauschen ~-9.
 DEFAULT_LAMBDA = 1.0
 
 

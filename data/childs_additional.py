@@ -143,12 +143,12 @@ RICHI_264_RECONSTRUCTION_DIFFS = (
 #   * RICHI-274: Roundtrip OK (Re-Encryption == Tabelle). Verifiziert.
 #   * RICHI-338: NICHT roundtrip-verifiziert. Re-Encryption des gespeicherten
 #     Klartexts ergibt 22 Zeichen-Abweichungen zur Tabelle -> die Tabelle
-#     enthaelt mehr als die 5 sichtbaren OCR-Artefakte. Der Klartext ist
+#     enthaelt mehr als die 4 sichtbaren OCR-Artefakte. Der Klartext ist
 #     sprachlich plausibel, aber nicht hart belegt.
 #
 # Quelle: docs/childs_djvu.txt
 #   * RICHI-274-Tabelle: Index 76326 (15 Zeilen x 18 Zeichen)
-#   * RICHI-338-Tabelle: Index 77542 (18 Zeilen x 18 Zeichen, saubere OCR)
+#   * RICHI-338-Tabelle: Index 77542 (18 Zeilen x 18 Zeichen, 4 OCR-Artefakte)
 #   * Permutation: 6-15-12-16-5-7-14-4-13-8-11-1-17-2-10-3-18-9 (Rangordnung)
 #   * Leserichtung: spaltenweise (Spalte 1..18), dann untranspose(ct, perm)
 #
@@ -178,7 +178,10 @@ RICHI_274_TABLE = (
     "AXDAVAVDAAXADFXXVX"
 )
 
-# RICHI-338: 18 Zeilen x 18 Zeichen (saubere OCR, Index 77542).
+# RICHI-338: 18 Zeilen x 18 Zeichen (Index 77542). Enthaelt 4 OCR-Artefakte
+# (`5`, `f`, `P`, `%`, `i`), die clean() entfernt -> 320 Zeichen. Beim
+# spaltenweisen Lesen bleiben 306 Zeichen (17 volle Zeilen); die Re-Encryption
+# ergibt 22 Abweichungen. NICHT roundtrip-verifiziert.
 RICHI_338_TABLE = (
     "VVDAFVAXFDADADGDGX"
     "AADDFAAXDADDXAXFFG"
