@@ -281,7 +281,7 @@ VGGFG DAAFV GGGGX AVVVV
 
 ### Seite 215 (im Artikel ohne Seitenzahl)
 
-**Schlüssel:** `Nov22-24`
+**Schlüssel:** nicht sicher zugeordnet
 
 *Für diese Transkription ist im Artikel kein separates Originalbild enthalten.*
 
@@ -368,3 +368,143 @@ XVVAD FDVAA
 - [Cipherbrain: Unsolved ADFGVX messages from World War I](https://scienceblogs.de/klausis-krypto-kolumne/unsolved-adfxvx-messages-from-world-war-i/)
 - [Originaltranskription und Abbildungen](docs/cipherbrain_pages/)
 - [Weitere historische Unterlagen und Dokumentation](docs/)
+
+## Überlieferte Lösungen
+
+ADFGVX wird in zwei Schritten entschlüsselt: Zuerst wird die Spaltentransposition anhand der Schlüssel-Permutation rückgängig gemacht. Der so erhaltene Strom aus ADFGVX-Zeichen wird anschließend paarweise als Koordinaten im 6×6-Schlüsselquadrat gelesen. Im Klartext steht `X` für einen Wortabstand; Ziffern und Schreibweisen sind wie in den veröffentlichten Lösungen belassen.
+
+**Wichtiger Belegunterschied:** Für Seite 100 ist eine einzelne Transkriptionskorrektur (`V` → `A`) dokumentiert; die entschlüsselte Nachricht stimmt danach exakt. Für Seiten 105 und 146 dokumentiert der Fahrplan ebenfalls einen exakten Roundtrip mit den dortigen korrigierten Geheimtexten. Bei den übrigen folgenden Korpus-Lösungen wurde der Geheimtext aus dem bereits veröffentlichten Klartext synthetisch rekonstruiert. Ein Roundtrip bestätigt dort nur die Konstruktion, nicht unabhängig die ursprüngliche Funkübertragung. Die Klartexte stammen aus den unten genannten Kommentaren.
+
+| Seite | Schlüssel | Beleglage |
+|---|---|---|
+| 100 | `Nov1-3` | Eine eindeutige Korrektur; danach exakter Roundtrip |
+| 105 | `Nov1-3` | Exakter Roundtrip mit korrigierter Fassung |
+| 109 | `Nov1-3` | Geheimtext aus Klartext rekonstruiert; zirkulärer Roundtrip |
+| 132 | `Nov4-6` | Geheimtext aus Klartext rekonstruiert; zirkulärer Roundtrip |
+| 146 | `Nov4-6` | Korrigierte Fassung; exakter Roundtrip |
+| 153a | `Nov13-15a` | Geheimtext aus Klartext rekonstruiert; zirkulärer Roundtrip |
+| 164a | `Nov7-9` | Geheimtext aus Klartext rekonstruiert; zirkulärer Roundtrip |
+| 164b | `Nov7-9` | Geheimtext aus Klartext rekonstruiert; zirkulärer Roundtrip |
+| 171 | `Nov7-9` | Geheimtext aus Klartext rekonstruiert; zirkulärer Roundtrip |
+| 176a | `Nov10-12` | Geheimtext aus Klartext rekonstruiert; zirkulärer Roundtrip |
+| 187 | `Nov13-15b` | Geheimtext aus Klartext rekonstruiert; zirkulärer Roundtrip |
+
+### Seite 100 — bewiesene Lesung nach einer Korrektur
+
+An Position 20 der Transkription wird `V` zu `A` korrigiert. Mit `Nov1-3` wird zunächst die Spaltentransposition rückgängig gemacht und danach jedes ADFGVX-Bigramm mit dem Quadrat in Klartext umgesetzt. Die Korrektur ist im Fahrplan als eindeutige Ein-Zeichen-Korrektur dokumentiert.
+
+```text
+KEINESTOERUNGDURCHFEINDXMITTAGS2FEINDLXDIVXIMMARSCHAUFBELGRADX
+```
+
+Quelle: Armin #13 / Norbert #40. [Entschlüsselungsweg](docs/fahrplan/korpus-100.md).
+
+### Seite 105 — korrigierte Fassung
+
+Die korrigierte Geheimtextfassung wird mit demselben `Nov1-3`-Schlüssel entschlüsselt. Nach der Spaltentransposition werden die Bigramme über das 6×6-Quadrat ersetzt. Der dokumentierte Roundtrip ist exakt.
+
+```text
+GERMANIAATAPPEKONSTANTINOPELXRFUERMITTEHMEERDIVIC9VNZUXTEL9VRX62XDOV2TTELEGRXN0X58XISTELTX32141XQ4XAXVOMX4CNOVEMBERNULEDIGTXA8MIRALSTAFX32398XB
+```
+
+Quelle: Norbert #15 / Max Baertl #39. [Entschlüsselungsweg](docs/fahrplan/korpus-105.md).
+
+### Seite 109 — veröffentlichte Lösung, Geheimtext rekonstruiert
+
+Die Kommentarlösung ist mit `Nov1-3` und dem bekannten Quadrat in die ADFGVX-Form zurückübertragen worden. Da der Geheimtext aus dem Klartext erzeugt wurde, ist der Roundtrip kein unabhängiger Nachweis für die beschädigte Originalübertragung.
+
+```text
+OXKXMXABENDMELDUNGXS4V4XUMBJRGA8GLETZTEVTVILEBEEVUETX1WEITEDEFDUXNIV5IMMARSCH4UFBELGRADERKAVV2XSONSTKEINEEDMILNISSEXXASOXK511
+```
+
+Quelle: Norbert #18 / Max Baertl #39. [Dokumentation](docs/fahrplan/korpus-109.md).
+
+### Seite 132 — veröffentlichte Lösung, Geheimtext rekonstruiert
+
+Die Klartextlösung wird mit `Nov4-6` über Quadrat-Substitution und Spaltentransposition zurück in eine Geheimtextfassung übersetzt. Das bestätigt die Konsistenz der Rekonstruktion, nicht unabhängig die Originaltranskription.
+
+```text
+FUEREILVESEXWIEDERHOLETTELEGRXVONVIERTERPERIODEINFUENFTERXGEBETSORDER5MINXVVV
+```
+
+Quelle: Norbert #37 / Max Baertl #39. [Dokumentation](docs/fahrplan/korpus-132.md).
+
+### Seite 146 — korrigierte Fassung
+
+Die dokumentierte korrigierte Fassung wird mit `Nov4-6` entschlüsselt. Nach Rückgängigmachen der Spaltentransposition und Ersetzen der Bigramm-Koordinaten ergibt sich exakt die veröffentlichte Nachricht.
+
+```text
+FUNKSTELLEKERTSCHERHAE9TRB12X1FXR4FNAMENRICHARDEMILKARLXFUNKSTELLENDORTIGENBEREICHSBENACHRICHTIGENXNACHRICHTENCHEF4BG7834X
+```
+
+Quelle: Norbert #19 / Max Baertl #39. [Entschlüsselungsweg](docs/fahrplan/korpus-146.md).
+
+### Seite 153a — veröffentlichte Lösung, Geheimtext rekonstruiert
+
+Mit `Nov13-15a` wird die Kommentarlösung in eine passende Geheimtextfassung zurückübersetzt. Das Originalbild und die erhaltene Transkription sind nicht identisch mit diesem rekonstruierten Geheimtext; der Roundtrip allein belegt daher die Originalübertragung nicht.
+
+```text
+RUSSISCHEUNDPOLNHEERESVERKEHRVOLLERFASSENXWICHTIGESBESONDERESAUSPOLNVERKEHRUEBEROHLSTATIONVERZIFFERTFUNKENXSOWEITFERNSCHREIBERVERBDGNICHTARBEICETXRESTSSCHRIFTLICHXNACHCHEFX0X01
+```
+
+Quelle: George Lasry #50 / Norbert #53. [Dokumentation](docs/fahrplan/korpus-153a.md).
+
+### Seite 164a — veröffentlichte Lösung, Geheimtext rekonstruiert
+
+Die Lösung wird mit `Nov7-9` und dem dokumentierten Quadrat zurückübersetzt; der Geheimtext wurde aus dem Klartext rekonstruiert.
+
+```text
+ELXDIEHOEHEX828XHOEHELX9IRXOXSONSTKEINEEREIGNISSEVONBEDEUTUNGXX
+```
+
+Quelle: Norbert #41 / #44. [Dokumentation](docs/fahrplan/korpus-164a.md).
+
+### Seite 164b — veröffentlichte Lösung, Geheimtext rekonstruiert
+
+Auch diese Nachricht verwendet `Nov7-9`. Der berichtete Klartext wurde in eine passende Geheimtextfassung zurückübersetzt; der Roundtrip ist zirkulär.
+
+```text
+XINXTEMESVARXBEFRIEDNISXUNDXDIVVONXMIRCONACHWESTENUNDSUEDENWEGXLEIDERWEGEVOMGEGNERBESETZTX
+```
+
+Quelle: Norbert #42 / #43. [Dokumentation](docs/fahrplan/korpus-164b.md).
+
+### Seite 171 — veröffentlichte Lösung, Geheimtext rekonstruiert
+
+Die Kommentarlösung wird mit `Nov7-9` zurückübersetzt. Die rekonstruierte Geheimtextfassung ist kein unabhängiger Beleg für die erhaltene, beschädigte Transkription.
+
+```text
+INUKRAINEUNDPOLENRUBELKURSETARKSTEIGENDINFOLGEBRUCHESZWISCHENDEUTSCHLANDUNDSOWJETREGIERUNGUNDERWARTUNGDERWIEDERHERSTELLUNGRUSSLANDSDURCHDEUTSCHLANDUNDENTENTE
+```
+
+Quelle: Norbert #20 / Max Baertl #39. [Dokumentation](docs/fahrplan/korpus-171.md).
+
+### Seite 176a — veröffentlichte Lösung, Geheimtext rekonstruiert
+
+Die Nachricht wird mit `Nov10-12` entschlüsselt; der im Fahrplan gezeigte Geheimtext wurde aus der Kommentarlösung erzeugt.
+
+```text
+DURCHBRUCHVORBEREITETXDURCHBRUCHSRICHTUNGNACHNORDENODERNORDOSTENERFOLGENWIRDXKANNJETZTNOCHNICHTBEEURTEILTWERDENX
+```
+
+Quelle: Norbert #26 / Max Baertl #39. [Dokumentation](docs/fahrplan/korpus-176a.md).
+
+### Seite 187 — veröffentlichte Lösung, Geheimtext rekonstruiert
+
+Mit `Nov13-15b` wird der Klartext in eine ADFGVX-Fassung zurückübersetzt. Die Übereinstimmung des Roundtrips ist hier konstruktionsbedingt.
+
+```text
+SELLVXGENXKOMX9XAXKXBRESLAUXXBITTEWEGENDRINGENDERNOTLAGEINBEKLEIDUNGX4000XPAARSTIEFELZUNAECHSTNACHXODERBERG
+```
+
+Quelle: Norbert #24 / Max Baertl #39. [Dokumentation](docs/fahrplan/korpus-187.md).
+
+### Zusätzliche Lösung ohne gesicherte Seitenzuordnung
+
+Im früheren Lösungsdatensatz ist außerdem eine Lösung mit Schlüsselkennung `Nov22-24` überliefert. Die Kennung lautet dort `??`; sie wird deshalb keiner der 22 nummerierten Transkriptionen zugeordnet. Der Klartext ist als Kommentarlösung erhalten, ein unabhängiger Roundtrip mit einer identifizierten Originaltranskription ist hier nicht belegt.
+
+```text
+ABSXMIDIV5XEILMELDGX24NX24NXARMADAKERTSCHXBRINGTENTENTEFLOTTEZWODIVISIONENXNEUSEELAENDERXENGLXUXFRANZOXMITXNURXOHLXKORPSFRISCHX3Y52
+```
+
+Quelle: Norbert #32 / Max Baertl #39. Schlüsselmaterial: `Nov22-24`.
