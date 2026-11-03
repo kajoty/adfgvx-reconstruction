@@ -1,1 +1,0 @@
-"""Tests und synthetische Testfaelle."""
