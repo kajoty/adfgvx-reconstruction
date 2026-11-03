@@ -2,6 +2,8 @@
 
 Sammlung der 22 verschlüsselten Funksprüche aus dem Cipherbrain-Artikel sowie der belegten Schlüssel und Originalabbildungen. Die Transkriptionen stehen in [`data/corpus.py`](data/corpus.py); die Schlüsselkennungen in [`data/keys.py`](data/keys.py).
 
+**[Zu den Lösungen und Erklärungen springen](#überlieferte-lösungen)** — 11 zugeordnete Lösungen und eine zusätzliche Lösung ohne gesicherte Seitenzuordnung.
+
 ## Zeichenerklärung
 
 - Geheimtexte bestehen aus den Symbolen `A D F G V X`; Leerzeichen trennen hier nur Fünfergruppen.
